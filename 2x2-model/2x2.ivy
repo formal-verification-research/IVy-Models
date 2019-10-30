@@ -21,7 +21,6 @@ type coord = {0,1} #simple 0s and 1s the destination can be set to
 relation sending(A:arbiter,R:router,S:router) #a link between an arbiter and the routers sending and receiving the packet
 
 var assigned : arbiter #tells which arbiter is currently assigned
-relation blocked(assigned:arbiter)
 
 var x_dest : coord #x-coordinate of destination
 var y_dest : coord #y-coordinate of destination
@@ -48,19 +47,20 @@ object intf = {
 	
 	action choose(s:router,r:router,a:arbiter) #if simultaneous requests, choose which to get
 	
-	action send(f:flit,r:router,a:arbiter) #once the router order is chosen, get flits from those routers and send to the next router
+	action send(s:router,r:router,a:arbiter) #once the router order is chosen, get flits from those routers and send to the next router
 
 }
 
 
 object spec = { #The specifications for actions to run
 
-    after init { #on startup, nothing is blocked (there are no problems that could cause deadlock)
-       	arb_N_10.blocked := false;
-		arb_W_10.blocked := false;
+    after init { 
+		#on startup, nothing is faulty
+       	arb_N_10.faulty := false;
+		arb_W_10.faulty := false;
 		#arb_S_11.blocked := false;
 		#arb_E_00.blocked := false; 
-		arb_PE_10.blocked := false;
+		arb_PE_10.faulty := false;
 		
 		#this blocked variable tells whether the arbiter can send a flit at that time (it checks the connection from the arbiter to the next router)
 		#if a receiving router has a flit, it will tell the arbiter it cannot receive another.
@@ -100,32 +100,39 @@ object r_PE_10 = {
 	
 	after init {
 		has_flit := *; #maybe it has a flit, maybe it doesn't
-		ready := false;
+		ready := false; #it's not ready to send the flit quite yet.
 	}
 	
 	action generate(f:flit,a:arbiter,r:router) = { #choosing the destination
 		if has_flit {
 			x_dest := *; #arbitrarily chooses
 	        y_dest := *; #arbitrarily chooses
-	        if x_dest = 1 & y_dest = 1 {
-				if arb_N_10.blocked {
-					assigned := aw10; #send it to the other arbiter if an10 is blocked.
-					
-					############# Check if aw10 is blocked as well. Only try alternative if faulty, not busy.
-					
-					ready := true;
+	        if x_dest = 1 & y_dest = 1 { #only if it's going directly north
+				if arb_N_10.faulty & ~arb_W_10.faulty & ~arb_W_10.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
+					assigned := aw10; #send it to the other arbiter if an10 is blocked.	
+					ready := true; #mark that it's ready to receive a packet
 				}
-				else {
+				else if arb_N_10.busy { #if the receiver is busy, 
+					has_flit := false; #drop the flit to prevent deadlock
+					ready := false;
+				}
+				else { #if it's going north and everything's clear
+					require ~arb_N_10.faulty & ~arb_N_10.busy; #double check that it's clear
 					assigned := an10; #send north if it needs to go to (1,1)
 					ready := true;
 				}
 			}
-	        else { 
-				if arb_W_10.blocked {
+	        else { #same as 110-123 but for packets not going to (1,1).
+				if arb_W_10.faulty & ~arb_N_10.faulty & ~arb_N_10.busy {
 					assigned := an10; #send it to the other arbiter if aw10 is blocked.
 					ready := true;
 				}
+				else if arb_W_10.busy {
+					has_flit := false;
+					ready := false;
+				}
 				else {
+					require ~arb_W_10.faulty & ~arb_N_10.busy;
 					assigned := aw10; #if it's not going to (1,1), send it west by default.
 					ready := true;
 				}
@@ -158,19 +165,24 @@ export r_PE_10.ship_flit
 
 object arb_N_10 = {
 
-	individual blocked : bool #now local, tells if arbiter is blocked
+	#individual blocked : bool #now local, tells if arbiter is blocked
+	
+	individual faulty : bool
+	individual busy : bool
+	
 	type can_get_from = {r_pe_10,r_w_10,r_n_10} #possibilities of routers that can have a packet to send
 	individual get_from : can_get_from #where the arbiter decides to get from
 	individual rand : bool
 	
 	after init { 							#before the arbiter can get a flit, make sure that it's not blocked, that a flit exists,
-		require ~blocked & (r_PE_10.has_flit | r_W_10.has_flit | r_N_10.has_flit) & assigned = an10; #  and that it's assigned here.
+		require ~busy & (r_PE_10.has_flit | r_W_10.has_flit | r_N_10.has_flit) & assigned = an10; #  and that it's assigned here.
 		rand := *;
 	}
 	
 	##UPDATE MON 5PM: Added conditions for if all possible sources of flits
+	## Use nested if statements instead.
 	
-	before move_flit(f:flit,r:router,s:router,a:arbiter) { #check for simultaneous requests
+	before move_flit(s:router,r:router,a:arbiter) { #check for simultaneous requests
 		require assigned = an10;
 		if r_PE_10.has_flit & r_N_10.has_flit & r_W_10.has_flit {
 			call intf.choose(s,r,a); ########## Maybe doesn't need to exist  
@@ -211,8 +223,8 @@ object arb_N_10 = {
 		}
 	}
 	
-	action move_flit(f:flit,r:router,s:router,a:arbiter) = { ####### Check the downstream router, too.
-		call intf.send(f,r,a); #check the conditions to send a packet
+	action move_flit(s:router,r:router,a:arbiter) = { ####### Check the downstream router, too.
+		call intf.send(s,r,a); #check the conditions to send a packet
 		if get_from = r_pe_10 {
 			sending(a,r,s) := true; #I'll do more with this later, perhaps with specific names (see router and arbiter types)
 			r_PE_10.has_flit := false;
@@ -238,16 +250,20 @@ object arb_N_10 = {
 
 object arb_W_10 = {
 
-	individual blocked : bool #now local, tells if arbiter is blocked
+	#individual blocked : bool #now local, tells if arbiter is blocked
+	
+	individual faulty : bool
+	individual busy : bool
+	
 	type can_get_from = {r_pe_10,r_w_10,r_n_10} #possibilities of routers that can have a packet to send
 	individual get_from : can_get_from #where the arbiter decides to get from
 	individual rand : bool
 	
 	after init { 							#before the arbiter can get a flit, make sure that it's not blocked, that a flit exists,
-		require ~blocked & (r_PE_10.has_flit | r_W_10.has_flit | r_N_10.has_flit) & assigned = aw10; #  and that it's assigned here.
+		require ~busy & (r_PE_10.has_flit | r_W_10.has_flit | r_N_10.has_flit) & assigned = aw10; #  and that it's assigned here.
 	}
 	
-	before move_flit(f:flit,r:router,s:router,a:arbiter) { #check for simultaneous requests
+	before move_flit(s:router,r:router,a:arbiter) { #check for simultaneous requests
 		require assigned = aw10;
 		if r_PE_10.has_flit & r_N_10.has_flit & r_W_10.has_flit {
 			call intf.choose(s,r,a); 
@@ -288,8 +304,8 @@ object arb_W_10 = {
 		}
 	}
 	
-	action move_flit(f:flit,r:router,s:router,a:arbiter) = {
-		call intf.send(f,r,a); #check the conditions to send a packet
+	action move_flit(s:router,r:router,a:arbiter) = {
+		call intf.send(s,r,a); #check the conditions to send a packet
 		if get_from = r_pe_10 {
 			sending(a,r,s) := true; #I'll do more with this later, perhaps with specific names (see router and arbiter types)
 			r_PE_10.has_flit := false; #The sender no longer has the flit
@@ -315,15 +331,19 @@ object arb_W_10 = {
 
 object arb_PE_10 = {
 
-	individual blocked : bool #now local, tells if arbiter is blocked
+	#individual blocked : bool #now local, tells if arbiter is blocked
+	
+	individual faulty : bool
+	individual busy : bool
+	
 	type can_get_from = {r_w_10,r_n_10} #possibilities of routers that can have a packet to send
 	individual get_from : can_get_from #where the arbiter decides to get from
 	
 	after init { 							#before the arbiter can get a flit, make sure that it's not blocked, that a flit exists,
-		require ~blocked & (r_PE_10.has_flit | r_W_10.has_flit | r_N_10.has_flit) & assigned = aw10; #  and that it's assigned here.
+		require ~busy & (r_PE_10.has_flit | r_W_10.has_flit | r_N_10.has_flit) & assigned = aw10; #  and that it's assigned here.
 	}
 	
-	before move_flit(f:flit,r:router,s:router,a:arbiter) { #check for simultaneous requests
+	before move_flit(s:router,r:router,a:arbiter) { #check for simultaneous requests
 		if (x_dest = 1 & y_dest = 0) & (r_N_10.has_flit & r_W_10.has_flit) {
 			call intf.choose(s,r,a); 
 			get_from := *; #nondeterministically choose just one place to start. the other router will still have a packet at the end.
@@ -336,8 +356,8 @@ object arb_PE_10 = {
 		}
 	}
 	
-	action move_flit(f:flit,r:router,s:router,a:arbiter) = {
-		call intf.send(f,r,a); #check the conditions to send a packet
+	action move_flit(s:router,r:router,a:arbiter) = {
+		call intf.send(s,r,a); #check the conditions to send a packet
 		if get_from = r_w_10 {
 			sending(a,r,s) := true;
 			r_W_10.has_flit := false;
@@ -381,7 +401,7 @@ object r_N_10 = {
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
 		if has_flit {
-			#arb_S_11.blocked := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
+			#arb_S_11.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 			#this arbiter isn't modeled yet
 		}
 	}
@@ -393,7 +413,7 @@ object r_E_00 = {
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
 		if has_flit { 
-			arb_W_10.blocked := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
+			arb_W_10.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 		}
 	}
 }  
@@ -404,7 +424,7 @@ object r_S_11 = {
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
 		if has_flit {
-			arb_N_10.blocked := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
+			arb_N_10.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 		}
 	}
 }  
