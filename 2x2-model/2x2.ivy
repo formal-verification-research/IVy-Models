@@ -38,17 +38,9 @@ relation sending(A:arbiter,R:router,S:router) #a link between an arbiter and the
 
 
 object intf = { 
-
-	# I decided against having quite so many interface actions; now the actions are present inside each of the objects
-	# because there were simply too many factors to take into account for each.
-	# It would have been difficult to scale.
-	
 	action check(f:flit,r:router,a:arbiter) #arbiter checks routers to see if they have packets - not super accurate, but the best I could come up with so far
-	
 	action choose(s:router,r:router,a:arbiter) #if simultaneous requests, choose which to get
-	
 	action send(s:router,r:router,a:arbiter) #once the router order is chosen, get flits from those routers and send to the next router
-
 }
 
 
@@ -58,12 +50,8 @@ object spec = { #The specifications for actions to run
 		#on startup, nothing is faulty
        	arb_N_10.faulty := false;
 		arb_W_10.faulty := false;
-		#arb_S_11.blocked := false;
-		#arb_E_00.blocked := false; 
-		arb_PE_10.faulty := false;
-		
-		#this blocked variable tells whether the arbiter can send a flit at that time (it checks the connection from the arbiter to the next router)
-		#if a receiving router has a flit, it will tell the arbiter it cannot receive another.
+		#arb_S_11.faulty := false;
+		#arb_E_00.faulty := false; 
 	}
 	
 	before intf.check {
@@ -108,6 +96,7 @@ object r_PE_10 = {
 	}
 	
 	action generate(f:flit,a:arbiter,r:router) = { #choosing the destination
+		
 		if has_flit {
 			x_dest := *; #arbitrarily chooses
 	        y_dest := *; #arbitrarily chooses
@@ -145,14 +134,14 @@ object r_PE_10 = {
 		
     }
 	
-	action ship_flit(f:flit,a:arbiter,r:router) = {
+	action send_flit(f:flit,a:arbiter,r:router) = {
 		require has_flit & ready;
 		call intf.check(f,r,a);
 	}
 
    
 } export r_PE_10.generate
-export r_PE_10.ship_flit
+export r_PE_10.send_flit
 
 
 
@@ -166,6 +155,8 @@ export r_PE_10.ship_flit
 # ALL THE ARBITERS #
 #                  #
 ####################
+
+# The arbiters only check which arbiter is assigned, not the eventual destination.
 
 object arb_N_10 = {
 
@@ -182,10 +173,7 @@ object arb_N_10 = {
 		require ~busy & ((r_PE_10.has_flit & r_PE_10.assigned = an10) | (r_W_10.has_flit & r_W_10.assigned = an10) | (r_N_10.has_flit & r_N_10.assigned = an10)); #  and that it's assigned here.
 		rand := *;
 	}
-	
-	##UPDATE MON 5PM: Added conditions for if all possible sources of flits
-	## Use nested if statements instead.
-	
+		
 	before move_flit(s:router,r:router,a:arbiter) { #check for simultaneous requests
 		if r_PE_10.has_flit & r_PE_10.assigned = an10 {
 			if r_W_10.has_flit & r_W_10.assigned = an10 {
@@ -223,11 +211,13 @@ object arb_N_10 = {
 		}
 	}
 	
-	action move_flit(s:router,r:router,a:arbiter) = { ####### Check the downstream router, too.
+	action move_flit(s:router,r:router,a:arbiter) = { 
 		call intf.send(s,r,a); #check the conditions to send a packet
 		if get_from = r_pe_10 {
 			sending(a,r,s) := true; #I'll do more with this later, perhaps with specific names (see router and arbiter types)
 			r_PE_10.has_flit := false;
+			r_S_11.x_dest := r_PE_10.x_dest;
+			r_S_11.y_dest := r_PE_10.y_dest;
 			r_S_11.has_flit := true;
 			sending(a,r,s) := false;
 		}
@@ -329,7 +319,6 @@ object arb_PE_10 = {
 
 	#individual blocked : bool #now local, tells if arbiter is blocked
 	
-	individual faulty : bool
 	individual busy : bool
 	
 	type can_get_from = {r_w_10,r_n_10} #possibilities of routers that can have a packet to send
@@ -385,6 +374,7 @@ object r_W_10 = {
 	individual x_dest : coord
 	individual y_dest : coord
 	individual assigned : arbiter
+	individual ready : bool
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
@@ -394,14 +384,53 @@ object r_W_10 = {
 		}
 	}
 	
-	#now I need to add an action to decide where to assign flits?
-}  
+	action assigner = { #check the destination to determine which arbiter to assign.
+		require has_flit;
+		if x_dest = 1 & y_dest = 0 {
+			assigned := ape10;
+			ready := true;	
+		} else if x_dest = 1 & y_dest = 1 { #only if it's going directly north
+			if arb_N_10.faulty & ~arb_W_10.faulty & ~arb_W_10.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
+				assigned := aw10; #send it to the other arbiter if an10 is blocked.	
+				ready := true; #mark that it's ready to receive a packet
+			}
+			else if arb_N_10.busy { #if the receiver is busy, 
+				has_flit := false; #drop the flit to prevent deadlock
+				ready := false;
+			}
+			else { #if it's going north and everything's clear
+				require ~arb_N_10.faulty & ~arb_N_10.busy; #double check that it's clear
+				assigned := an10; #send north if it needs to go to (1,1)
+				ready := true;
+			}
+		}
+		else { #same as 110-123 but for packets not going to (1,1).
+			if arb_W_10.faulty & ~arb_N_10.faulty & ~arb_N_10.busy {
+				assigned := an10; #send it to the other arbiter if aw10 is blocked.
+				ready := true;
+			}
+			else if arb_W_10.busy {
+				has_flit := false;
+				ready := false;
+			}
+			else {
+				require ~arb_W_10.faulty & ~arb_N_10.busy;
+				assigned := aw10; #if it's not going to (1,1), send it west by default.
+				ready := true;
+			}
+		}	
+	}
+	
+} export r_W_10.assigner
+
+
 
 object r_N_10 = {
 	individual has_flit : bool
 	individual x_dest : coord
 	individual y_dest : coord
 	individual assigned : arbiter
+	individual ready : bool
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
@@ -411,13 +440,54 @@ object r_N_10 = {
 		}
 	}
 	
-} 
+	action assigner = { #check the destination to determine which arbiter to assign.
+		require has_flit;
+		if x_dest = 1 & y_dest = 0 {
+			assigned := ape10;
+			ready := true;	
+		} 
+		else if x_dest = 1 & y_dest = 1 { #only if it's going directly north
+			if arb_N_10.faulty & ~arb_W_10.faulty & ~arb_W_10.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
+				assigned := aw10; #send it to the other arbiter if an10 is blocked.	
+				ready := true; #mark that it's ready to receive a packet
+			}
+			else if arb_N_10.busy { #if the receiver is busy, 
+				has_flit := false; #drop the flit to prevent deadlock
+				ready := false;
+			}
+			else { #if it's going north and everything's clear
+				require ~arb_N_10.faulty & ~arb_N_10.busy; #double check that it's clear
+				assigned := an10; #send north if it needs to go to (1,1)
+				ready := true;
+			}
+		}
+		else { #same as 110-123 but for packets not going to (1,1).
+			if arb_W_10.faulty & ~arb_N_10.faulty & ~arb_N_10.busy {
+				assigned := an10; #send it to the other arbiter if aw10 is blocked.
+				ready := true;
+			}
+			else if arb_W_10.busy {
+				has_flit := false;
+				ready := false;
+			}
+			else {
+				require ~arb_W_10.faulty & ~arb_N_10.busy;
+				assigned := aw10; #if it's not going to (1,1), send it west by default.
+				ready := true;
+			}
+		}
+	
+	}
+} export r_N_10.assigner 
 
-object r_E_00 = {
+
+
+object r_E_00 = { #this will be more relevant when more parts are added
 	individual has_flit : bool
 	individual x_dest : coord
 	individual y_dest : coord
 	individual assigned : arbiter
+	individual ready : bool
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
@@ -425,13 +495,53 @@ object r_E_00 = {
 			arb_W_10.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 		}
 	}
-}  
+	
+	action assigner = { #check the destination to determine which arbiter to assign.
+		require has_flit;
+		if x_dest = 0 & y_dest = 0 {
+			#assigned := ape00;
+			#ready := true;	
+		} 
+		else if x_dest = 1 & y_dest = 1 { #only if it's going directly north
+			if arb_N_10.faulty & ~arb_W_10.faulty & ~arb_W_10.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
+				#assigned := aw10; #send it to the other arbiter if an10 is blocked.	
+				#ready := true; #mark that it's ready to receive a packet
+			}
+			else if arb_N_10.busy { #if the receiver is busy, 
+				has_flit := false; #drop the flit to prevent deadlock
+				ready := false;
+			}
+			else { #if it's going north and everything's clear
+				#require ~arb_N_10.faulty & ~arb_N_10.busy; #double check that it's clear
+				#assigned := an10; #send north if it needs to go to (1,1)
+				#ready := true;
+			}
+		}
+		else { #same as 110-123 but for packets not going to (1,1).
+			if arb_W_10.faulty & ~arb_N_10.faulty & ~arb_N_10.busy {
+				#assigned := an10; #send it to the other arbiter if aw10 is blocked.
+				#ready := true;
+			}
+			else if arb_W_10.busy {
+				has_flit := false;
+				ready := false;
+			}
+			else {
+				#require ~arb_W_10.faulty & ~arb_N_10.busy;
+				#assigned := aw10; #if it's not going to (1,1), send it west by default.
+				#ready := true;
+			}
+		}	
+	}
+} export r_E_00.assigner
+  
 
-object r_S_11 = {
+object r_S_11 = { #this will be more relevant once more parts are added
 	individual has_flit : bool
 	individual x_dest : coord
 	individual y_dest : coord
 	individual assigned : arbiter
+	individual ready : bool
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
@@ -439,7 +549,45 @@ object r_S_11 = {
 			arb_N_10.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 		}
 	}
-}  
+	
+	action assigner = { #check the destination to determine which arbiter to assign.
+		require has_flit;
+		if x_dest = 1 & y_dest = 1 {
+			#assigned := ape11;
+			#ready := true;	
+		} 
+		else if x_dest = 1 & y_dest = 1 { #only if it's going directly north
+			if arb_N_10.faulty & ~arb_W_10.faulty & ~arb_W_10.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
+				#assigned := aw10; #send it to the other arbiter if an10 is blocked.	
+				#ready := true; #mark that it's ready to receive a packet
+			}
+			else if arb_N_10.busy { #if the receiver is busy, 
+				has_flit := false; #drop the flit to prevent deadlock
+				ready := false;
+			}
+			else { #if it's going north and everything's clear
+				#require ~arb_N_10.faulty & ~arb_N_10.busy; #double check that it's clear
+				#assigned := an10; #send north if it needs to go to (1,1)
+				#ready := true;
+			}
+		}
+		else { #same as 110-123 but for packets not going to (1,1).
+			if arb_W_10.faulty & ~arb_N_10.faulty & ~arb_N_10.busy {
+				#assigned := an10; #send it to the other arbiter if aw10 is blocked.
+				#ready := true;
+			}
+			else if arb_W_10.busy {
+				has_flit := false;
+				ready := false;
+			}
+			else {
+				#require ~arb_W_10.faulty & ~arb_N_10.busy;
+				#assigned := aw10; #if it's not going to (1,1), send it west by default.
+				#ready := true;
+			}
+		}	
+	}
+} export r_S_11.assigner
 
 
 
