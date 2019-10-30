@@ -1,9 +1,5 @@
 #lang ivy1.7
 
-#describes routing protocol for r_PE_10 and its neighbors
-
-
-
 
 ####################
 #                  #
@@ -17,13 +13,7 @@ type arbiter = {an10,aw10,as11,ae00,an00,aw11,ape10} #list of arbiters (no under
 type router = {rn10,rw10,rs11,re00,rpe10} #list of routers (no underscores to differentiate)
 type coord = {0,1} #simple 0s and 1s the destination can be set to
 
-# relation link(F:flit,A:arbiter) #attaches an address to the flit - maybe not needed?
 relation sending(A:arbiter,R:router,S:router) #a link between an arbiter and the routers sending and receiving the packet
-
-#var assigned : arbiter #tells which arbiter is currently assigned
-
-#var x_dest : coord #x-coordinate of destination
-#var y_dest : coord #y-coordinate of destination
 
 
 
@@ -40,14 +30,16 @@ relation sending(A:arbiter,R:router,S:router) #a link between an arbiter and the
 object intf = { 
 	action check(f:flit,r:router,a:arbiter) #arbiter checks routers to see if they have packets - not super accurate, but the best I could come up with so far
 	action choose(s:router,r:router,a:arbiter) #if simultaneous requests, choose which to get
-	action send(s:router,r:router,a:arbiter) #once the router order is chosen, get flits from those routers and send to the next router
+	action send(s:router,r:router,a:arbiter) = {#once the router order is chosen, get flits from those routers and send to the next router
+		sending(a,r,s) := true;
+		sending(a,r,s) := false;
+	}
 }
 
 
 object spec = { #The specifications for actions to run
 
-    after init { 
-		#on startup, nothing is faulty
+    after init { #on startup, nothing is faulty
        	arb_N_10.faulty := false;
 		arb_W_10.faulty := false;
 		#arb_S_11.faulty := false;
@@ -160,8 +152,6 @@ export r_PE_10.send_flit
 
 object arb_N_10 = {
 
-	#individual blocked : bool #now local, tells if arbiter is blocked
-	
 	individual faulty : bool
 	individual busy : bool
 	
@@ -169,9 +159,9 @@ object arb_N_10 = {
 	individual get_from : can_get_from #where the arbiter decides to get from
 	individual rand : bool
 	
-	after init { 							#before the arbiter can get a flit, make sure that it's not blocked, that a flit exists,
-		require ~busy & ((r_PE_10.has_flit & r_PE_10.assigned = an10) | (r_W_10.has_flit & r_W_10.assigned = an10) | (r_N_10.has_flit & r_N_10.assigned = an10)); #  and that it's assigned here.
-		rand := *;
+	after init { #before the arbiter can get a flit, make sure that it's not blocked, that a flit exists, and that it's assigned here.
+		require ~busy & ((r_PE_10.has_flit & r_PE_10.assigned = an10) | (r_W_10.has_flit & r_W_10.assigned = an10) | (r_N_10.has_flit & r_N_10.assigned = an10)); 
+		rand := *; #arbitrarily choose either a true or a false.
 	}
 		
 	before move_flit(s:router,r:router,a:arbiter) { #check for simultaneous requests
@@ -181,7 +171,7 @@ object arb_N_10 = {
 					get_from := *;
 				}
 				else {
-					if rand = 1 {
+					if rand {
 						get_from := r_pe_10;
 					}
 					else {
@@ -195,7 +185,7 @@ object arb_N_10 = {
 		}	
 		else if r_W_10.has_flit & r_W_10.assigned = an10 {
 			if r_N_10.has_flit & r_N_10.assigned = an10 {
-				if rand = 1 {
+				if rand {
 					get_from := r_w_10;
 				}
 				else {
@@ -212,26 +202,24 @@ object arb_N_10 = {
 	}
 	
 	action move_flit(s:router,r:router,a:arbiter) = { 
-		call intf.send(s,r,a); #check the conditions to send a packet
+		call intf.send(s,r,a); #modify the sending relation
 		if get_from = r_pe_10 {
-			sending(a,r,s) := true; #I'll do more with this later, perhaps with specific names (see router and arbiter types)
-			r_PE_10.has_flit := false;
+			r_PE_10.has_flit := false; #send the packet and all its information
 			r_S_11.x_dest := r_PE_10.x_dest;
 			r_S_11.y_dest := r_PE_10.y_dest;
 			r_S_11.has_flit := true;
-			sending(a,r,s) := false;
 		}
 		else if get_from = r_w_10 {
-			sending(a,r,s) := true;
 			r_W_10.has_flit := false;
+			r_S_11.x_dest := r_W_10.x_dest;
+			r_S_11.y_dest := r_W_10.y_dest;
 			r_S_11.has_flit := true;
-			sending(a,r,s) := false;
 		}
 		else if get_from = r_n_10 {
-			sending(a,r,s) := true;
-			r_W_10.has_flit := false;
+			r_N_10.has_flit := false;
+			r_S_11.x_dest := r_N_10.x_dest;
+			r_S_11.y_dest := r_N_10.y_dest;
 			r_S_11.has_flit := true;
-			sending(a,r,s) := false;
 		}
 	}
 } export arb_N_10.move_flit
@@ -260,7 +248,7 @@ object arb_W_10 = {
 					get_from := *;
 				}
 				else {
-					if rand = 1 {
+					if rand {
 						get_from := r_pe_10;
 					}
 					else {
@@ -274,7 +262,7 @@ object arb_W_10 = {
 		}	
 		else if r_W_10.has_flit & r_W_10.assigned = aw10 {
 			if r_N_10.has_flit & r_N_10.assigned = aw10 {
-				if rand = 1 {
+				if rand {
 					get_from := r_w_10;
 				}
 				else {
@@ -290,25 +278,25 @@ object arb_W_10 = {
 		}
 	}
 	
-	action move_flit(s:router,r:router,a:arbiter) = {
-		call intf.send(s,r,a); #check the conditions to send a packet
-		if get_from = r_pe_10 {
-			sending(a,r,s) := true; #I'll do more with this later, perhaps with specific names (see router and arbiter types)
-			r_PE_10.has_flit := false; #The sender no longer has the flit
-			r_E_00.has_flit := true; #Now the receiver has the flit
-			sending(a,r,s) := false; #once it's done, it stops the sending relation
+	action move_flit(s:router,r:router,a:arbiter) = { 
+		call intf.send(s,r,a); #modify the sending relation
+		if get_from = r_pe_10 { #send the packet and all its information
+			r_PE_10.has_flit := false;
+			r_E_00.x_dest := r_PE_10.x_dest;
+			r_E_00.y_dest := r_PE_10.y_dest;
+			r_E_00.has_flit := true;
 		}
 		else if get_from = r_w_10 {
-			sending(a,r,s) := true;
 			r_W_10.has_flit := false;
+			r_E_00.x_dest := r_W_10.x_dest;
+			r_E_00.y_dest := r_W_10.y_dest;
 			r_E_00.has_flit := true;
-			sending(a,r,s) := false;
 		}
 		else if get_from = r_n_10 {
-			sending(a,r,s) := true;
-			r_W_10.has_flit := false;
+			r_N_10.has_flit := false;
+			r_E_00.x_dest := r_N_10.x_dest;
+			r_E_00.y_dest := r_N_10.y_dest;
 			r_E_00.has_flit := true;
-			sending(a,r,s) := false;
 		}
 	}
 } export arb_W_10.move_flit
@@ -342,17 +330,13 @@ object arb_PE_10 = {
 		}
 	}
 	
-	action move_flit(s:router,r:router,a:arbiter) = {
-		call intf.send(s,r,a); #check the conditions to send a packet
+	action move_flit(s:router,r:router,a:arbiter) = { 
+		call intf.send(s,r,a); #modify the sending relation
 		if get_from = r_w_10 {
-			sending(a,r,s) := true;
 			r_W_10.has_flit := false;
-			sending(a,r,s) := false;
 		}
 		else if get_from = r_n_10 {
-			sending(a,r,s) := true;
 			r_N_10.has_flit := false;
-			sending(a,r,s) := false;
 		}
 	}
 } export arb_PE_10.move_flit
