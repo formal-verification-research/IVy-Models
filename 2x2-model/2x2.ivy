@@ -184,39 +184,36 @@ object arb_N_10 = {
 	
 	before move_flit(s:router,r:router,a:arbiter) { #check for simultaneous requests
 		require assigned = an10;
-		if r_PE_10.has_flit & r_N_10.has_flit & r_W_10.has_flit {
-			call intf.choose(s,r,a); ########## Maybe doesn't need to exist  
-			get_from := *; #nondeterministically choose just one place to start. the other router will still have a packet at the end.
-		}
-		else if r_PE_10.has_flit & r_W_10.has_flit { #Nested if statements
-			if rand = 1 {
+		if r_PE_10.has_flit {
+			if r_W_10.has_flit {
+				if r_N_10.has_flit {
+					get_from := *;
+				}
+				else {
+					if rand = 1 {
+						get_from := r_pe_10;
+					}
+					else {
+						get_from := r_w_10;
+					}
+				}
+			}
+			else {
 				get_from := r_pe_10;
 			}
-			else {
-				get_from := r_w_10;
-			}
-		}
-		else if r_N_10.has_flit & r_W_10.has_flit {
-			if rand = 1 {
-				get_from := r_n_10;
-			}
-			else {
-				get_from := r_w_10;
-			}
-		}
-		else if r_PE_10.has_flit & r_N_10.has_flit {
-			if rand = 1 {
-				get_from := r_pe_10;
-			}
-			else {
-				get_from := r_n_10;
-			}
-		}
-		else if r_PE_10.has_flit {
-			get_from := r_pe_10;
-		}
+		}	
 		else if r_W_10.has_flit {
-			get_from := r_w_10;
+			if r_N_10.has_flit {
+				if rand = 1 {
+					get_from := r_w_10;
+				}
+				else {
+					get_from := r_n_10;
+				}
+			}
+			else {
+				get_from := r_w_10;
+			}
 		}
 		else if r_N_10.has_flit {
 			get_from := r_n_10;
@@ -265,39 +262,36 @@ object arb_W_10 = {
 	
 	before move_flit(s:router,r:router,a:arbiter) { #check for simultaneous requests
 		require assigned = aw10;
-		if r_PE_10.has_flit & r_N_10.has_flit & r_W_10.has_flit {
-			call intf.choose(s,r,a); 
-			get_from := *; #nondeterministically choose just one place to start. the other router will still have a packet at the end.
-		}
-		else if r_PE_10.has_flit & r_W_10.has_flit {
-			if rand = 1 {
+		if r_PE_10.has_flit {
+			if r_W_10.has_flit {
+				if r_N_10.has_flit {
+					get_from := *;
+				}
+				else {
+					if rand = 1 {
+						get_from := r_pe_10;
+					}
+					else {
+						get_from := r_w_10;
+					}
+				}
+			}
+			else {
 				get_from := r_pe_10;
 			}
-			else {
-				get_from := r_w_10;
-			}
-		}
-		else if r_N_10.has_flit & r_W_10.has_flit {
-			if rand = 1 {
-				get_from := r_n_10;
-			}
-			else {
-				get_from := r_w_10;
-			}
-		}
-		else if r_PE_10.has_flit & r_N_10.has_flit {
-			if rand = 1 {
-				get_from := r_pe_10;
-			}
-			else {
-				get_from := r_n_10;
-			}
-		}
-		else if r_PE_10.has_flit {
-			get_from := r_pe_10;
-		}
+		}	
 		else if r_W_10.has_flit {
-			get_from := r_w_10;
+			if r_N_10.has_flit {
+				if rand = 1 {
+					get_from := r_w_10;
+				}
+				else {
+					get_from := r_n_10;
+				}
+			}
+			else {
+				get_from := r_w_10;
+			}
 		}
 		else if r_N_10.has_flit {
 			get_from := r_n_10;
@@ -344,15 +338,18 @@ object arb_PE_10 = {
 	}
 	
 	before move_flit(s:router,r:router,a:arbiter) { #check for simultaneous requests
-		if (x_dest = 1 & y_dest = 0) & (r_N_10.has_flit & r_W_10.has_flit) {
-			call intf.choose(s,r,a); 
-			get_from := *; #nondeterministically choose just one place to start. the other router will still have a packet at the end.
+		require x_dest = 1 & y_dest = 0;
+		
+		if r_N_10.has_flit {
+			if r_W_10.has_flit {
+				get_from := *;
+			}
+			else {
+				get_from := r_n_10;
+			}
 		}
 		else if r_W_10.has_flit {
 			get_from := r_w_10;
-		}
-		else if r_N_10.has_flit {
-			get_from := r_n_10;
 		}
 	}
 	
