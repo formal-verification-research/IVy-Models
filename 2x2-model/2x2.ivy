@@ -13,7 +13,7 @@ type arbiter = {an10,aw10,as11,ae00,an00,aw11,ape10} #list of arbiters (no under
 type router = {rn10,rw10,rs11,re00,rpe10} #list of routers (no underscores to differentiate)
 type coord = {0,1} #simple 0s and 1s the destination can be set to
 type integer
-interpret integer -> int
+interpret integer -> nat
 
 relation sending(S:router,R:router,A:arbiter) #a link between an arbiter and the routers sending and receiving the packet
 
@@ -83,32 +83,30 @@ object history = { #right now, it only counts the history of arb_N_10 to see if 
 	action store_history(s:router,r:router,a:arbiter) = { #track the flit's route if it goes in a loop.
 		call arb_N_10.move_flit(s,r,a); 
 		if r_S_11.has_flit & num_loops < 5 {
-			call arb_S_11.move_flit(s,r,a);
-			if r_N_10.has_flit {
-				num_loops := num_loops + 1;
-				if num_loops < 5 {
-					#call history.store_history(s,r,a); #this creates an infinite loop...
+			while num_loops < 5 { #if this number is set higher than 4, the assertion below fails.
+				assert num_loops < 5; #this can be used to check for livelock, maybe?
+				call arb_S_11.move_flit(s,r,a); #see if it wants to keep going in the loop.
+				if r_N_10.has_flit {
+					num_loops := num_loops + 1; #add 1 to the loop counter
+					if num_loops < 5 {
+						call arb_N_10.move_flit(s,r,a); #let it keep going if it hasn't gone 4 times yet.
+					}
+					else {
+						r_S_11.has_flit := false; #drop the flit if it's gone around more than 4 times
+						num_loops := 0;	#reset the counter if the flit gets dropped
+					}
+					
 				}
 				else {
-					r_S_11.has_flit := false; #drop the flit if it's gone around more than 5 times
-					num_loops := 0;	
+					num_loops := 0; #reset the number of loops if the flit goes somewhere else
 				}
 			}
-			else {
-				num_loops := 0; #reset the number of loops if the flit goes somewhere else
-			}
 		}
-		else if num_loops >= 5 { #drop the flit if it's gone around more than 5 times
+		else if num_loops >= 5 { #drop the flit if it's gone around more than 4 times
+		#	assert num_loops < 5; # For testing purposes... it causes 2 failed checks.
 			r_S_11.has_flit := false;
 			num_loops := 0; 
 		}
-		else {
-			num_loops := 0; #reset the number of loops if the flit goes somewhere else
-		}
-	}
-	
-	after store_history(s:router,r:router,a:arbiter) {
-		
 	}
 	
 	execute store_history before intf.check
