@@ -140,12 +140,12 @@ object r_PE_10 = {
 	individual assigned : arbiter
 	
 	individual last_generated : int
-	individual id : int
+	individual id : int #the ID of the flit that is currently here
 	
 	after init {
 		has_flit := *; #maybe it has a flit, maybe it doesn't
 		ready := false; #it's not ready to send the flit quite yet.
-		last_generated := 0;
+		last_generated := 1;
 	}
 	
 	action generate(a:arbiter,r:router) = { #choosing the destination
@@ -268,21 +268,24 @@ object arb_N_10 = {
 	action move_flit(s:router,r:router,a:arbiter) = { 
 		call intf.send(s,r,a); #modify the sending relation
 		if get_from = r_pe_10 {
-			r_PE_10.has_flit := false; #send the packet and all its information
+			r_PE_10.has_flit := false; #copy over the packet and all its information
 			r_S_11.x_dest := r_PE_10.x_dest;
 			r_S_11.y_dest := r_PE_10.y_dest;
+			r_S_11.id := r_PE_10.id;
 			r_S_11.has_flit := true;
 		}
 		else if get_from = r_w_10 {
 			r_W_10.has_flit := false;
 			r_S_11.x_dest := r_W_10.x_dest;
 			r_S_11.y_dest := r_W_10.y_dest;
+			r_S_11.id := r_W_10.id;
 			r_S_11.has_flit := true;
 		}
 		else if get_from = r_n_10 {
 			r_N_10.has_flit := false;
 			r_S_11.x_dest := r_N_10.x_dest;
 			r_S_11.y_dest := r_N_10.y_dest;
+			r_S_11.id := r_N_10.id;
 			r_S_11.has_flit := true;
 		}
 	}
@@ -347,18 +350,21 @@ object arb_W_10 = {
 			r_PE_10.has_flit := false;
 			r_E_00.x_dest := r_PE_10.x_dest;
 			r_E_00.y_dest := r_PE_10.y_dest;
+			r_E_00.id := r_PE_10.id;
 			r_E_00.has_flit := true;
 		}
 		else if get_from = r_w_10 {
 			r_W_10.has_flit := false;
 			r_E_00.x_dest := r_W_10.x_dest;
 			r_E_00.y_dest := r_W_10.y_dest;
+			r_E_00.id := r_W_10.id;
 			r_E_00.has_flit := true;
 		}
 		else if get_from = r_n_10 {
 			r_N_10.has_flit := false;
 			r_E_00.x_dest := r_N_10.x_dest;
 			r_E_00.y_dest := r_N_10.y_dest;
+			r_E_00.id := r_N_10.id;
 			r_E_00.has_flit := true;
 		}
 		
@@ -424,11 +430,13 @@ object r_W_10 = {
 	individual y_dest : coord
 	individual assigned : arbiter
 	individual ready : bool
+	individual id : int #the ID of the flit that is currently here
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
 		if has_flit {
 			arb_E_00.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
+			id := 0; #don't give it an individual ID if it was in the system to begin with.
 		}
 	}
 	
@@ -437,7 +445,8 @@ object r_W_10 = {
 		if x_dest = 1 & y_dest = 0 {
 			assigned := ape10;
 			ready := true;	
-		} else if x_dest = 1 & y_dest = 1 { #only if it's going directly north
+		} 
+		else if x_dest = 1 & y_dest = 1 { #only if it's going directly north
 			if arb_N_10.faulty & ~arb_W_10.faulty & ~arb_W_10.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
 				assigned := aw10; #send it to the other arbiter if an10 is blocked.	
 				ready := true; #mark that it's ready to receive a packet
@@ -479,12 +488,14 @@ object r_N_10 = {
 	individual y_dest : coord
 	individual assigned : arbiter
 	individual ready : bool
+	individual id : int #the ID of the flit that is currently here
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
 		if has_flit {
 			#arb_S_11.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 			#this arbiter isn't modeled yet
+			id := 0; #don't give it an individual ID if it was in the system to begin with.
 		}
 	}
 	
@@ -596,18 +607,21 @@ object arb_E_00 = {
 		#	r_PE_00.has_flit := false;
 		#	r_W_10.x_dest := r_PE_00.x_dest;
 		#	r_W_10.y_dest := r_PE_00.y_dest;
+		#	r_W_10.id := r_PE_00.id;
 		#	r_W_10.has_flit := true;
 		}
 		else if get_from = r_e_00 {
 			r_E_00.has_flit := false;
 			r_W_10.x_dest := r_E_00.x_dest;
 			r_W_10.y_dest := r_E_00.y_dest;
+			r_W_10.id := r_E_00.id;
 			r_W_10.has_flit := true;
 		}
 		else if get_from = r_n_00 {
 		#	r_N_00.has_flit := false;
 		#	r_W_10.x_dest := r_N_00.x_dest;
 		#	r_W_10.y_dest := r_N_00.y_dest;
+		#	r_W_10.id := r_N_00.id;
 		#	r_W_10.has_flit := true;
 		}
 	}
@@ -620,11 +634,13 @@ object r_E_00 = { #this will be more relevant when more parts are added
 	individual y_dest : coord
 	individual assigned : arbiter
 	individual ready : bool
+	individual id : int #the ID of the flit that is currently here
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
 		if has_flit { 
 			arb_W_10.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
+			id := 0; #don't give it an individual ID if it was in the system to begin with.
 		}
 	}
 	
@@ -737,18 +753,21 @@ object arb_S_11 = {
 		#	r_PE_11.has_flit := false;
 		#	r_N_10.x_dest := r_PE_11.x_dest;
 		#	r_N_10.y_dest := r_PE_11.y_dest;
+		#	r_N_10.id := r_PE_11.id;
 		#	r_N_10.has_flit := true;
 		}
 		else if get_from = r_w_11 {
 		#	r_W_11.has_flit := false;
 		#	r_N_10.x_dest := r_W_11.x_dest;
 		#	r_N_10.y_dest := r_W_11.y_dest;
+		#	r_N_10.id := r_W_11.id;
 		#	r_N_10.has_flit := true;
 		}
 		else if get_from = r_s_11 {
 			r_S_11.has_flit := false;
 			r_N_10.x_dest := r_S_11.x_dest;
 			r_N_10.y_dest := r_S_11.y_dest;
+			r_N_10.id := r_S_11.id;
 			r_N_10.has_flit := true;
 		}
 	}
@@ -761,11 +780,13 @@ object r_S_11 = { #this will be more relevant once more parts are added
 	individual y_dest : coord
 	individual assigned : arbiter
 	individual ready : bool
+	individual id : int #the ID of the flit that is currently here
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
 		if has_flit {
 			arb_N_10.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
+			id := 0; #don't give it an individual ID if it was in the system to begin with.
 		}
 	}
 	
