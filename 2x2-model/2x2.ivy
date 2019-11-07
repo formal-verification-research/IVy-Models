@@ -428,10 +428,14 @@ object r_W_10 = {
 	
 	action counter = {
 		require has_flit & (id = spec.flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
-		tally := tally + 1;
-		if tally > 5 {
+		if tally < 5 {
+			tally := tally + 1;
+			assert tally <= 5;
+		}
+		else {
 			has_flit := false;
 			call intf.change_watch;
+			tally := 0;
 		}
 	}
 	
@@ -453,6 +457,7 @@ object r_N_10 = {
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
+		tally := 0;
 		if has_flit {
 			#arb_S_11.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 			#this arbiter isn't modeled yet
@@ -500,10 +505,14 @@ object r_N_10 = {
 	
 	action counter = {
 		require has_flit & (id = spec.flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
-		tally := tally + 1;
-		if tally > 5 {
+		if tally < 5 {
+			tally := tally + 1;
+			assert tally <= 5;
+		}
+		else {
 			has_flit := false;
 			call intf.change_watch;
+			tally := 0;
 		}
 	}
 	
@@ -612,6 +621,7 @@ object r_E_00 = { #this will be more relevant when more parts are added
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
+		tally := 0;
 		if has_flit { 
 			arb_W_10.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 			id := 0; #don't give it an individual ID if it was in the system to begin with.
@@ -658,10 +668,14 @@ object r_E_00 = { #this will be more relevant when more parts are added
 	
 	action counter = {
 		require has_flit & (id = spec.flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
-		tally := tally + 1;
-		if tally > 5 {
+		if tally < 5 {
+			tally := tally + 1;
+			assert tally <= 5;
+		}
+		else {
 			has_flit := false;
 			call intf.change_watch;
+			tally := 0;
 		}
 	}
 	
@@ -772,6 +786,7 @@ object r_S_11 = { #this will be more relevant once more parts are added
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
+		tally := 0;
 		if has_flit {
 			arb_N_10.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 			id := 0; #don't give it an individual ID if it was in the system to begin with.
@@ -818,10 +833,14 @@ object r_S_11 = { #this will be more relevant once more parts are added
 	
 	action counter = {
 		require has_flit & (id = spec.flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
-		tally := tally + 1;
-		if tally > 5 {
+		if tally < 5 {
+			tally := tally + 1;
+			assert tally <= 5;
+		}
+		else {
 			has_flit := false;
 			call intf.change_watch;
+			tally := 0;
 		}
 	}
 	
@@ -844,4 +863,8 @@ object r_S_11 = { #this will be more relevant once more parts are added
 #CHECKING FOR POSSIBILITIES OF DEADLOCK
 #Because there are only a few routers, this is not complete yet.
 invariant ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_10.assigned = aw11)) #preventing deadlock???
+invariant r_S_11.tally <= 5
+invariant r_E_00.tally <= 5
+invariant r_N_10.tally <= 5
+invariant r_W_10.tally <= 5 #when you change the 5 to a 4 on any of these, it fails ivy_check... that seems promising.
 
