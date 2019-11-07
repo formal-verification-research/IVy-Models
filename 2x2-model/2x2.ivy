@@ -57,6 +57,7 @@ object spec = { #The specifications for actions to run
 	
 	before intf.check {
 		require ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_10.assigned = aw11)); #preventing deadlock???
+		#this will work much better once the model has been expanded to include the other nodes.
 	}
 	
 	before intf.choose {
@@ -864,6 +865,10 @@ object r_S_11 = { #this will be more relevant once more parts are added
 #CHECKING FOR POSSIBILITIES OF DEADLOCK
 #Because there are only a few routers, this is not complete yet.
 invariant ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_10.assigned = aw11)) #preventing deadlock???
+	#this will work much better once the model has been expanded to include the other nodes.
+
+
+#CHECKING FOR POSSIBILITIES OF LIVELOCK
 invariant r_S_11.tally <= 5
 invariant r_E_00.tally <= 5
 invariant r_N_10.tally <= 5
