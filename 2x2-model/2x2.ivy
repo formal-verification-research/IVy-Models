@@ -9,7 +9,8 @@
 
 
 type int #maybe there's a good way to use abstract datatypes (http://microsoft.github.io/ivy/examples/datatypes.html) instead of integers...
-interpret int -> int
+interpret int -> int #right now, int just means it has the integer type.
+
 type arbiter = {an10,aw10,as11,ae00,an00,aw11,ape10} #list of arbiters (no underscores to differentiate)
 type router = {rn10,rw10,rs11,re00,rpe10} #list of routers (no underscores to differentiate)
 type coord = {0,1} #simple 0s and 1s the destination can be set to
@@ -123,7 +124,7 @@ object r_PE_10 = {
 					ready := true;
 				}
 				else if arb_W_10.busy {
-					has_flit := false;
+					has_flit := false; #if it looks like it could cause deadlock, drop the flit.
 					ready := false;
 				}
 				else {
@@ -429,17 +430,17 @@ object r_W_10 = {
 	action counter = {
 		require has_flit & (id = spec.flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
 		if tally < 5 {
-			tally := tally + 1;
+			tally := tally + 1; #only increment the counter if it's 4 or less.
 			assert tally <= 5;
 		}
-		else {
-			has_flit := false;
-			call intf.change_watch;
-			tally := 0;
+		else { #if the certain flit has been here more than 5 times... NOTE: eventually, this will have to also deal with other routers.
+			has_flit := false; #drop flit
+			call intf.change_watch; #change the ID of the flit that's being watched
+			tally := 0; #reset the counter
 		}
 	}
 	
-	execute counter before assigner
+	execute counter before assigner #make sure to count the visits before sending the flit somewhere.
 	
 } export r_W_10.assigner
   export r_W_10.counter
