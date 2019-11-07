@@ -56,18 +56,15 @@ object spec = { #The specifications for actions to run
 	}
 	
 	before intf.check {
-		require r_PE_10.has_flit | r_W_10.has_flit | r_E_00.has_flit | r_N_10.has_flit | r_S_11.has_flit;
-		#require that at least someone has a flit before it can be sent to an arbiter
+		require ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_10.assigned = aw11)); #preventing deadlock???
 	}
 	
 	before intf.choose {
-		require (r_PE_10.has_flit & r_W_10.has_flit) | (r_N_10.has_flit & r_W_10.has_flit) | (r_PE_10.has_flit & r_N_10.has_flit);
-		#require that two routers have flits to send to the same arbiter in order to choose one to serve
-		#eventually I'll add logic to check the destination as well
+		
 	}
 	
 	before intf.send {
-		#eventually require something clever
+		
 	}
 	
 } 
@@ -843,4 +840,10 @@ object r_S_11 = { #this will be more relevant once more parts are added
 ####################
 
 #None needed by ivy_check. I'll see if I can come up with some.
+
+
+#CHECKING FOR POSSIBILITIES OF DEADLOCK
+#Because there are only a few routers, this is not complete yet.
+#invariant ~(r_PE_10.ready & ~(r_W_10.has_flit & r_S_11.has_flit)
+
 
