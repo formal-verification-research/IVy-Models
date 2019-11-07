@@ -29,7 +29,7 @@ relation sending(S:router,R:router,A:arbiter) #a link between an arbiter and the
 
 
 object intf = { 
-	action assign_int
+	action change_watch
 	action check(s:router,r:router,a:arbiter) #arbiter checks routers to see if they have packets - not super accurate, but the best I could come up with so far
 	action choose(s:router,r:router,a:arbiter) #if simultaneous requests, choose which to get
 	action send(s:router,r:router,a:arbiter) = {#once the router order is chosen, get flits from those routers and send to the next router
@@ -51,8 +51,8 @@ object spec = { #The specifications for actions to run
 		flit_to_watch := *;
 	}
 	
-	before intf.assign_int {
-	
+	before intf.change_watch {
+		flit_to_watch := *;
 	}
 	
 	before intf.check {
@@ -431,9 +431,11 @@ object r_W_10 = {
 	individual assigned : arbiter
 	individual ready : bool
 	individual id : int #the ID of the flit that is currently here
+	individual tally : int
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
+		tally := 0;
 		if has_flit {
 			arb_E_00.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 			id := 0; #don't give it an individual ID if it was in the system to begin with.
@@ -478,7 +480,19 @@ object r_W_10 = {
 		}	
 	}
 	
+	action counter = {
+		require has_flit & (id = spec.flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
+		tally := tally + 1;
+		if tally > 5 {
+			has_flit := false;
+			call intf.change_watch;
+		}
+	}
+	
+	execute counter before assigner
+	
 } export r_W_10.assigner
+  export r_W_10.counter
 
 
 
@@ -489,6 +503,7 @@ object r_N_10 = {
 	individual assigned : arbiter
 	individual ready : bool
 	individual id : int #the ID of the flit that is currently here
+	individual tally : int
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
@@ -535,9 +550,21 @@ object r_N_10 = {
 				ready := true;
 			}
 		}
-	
 	}
+	
+	action counter = {
+		require has_flit & (id = spec.flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
+		tally := tally + 1;
+		if tally > 5 {
+			has_flit := false;
+			call intf.change_watch;
+		}
+	}
+	
+	execute counter before assigner
+	
 } export r_N_10.assigner 
+  export r_N_10.counter
 
 
 
@@ -635,6 +662,7 @@ object r_E_00 = { #this will be more relevant when more parts are added
 	individual assigned : arbiter
 	individual ready : bool
 	individual id : int #the ID of the flit that is currently here
+	individual tally : int
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
@@ -681,7 +709,20 @@ object r_E_00 = { #this will be more relevant when more parts are added
 			}
 		}	
 	}
+	
+	action counter = {
+		require has_flit & (id = spec.flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
+		tally := tally + 1;
+		if tally > 5 {
+			has_flit := false;
+			call intf.change_watch;
+		}
+	}
+	
+	execute counter before assigner
+	
 } export r_E_00.assigner
+  export r_E_00.counter
   
   
   
@@ -781,6 +822,7 @@ object r_S_11 = { #this will be more relevant once more parts are added
 	individual assigned : arbiter
 	individual ready : bool
 	individual id : int #the ID of the flit that is currently here
+	individual tally : int
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
@@ -827,7 +869,20 @@ object r_S_11 = { #this will be more relevant once more parts are added
 			}
 		}	
 	}
+	
+	action counter = {
+		require has_flit & (id = spec.flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
+		tally := tally + 1;
+		if tally > 5 {
+			has_flit := false;
+			call intf.change_watch;
+		}
+	}
+	
+	execute counter before assigner
+	
 } export r_S_11.assigner
+  export r_S_11.counter
 
 
 
