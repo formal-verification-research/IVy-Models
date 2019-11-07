@@ -8,14 +8,13 @@
 ####################
 
 
-type int
+type int #maybe there's a good way to use abstract datatypes (http://microsoft.github.io/ivy/examples/datatypes.html) instead of integers...
 interpret int -> int
 type arbiter = {an10,aw10,as11,ae00,an00,aw11,ape10} #list of arbiters (no underscores to differentiate)
 type router = {rn10,rw10,rs11,re00,rpe10} #list of routers (no underscores to differentiate)
 type coord = {0,1} #simple 0s and 1s the destination can be set to
 
 relation sending(S:router,R:router,A:arbiter) #a link between an arbiter and the routers sending and receiving the packet
-
 
 
 
@@ -32,7 +31,7 @@ object intf = {
 	action change_watch
 	action check(s:router,r:router,a:arbiter) #arbiter checks routers to see if they have packets - not super accurate, but the best I could come up with so far
 	action choose(s:router,r:router,a:arbiter) #if simultaneous requests, choose which to get
-	action send(s:router,r:router,a:arbiter) = {#once the router order is chosen, get flits from those routers and send to the next router
+	action send(s:router,r:router,a:arbiter) = { #once the router order is chosen, get flits from those routers and send to the next router
 		sending(s,r,a) := true;
 		sending(s,r,a) := false;
 	}
@@ -92,7 +91,7 @@ object r_PE_10 = {
 	after init {
 		has_flit := *; #maybe it has a flit, maybe it doesn't
 		ready := false; #it's not ready to send the flit quite yet.
-		last_generated := 1;
+		last_generated := 0; #start off with an ID of 1.
 	}
 	
 	action generate(a:arbiter,r:router) = { #choosing the destination
@@ -100,7 +99,7 @@ object r_PE_10 = {
 		if has_flit {
 			x_dest := *; #arbitrarily chooses
 	        y_dest := *; #arbitrarily chooses
-			id := last_generated + 1;
+			id := last_generated + 1; #give the flit a sequential ID
 			ensure id > last_generated;
 			last_generated := id;
 	        if x_dest = 1 & y_dest = 1 { #only if it's going directly north
@@ -844,6 +843,5 @@ object r_S_11 = { #this will be more relevant once more parts are added
 
 #CHECKING FOR POSSIBILITIES OF DEADLOCK
 #Because there are only a few routers, this is not complete yet.
-#invariant ~(r_PE_10.ready & ~(r_W_10.has_flit & r_S_11.has_flit)
-
+invariant ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_10.assigned = aw11)) #preventing deadlock???
 
