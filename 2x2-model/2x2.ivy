@@ -48,7 +48,9 @@ object spec = { #The specifications for actions to run
 		arb_W_10.faulty := false;
 		arb_S_11.faulty := false;
 		arb_E_00.faulty := true; 
-		flit_to_watch := *;
+	flit_to_watch := *;
+	r_S_11.tally :=0;
+	r_N_10.tally :=0;
 	}
 	
 	before intf.change_watch {
@@ -100,7 +102,7 @@ object r_PE_10 = {
 		
 		if has_flit {
 			x_dest := *; #arbitrarily chooses
-	        y_dest := *; #arbitrarily chooses
+	                y_dest := *; #arbitrarily chooses
 			id := last_generated + 1; #give the flit a sequential ID
 			ensure id > last_generated;
 			last_generated := id;
@@ -383,7 +385,7 @@ object r_W_10 = {
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
-		tally := 0;
+		# tally := 0;
 		if has_flit {
 			arb_E_00.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 			id := 0; #don't give it an individual ID if it was in the system to begin with.
@@ -429,16 +431,19 @@ object r_W_10 = {
 	}
 	
 	action counter = {
-		require has_flit & (id = flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
-		if tally < 5 {
-			tally := tally + 1; #only increment the counter if it's 4 or less.
-			assert tally <= 5;
-		}
-		else { #if the certain flit has been here more than 5 times... NOTE: eventually, this will have to also deal with other routers.
-			has_flit := false; #drop flit
-			call intf.change_watch; #change the ID of the flit that's being watched
-			tally := 0; #reset the counter
-		}
+		require has_flit & (id = flit_to_watch); #only proceed
+	#if it has a flit and the ID is the assigned ID to watch
+	        assert id = flit_to_watch;
+		# if tally < 5 {
+		# 	tally := tally + 1; #only increment the counter if it's 4 or less.
+		# 	assert tally <= 5;
+		# }
+		# else { #if the certain flit has been here more than 5 times... NOTE: eventually, this will have to also deal with other routers.
+		# 	has_flit := false; #drop flit
+		# 	call intf.change_watch; #change the ID of the flit that's being watched
+		# 	tally := 0; #reset the counter
+	        # }
+	        tally := tally + 1;
 	}
 	
 	execute counter before assigner #make sure to count the visits before sending the flit somewhere.
@@ -506,16 +511,19 @@ object r_N_10 = {
 	}
 	
 	action counter = {
-		require has_flit & (id = flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
-		if tally < 5 {
-			tally := tally + 1;
-			assert tally <= 5;
-		}
-		else {
-			has_flit := false;
-			call intf.change_watch;
-			tally := 0;
-		}
+		require has_flit & (id = flit_to_watch); #only proceed
+	#if it has a flit and the ID is the assigned ID to watch
+                assert id = flit_to_watch;
+		# if tally < 5 {
+		# 	tally := tally + 1;
+		# 	assert tally <= 5;
+		# }
+		# else {
+		# 	has_flit := false;
+		# 	call intf.change_watch;
+		# 	tally := 0;
+	    # }
+	        tally := tally + 1;
 	}
 	
 	execute counter before assigner
@@ -670,15 +678,16 @@ object r_E_00 = { #this will be more relevant when more parts are added
 	
 	action counter = {
 		require has_flit & (id = flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
-		if tally < 5 {
-			tally := tally + 1;
-			assert tally <= 5;
-		}
-		else {
-			has_flit := false;
-			call intf.change_watch;
-			tally := 0;
-		}
+		# if tally < 5 {
+		# 	tally := tally + 1;
+		# 	assert tally <= 5;
+		# }
+		# else {
+		# 	has_flit := false;
+		# 	call intf.change_watch;
+		# 	tally := 0;
+	    # }
+ 	        tally := tally + 1;
 	}
 	
 	execute counter before assigner
@@ -788,7 +797,7 @@ object r_S_11 = { #this will be more relevant once more parts are added
 	
 	after init {
 		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
-		tally := 0;
+		# tally := 0;
 		if has_flit {
 			arb_N_10.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
 			id := 0; #don't give it an individual ID if it was in the system to begin with.
@@ -834,16 +843,19 @@ object r_S_11 = { #this will be more relevant once more parts are added
 	}
 	
 	action counter = {
-		require has_flit & (id = flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
-		if tally < 5 {
-			tally := tally + 1;
-			assert tally <= 5;
-		}
-		else {
-			has_flit := false;
-			call intf.change_watch;
-			tally := 0;
-		}
+		require has_flit & (id = flit_to_watch); #only proceed
+	#if it has a flit and the ID is the assigned ID to watch
+       	        assert id = flit_to_watch;
+		# if tally < 5 {
+		# 	tally := tally + 1;
+		# 	assert tally <= 5;
+		# }
+		# else {
+		# 	has_flit := false;
+		# 	call intf.change_watch;
+		# 	tally := 0;
+	    # }
+	        tally := tally + 1;
 	}
 	
 	execute counter before assigner
@@ -869,8 +881,10 @@ invariant ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_
 
 
 #CHECKING FOR POSSIBILITIES OF LIVELOCK
-invariant r_S_11.tally <= 5
-invariant r_E_00.tally <= 5
-invariant r_N_10.tally <= 5
-invariant r_W_10.tally <= 5 #when you change the 5 to a 4 on any of these, it fails ivy_check... that seems promising.
+# invariant r_S_11.tally <= 5
+# invariant r_E_00.tally <= 5
+# invariant r_N_10.tally <= 5
+# invariant r_W_10.tally <= 5 #when you change the 5 to a 4 on any of
+# these, it fails ivy_check... that seems promising.
+invariant ~(r_S_11.tally > 5) & ~(r_N_10.tally > 5)
 
