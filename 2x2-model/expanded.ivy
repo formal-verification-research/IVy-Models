@@ -7,15 +7,16 @@
 ###########################################################
 
 type int #maybe there's a good way to use abstract datatypes ( http://microsoft.github.io/ivy/examples/datatypes.html ) instead of integers...
-interpret int -> nat #right now, int just means it has the integer type.
+interpret int -> bv[16] #right now, int just means it has the integer type.
 
-type arbiter = {an10,aw10,ape10,an00,ae00,ape00,as01,ae01,ape01,as11,aw11,ape11} #list of arbiters (no underscores to differentiate)
-type router = {rn10,rw10,rpe10,rn00,re00,rpe00,rs01,re01,rpe01,rs11,rw11,rpe11} #list of routers (no underscores to differentiate)
+type arbiter = {void,an10,aw10,ape10,an00,ae00,ape00,as01,ae01,ape01,as11,aw11,ape11} #list of arbiters (no underscores to differentiate)
+type router = {null,rn10,rw10,rpe10,rn00,re00,rpe00,rs01,re01,rpe01,rs11,rw11,rpe11} #list of routers (no underscores to differentiate)
 type coord = {0,1} #simple 0s and 1s the destination can be set to
 
 relation sending(S:router,R:router,A:arbiter) #a link between an arbiter and the routers sending and receiving the packet
 
 var flit_to_watch : int
+var last_generated : int
 
 
 
@@ -27,6 +28,7 @@ var flit_to_watch : int
 object intf = { 
 	action change_watch = {
 		flit_to_watch := *;
+		assert flit_to_watch > 0;
 	}
 	action check(s:router,r:router,a:arbiter) = { #arbiter checks routers to see if they have packets - not super accurate, but the best I could come up with so far
 		
@@ -49,10 +51,11 @@ object spec = { #The specifications for actions to run
 		arb_E_00.faulty := false;
 		arb_N_00.faulty := false;
 		flit_to_watch := *;
+		last_generated := 0;
 	}
 	
 	before intf.change_watch {
-		
+		flit_to_watch := *;
 	}
 	
 	before intf.check {
@@ -120,21 +123,20 @@ object r_PE_10 = {
 	individual y_dest : coord
 	individual assigned : arbiter
 	
-	individual last_generated : int
 	individual id : int #the ID of the flit that is currently here
 	
 	after init {
 		has_flit := *; #maybe it has a flit, maybe it doesn't
 		ready := false; #it's not ready to send the flit quite yet.
-		last_generated := 0; #start off with an ID of 1.
+		assigned := void;
 	}
 	
-	action generate(a:arbiter,r:router) = { #choosing the destination
+	action generate = { #choosing the destination
 		require has_flit;
 		x_dest := *; #arbitrarily chooses
 		y_dest := *; #arbitrarily chooses
 		id := last_generated + 1; #give the flit a sequential ID
-		ensure id > last_generated;
+		require id > last_generated;
 		last_generated := id;
 		if x_dest = 1 & y_dest = 1 { #only if it's going directly north
 			if arb_N_10.faulty & ~arb_W_10.faulty & ~arb_W_10.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
@@ -459,13 +461,11 @@ object r_PE_00 = {
 	individual y_dest : coord
 	individual assigned : arbiter
 	
-	individual last_generated : int
 	individual id : int #the ID of the flit that is currently here
 	
 	after init {
 		has_flit := *; #maybe it has a flit, maybe it doesn't
 		ready := false; #it's not ready to send the flit quite yet.
-		last_generated := 0; #start off with an ID of 1.
 	}
 	
 	action generate(a:arbiter,r:router) = { #choosing the destination
@@ -473,7 +473,7 @@ object r_PE_00 = {
 		x_dest := *; #arbitrarily chooses
 		y_dest := *; #arbitrarily chooses
 		id := last_generated + 1; #give the flit a sequential ID
-		ensure id > last_generated;
+		require id > last_generated;
 		last_generated := id;
 		if x_dest = 1 & y_dest = 0 { #only if it's going directly north
 			if arb_E_00.faulty & ~arb_N_00.faulty & ~arb_N_00.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
@@ -802,13 +802,11 @@ object r_PE_01 = {
 	individual y_dest : coord
 	individual assigned : arbiter
 	
-	individual last_generated : int
 	individual id : int #the ID of the flit that is currently here
 	
 	after init {
 		has_flit := *; #maybe it has a flit, maybe it doesn't
 		ready := false; #it's not ready to send the flit quite yet.
-		last_generated := 0; #start off with an ID of 1.
 	}
 	
 	action generate(a:arbiter,r:router) = { #choosing the destination
@@ -816,7 +814,7 @@ object r_PE_01 = {
 		x_dest := *; #arbitrarily chooses
 		y_dest := *; #arbitrarily chooses
 		id := last_generated + 1; #give the flit a sequential ID
-		ensure id > last_generated;
+		require id > last_generated;
 		last_generated := id;
 		if x_dest = 0 & y_dest = 0 { #only if it's going directly north
 			if arb_S_01.faulty & ~arb_E_01.faulty & ~arb_E_01.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
@@ -1152,7 +1150,6 @@ object r_PE_11 = {
 	after init {
 		has_flit := *; #maybe it has a flit, maybe it doesn't
 		ready := false; #it's not ready to send the flit quite yet.
-		last_generated := 0; #start off with an ID of 1.
 	}
 	
 	action generate(a:arbiter,r:router) = { #choosing the destination
@@ -1160,7 +1157,7 @@ object r_PE_11 = {
 		x_dest := *; #arbitrarily chooses
 		y_dest := *; #arbitrarily chooses
 		id := last_generated + 1; #give the flit a sequential ID
-		ensure id > last_generated;
+		require id > last_generated;
 		last_generated := id;
 		if x_dest = 0 & y_dest = 1 { #only if it's going directly north
 			if arb_W_11.faulty & ~arb_S_11.faulty & ~arb_S_11.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
@@ -1486,7 +1483,7 @@ instance r_W_11 : r_x_11
 
 #CHECKING FOR POSSIBILITIES OF DEADLOCK
 #Because there are only a few routers, this is not complete yet.
-#invariant ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_10.assigned = aw11)) #preventing deadlock???
+invariant ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_10.assigned = aw11)) #preventing deadlock???
 	#this will work much better once the model has been expanded to include the other nodes.
 
 
@@ -1496,6 +1493,6 @@ instance r_W_11 : r_x_11
 # invariant r_N_10.tally <= 5
 # invariant r_W_10.tally <= 5 #when you change the 5 to a 4 on any of
 # these, it fails ivy_check... that seems promising.
-#invariant ~(r_S_11.tally > 5) & ~(r_N_10.tally > 5)
+# invariant ~(r_S_11.tally > 5) & ~(r_N_10.tally > 5)
 
 
