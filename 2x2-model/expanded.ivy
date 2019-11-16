@@ -7,10 +7,10 @@
 ###########################################################
 
 type int #maybe there's a good way to use abstract datatypes ( http://microsoft.github.io/ivy/examples/datatypes.html ) instead of integers...
-interpret int -> bv[16] #right now, int just means it has the integer type.
+interpret int -> nat #right now, int just means it has the integer type.
 
-type arbiter = {an10,aw10,as11,ae00,an00,aw11,ape10} #list of arbiters (no underscores to differentiate)
-type router = {rn10,rw10,rs11,re00,rpe10} #list of routers (no underscores to differentiate)
+type arbiter = {an10,aw10,ape10,an00,ae00,ape00,as01,ae01,ape01,as11,aw11,ape11} #list of arbiters (no underscores to differentiate)
+type router = {rn10,rw10,rpe10,rn00,re00,rpe00,rs01,re01,rpe01,rs11,rw11,rpe11} #list of routers (no underscores to differentiate)
 type coord = {0,1} #simple 0s and 1s the destination can be set to
 
 relation sending(S:router,R:router,A:arbiter) #a link between an arbiter and the routers sending and receiving the packet
@@ -40,7 +40,7 @@ object intf = {
 object spec = { #The specifications for actions to run
 
     after init { #on startup, nothing is faulty
-       	arb_N_10.faulty := false;
+		arb_N_10.faulty := false;
 		arb_W_10.faulty := false;
 		arb_S_01.faulty := false;
 		arb_E_01.faulty := false;
@@ -178,7 +178,7 @@ object r_PE_10 = {
    
 } #closeob
 
-object arb_W_10(r:router,s:router,a:arbiter) = {
+object arb_W_10 = {
 	
 	individual faulty : bool
 	individual busy : bool
@@ -256,11 +256,11 @@ object arb_W_10(r:router,s:router,a:arbiter) = {
 	export move_flit
 } #closeob 
 
-object arb_N_10(r:router,s:router,a:arbiter) = {
+object arb_N_10 = {
 	
 	individual faulty : bool
 	individual busy : bool
-	
+		
 	type can_get_from = {void,r_pe_10,r_w_10,r_n_10} #possibilities of routers that can have a packet to send
 	individual get_from : can_get_from #where the arbiter decides to get from
 	individual rand : bool
@@ -336,7 +336,7 @@ object arb_N_10(r:router,s:router,a:arbiter) = {
 	export move_flit
 } #closeob 
 
-object arb_PE_10(r:router,s:router,a:arbiter) = {
+object arb_PE_10 = {
 	
 	individual busy : bool
 	
@@ -517,7 +517,7 @@ object r_PE_00 = {
    
 } #closeob
 
-object arb_E_00(r:router,s:router,a:arbiter) = {
+object arb_E_00 = {
 	
 	individual faulty : bool
 	individual busy : bool
@@ -595,7 +595,7 @@ object arb_E_00(r:router,s:router,a:arbiter) = {
 	export move_flit
 } #closeob 
 
-object arb_N_00(r:router,s:router,a:arbiter) = {
+object arb_N_00 = {
 	
 	individual faulty : bool
 	individual busy : bool
@@ -673,7 +673,7 @@ object arb_N_00(r:router,s:router,a:arbiter) = {
 	export move_flit
 } #closeob 
 
-object arb_PE_00(r:router,s:router,a:arbiter) = {
+object arb_PE_00 = {
 	
 	individual busy : bool
 	
@@ -860,7 +860,7 @@ object r_PE_01 = {
    
 } #closeob
 
-object arb_E_01(r:router,s:router,a:arbiter) = {
+object arb_E_01 = {
 	
 	individual faulty : bool
 	individual busy : bool
@@ -938,7 +938,7 @@ object arb_E_01(r:router,s:router,a:arbiter) = {
 	export move_flit
 } #closeob 
 
-object arb_S_01(r:router,s:router,a:arbiter) = {
+object arb_S_01 = {
 	
 	individual faulty : bool
 	individual busy : bool
@@ -1016,7 +1016,7 @@ object arb_S_01(r:router,s:router,a:arbiter) = {
 	export move_flit
 } #closeob 
 
-object arb_PE_01(r:router,s:router,a:arbiter) = {
+object arb_PE_01 = {
 	
 	individual busy : bool
 	
@@ -1205,7 +1205,7 @@ object r_PE_11 = {
    
 } #closeob
 
-object arb_W_11(r:router,s:router,a:arbiter) = {
+object arb_W_11 = {
 	
 	individual faulty : bool
 	individual busy : bool
@@ -1283,7 +1283,7 @@ object arb_W_11(r:router,s:router,a:arbiter) = {
 	export move_flit
 } #closeob 
 
-object arb_S_11(r:router,s:router,a:arbiter) = {
+object arb_S_11 = {
 	
 	individual faulty : bool
 	individual busy : bool
@@ -1361,7 +1361,7 @@ object arb_S_11(r:router,s:router,a:arbiter) = {
 	export move_flit
 } #closeob 
 
-object arb_PE_11(r:router,s:router,a:arbiter) = {
+object arb_PE_11 = {
 	
 	individual busy : bool
 	
