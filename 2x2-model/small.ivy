@@ -32,7 +32,7 @@ var packet : flit #the only packet in the system right now
 
 object spec = { #The specifications for actions to run
 
-    after init { #on startup, nothing is faulty
+    after init { #on startup, tallies are 0 and the packet is assigned the id chosen to watch.
 		id(packet) := id(flit_to_watch);
 		r_S_11.tally := 0;
 		r_N_10.tally := 0;
@@ -58,20 +58,20 @@ object r_PE_10 = {
 
 	action generate = { #this one only generates a single flit.
 		require has_flit;
-	#	id(packet) := *; #assign the flit an ID
 		id(flit_to_watch) := id(packet); #the ID is always the one to watch in this small model
 		ensure id(flit_to_watch) = id(packet);
-		assigned := an10; #send north if it needs to go to (1,1)
+		assigned := an10; #send north
 		ready := true;
 		call send_flit;
     }
 	
 	action send_flit = {
 		ensure has_flit & ready;
-		call arb_N_10.move_flit;
+		call arb_N_10.move_flit; #tell the arbiter it's ready
 	}
 
 } export r_PE_10.generate
+#closeob
 
 
 
@@ -84,7 +84,6 @@ object arb_N_10 = {
 	
 	type can_get_from = {r_pe_10,r_n_10} #possibilities of routers that can have a packet to send
 	individual get_from : can_get_from #where the arbiter decides to get from
-	individual rand : bool
 	
 	after init { #before the arbiter can get a flit, make sure that a flit exists, and that it's assigned here.
 		require (r_PE_10.has_flit & r_PE_10.assigned = an10) | (r_N_10.has_flit & r_N_10.assigned = an10); 
@@ -117,23 +116,21 @@ object arb_N_10 = {
 	}
 	
 } export arb_N_10.move_flit
+#closeob
+
 
 
 object arb_S_11 = {
-	
-	individual faulty : bool
-	individual busy : bool
-	
+
 	type can_get_from = {r_pe_11,r_s_11} #possibilities of routers that can have a packet to send
 	individual get_from : can_get_from #where the arbiter decides to get from
-	individual rand : bool
 	
-	after init { #before the arbiter can get a flit, make sure that it's not blocked, that a flit exists, and that it's assigned here.
+	after init { #before the arbiter can get a flit, make sure that a flit exists, and that it's assigned here.
 		require r_S_11.has_flit & r_S_11.assigned = as11; 
 	}
 	
-	before move_flit { #check for simultaneous requests
-		get_from := r_s_11; #for now, always send to r_S_11 to create livelock
+	before move_flit { 
+		get_from := r_s_11; 
 	}
 	
 	action move_flit = { 
@@ -143,6 +140,8 @@ object arb_S_11 = {
 	}
 	
 } export arb_S_11.move_flit
+#closeob
+
 
 
 ###################
@@ -157,26 +156,27 @@ object r_N_10 = {
 	individual tally : int
 	
 	after init {
-		has_flit := false; #it may already have a flit when r_PE_10 generates a flit
+		has_flit := false; 
 		tally := 0;
 		id(packet) := id(flit_to_watch);
 	}
 	
-	action assigner = { #check the destination to determine which arbiter to assign.
-		require has_flit & (id(packet) = id(flit_to_watch)); #only proceed
-		assigned := an10; #send north if it needs to go to (1,1)
+	action assigner = { 
+		require has_flit & (id(packet) = id(flit_to_watch)); 
+		assigned := an10; #send north
 		ready := true;
 		call counter;
+		call arb_N_10.move_flit; #tell the arbiter it's ready
 	}
 	
 	action counter = {
-		require has_flit & (id(packet) = id(flit_to_watch)); #only proceed
-		#if it has a flit and the ID is the assigned ID to watch
-        assert id(packet) = id(flit_to_watch);
+		require has_flit & (id(packet) = id(flit_to_watch)); 
 		tally := tally + 1;
 	}
 		
 } export r_N_10.assigner 
+#closeob
+
 
 
 object r_S_11 = {
@@ -186,36 +186,33 @@ object r_S_11 = {
 	individual tally : int
 	
 	after init {
-		has_flit := false; #it may already have a flit when r_PE_10 generates a flit
+		has_flit := false; 
 		tally := 0;
 	}
 	
-	action assigner = { #check the destination to determine which arbiter to assign.
-		require has_flit & (id(packet) = id(flit_to_watch)); #only proceed
-		assigned := an10; #send north if it needs to go to (1,1)
+	action assigner = { 
+		require has_flit & (id(packet) = id(flit_to_watch)); 
+		assigned := as11; #send south 
 		ready := true;
 		call counter;
+		call arb_S_11.move_flit; #tell the arbiter it's ready
 	}
 	
 	action counter = {
-		require has_flit & (id(packet) = id(flit_to_watch)); #only proceed
-		#if it has a flit and the ID is the assigned ID to watch
-        assert id(packet) = id(flit_to_watch);
+		require has_flit & (id(packet) = id(flit_to_watch)); 
 		tally := tally + 1;
 	}
 		
 } export r_S_11.assigner 
+#closeob
 
 
 
-####################
-#                  #
-#  THE INVARIANTS  #
-#                  #
-####################
+##################
+# THE INVARIANTS #
+##################
 
-#CHECKING FOR POSSIBILITIES OF LIVELOCK
-# invariant r_S_11.tally <= 5
+ invariant r_S_11.tally <= 5
 # invariant r_N_10.tally <= 5
 # invariant ((r_N_10.tally - r_S_11.tally) <= 1) & ((r_S_11.tally - r_N_10.tally) <= 1)
 
