@@ -29,11 +29,12 @@ var flit_to_watch : int
 
 
 object intf = { 
-	action change_watch = {
+	action choose_flit_to_watch = { # nondeterministically choose
+	# a flit to watch
 		flit_to_watch := *;
 	}
 	action check(s:router,r:router,a:arbiter) #arbiter checks routers to see if they have packets - not super accurate, but the best I could come up with so far
-	action choose(s:router,r:router,a:arbiter) #if simultaneous requests, choose which to get
+	action arbitrate(s:router,r:router,a:arbiter) #if simultaneous requests, choose which to get
 	action send(s:router,r:router,a:arbiter) = { #once the router order is chosen, get flits from those routers and send to the next router
 		sending(s,r,a) := true;
 		sending(s,r,a) := false;
@@ -53,7 +54,7 @@ object spec = { #The specifications for actions to run
 	r_N_10.tally :=0;
 	}
 	
-	before intf.change_watch {
+	before intf.choose_flit_to_watch {
 		
 	}
 	
@@ -62,7 +63,7 @@ object spec = { #The specifications for actions to run
 		#this will work much better once the model has been expanded to include the other nodes.
 	}
 	
-	before intf.choose {
+	before intf.arbitrate {
 		
 	}
 	
@@ -440,7 +441,7 @@ object r_W_10 = {
 		# }
 		# else { #if the certain flit has been here more than 5 times... NOTE: eventually, this will have to also deal with other routers.
 		# 	has_flit := false; #drop flit
-		# 	call intf.change_watch; #change the ID of the flit that's being watched
+		# 	call intf.choose_flit_to_watch; #change the ID of the flit that's being watched
 		# 	tally := 0; #reset the counter
 	        # }
 	        tally := tally + 1;
@@ -520,7 +521,7 @@ object r_N_10 = {
 		# }
 		# else {
 		# 	has_flit := false;
-		# 	call intf.change_watch;
+		# 	call intf.choose_flit_to_watch;
 		# 	tally := 0;
 	    # }
 	        tally := tally + 1;
@@ -684,7 +685,7 @@ object r_E_00 = { #this will be more relevant when more parts are added
 		# }
 		# else {
 		# 	has_flit := false;
-		# 	call intf.change_watch;
+		# 	call intf.choose_flit_to_watch;
 		# 	tally := 0;
 	    # }
  	        tally := tally + 1;
@@ -852,7 +853,7 @@ object r_S_11 = { #this will be more relevant once more parts are added
 		# }
 		# else {
 		# 	has_flit := false;
-		# 	call intf.change_watch;
+		# 	call intf.choose_flit_to_watch;
 		# 	tally := 0;
 	    # }
 	        tally := tally + 1;
@@ -876,15 +877,15 @@ object r_S_11 = { #this will be more relevant once more parts are added
 
 #CHECKING FOR POSSIBILITIES OF DEADLOCK
 #Because there are only a few routers, this is not complete yet.
-invariant ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_10.assigned = aw11)) #preventing deadlock???
+#invariant ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_10.assigned = aw11)) #preventing deadlock???
 	#this will work much better once the model has been expanded to include the other nodes.
 
 
 #CHECKING FOR POSSIBILITIES OF LIVELOCK
-# invariant r_S_11.tally <= 5
+invariant r_S_11.tally <= 5
 # invariant r_E_00.tally <= 5
 # invariant r_N_10.tally <= 5
 # invariant r_W_10.tally <= 5 #when you change the 5 to a 4 on any of
 # these, it fails ivy_check... that seems promising.
-invariant ~(r_S_11.tally > 5) & ~(r_N_10.tally > 5)
+#invariant ~(r_S_11.tally > 5) & ~(r_N_10.tally > 5)
 
