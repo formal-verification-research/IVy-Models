@@ -115,7 +115,7 @@ object arb_N_10 = {
 		}
 	}
 	
-} export arb_N_10.move_flit
+} 
 #closeob
 
 
@@ -139,7 +139,7 @@ object arb_S_11 = {
 		r_N_10.has_flit := true;
 	}
 	
-} export arb_S_11.move_flit
+} 
 #closeob
 
 
@@ -173,6 +173,7 @@ object r_N_10 = {
 		require has_flit & (id(packet) = id(flit_to_watch)); 
 		tally := tally + 1;
 	}
+	
 		
 } export r_N_10.assigner 
 #closeob
@@ -212,7 +213,7 @@ object r_S_11 = {
 # THE INVARIANTS #
 ##################
 
- invariant r_S_11.tally <= 5
+# invariant r_S_11.tally <= 5
 # invariant r_N_10.tally <= 5
-# invariant ((r_N_10.tally - r_S_11.tally) <= 1) & ((r_S_11.tally - r_N_10.tally) <= 1)
+ invariant ((r_N_10.tally - r_S_11.tally) < 2) & ((r_S_11.tally - r_N_10.tally) < 2)
 
