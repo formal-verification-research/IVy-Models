@@ -36,6 +36,7 @@ object spec = { #The specifications for actions to run
 		id(packet) := id(flit_to_watch);
 		r_S_11.tally := 0;
 		r_N_10.tally := 0;
+		call r_PE_10.generate
 	}
 	
 } #closeob 
@@ -70,7 +71,7 @@ object r_PE_10 = {
 		call arb_N_10.move_flit; #tell the arbiter it's ready
 	}
 
-} export r_PE_10.generate
+} 
 #closeob
 
 
@@ -82,7 +83,7 @@ object r_PE_10 = {
 
 object arb_N_10 = {
 	
-	type can_get_from = {r_pe_10,r_n_10} #possibilities of routers that can have a packet to send
+	type can_get_from = {void,r_pe_10,r_n_10} #possibilities of routers that can have a packet to send
 	individual get_from : can_get_from #where the arbiter decides to get from
 	
 	after init { #before the arbiter can get a flit, make sure that a flit exists, and that it's assigned here.
@@ -169,11 +170,13 @@ object r_N_10 = {
 		assigned := an10; #send north
 		ready := true;
 		call counter;
+		require tally < 6;
 		call arb_N_10.move_flit; #tell the arbiter it's ready
 	}
 	
 	action counter = {
 		require has_flit & (id(packet) = id(flit_to_watch)); 
+		require tally < 5;
 		tally := tally + 1;
 	}
 	
@@ -199,14 +202,15 @@ object r_S_11 = {
 		assigned := as11; #send south 
 		ready := true;
 		call counter;
+		require tally < 6;
 		call arb_S_11.move_flit; #tell the arbiter it's ready
 	}
 	
 	action counter = {
 		require has_flit & (id(packet) = id(flit_to_watch)); 
+		require tally < 5;
 		tally := tally + 1;
 	}
-		
 }  
 #closeob
 
@@ -216,7 +220,7 @@ object r_S_11 = {
 # THE INVARIANTS #
 ##################
 
- invariant r_S_11.tally <= 5
- invariant r_N_10.tally <= 5
+# invariant r_S_11.tally <= 5
+# invariant r_N_10.tally <= 5
 # invariant ((r_N_10.tally - r_S_11.tally) < 2) & ((r_S_11.tally - r_N_10.tally) < 2)
 
