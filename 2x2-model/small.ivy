@@ -108,10 +108,12 @@ object arb_N_10 = {
 		if get_from = r_pe_10 {
 			r_PE_10.has_flit := false; #copy over the packet
 			r_S_11.has_flit := true;
+			call r_S_11.assigner;
 		}
 		else if get_from = r_n_10 {
 			r_N_10.has_flit := false;
 			r_S_11.has_flit := true;
+			call r_S_11.assigner;
 		}
 	}
 	
@@ -137,6 +139,7 @@ object arb_S_11 = {
 		require get_from = r_s_11;
 		r_S_11.has_flit := false;
 		r_N_10.has_flit := true;
+		call r_N_10.assigner;
 	}
 	
 } 
@@ -174,8 +177,8 @@ object r_N_10 = {
 		tally := tally + 1;
 	}
 	
-		
-} export r_N_10.assigner 
+
+}  
 #closeob
 
 
@@ -204,7 +207,7 @@ object r_S_11 = {
 		tally := tally + 1;
 	}
 		
-} export r_S_11.assigner 
+}  
 #closeob
 
 
@@ -213,7 +216,7 @@ object r_S_11 = {
 # THE INVARIANTS #
 ##################
 
-# invariant r_S_11.tally <= 5
-# invariant r_N_10.tally <= 5
- invariant ((r_N_10.tally - r_S_11.tally) < 2) & ((r_S_11.tally - r_N_10.tally) < 2)
+ invariant r_S_11.tally <= 5
+ invariant r_N_10.tally <= 5
+# invariant ((r_N_10.tally - r_S_11.tally) < 2) & ((r_S_11.tally - r_N_10.tally) < 2)
 
