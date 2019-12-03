@@ -109,12 +109,12 @@ object arb_N_10 = {
 		if get_from = r_pe_10 {
 			r_PE_10.has_flit := false; #copy over the packet
 			r_S_11.has_flit := true;
-			call r_S_11.assigner; #the downstream router then assigns and forwards the packet
+			#call r_S_11.assigner; #the downstream router then assigns and forwards the packet
 		}
 		else if get_from = r_n_10 {
 			r_N_10.has_flit := false;
 			r_S_11.has_flit := true;
-			call r_S_11.assigner;
+			#call r_S_11.assigner;
 		}
 	}
 	
@@ -140,7 +140,7 @@ object arb_S_11 = { #very similar to arb_N_10
 		require get_from = r_s_11;
 		r_S_11.has_flit := false;
 		r_N_10.has_flit := true;
-		call r_N_10.assigner;
+		#call r_N_10.assigner;
 	}
 	
 } 
@@ -210,7 +210,8 @@ object r_S_11 = {
 }  
 #closeob
 
-
+export r_N_10.assigner
+export r_S_11.assigner
 
 ##################
 # THE INVARIANTS #
