@@ -36,7 +36,7 @@ object spec = { #The specifications for actions to run
 		id(packet) := id(flit_to_watch); #for now, the only flit that exists is the one to watch.
 		r_S_11.tally := 0; #start with 0 on the tallies
 		r_N_10.tally := 0;
-		call r_PE_10.generate #start the process
+		#call r_PE_10.generate #start the process
 	}
 	
 } #closeob 
@@ -74,6 +74,8 @@ object r_PE_10 = {
 } 
 #closeob
 
+export r_PE_10.generate 
+
 
 
 ####################
@@ -83,7 +85,7 @@ object r_PE_10 = {
 
 object arb_N_10 = {
 	
-	type can_get_from = {void,r_pe_10,r_n_10} #possibilities of routers that can have a packet to send
+	type can_get_from = {r_pe_10,r_n_10} #possibilities of routers that can have a packet to send
 	individual get_from : can_get_from #where the arbiter decides to get from
 	
 	after init { #before the arbiter can get a flit, make sure that a flit exists, and that it's assigned here.
