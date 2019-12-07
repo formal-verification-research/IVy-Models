@@ -219,7 +219,9 @@ export r_S_11.assigner
 # THE INVARIANTS #
 ##################
 
-# invariant r_S_11.tally <= 5
+# invariant ~(1 ~= 5 & 1 ~= 6 & 0 ~= 1 & 0 ~= 5 & 0
+# ~= 6 & 5 ~= 6)
+invariant (r_S_11.tally <= 7)
 # invariant r_N_10.tally <= 5
 # invariant ((r_N_10.tally - r_S_11.tally) < 2) & ((r_S_11.tally - r_N_10.tally) < 2)
 
