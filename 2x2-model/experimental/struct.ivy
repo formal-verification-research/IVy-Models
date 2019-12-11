@@ -1,0 +1,13 @@
+#lang ivy1.7
+
+include collections
+
+type int
+interpret int -> bv[3]
+
+type packet = struct {
+	x_dest : coord,
+	y_dest : coord,
+	id : int
+}
+

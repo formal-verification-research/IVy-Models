@@ -1,0 +1,58 @@
+#lang ivy1.7
+
+type numba 
+interpret numba -> nat
+
+var tally : numba
+var packet : numba
+var watching : numba
+
+object spec = {
+	after init {
+		tally := 0;
+		watching := 5;
+	}
+	before counter.incrementer {
+		require tally < 10;
+		require watching = packet;
+	}
+	before subtractor.decrementer {
+		require tally > 0;
+		require watching = packet;
+	}
+	after counter.incrementer {
+		ensure packet = watching;
+	}
+	after subtractor.decrementer {
+		ensure packet = watching;
+	}
+	
+} #closeob
+
+object counter = {
+	after init {
+		packet := *;
+	}
+	
+	action incrementer = {
+		tally := tally + 1;
+	}
+	
+	export incrementer
+	
+} #closeob
+
+object subtractor = {
+	after init {
+		packet := *;
+	}
+	
+	action decrementer = {
+		tally := tally - 1;
+	}
+	
+	export decrementer
+	
+} #closeob
+
+invariant tally <= 9 & tally >= 0

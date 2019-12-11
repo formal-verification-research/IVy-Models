@@ -1413,12 +1413,13 @@ module r_x_11 = {
 	individual tally : int
 	
 	after init {
-		has_flit := *; #it may already have a flit when r_PE_10 generates a flit
+		has_flit := false; #it may already have a flit when r_PE_10 generates a flit
 		tally := 0;
 	}
 	
 	action assigner = { #check the destination to determine which arbiter to assign.
 		require has_flit;
+		require tally < 5;
 		if x_dest = 1 & y_dest = 1 {
 			assigned := ape11;
 			ready := true;
