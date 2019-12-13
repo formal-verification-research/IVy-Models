@@ -233,13 +233,12 @@ export r_S_11.assigner
 
 #invariant (livelock_exists | (r_S_11.tally <= 5 & r_N_10.tally <= 5))
 
-#invariant (r_S_11.tally >= 5 | r_N_10.tally >= 5 | (r_S_11.tally <= 5
-# & r_N_10.tally <= 5))
+invariant (r_S_11.tally >= 5 | r_N_10.tally >= 5 | (r_S_11.tally <= 5 & r_N_10.tally <= 5))
 
 #invariant ((r_S_11.tally <= 5 & r_N_10.tally <= 5) -> ~(r_S_11.tally
 #> 5 | r_N_10.tally > 5))
 
-invariant ((r_S_11.tally = 5) -> ((r_N_10.tally = r_S_11.tally - 1) | (r_N_10.tally = r_S_11.tally) | (r_N_10.tally = r_S_11.tally + 1)))
+# invariant ((r_S_11.tally = 5) -> ((r_N_10.tally = r_S_11.tally - 1) | (r_N_10.tally = r_S_11.tally) | (r_N_10.tally = r_S_11.tally + 1)))
 
 # uncomment below to see a trace that seems to show that the 
 # variable is working as it is supposed to.
