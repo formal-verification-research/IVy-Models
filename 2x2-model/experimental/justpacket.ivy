@@ -1,0 +1,69 @@
+#lang ivy1.7
+
+type router = {rs11,rn10} #void to make livelock happen
+type coord = {0,1}
+type integer
+interpret integer -> bv[4]
+
+object packet = {
+	
+	individual x_dest : coord
+	individual y_dest : coord
+	
+	individual x_cur : coord
+	individual y_cur : coord
+	
+	individual tally : integer
+	
+	after init {
+		x_dest := 0;
+		y_dest := 0;
+		x_cur := 1;
+		y_cur := 0;
+		tally := 0;
+	}
+	
+	action send_north = {
+		require y_cur = 0;
+		y_cur := 1;
+		if y_cur ~= y_dest {
+			call incr
+		};
+	}
+	
+	action send_south = {
+		require y_cur = 1;
+		y_cur := 0;
+		if y_cur ~= y_dest {
+			call incr
+		};
+	}
+	
+	action send_east = {
+		require x_cur = 0;
+		x_cur := 1;
+		if x_cur ~= x_dest {
+			call incr
+		};
+	}
+	
+	action send_west = {
+		require x_cur = 1;
+		x_cur := 0;
+		if x_cur ~= x_dest {
+			call incr
+		};
+	}
+	
+	action incr = {
+		tally := tally + 1;
+	}
+	
+	export send_north
+	export send_south
+	export send_east
+	export send_west
+	
+} #closeob
+
+invariant (packet.tally > 5) -> (packet.y_cur = packet.y_dest & packet.x_cur = packet.x_dest)
