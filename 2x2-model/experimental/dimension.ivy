@@ -1,0 +1,128 @@
+#lang ivy1.7
+
+#this is for the 2x2 model
+
+type int
+interpret int -> nat
+
+type coord
+interpret coord -> bv[1]
+
+type router = {rs11,rn10,rw11,re01,rn00,rs01,re00,rw10}
+
+object intf = {
+	
+	individual s : int #S in documentation
+	individual l : int #L in documentation
+	individual n : int #N in documentation
+	
+	after init {
+		n := 2; #N in documentation
+		l := n - 1;
+		l := 4 * l; #L in documentation
+		s := l + 1; #S in documentation
+		ensure intf.s > intf.n;
+	}
+	
+} #end intf
+
+object counter = {
+	
+	individual rs11 : int
+	individual rn10 : int
+	individual rw11 : int
+	individual re01 : int
+	individual rn00 : int
+	individual rs01 : int
+	individual re00 : int
+	individual rw10 : int
+	
+} #end counter
+
+object packet = {
+	
+	individual count : int
+	
+	individual dest : router #destination y coordinate
+	individual current : router #current x coordinate
+	
+	after init {
+		dest := *; #it can have any destination
+		current := *; #it can have any destination
+		count := 0; #start with a count of 0
+	}
+	
+	before route { #before routing the packet
+		assert x_cur <= intf.n - 1; #make sure the packet is within the max dimmensions
+		assert y_cur <= intf.n - 1; #make sure the packet is within the max dimmensions
+		assert x_dest <= intf.n - 1; #make sure the packet wants to go within the max dimmensions
+		assert y_dest <= intf.n - 1; #make sure the packet wants to go within the max dimmensions
+	}
+	
+	action route = {
+		if y_dest = y_cur { #if it is at the right y coordinate
+			if x_dest = x_cur { #if it is at the right x coordinate
+				count := 0; #do nothing, stay here
+			}
+			else if x_dest < x_cur { #if it needs to go west
+		                call send_west; #send west
+		                #call intf.move; #increment the total counter
+			}
+			else if x_dest > x_cur { #if it needs to go east
+		                call send_east; #send east
+				#call intf.move; #increment the total counter
+			}; #endif
+		}
+		else if y_dest < y_cur { #if it needs to go south
+	                        call send_south; #send south
+                               #call intf.move; #increment the total counter
+		}
+		else if y_dest > y_cur { #if it needs to go north
+	                        call send_north; #send north
+			        #call intf.move; #increment the total counter
+		}; #endif
+	}
+	
+	action send_clockwise = {
+		
+		if current = rw11 {
+			current := rn10;
+		} else 
+		if current = rn10 {
+			current := re00;
+		} else
+		if current = re00 {
+			current := rs01;
+		} else 
+		if current = rs01 {
+			current := rw11;
+		};
+		call incr
+	}
+	
+	action send_counterclock = {
+		
+		if current = rw11 {
+			current := rn10;
+		} else 
+		if current = rn10 {
+			current := re00;
+		} else
+		if current = re00 {
+			current := rs01;
+		} else 
+		if current = rs01 {
+			current := rw11;
+		};
+		call incr
+	}
+	
+	
+	
+	
+	
+	invariant x_dest = 1 | x_dest = 0
+	
+} #end packet
+
+
