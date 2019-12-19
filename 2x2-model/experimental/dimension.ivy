@@ -9,6 +9,7 @@ type coord
 interpret coord -> bv[1]
 
 type router = {rs11,rn10,rw11,re01,rn00,rs01,re00,rw10}
+type nodes = {00,01,10,11}
 
 object intf = {
 	
@@ -28,100 +29,246 @@ object intf = {
 
 object counter = {
 	
-	individual rs11 : int
-	individual rn10 : int
-	individual rw11 : int
-	individual re01 : int
-	individual rn00 : int
-	individual rs01 : int
-	individual re00 : int
-	individual rw10 : int
+	individual rs11c : int
+	individual rn10c : int
+	individual rw11c : int
+	individual re01c : int
+	individual rn00c : int
+	individual rs01c : int
+	individual re00c : int
+	individual rw10c : int
+	individual count : int
+	
+	after init {
+		rs11c := 0;
+		rn10c := 0;
+		rw11c := 0;
+		re01c := 0;
+		rn00c := 0;
+		rs01c := 0;
+		re00c := 0;
+		rw10c := 0;
+		count := 0;
+	} 
+	
+	action incr = {
+		count := count + 1;
+		if packet.cur = rs11 {
+			rs11c := rs11c + 1;
+		} else 
+		if packet.cur = rn10 {
+			rn10c := rn10c + 1;
+		} else
+		if packet.cur = rw11 {
+			rw11c := rw11c + 1;
+		} else 
+		if packet.cur = re01 {
+			re01c := re01c + 1;
+		} else
+		if packet.cur = rn00 {
+			rn00c := rn00c + 1;
+		} else 
+		if packet.cur = rs01 {
+			rs01c := rs01c + 1;
+		} else
+		if packet.cur = re00 {
+			re00c := re00c + 1;
+		} else 
+		if packet.cur = rw10 {
+			rw10c := rw10c + 1;
+		};
+	}
 	
 } #end counter
 
 object packet = {
 	
-	individual count : int
-	
-	individual dest : router #destination y coordinate
-	individual current : router #current x coordinate
+	individual dest : nodes #destination y coordinate
+	individual cur : router #cur x coordinate
 	
 	after init {
 		dest := *; #it can have any destination
-		current := *; #it can have any destination
-		count := 0; #start with a count of 0
+		cur := *; #it can have any destination
+		counter.count := 0; #start with a count of 0
 	}
-	
-	before route { #before routing the packet
-		assert x_cur <= intf.n - 1; #make sure the packet is within the max dimmensions
-		assert y_cur <= intf.n - 1; #make sure the packet is within the max dimmensions
-		assert x_dest <= intf.n - 1; #make sure the packet wants to go within the max dimmensions
-		assert y_dest <= intf.n - 1; #make sure the packet wants to go within the max dimmensions
-	}
-	
+		
 	action route = {
-		if y_dest = y_cur { #if it is at the right y coordinate
-			if x_dest = x_cur { #if it is at the right x coordinate
-				count := 0; #do nothing, stay here
-			}
-			else if x_dest < x_cur { #if it needs to go west
-		                call send_west; #send west
-		                #call intf.move; #increment the total counter
-			}
-			else if x_dest > x_cur { #if it needs to go east
-		                call send_east; #send east
-				#call intf.move; #increment the total counter
-			}; #endif
-		}
-		else if y_dest < y_cur { #if it needs to go south
-	                        call send_south; #send south
-                               #call intf.move; #increment the total counter
-		}
-		else if y_dest > y_cur { #if it needs to go north
-	                        call send_north; #send north
-			        #call intf.move; #increment the total counter
-		}; #endif
+		if dest = 00 {
+			if cur = rs11 {
+				call change_direction;
+			} else 
+			if cur = rn10 {
+				call send_clockwise;
+			} else
+			if cur = rw11 {
+				call send_clockwise;
+			} else 
+			if cur = re01 {
+				call send_counterclock;
+			} else
+			if cur = rn00 {
+				call done;
+			} else 
+			if cur = rs01 {
+				call change_direction;
+			} else
+			if cur = re00 {
+				call done;
+			} else 
+			if cur = rw10 {
+				call send_clockwise;
+			};
+		} else
+		if dest = 10 {
+			if cur = rs11 {
+				call change_direction;
+			} else 
+			if cur = rn10 {
+				call done;
+			} else
+			if cur = rw11 {
+				call send_clockwise;
+			} else 
+			if cur = re01 {
+				call send_counterclock;
+			} else
+			if cur = rn00 {
+				call send_counterclock;
+			} else 
+			if cur = rs01 {
+				call send_clockwise;
+			} else
+			if cur = re00 {
+				call change_direction;
+			} else 
+			if cur = rw10 {
+				call done;
+			};
+		} else
+		if dest = 01 {
+			if cur = rs11 {
+				call send_counterclock;
+			} else 
+			if cur = rn10 {
+				call send_clockwise;
+			} else
+			if cur = rw11 {
+				call change_direction;
+			} else 
+			if cur = re01 {
+				call done;
+			} else
+			if cur = rn00 {
+				call change_direction;
+			} else 
+			if cur = rs01 {
+				call done;
+			} else
+			if cur = re00 {
+				call send_clockwise;
+			} else 
+			if cur = rw10 {
+				call send_clockwise;
+			};
+		} else
+		if dest = 11 {
+			if cur = rs11 {
+				call done;
+			} else 
+			if cur = rn10 {
+				call send_clockwise;
+			} else
+			if cur = rw11 {
+				call done;
+			} else 
+			if cur = re01 {
+				call change_direction;
+			} else
+			if cur = rn00 {
+				call send_counterclock;
+			} else 
+			if cur = rs01 {
+				call send_clockwise;
+			} else
+			if cur = re00 {
+				call send_clockwise;
+			} else 
+			if cur = rw10 {
+				call send_counterclock;
+			};
+		};
 	}
 	
 	action send_clockwise = {
 		
-		if current = rw11 {
-			current := rn10;
+		if cur = rw11 {
+			cur := rn10;
 		} else 
-		if current = rn10 {
-			current := re00;
+		if cur = rn10 {
+			cur := re00;
 		} else
-		if current = re00 {
-			current := rs01;
+		if cur = re00 {
+			cur := rs01;
 		} else 
-		if current = rs01 {
-			current := rw11;
+		if cur = rs01 {
+			cur := rw11;
 		};
-		call incr
+		call counter.incr
 	}
 	
 	action send_counterclock = {
 		
-		if current = rw11 {
-			current := rn10;
+		if cur = rs11 {
+			cur := re01;
 		} else 
-		if current = rn10 {
-			current := re00;
+		if cur = re01 {
+			cur := rn00;
 		} else
-		if current = re00 {
-			current := rs01;
+		if cur = rn00 {
+			cur := rw10;
 		} else 
-		if current = rs01 {
-			current := rw11;
+		if cur = rw10 {
+			cur := rs11;
 		};
-		call incr
+		call counter.incr
 	}
 	
+	action change_direction = {
+		
+		if cur = rs11 {
+			cur := rn10;
+		} else 
+		if cur = rn10 {
+			cur := rs11;
+		} else
+		if cur = rw11 {
+			cur := re01;
+		} else 
+		if cur = re01 {
+			cur := rw11;
+		} else
+		if cur = rn00 {
+			cur := rs01;
+		} else 
+		if cur = rs01 {
+			cur := rn00;
+		} else
+		if cur = re00 {
+			cur := rw10;
+		} else 
+		if cur = rw10 {
+			cur := re00;
+		};
+		call counter.incr
+	}
 	
+	action done = {
+		counter.count := 0;
+		cur := *; #keep simulating
+		dest := *; #keep simulating
+	}
 	
-	
-	
-	invariant x_dest = 1 | x_dest = 0
+	export route
 	
 } #end packet
 
