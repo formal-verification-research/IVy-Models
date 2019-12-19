@@ -8,13 +8,13 @@ interpret integer -> bv[3] #still working on figuring out an
 #uninterpreted type.
 
 object counter = {
-    type c
+    type c	
     relation (X:c < Y:c)
-    action incr(inp:c) returns (out:c)
+	action incr(inp:c) returns (out:c)
 
     object spec = {
-        property [transitivity] X:c < Y & Y < Z -> X < Z
-        property [antisymmetry] ~(X:c < Y & Y < X)
+        axiom [transitivity] X:c < Y & Y < Z -> X < Z
+        axiom [antisymmetry] ~(X:c < Y & Y < X)
 
         after incr {
             assert inp < out
@@ -22,7 +22,9 @@ object counter = {
     }
 }
 
-# object intf = { 
+object intf = { 
+	
+	action move(x:counter.c)
 	
 # 	# individual total_moves : integer #tracks the total number of moves in the system
 # 	individual max_dim : coord #used to set how many nodes there are each direction
@@ -36,7 +38,7 @@ object counter = {
 # 	# 	total_moves := total_moves + 1; #increment total_moves
 # 	# }
 		
-# } #end intf
+} #end intf
 
 object spec = { 
 	
@@ -107,34 +109,34 @@ object packet = { #now everything runs from the packet's point of view
 		y_cur := y_cur + 1; #set the current position to 1 to the north
 		if y_cur ~= y_dest { #if it hasn't arrived at its y destination
 	                   #call incr #increment the packet counter
-	                   call counter.incr(cnt)	                        	    
+	                   call intf.move(counter.incr(cnt))	                        	    
 		}; #endif
 	}
 	
 	action send_south = {
-		ensure y_dest < spec.max_dim; #make sure the destination is within the right range
+		assert y_dest < spec.max_dim; #make sure the destination is within the right range
 		y_cur := y_cur - 1; #set the current position to 1 to the south
 		if y_cur ~= y_dest { #if it hasn't arrived at its y destination
 	                   #call incr #increment the packet counter
-	                   call counter.incr(cnt)	                        	    
+	                   call intf.move(counter.incr(cnt))	                        	    
 		}; #endif
 	}
 	
 	action send_east = {
-		ensure x_dest > 0; #make sure the destination is not 0
+		assert x_dest > 0; #make sure the destination is not 0
 		x_cur := x_cur + 1; #set the current position to 1 to the east
 		if x_cur ~= x_dest { #if it hasn't arrived at its x destination
 	                   #call incr #increment the packet counter
-	                   call counter.incr(cnt)	                        	    
+	                   call intf.move(counter.incr(cnt))	                        	    
 		}; #endif
 	}
 	
 	action send_west = {
-		ensure x_dest < spec.max_dim; #make sure the destination is within the right range
+		assert x_dest < spec.max_dim; #make sure the destination is within the right range
 		x_cur := x_cur - 1; #set the current position to 1 to the west
 		if x_cur ~= x_dest { #if it hasn't arrived at its x destination
 	                   #call incr #increment the packet counter
-	                   call counter.incr(cnt)	                        	    
+	                   call intf.move(counter.incr(cnt))	                        	    
 		}; #endif
 	}
 	
@@ -145,4 +147,8 @@ object packet = { #now everything runs from the packet's point of view
 	export route #the routing decision is exported to the environment 
 	
 } #end packet
+
+#isolate iso_p = packet with spec, counter
+invariant X:coord = 0 | X:coord = 1
+
 
