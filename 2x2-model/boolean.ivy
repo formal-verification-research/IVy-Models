@@ -231,9 +231,13 @@ export r_S_11.assigner
 # THE INVARIANTS #
 ##################
 
-#invariant (livelock_exists | (r_S_11.tally <= 5 & r_N_10.tally <= 5))
+invariant (livelock_exists | (r_S_11.tally <= 5 & r_N_10.tally <= 5))
 
 invariant (r_S_11.tally >= 5 | r_N_10.tally >= 5 | (r_S_11.tally <= 5 & r_N_10.tally <= 5))
+
+invariant livelock_exists -> (r_S_11.tally > 5 | r_N_10.tally > 5)
+
+invariant (r_S_11.tally > 5 | r_N_10.tally > 5) -> livelock_exists
 
 #invariant ((r_S_11.tally <= 5 & r_N_10.tally <= 5) -> ~(r_S_11.tally
 #> 5 | r_N_10.tally > 5))
