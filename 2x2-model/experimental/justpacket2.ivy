@@ -3,19 +3,21 @@
 type coord #coordinates are 1 or 0 in this model... 
 interpret coord -> bv[1] #easily expanded to 3x3 using bv[2]
 
-type integer #for the tallies, I still haven't found a good way around it
-interpret integer -> bv[3] #still working on figuring out an
+# type integer #for the tallies, I still haven't found a good way around it
+# interpret integer -> bv[3] #still working on figuring out an
 #uninterpreted type.
 
 object counter = {
     type c	
     relation (X:c < Y:c)
-	action incr(inp:c) returns (out:c)
+    # action incr(inp:c) returns (out:c)
+    action incr(inp:c) returns (out:c)= {
+    	assume inp < out
+    }    	
 
     object spec = {
         axiom [transitivity] X:c < Y & Y < Z -> X < Z
         axiom [antisymmetry] ~(X:c < Y & Y < X)
-
         after incr {
             assert inp < out
         }
@@ -24,7 +26,7 @@ object counter = {
 
 object intf = { 
 	
-	action move(x:counter.c)
+	action move(cnt:counter.c)
 	
 # 	# individual total_moves : integer #tracks the total number of moves in the system
 # 	individual max_dim : coord #used to set how many nodes there are each direction
@@ -82,10 +84,11 @@ object packet = { #now everything runs from the packet's point of view
 	
 	action route = {
 		if y_dest = y_cur { #if it is at the right y coordinate
-			if x_dest = x_cur { #if it is at the right x coordinate
-				cnt := 0; #do nothing, stay here
-			}
-			else if x_dest < x_cur { #if it needs to go west
+			# if x_dest = x_cur { #if destination has reached
+		        #         #cnt := 0; #do nothing, stay here
+			# }
+			# else
+	                if x_dest < x_cur { #if it needs to go west
 		                call send_west; #send west
 		                #call intf.move; #increment the total counter
 			}
@@ -150,5 +153,5 @@ object packet = { #now everything runs from the packet's point of view
 
 #isolate iso_p = packet with spec, counter
 invariant X:coord = 0 | X:coord = 1
-
+#invariant x
 
