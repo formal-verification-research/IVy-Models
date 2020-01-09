@@ -1,0 +1,88 @@
+#lang ivy1.7
+
+type loc = {top,bottom}
+var flit_is : loc
+
+object spec = {
+	
+	after init {
+		rar.r_send.has_flit := true;
+		rar.r_recv.has_flit := false;
+		flit_is := top;
+	}
+	
+} #end spec
+
+
+
+
+object rar = {
+	
+	object r_send = {
+		
+		individual has_flit : bool
+		
+		after init {
+			assert has_flit;
+		}
+		
+		before send {
+			require has_flit;
+			flit_is := top;
+		}
+		
+		action send = {
+			has_flit := false;
+			call r_recv.get_flit;
+		}
+		
+		after send {
+			assert ~has_flit;
+			has_flit := true;
+			flit_is := top;
+		}
+		
+		invariant has_flit -> flit_is = top
+
+	} #end r_send 
+	
+	object arbiter = {
+
+		action check = {
+			require ~r_recv.has_flit;
+			if r_send.has_flit {
+				call r_send.send;
+			};
+		}
+		
+		export check
+		
+	} #end arbiter
+	
+	object r_recv = {
+		
+		individual has_flit : bool
+		
+		after init {
+
+		}
+		
+		action get_flit = {
+			assert ~has_flit;
+			has_flit := true;
+			flit_is := bottom;
+		}
+		
+		after get_flit {
+			assert has_flit;
+			has_flit := false;
+			flit_is := bottom;
+		}
+		
+		invariant has_flit -> flit_is = bottom
+		
+	} #end r_recv
+	
+	invariant r_recv.has_flit | r_send.has_flit
+	
+} #end r_a_r
