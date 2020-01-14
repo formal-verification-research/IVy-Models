@@ -1,0 +1,112 @@
+#lang ivy1.7
+
+type sources = {void,r1,r2,r3} #places it can get the flit from, currently oversimplified
+
+module routers = {
+	
+	individual has_flit : bool #whether there is a flit here or not
+	
+	after init { #there may be a flit anywhere, chosen at initialization
+		has_flit := *; #chosen nondeterministically
+	}
+	
+} #end routers
+
+instance router1 : routers
+instance router2 : routers
+instance router3 : routers
+#all three routers have the same simple action right now.
+
+
+object arbiter = {
+	individual boolean_rand : bool #for choosing between 2 options
+	individual get_from : sources #the option that was chosen (see ln 3)
+	individual finished : bool #mostly to help with invariants
+	
+	after init {
+		boolean_rand := *; #chosen nondeterministically
+		finished := false; #not finished after initialization
+		get_from := void; #has not chosen a source
+	}
+	
+	action choose = {
+		if router1.has_flit {
+			if router2.has_flit {
+				if router3.has_flit { #if all 3 have flits
+					get_from := *; #choose nondeterministically
+					require get_from ~= void; #make sure it's not void (it will just try again if it is)
+					finished := true; #mark the choice finished
+				}
+				else { #if only r1 and r2 have flits
+					if boolean_rand {
+						get_from := r1;
+						finished := true;
+					}
+					else {
+						get_from := r2;
+						finished := true;
+					}
+				}
+			}
+			else if router3.has_flit { #if just r1 and r3 have flits
+				if boolean_rand {
+						get_from := r1;
+						finished := true;
+					}
+					else {
+						get_from := r3;
+						finished := true;
+					}
+			}
+			else { #if only r1 has a flit
+				get_from := r1;
+				finished := true;
+			}
+		}	
+		else if router2.has_flit {
+			if router3.has_flit { #if r2 and r3 have flits
+				if boolean_rand {
+					get_from := r2;
+					finished := true;
+				}
+				else {
+					get_from := r3;
+					finished := true;
+				}
+			}
+			else { #if only r2 has a flit
+				get_from := r2;
+				finished := true;
+			}
+		}
+		else if router3.has_flit { #if only r3 has a flit
+			get_from := r3;
+			finished := true;
+		}
+		else { #make sure at least one of the options is selected.
+			get_from := void;
+			finished := true;
+		}
+	}
+	
+	invariant (get_from ~= void) -> finished #if get_from is not void, it must be finished
+	invariant (finished -> (get_from ~= void)) | ~(router1.has_flit | router2.has_flit | router3.has_flit) #if it's finished and void, nobody had a flit
+	
+} #end arbiter
+
+export arbiter.choose #can be called by the environment
+
+#if just one has a flit and it's finished, that one was chosen
+invariant (arbiter.finished & router1.has_flit & ~router2.has_flit & ~router3.has_flit) -> arbiter.get_from = r1
+invariant (arbiter.finished & ~router1.has_flit & router2.has_flit & ~router3.has_flit) -> arbiter.get_from = r2
+invariant (arbiter.finished & ~router1.has_flit & ~router2.has_flit & router3.has_flit) -> arbiter.get_from = r3
+
+#if just two had flits and it's finished, one of those was chosen
+invariant (arbiter.finished & router1.has_flit & router2.has_flit & ~router3.has_flit) -> (arbiter.get_from = r1 | arbiter.get_from = r2)
+invariant (arbiter.finished & ~router1.has_flit & router2.has_flit & router3.has_flit) -> (arbiter.get_from = r2 | arbiter.get_from = r3)
+invariant (arbiter.finished & router1.has_flit & ~router2.has_flit & router3.has_flit) -> (arbiter.get_from = r3 | arbiter.get_from = r1)
+
+#if all three have flits, one non-void router was chosen
+invariant (arbiter.finished & router1.has_flit & router2.has_flit & router3.has_flit) -> (arbiter.get_from = r1 | arbiter.get_from = r2 | arbiter.get_from = r3)
+
+
