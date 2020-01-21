@@ -89,49 +89,51 @@ module top_row = {
 					if r6.has_flit { 
 						get_from := *; 
 						assume get_from ~= void; 
-						ready := true;
+						# ready := true;
 					}
 					else { 
 						if boolean_rand {
 							get_from := r14;
-							ready := true;
+							# ready := true;
 						}
 						else {
 							get_from := r25;
-							ready := true;
+							# ready := true;
 						}
-					}
+		                        }
 				}
 				else if r6.has_flit { #if just r4 and r6 have flits
 					if boolean_rand {
 							get_from := r14;
-							ready := true;
+							# ready := true;
 						}
 						else {
 							get_from := r36;
-							ready := true;
+							# ready := true;
 						}
 				}
 				else { #if only r4 has a flit
 					get_from := r14;
-					ready := true;
-				}
+					# ready := true;
+		                }
+	                        ready := true;
 			}	
 			else if r5.has_flit {
 				if r6.has_flit { #if r5 and r6 have flits
 					if boolean_rand {
 						get_from := r25;
-						ready := true;
+						# ready := true;
 					}
 					else {
 						get_from := r36;
-						ready := true;
+						# ready := true;
 					}
 				}
 				else { #if only r5 has a flit
 					get_from := r25;
-					ready := true;
-				}
+					# ready := true;
+		                }
+                                ready := true;
 			}
 			else if r6.has_flit { #if only r6 has a flit
 				get_from := r36;
