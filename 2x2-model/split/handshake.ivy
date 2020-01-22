@@ -99,24 +99,24 @@ module top_row = {
 						else {
 							get_from := r25;
 							# ready := true;
-						}
-		                        }
+						};
+		            };
 				}
 				else if r6.has_flit { #if just r4 and r6 have flits
 					if boolean_rand {
-							get_from := r14;
-							# ready := true;
+						get_from := r14;
+						# ready := true;
 						}
-						else {
-							get_from := r36;
-							# ready := true;
-						}
+					else {
+						get_from := r36;
+						# ready := true;
+					};
 				}
 				else { #if only r4 has a flit
 					get_from := r14;
 					# ready := true;
-		                }
-	                        ready := true;
+		        };
+	            ready := true;
 			}	
 			else if r5.has_flit {
 				if r6.has_flit { #if r5 and r6 have flits
@@ -127,13 +127,13 @@ module top_row = {
 					else {
 						get_from := r36;
 						# ready := true;
-					}
+					};
 				}
 				else { #if only r5 has a flit
 					get_from := r25;
 					# ready := true;
-		                }
-                                ready := true;
+		        };
+                ready := true;
 			}
 			else if r6.has_flit { #if only r6 has a flit
 				get_from := r36;
@@ -142,7 +142,7 @@ module top_row = {
 			else { #make sure at least one of the options is selected.
 				get_from := void;
 				ready := false;
-			}
+			};
 		}
 		
 		action check = {
@@ -268,58 +268,60 @@ module bottom_row = {
 					if r3.has_flit { 
 						get_from := *; 
 						assume get_from ~= void; 
-						ready := true;
+						# ready := true;
 					}
 					else { 
 						if boolean_rand {
 							get_from := r14;
-							ready := true;
+							# ready := true;
 						}
 						else {
 							get_from := r25;
-							ready := true;
-						}
-					}
+							# ready := true;
+						};
+		            };
 				}
-				else if r3.has_flit { #if just r1 and r3 have flits
+				else if r3.has_flit { #if just r4 and r6 have flits
 					if boolean_rand {
-							get_from := r14;
-							ready := true;
+						get_from := r14;
+						# ready := true;
 						}
-						else {
-							get_from := r36;
-							ready := true;
-						}
+					else {
+						get_from := r36;
+						# ready := true;
+					};
 				}
-				else { #if only r1 has a flit
+				else { #if only r4 has a flit
 					get_from := r14;
-					ready := true;
-				}
+					# ready := true;
+		        };
+	            ready := true;
 			}	
 			else if r2.has_flit {
-				if r3.has_flit { #if r2 and r3 have flits
+				if r3.has_flit { #if r5 and r6 have flits
 					if boolean_rand {
 						get_from := r25;
-						ready := true;
+						# ready := true;
 					}
 					else {
 						get_from := r36;
-						ready := true;
-					}
+						# ready := true;
+					};
 				}
-				else { #if only r2 has a flit
+				else { #if only r5 has a flit
 					get_from := r25;
-					ready := true;
-				}
+					# ready := true;
+		        };
+                ready := true;
 			}
-			else if r3.has_flit { #if only r3 has a flit
+			else if r3.has_flit { #if only r6 has a flit
 				get_from := r36;
 				ready := true;
 			}
 			else { #make sure at least one of the options is selected.
 				get_from := void;
 				ready := false;
-			}
+			};
 		}
 		
 		action check = {
@@ -382,7 +384,7 @@ module bottom_row = {
 	invariant ~(arbiter.ready & arbiter.get_from = void)
 	invariant (arbiter.ready & (r1.has_flit | r2.has_flit | r3.has_flit)) -> (arbiter.get_from ~= void)
 	
-} #end top_row
+} #end bottom_row
 
 instance d : bottom_row
 instance e : bottom_row
