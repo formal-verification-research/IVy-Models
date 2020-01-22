@@ -204,6 +204,9 @@ module top_row = {
 				assert ~r_recv.hf; 
 				assert r4.hf | r5.hf | r6.hf;
 				call send; 
+			}
+			else {
+				get_from := void;
 			};
 		} #end check
 		
@@ -237,7 +240,7 @@ module top_row = {
 		conjecture (ready & r5.hf) -> get_from ~= void
 		conjecture (ready & r6.hf) -> get_from ~= void
 		conjecture ready -> get_from ~= void
-	#	conjecture (ready & r4.hf & ~r5.hf & ~r6.hf) -> get_from = r14
+		conjecture (ready & r4.hf & ~r5.hf & ~r6.hf) -> get_from = r14
 	#	conjecture (ready & get_from = r14) -> (r4.hf)
 	#	conjecture (ready & get_from = r25) -> (r5.hf)
 	#	conjecture (ready & get_from = r36) -> (r6.hf)
