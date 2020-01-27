@@ -75,49 +75,6 @@ object spec = { #cont: copy_data
 			f.r3.hf := false;
 		};
 		
-	
-	#	a.r4.hf := d.r_recv.hf;
-	#	b.r4.hf := d.r_recv.hf;
-	#	c.r4.hf := d.r_recv.hf;
-	#	d.r1.hf := a.r_recv.hf;
-	#	e.r1.hf := a.r_recv.hf;
-	#	f.r1.hf := a.r_recv.hf;
-	#	        		  
-	#	a.r5.hf := e.r_recv.hf;
-	#	b.r5.hf := e.r_recv.hf;
-	#	c.r5.hf := e.r_recv.hf;
-	#	d.r2.hf := b.r_recv.hf;
-	#	e.r2.hf := b.r_recv.hf;
-	#	f.r2.hf := b.r_recv.hf;
-	#	        	  
-	#	a.r6.hf := f.r_recv.hf;
-	#	b.r6.hf := f.r_recv.hf;
-	#	c.r6.hf := f.r_recv.hf;
-	#	d.r3.hf := c.r_recv.hf;
-	#	e.r3.hf := c.r_recv.hf;
-	#	f.r3.hf := c.r_recv.hf;
-	#	
-	#	assert (d.r_recv.hf -> a.r4.hf);
-	#	assert (d.r_recv.hf -> b.r4.hf);
-	#	assert (d.r_recv.hf -> c.r4.hf);
-	#	assert (a.r_recv.hf -> d.r1.hf);
-	#	assert (a.r_recv.hf -> e.r1.hf);
-	#	assert (a.r_recv.hf -> f.r1.hf);
-	#
-	#	assert (e.r_recv.hf -> a.r5.hf);
-	#	assert (e.r_recv.hf -> b.r5.hf);
-	#	assert (e.r_recv.hf -> c.r5.hf);
-	#	assert (b.r_recv.hf -> d.r2.hf);
-	#	assert (b.r_recv.hf -> e.r2.hf);
-	#	assert (b.r_recv.hf -> f.r2.hf);
-	#	
-	#	assert (f.r_recv.hf -> a.r6.hf);
-	#	assert (f.r_recv.hf -> b.r6.hf);
-	#	assert (f.r_recv.hf -> c.r6.hf);
-	#	assert (c.r_recv.hf -> d.r3.hf);
-	#	assert (c.r_recv.hf -> e.r3.hf);
-	#	assert (c.r_recv.hf -> f.r3.hf);
-		
 		copy_finished := true;
 		
 	} #end copy_data
@@ -127,42 +84,26 @@ object spec = { #cont: copy_data
 		if a.arbiter.ready {
 			b.arbiter.ready := false;
 			c.arbiter.ready := false;
-			# d.arbiter.ready := false;
-			# e.arbiter.ready := false;
-			# f.arbiter.ready := false;
 		};
 		if b.arbiter.ready {
 			a.arbiter.ready := false;
 			c.arbiter.ready := false;
-			# d.arbiter.ready := false;
-			# e.arbiter.ready := false;
-			# f.arbiter.ready := false;
+
 		};
 		if c.arbiter.ready {
 			a.arbiter.ready := false;
 			b.arbiter.ready := false;
-			# d.arbiter.ready := false;
-			# e.arbiter.ready := false;
-			# f.arbiter.ready := false;
+
 		};
 		if d.arbiter.ready {
-			# a.arbiter.ready := false;
-			# b.arbiter.ready := false;
-			# c.arbiter.ready := false;
 			e.arbiter.ready := false;
 			f.arbiter.ready := false;
 		};
 		if e.arbiter.ready {
-			# a.arbiter.ready := false;
-			# b.arbiter.ready := false;
-			# c.arbiter.ready := false;
 			d.arbiter.ready := false;
 			f.arbiter.ready := false;
 		};
 		if f.arbiter.ready {
-			# a.arbiter.ready := false;
-			# b.arbiter.ready := false;
-			# c.arbiter.ready := false;
 			d.arbiter.ready := false;
 			e.arbiter.ready := false;
 		};
