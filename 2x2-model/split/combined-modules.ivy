@@ -1,0 +1,491 @@
+#lang ivy1.7
+
+#lang ivy1.7
+
+
+#all 6 in 1 mod
+#fix hf on recv
+#find other errors
+
+
+type sources = {void,rc1,rc2,rc3,rc4,rc5,rc6} #rc is router chosen
+
+object spec = { #cont: copy_data
+	
+	individual copy_finished : bool
+	
+	after init {
+		copy_finished := false;
+		a.r4.hf := true;
+		a.r5.hf := true;
+		a.r6.hf := true;
+		b.r4.hf := true;
+		b.r5.hf := true;
+		b.r6.hf := true;
+		c.r4.hf := true;
+		c.r5.hf := true;
+		c.r6.hf := true;
+		d.r_recv.hf := true;
+		e.r_recv.hf := true;
+		f.r_recv.hf := true;
+		
+		d.r1.hf := false;
+		d.r2.hf := false;
+		d.r3.hf := false;
+		e.r1.hf := false;
+		e.r2.hf := false;
+		e.r3.hf := false;
+		f.r1.hf := false;
+		f.r2.hf := false;
+		f.r3.hf := false;
+		a.r_recv.hf := false;
+		b.r_recv.hf := false;
+		c.r_recv.hf := false;
+		
+		#CANNOT POSSIBLY HAVE FLITS:
+		a.r1.hf := false;
+		a.r2.hf := false;
+		a.r3.hf := false;
+		b.r1.hf := false;
+		b.r2.hf := false;
+		b.r3.hf := false;
+		c.r1.hf := false;
+		c.r2.hf := false;
+		c.r3.hf := false;
+		d.r4.hf := false;
+		d.r5.hf := false;
+		d.r6.hf := false;
+		e.r4.hf := false;
+		e.r5.hf := false;
+		e.r6.hf := false;
+		f.r4.hf := false;
+		f.r5.hf := false;
+		f.r6.hf := false;
+	}
+	
+	invariant ~(a.r1.hf | a.r2.hf | a.r3.hf | b.r1.hf | b.r2.hf | b.r3.hf | c.r1.hf | c.r2.hf | c.r3.hf | d.r4.hf | d.r5.hf | d.r6.hf | e.r4.hf | e.r5.hf | e.r6.hf | f.r4.hf | f.r5.hf | f.r6.hf)
+	invariant a.arbiter.get_from ~= rc1 & a.arbiter.get_from ~= rc2 & a.arbiter.get_from ~= rc3
+	invariant b.arbiter.get_from ~= rc1 & b.arbiter.get_from ~= rc2 & b.arbiter.get_from ~= rc3
+	invariant c.arbiter.get_from ~= rc1 & c.arbiter.get_from ~= rc2 & c.arbiter.get_from ~= rc3
+	invariant d.arbiter.get_from ~= rc4 & d.arbiter.get_from ~= rc5 & d.arbiter.get_from ~= rc6
+	invariant e.arbiter.get_from ~= rc4 & e.arbiter.get_from ~= rc5 & e.arbiter.get_from ~= rc6
+	invariant f.arbiter.get_from ~= rc4 & f.arbiter.get_from ~= rc5 & f.arbiter.get_from ~= rc6
+
+
+
+	action copy_data = {
+		
+		if d.r_recv.hf {
+			a.r4.hf := true;
+			b.r4.hf := true;
+			c.r4.hf := true;
+		} else {
+			a.r4.hf := false;
+			b.r4.hf := false;
+			c.r4.hf := false;
+		};
+		if e.r_recv.hf {
+			a.r5.hf := true;
+			b.r5.hf := true;
+			c.r5.hf := true;
+		} else {
+			a.r5.hf := false;
+			b.r5.hf := false;
+			c.r5.hf := false;
+		};
+		if f.r_recv.hf {
+			a.r6.hf := true;
+			b.r6.hf := true;
+			c.r6.hf := true;
+		} else {
+			a.r6.hf := false;
+			b.r6.hf := false;
+			c.r6.hf := false;
+		};
+		
+		if a.r_recv.hf {
+			d.r1.hf := true;
+			e.r1.hf := true;
+			f.r1.hf := true;
+		} else {
+			d.r1.hf := false;
+			e.r1.hf := false;
+			f.r1.hf := false;
+		};
+		if b.r_recv.hf {
+			d.r2.hf := true;
+			e.r2.hf := true;
+			f.r2.hf := true;
+		} else {
+			d.r2.hf := false;
+			e.r2.hf := false;
+			f.r2.hf := false;
+		};
+		if c.r_recv.hf {
+			d.r3.hf := true;
+			e.r3.hf := true;
+			f.r3.hf := true;
+		} else {
+			d.r3.hf := false;
+			e.r3.hf := false;
+			f.r3.hf := false;
+		};
+		
+		copy_finished := true;
+		
+	} #end copy_data
+	
+	action async = { #the invariant doesn't work when 2 arbiters try to send simultaneously.
+		#in example, both A and B arbiters picked r25 but A sent first.
+		if a.arbiter.ready {
+			b.arbiter.ready := false;
+			c.arbiter.ready := false;
+		};
+		if b.arbiter.ready {
+			a.arbiter.ready := false;
+			c.arbiter.ready := false;
+
+		};
+		if c.arbiter.ready {
+			a.arbiter.ready := false;
+			b.arbiter.ready := false;
+
+		};
+		if d.arbiter.ready {
+			e.arbiter.ready := false;
+			f.arbiter.ready := false;
+		};
+		if e.arbiter.ready {
+			d.arbiter.ready := false;
+			f.arbiter.ready := false;
+		};
+		if f.arbiter.ready {
+			d.arbiter.ready := false;
+			e.arbiter.ready := false;
+		};
+	
+	} #end async
+	conjecture copy_finished -> (a.r4.hf = b.r4.hf) & (b.r4.hf = c.r4.hf) & (c.r4.hf = d.r_recv.hf)
+	conjecture copy_finished -> (a.r5.hf = b.r5.hf) & (b.r5.hf = c.r5.hf) & (c.r5.hf = e.r_recv.hf)
+	conjecture copy_finished -> (a.r6.hf = b.r6.hf) & (b.r6.hf = c.r6.hf) & (c.r6.hf = f.r_recv.hf)
+	conjecture copy_finished -> (d.r1.hf = e.r1.hf) & (e.r1.hf = f.r1.hf) & (f.r1.hf = a.r_recv.hf)
+	conjecture copy_finished -> (d.r2.hf = e.r2.hf) & (e.r2.hf = f.r2.hf) & (f.r2.hf = b.r_recv.hf)
+	conjecture copy_finished -> (d.r3.hf = e.r3.hf) & (e.r3.hf = f.r3.hf) & (f.r3.hf = c.r_recv.hf)
+	
+	conjecture a.r_recv.hf -> (d.r1.hf & e.r1.hf & f.r1.hf)
+	conjecture b.r_recv.hf -> (d.r2.hf & e.r2.hf & f.r2.hf)
+	conjecture c.r_recv.hf -> (d.r3.hf & e.r3.hf & f.r3.hf)
+	conjecture d.r_recv.hf -> (a.r4.hf & b.r4.hf & c.r4.hf)
+	conjecture e.r_recv.hf -> (a.r5.hf & b.r5.hf & c.r5.hf)
+	conjecture f.r_recv.hf -> (a.r6.hf & b.r6.hf & c.r6.hf)
+	
+	conjecture (d.r1.hf | e.r1.hf | f.r1.hf) -> (a.r_recv.hf & d.r1.hf & e.r1.hf & f.r1.hf)
+	conjecture (d.r2.hf | e.r2.hf | f.r2.hf) -> (b.r_recv.hf & d.r2.hf & e.r2.hf & f.r2.hf)
+	conjecture (d.r3.hf | e.r3.hf | f.r3.hf) -> (c.r_recv.hf & d.r3.hf & e.r3.hf & f.r3.hf)
+	conjecture (a.r4.hf | b.r4.hf | c.r4.hf) -> (d.r_recv.hf & a.r4.hf & b.r4.hf & c.r4.hf)
+	conjecture (a.r5.hf | b.r5.hf | c.r5.hf) -> (e.r_recv.hf & a.r5.hf & b.r5.hf & c.r5.hf)
+	conjecture (a.r6.hf | b.r6.hf | c.r6.hf) -> (f.r_recv.hf & a.r6.hf & b.r6.hf & c.r6.hf)
+	
+} #end spec
+
+module node = {
+
+	module r_send = {
+		
+		individual hf : bool 
+		
+		# after init {
+			# hf := *; 
+		# }
+		
+		before send {
+			require hf;
+		}
+		
+		action send = {
+			assert hf;
+			call arbiter.check;
+		} #end send
+		
+		action has_sent = {
+			hf := false;
+		} #end has_sent
+		
+		after has_sent {
+			assert ~hf;
+		}
+		
+	} #end r_send 
+	
+	instance r1 : r_send
+	instance r2 : r_send
+	instance r3 : r_send
+	instance r4 : r_send
+	instance r5 : r_send
+	instance r6 : r_send
+	
+	object arbiter = {
+		
+		individual boolean_rand : bool 
+		individual get_from : sources 
+		individual ready : bool
+		
+		after init {
+			boolean_rand := *;
+			get_from := void;
+			ready := false;
+		}
+		
+		before choose {
+			get_from := void;
+			ready := false;
+		}
+		
+		action choose = {
+			if r4.hf {
+				if r5.hf {
+					if r6.hf { 
+						get_from := *; 
+						assume get_from = rc4 | get_from = rc5 | get_from = rc6; 
+					}
+					else { 
+						if boolean_rand {
+							get_from := rc4;
+						}
+						else {
+							get_from := rc5;
+						};
+		            };
+				}
+				else if r6.hf { #if just r4 and r6 have flits
+					if boolean_rand {
+						get_from := rc4;
+						}
+					else {
+						get_from := rc6;
+					};
+				}
+				else { #if only r4 has a flit
+					get_from := rc4;
+		        };
+	            ready := true;
+			}	
+			else if r5.hf {
+				if r6.hf { #if r5 and r6 have flits
+					if boolean_rand {
+						get_from := rc5;
+					}
+					else {
+						get_from := rc6;
+					};
+				}
+				else { #if only r5 has a flit
+					get_from := rc5;
+		        };
+                ready := true;
+			}
+			else if r6.hf { #if only r6 has a flit
+				get_from := rc6;
+				ready := true;
+			}
+			else { #make sure at least one of the options is selected.
+				get_from := void;
+				ready := false;
+			};
+			if r1.hf {
+				if r2.hf {
+					if r3.hf { 
+						get_from := *; 
+						assume get_from = rc1 | get_from = rc2 | get_from = rc3; 
+					}
+					else { 
+						if boolean_rand {
+							get_from := rc1;
+						}
+						else {
+							get_from := rc2;
+						};
+		            };
+				}
+				else if r3.hf { #if just r4 and r6 have flits
+					if boolean_rand {
+						get_from := rc1;
+						}
+					else {
+						get_from := rc3;
+					};
+				}
+				else { #if only r4 has a flit
+					get_from := rc1;
+		        };
+	            ready := true;
+			}	
+			else if r2.hf {
+				if r3.hf { #if r5 and r6 have flits
+					if boolean_rand {
+						get_from := rc2;
+					}
+					else {
+						get_from := rc3;
+					};
+				}
+				else { #if only r5 has a flit
+					get_from := rc2;
+		        };
+                ready := true;
+			}
+			else if r3.hf { #if only r6 has a flit
+				get_from := rc3;
+				ready := true;
+			}
+			else { #make sure at least one of the options is selected.
+				get_from := void;
+				ready := false;
+			};
+			call spec.async;
+		} #end choose
+		
+		action check = {
+			if ~r_recv.hf & ready & (get_from = rc4 | get_from = rc5 | get_from = rc6) {
+				assert ready;
+				assert ~r_recv.hf; 
+				assert r4.hf | r5.hf | r6.hf;
+				call send; 
+			}
+			else if ~r_recv.hf & ready & (get_from = rc1 | get_from = rc2 | get_from = rc3) {
+				assert ready;
+				assert ~r_recv.hf; 
+				assert r1.hf | r2.hf | r3.hf;
+				call send; 
+			}
+			else {
+				ready := false;
+				get_from := void;
+			#	call spec.copy_data;
+			};
+		} #end check
+		
+		execute choose before check
+		
+		action send = {
+			ready := false;
+			if get_from = rc1 {
+				assert r1.hf;
+				call r1.has_sent;
+				call r_recv.get_flit;
+				call a.r_recv.has_sent; 
+			};
+			if get_from = rc2 {
+				assert r2.hf;
+				call r2.has_sent;
+				call r_recv.get_flit;
+				call b.r_recv.has_sent;
+
+			};
+			if get_from = rc3 {
+				assert r3.hf;
+				call r3.has_sent;
+				call r_recv.get_flit;
+				call c.r_recv.has_sent;
+			};
+			if get_from = rc4 {
+				assert r4.hf;
+				call r4.has_sent;
+				call r_recv.get_flit;
+				call d.r_recv.has_sent; 
+			};
+			if get_from = rc5 {
+				assert r5.hf;
+				call r5.has_sent;
+				call r_recv.get_flit;
+				call e.r_recv.has_sent; 
+			};
+			if get_from = rc6 {
+				assert r6.hf;
+				call r6.has_sent;
+				call r_recv.get_flit;
+				call f.r_recv.has_sent; 
+			};
+			get_from := void;
+		} #end send
+				
+		conjecture (ready & r1.hf) -> get_from ~= void
+		conjecture (ready & r2.hf) -> get_from ~= void
+		conjecture (ready & r3.hf) -> get_from ~= void
+		conjecture (ready & r4.hf) -> get_from ~= void
+		conjecture (ready & r5.hf) -> get_from ~= void
+		conjecture (ready & r6.hf) -> get_from ~= void
+		
+		conjecture ready -> get_from ~= void
+		
+		conjecture ready -> (r1.hf | r2.hf | r3.hf | r4.hf | r5.hf | r6.hf)
+		
+		conjecture (ready & r4.hf & ~r5.hf & ~r6.hf) -> get_from = rc4 
+		conjecture (ready & ~r4.hf & r5.hf & ~r6.hf) -> get_from = rc5 
+		conjecture (ready & ~r4.hf & ~r5.hf & r6.hf) -> get_from = rc6
+		conjecture (ready & r1.hf & ~r2.hf & ~r3.hf) -> get_from = rc1
+		conjecture (ready & ~r1.hf & r2.hf & ~r3.hf) -> get_from = rc2
+		conjecture (ready & ~r1.hf & ~r2.hf & r3.hf) -> get_from = rc3
+		
+		conjecture (ready & r4.hf & r5.hf & ~r6.hf) -> (get_from = rc4 | get_from = rc5)
+        conjecture (ready & ~r4.hf & r5.hf & r6.hf) -> (get_from = rc5 | get_from = rc6)
+		conjecture (ready & r4.hf & ~r5.hf & r6.hf) -> (get_from = rc4 | get_from = rc6)
+		conjecture (ready & r1.hf & r2.hf & ~r3.hf) -> (get_from = rc1 | get_from = rc2)
+		conjecture (ready & ~r1.hf & r2.hf & r3.hf) -> (get_from = rc2 | get_from = rc3)
+		conjecture (ready & r1.hf & ~r2.hf & r3.hf) -> (get_from = rc1 | get_from = rc3)
+		
+		conjecture (ready & get_from = rc1) -> (r1.hf)
+		conjecture (ready & get_from = rc2) -> (r2.hf)
+		conjecture (ready & get_from = rc3) -> (r3.hf)
+		conjecture (ready & get_from = rc4) -> (r4.hf)
+		conjecture (ready & get_from = rc5) -> (r5.hf)
+		conjecture (ready & get_from = rc6) -> (r6.hf)
+		
+	} #end arbiter
+	
+	object r_recv = {
+		
+		individual hf : bool #whether or not there is a flit here
+		
+		# after init {
+			# hf := false; #start without a flit
+			# assert ~hf; #make sure it knows there is no flit
+		# }
+		
+		before get_flit {
+			require ~hf; #make sure there is no flit here before getting one
+		}
+		
+		action get_flit = {
+			hf := true; #get the flit
+		} #end get_flit
+		
+		after get_flit {
+			assert hf; #make sure it got the flit
+		}
+		
+		action has_sent = {
+			hf := false;
+			call spec.copy_data;
+		} #end has_sent
+		
+	} #end r_recv
+
+	export r1.send
+	export r2.send
+	export r3.send
+	export r4.send
+	export r5.send
+	export r6.send
+	
+	invariant ~(arbiter.ready & arbiter.get_from = void)
+
+	
+} #end top_row
+
+instance a : node
+instance b : node
+instance c : node
+instance d : node
+instance e : node
+instance f : node
