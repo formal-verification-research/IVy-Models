@@ -85,7 +85,7 @@ object arbiter = {
 		}
 		else { #make sure at least one of the options is selected.
 			get_from := void;
-			finished := true;
+			#finished := true;
 		}
 	}
 	

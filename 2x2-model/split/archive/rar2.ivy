@@ -1,0 +1,91 @@
+#lang ivy1.7
+
+type packet
+
+object spec = {
+	
+	after init {
+		rar.r_send_A.has_flit := true; #initialize with flits in ABC and not in XYZ (can be changed)
+		rar.r_send_B.has_flit := true;
+		rar.r_send_C.has_flit := true;
+	}
+
+} #end spec
+
+
+object rar = {
+	
+	module r_send = {
+		
+		individual has_flit : bool
+		individual green_flag : bool
+		
+		individual x:packet
+		
+		after init {
+			x := *;
+		}
+		
+		before intf.send {
+			require has_flit;
+			call arbiter.check;
+			require green_flag;
+		}
+		
+		implement intf.send {
+			has_flit := false;
+		}
+
+	} #end r_send 
+	
+	instance r_send_A : r_send
+	instance r_send_B : r_send
+	instance r_send_C : r_send
+	
+	object arbiter = {
+
+		type three = {1,2,3}
+		individual rand : three
+
+		action check = {
+			require r_recv.can_get;
+			rand := *;
+			if r_send_A.has_flit {
+				if r_send_B.has_flit {
+					if r_send_C.has_flit {
+						if r_send_A.x > r_send_B.x & r_send_A.x > r_send_C.x {
+							r_send_A.green_flag := true;
+							call r_send_A.send;
+							call r_recv.get_flit;
+							r_send_A.green_flag := false;
+						} else 
+						if r_send_B.x > r_send_A.x & r_send_B.x > r_send_C.x {
+							r_send_B.green_flag := true;
+							call r_send_B.send;
+							call r_recv.get_flit;
+							r_send_B.green_flag := false;
+						} else 
+						if r_send_C.x > r_send_A.x & r_send_C.x > r_send_B.x {
+							r_send_C.green_flag := true;
+							call r_send_C.send;
+							call r_recv.get_flit;
+							r_send_C.green_flag := false;
+						}
+					}
+				}
+			}
+		}
+		
+		export check
+		
+	} #end arbiter
+	
+	object r_recv = {
+		individual can_get : bool
+		action get_flit = {
+			can_get := false;
+		}
+	} #end arbiter
+	
+} #end r_a_r
+

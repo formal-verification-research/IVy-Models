@@ -28,7 +28,6 @@ object spec = { #cont: copy_data
 		
 	} #copy_data
 	
-		
 
 } #end spec
 
