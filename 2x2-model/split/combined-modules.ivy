@@ -95,39 +95,6 @@ object spec = {
 		};
 		call count_flits;
 		copy_finished := true;
-		
-		# All possible iterations
-		# {a,b,c} {a,b,d} {a,b,e} {a,b,f} 
-		# {a,c,d} {a,c,e} {a,c,f} 
-		# {a,d,e} {a,d,f} 
-		# {a,e,f} 
-		# {b,c,d} {b,c,e} {b,c,f} 
-		# {b,d,e} {b,d,f} 
-		# {b,e,f} 
-		# {c,d,e} {c,d,f} 
-		# {c,e,f} 
-		# {d,e,f}
-		
-		# assume ( (a.r_recv.hf & b.r_recv.hf & c.r_recv.hf) & (~d.r_recv.hf & ~e.r_recv.hf & ~f.r_recv.hf) ) |
-		       # ( (a.r_recv.hf & b.r_recv.hf & d.r_recv.hf) & (~c.r_recv.hf & ~e.r_recv.hf & ~f.r_recv.hf) ) |
-		       # ( (a.r_recv.hf & b.r_recv.hf & e.r_recv.hf) & (~c.r_recv.hf & ~d.r_recv.hf & ~f.r_recv.hf) ) |
-		       # ( (a.r_recv.hf & b.r_recv.hf & f.r_recv.hf) & (~c.r_recv.hf & ~d.r_recv.hf & ~e.r_recv.hf) ) |
-		       # ( (a.r_recv.hf & c.r_recv.hf & d.r_recv.hf) & (~b.r_recv.hf & ~e.r_recv.hf & ~f.r_recv.hf) ) |
-		       # ( (a.r_recv.hf & c.r_recv.hf & e.r_recv.hf) & (~b.r_recv.hf & ~d.r_recv.hf & ~f.r_recv.hf) ) |
-		       # ( (a.r_recv.hf & c.r_recv.hf & f.r_recv.hf) & (~b.r_recv.hf & ~d.r_recv.hf & ~e.r_recv.hf) ) |
-		       # ( (a.r_recv.hf & d.r_recv.hf & e.r_recv.hf) & (~b.r_recv.hf & ~c.r_recv.hf & ~f.r_recv.hf) ) |
-		       # ( (a.r_recv.hf & d.r_recv.hf & f.r_recv.hf) & (~b.r_recv.hf & ~c.r_recv.hf & ~e.r_recv.hf) ) |
-		       # ( (a.r_recv.hf & e.r_recv.hf & f.r_recv.hf) & (~b.r_recv.hf & ~c.r_recv.hf & ~d.r_recv.hf) ) |
-		       # ( (b.r_recv.hf & c.r_recv.hf & d.r_recv.hf) & (~a.r_recv.hf & ~e.r_recv.hf & ~f.r_recv.hf) ) |
-		       # ( (b.r_recv.hf & c.r_recv.hf & e.r_recv.hf) & (~a.r_recv.hf & ~d.r_recv.hf & ~f.r_recv.hf) ) |
-		       # ( (b.r_recv.hf & c.r_recv.hf & f.r_recv.hf) & (~a.r_recv.hf & ~e.r_recv.hf & ~d.r_recv.hf) ) |
-		       # ( (b.r_recv.hf & d.r_recv.hf & e.r_recv.hf) & (~a.r_recv.hf & ~c.r_recv.hf & ~f.r_recv.hf) ) |
-		       # ( (b.r_recv.hf & d.r_recv.hf & f.r_recv.hf) & (~a.r_recv.hf & ~c.r_recv.hf & ~e.r_recv.hf) ) |
-		       # ( (b.r_recv.hf & e.r_recv.hf & f.r_recv.hf) & (~a.r_recv.hf & ~c.r_recv.hf & ~d.r_recv.hf) ) |
-		       # ( (c.r_recv.hf & d.r_recv.hf & e.r_recv.hf) & (~a.r_recv.hf & ~b.r_recv.hf & ~f.r_recv.hf) ) |
-		       # ( (c.r_recv.hf & d.r_recv.hf & f.r_recv.hf) & (~a.r_recv.hf & ~b.r_recv.hf & ~e.r_recv.hf) ) |
-		       # ( (c.r_recv.hf & e.r_recv.hf & f.r_recv.hf) & (~a.r_recv.hf & ~b.r_recv.hf & ~d.r_recv.hf) ) |
-		       # ( (d.r_recv.hf & e.r_recv.hf & f.r_recv.hf) & (~a.r_recv.hf & ~b.r_recv.hf & ~c.r_recv.hf) );
 
 	} #end copy_data
 	
@@ -142,7 +109,6 @@ object spec = {
 			if (a.arbiter.get_from = rc3 & a.arbiter.ready) | (b.arbiter.get_from = rc3 & b.arbiter.ready) | (c.arbiter.get_from = rc3 & c.arbiter.ready) {
 				f.r_recv.hf := false;
 			};
-			
 			if (d.arbiter.get_from = rc1 & d.arbiter.ready) | (e.arbiter.get_from = rc1 & e.arbiter.ready) | (f.arbiter.get_from = rc1 & f.arbiter.ready) {
 				a.r_recv.hf := false;
 			};
@@ -183,7 +149,7 @@ object spec = {
 
 	invariant copy_finished -> flit_count_ok #each router is represented in 4 places, times 3 flits in system
 	
-	action async = { 
+	action remove_duplicates = { 
 
 		if a.arbiter.ready {
 			b.arbiter.ready := false;
@@ -228,7 +194,7 @@ object spec = {
 			e.arbiter.ready := false;
 		};
 	
-	} #end async
+	} #end remove_duplicates
 	
 	conjecture copy_finished -> (a.r1.hf = b.r1.hf) & (b.r1.hf = c.r1.hf) & (c.r1.hf = d.r_recv.hf)
 	conjecture copy_finished -> (a.r2.hf = b.r2.hf) & (b.r2.hf = c.r2.hf) & (c.r2.hf = e.r_recv.hf)
@@ -303,43 +269,43 @@ module node = {
 		action choose = {
 			if r1.hf {
 				if r2.hf {
-					if r3.hf { #if all 3 have flits
+					if r3.hf { # 1 2 3
 						get_from := *; 
 						assume get_from = rc1 | get_from = rc2 | get_from = rc3; 
 					}
-					else { #if only r1 and r2 have flits
+					else { # 1 2 _
 						get_from := *; 
 						assume get_from = rc1 | get_from = rc2; 
 		            };
 				}
-				else if r3.hf { #if just r1 and r3 have flits
+				else if r3.hf { # 1 _ 3
 					get_from := *; 
-						assume get_from = rc1 | get_from = rc3; 
+					assume get_from = rc1 | get_from = rc3; 
 				}
-				else { #if only r1 has a flit
+				else { # 1 _ _
 					get_from := rc1;
 		        };
 	            ready := true;
 			}	
 			else if r2.hf {
-				if r3.hf { #if r2 and r3 have flits
+				if r3.hf { # _ 2 3
 					get_from := *; 
 					assume get_from = rc2 | get_from = rc3; 
 				}
-				else { #if only r2 has a flit
+				else { # _ 2 _
 					get_from := rc2;
 		        };
                 ready := true;
 			}
-			else if r3.hf { #if only r3 has a flit
+			else if r3.hf { # _ _ 3
 				get_from := rc3;
 				ready := true;
 			}
-			else {
+			else { # _ _ _
 				get_from := void;
 				ready := false;
 			};
-			call spec.async;
+			call spec.remove_duplicates;
 		} #end choose
 		
 		action check = {
