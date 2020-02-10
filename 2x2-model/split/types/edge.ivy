@@ -177,48 +177,7 @@ object spec = {
 			};
 			
 	} #end clear_upstream
-	
-	# type bitv
-	# individual flit_count : bitv
-	# individual flit_count_should_be : bitv #so it knows how many flits it started with
-	# interpret bitv -> bv[3]
-	# individual flit_count_ok : bool
-	
-	# action count_flits_first = {
-	
-		# flit_count := 0;
-		
-		# if a.r_recv.hf { flit_count_should_be := flit_count_should_be + 1; };
-		# if b.r_recv.hf { flit_count_should_be := flit_count_should_be + 1; };
-		# if c.r_recv.hf { flit_count_should_be := flit_count_should_be + 1; };
-		# if d.r_recv.hf { flit_count_should_be := flit_count_should_be + 1; };
-		# if e.r_recv.hf { flit_count_should_be := flit_count_should_be + 1; };
-		# if f.r_recv.hf { flit_count_should_be := flit_count_should_be + 1; };
-		
-	# } #end count_flits_first
-	
-	# action count_flits = {
-	
-		# flit_count := 0;
-		# flit_count_ok := false;
-		
-		# if a.r_recv.hf { flit_count := flit_count + 1; };
-		# if b.r_recv.hf { flit_count := flit_count + 1; };
-		# if c.r_recv.hf { flit_count := flit_count + 1; };
-		# if d.r_recv.hf { flit_count := flit_count + 1; };
-		# if e.r_recv.hf { flit_count := flit_count + 1; };
-		# if f.r_recv.hf { flit_count := flit_count + 1; };
-		
-		# if flit_count = flit_count_should_be {
-			# flit_count_ok := true;
-		# } else {
-			# flit_count_ok := false;
-		# };
-		
-	# } #end count_flits
 
-	# invariant copy_finished -> flit_count_ok #each router is represented in 4 places, times 3 flits in system
-	
 	action remove_duplicates = { 
 
 		if a.arbiter.ready {
@@ -314,10 +273,10 @@ object spec = {
 	conjecture g.r_recv.hf -> (a.r3.hf & b.r3.hf & c.r3.hf & d.r3.hf)
 	conjecture h.r_recv.hf -> (a.r4.hf & b.r4.hf & c.r4.hf & d.r4.hf)
 	
-	conjecture (a.r1.hf | b.r1.hf | c.r1.hf) -> (e.r_recv.hf & a.r1.hf & b.r1.hf & c.r1.hf & d.r1.hf)
-	conjecture (a.r2.hf | b.r2.hf | c.r2.hf) -> (f.r_recv.hf & a.r2.hf & b.r2.hf & c.r2.hf & d.r2.hf)
-	conjecture (a.r3.hf | b.r3.hf | c.r3.hf) -> (g.r_recv.hf & a.r3.hf & b.r3.hf & c.r3.hf & d.r3.hf)
-	conjecture (a.r4.hf | b.r4.hf | c.r4.hf) -> (h.r_recv.hf & a.r4.hf & b.r4.hf & c.r4.hf & d.r4.hf)
+	conjecture (a.r1.hf | b.r1.hf | c.r1.hf | d.r1.hf) -> (e.r_recv.hf & a.r1.hf & b.r1.hf & c.r1.hf & d.r1.hf)
+	conjecture (a.r2.hf | b.r2.hf | c.r2.hf | d.r2.hf) -> (f.r_recv.hf & a.r2.hf & b.r2.hf & c.r2.hf & d.r2.hf)
+	conjecture (a.r3.hf | b.r3.hf | c.r3.hf | d.r3.hf) -> (g.r_recv.hf & a.r3.hf & b.r3.hf & c.r3.hf & d.r3.hf)
+	conjecture (a.r4.hf | b.r4.hf | c.r4.hf | d.r4.hf) -> (h.r_recv.hf & a.r4.hf & b.r4.hf & c.r4.hf & d.r4.hf)
 	
 	conjecture (e.r1.hf | f.r1.hf | g.r1.hf | h.r1.hf) -> (a.r_recv.hf & e.r1.hf & f.r1.hf & g.r1.hf & h.r1.hf)
 	conjecture (e.r2.hf | f.r2.hf | g.r2.hf | h.r2.hf) -> (b.r_recv.hf & e.r2.hf & f.r2.hf & g.r2.hf & h.r2.hf)
@@ -457,9 +416,7 @@ module node = {
 		} #end choose
 		
 		action check = {
-			if ~r_recv.hf & ready & (get_from = rc1 | get_from = rc2 | get_from = rc3) {
-				assert ready;
-				assert ~r_recv.hf; 
+			if ~r_recv.hf & ready & (get_from = rc1 | get_from = rc2 | get_from = rc3 | get_from = rc4) {
 				call send; 
 			}
 			else {

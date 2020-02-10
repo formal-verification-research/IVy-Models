@@ -7,54 +7,47 @@ object spec = {
 	individual copy_finished : bool
 	
 	after init {
-		#flit_count_ok := false;
+		flit_count_ok := false;
 		copy_finished := false;
-		
-		# 1/3 of senders definitely have a flit
+		a.r1.hf := true;
+		a.r2.hf := true;
+		a.r3.hf := true;
+		b.r1.hf := true;
+		b.r2.hf := true;
+		b.r3.hf := true;
+		c.r1.hf := true;
+		c.r2.hf := true;
+		c.r3.hf := true;
 		d.r_recv.hf := true;
-		a.r_recv.hf := true;
+		e.r_recv.hf := true;
+		f.r_recv.hf := true;
 		
-		# others may or may not have a flit
-		e.r_recv.hf := *;
-		f.r_recv.hf := *;
-		b.r_recv.hf := *;
-		c.r_recv.hf := *;
-		
-		# make sure they all match
-		a.r1.hf := d.r_recv.hf;
-		a.r2.hf := e.r_recv.hf;
-		a.r3.hf := f.r_recv.hf;
-		b.r1.hf := d.r_recv.hf;
-		b.r2.hf := e.r_recv.hf;
-		b.r3.hf := f.r_recv.hf;
-		c.r1.hf := d.r_recv.hf;
-		c.r2.hf := e.r_recv.hf;
-		c.r3.hf := f.r_recv.hf;
-		d.r1.hf := a.r_recv.hf;
-		d.r2.hf := b.r_recv.hf;
-		d.r3.hf := c.r_recv.hf;
-		e.r1.hf := a.r_recv.hf;
-		e.r2.hf := b.r_recv.hf;
-		e.r3.hf := c.r_recv.hf;
-		f.r1.hf := a.r_recv.hf;
-		f.r2.hf := b.r_recv.hf;
-		f.r3.hf := c.r_recv.hf;
-		
-		#call count_flits_first;
+		d.r1.hf := false;
+		d.r2.hf := false;
+		d.r3.hf := false;
+		e.r1.hf := false;
+		e.r2.hf := false;
+		e.r3.hf := false;
+		f.r1.hf := false;
+		f.r2.hf := false;
+		f.r3.hf := false;
+		a.r_recv.hf := false;
+		b.r_recv.hf := false;
+		c.r_recv.hf := false;
+		call count_flits;
 	}
 	
 	action copy_data = {
-	
-		#generate flits:		
-		a.r_recv.hf := true;
-		d.r1.hf := true;
-		e.r1.hf := true;
-		f.r1.hf := true;
-		d.r_recv.hf := true;
-		a.r1.hf := true;
-		b.r1.hf := true;
-		c.r1.hf := true;
-
+		
+		if a.r_recv.hf {
+			d.r1.hf := true;
+			e.r1.hf := true;
+			f.r1.hf := true;
+		} else {
+			d.r1.hf := false;
+			e.r1.hf := false;
+			f.r1.hf := false;
+		};
 		if b.r_recv.hf {
 			d.r2.hf := true;
 			e.r2.hf := true;
@@ -72,6 +65,15 @@ object spec = {
 			d.r3.hf := false;
 			e.r3.hf := false;
 			f.r3.hf := false;
+		};
+		if d.r_recv.hf {
+			a.r1.hf := true;
+			b.r1.hf := true;
+			c.r1.hf := true;
+		} else {
+			a.r1.hf := false;
+			b.r1.hf := false;
+			c.r1.hf := false;
 		};
 		if e.r_recv.hf {
 			a.r2.hf := true;
@@ -91,6 +93,7 @@ object spec = {
 			b.r3.hf := false;
 			c.r3.hf := false;
 		};
+		call count_flits;
 		copy_finished := true;
 
 	} #end copy_data
@@ -117,7 +120,35 @@ object spec = {
 			};
 			
 	} #end clear_upstream
+	
+	type bitv
+	individual flit_count : bitv
+	interpret bitv -> bv[3]
+	
+	individual flit_count_ok : bool
+	
+	action count_flits = {
+	
+		flit_count := 0;
+		flit_count_ok := false;
+		
+		if a.r_recv.hf { flit_count := flit_count + 1; };
+		if b.r_recv.hf { flit_count := flit_count + 1; };
+		if c.r_recv.hf { flit_count := flit_count + 1; };
+		if d.r_recv.hf { flit_count := flit_count + 1; };
+		if e.r_recv.hf { flit_count := flit_count + 1; };
+		if f.r_recv.hf { flit_count := flit_count + 1; };
+		
+		if flit_count = 3 {
+			flit_count_ok := true;
+		} else {
+			flit_count_ok := false;
+		};
+		
+	} #end count_flits
 
+	invariant copy_finished -> flit_count_ok #each router is represented in 4 places, times 3 flits in system
+	
 	action remove_duplicates = { 
 
 		if a.arbiter.ready {
@@ -200,6 +231,8 @@ module node = {
 		
 		before send {
 			require hf;
+			call spec.count_flits;
+			require spec.flit_count_ok;
 		}
 		
 		action send = {
@@ -277,6 +310,8 @@ module node = {
 		
 		action check = {
 			if ~r_recv.hf & ready & (get_from = rc1 | get_from = rc2 | get_from = rc3) {
+				assert ready;
+				assert ~r_recv.hf; 
 				call send; 
 			}
 			else {
@@ -300,7 +335,9 @@ module node = {
 				assert r2.hf;
 				call r2.has_sent;
 				call r_recv.get_flit;
+
 				call spec.copy_data;
+
 			};
 			if get_from = rc3 {
 				assert r3.hf;
