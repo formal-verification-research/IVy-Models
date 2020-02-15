@@ -1,0 +1,22 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        pseudocode.ivy: line 242: invar6
+        pseudocode.ivy: line 243: invar7
+
+    The following action implementations are present:
+        pseudocode.ivy: line 142: implementation of flit.get_distances
+
+    The following initializers are present:
+        pseudocode.ivy: line 131: flit.init[after4]
+        pseudocode.ivy: line 177: node.init[after5]
+        pseudocode.ivy: line 20: spec.init[after3]
+
+    Initialization must establish the invariant
+        pseudocode.ivy: line 242: invar6 ... PASS
+        pseudocode.ivy: line 243: invar7 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+OK
