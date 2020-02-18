@@ -1,15 +1,15 @@
 #lang ivy1.7
 
-type location
-interpret location -> bv[2]
-type distance
-interpret distance -> int
+type coord
+interpret coord -> bv[2]
+
+type moves
+# interpret moves -> int
 
 type directions = {north,south,east,west,new}
 #new means just injected
 
 type flit
-#relation flit_is(flit,location)
 
 object spec = {
   individual north_ok : bool
@@ -25,29 +25,49 @@ object spec = {
     node(X,Y).this_node_x := X;
     node(X,Y).this_node_y := Y;
     
-    #EDIT THESE TO CHANGE FAULTY LINKS
+    node(X,Y).north_free := false;
+    node(X,Y).east_free  := false;
+    node(X,Y).south_free := false;
+    node(X,Y).west_free  := false;
+    
+    # EDIT THESE TO CHANGE FAULTY LINKS
+    # GROUPED BY "EQUIVALENT" LINKS
+    
     node(0,0).north_free := true;
-    node(0,0).east_free  := true;
-
-    node(0,1).east_free  := true;
     node(0,1).south_free := true;
     
-    node(1,1).south_free := true;
+    node(0,0).east_free  := true;
+    node(1,0).west_free  := true;
+
+    node(0,1).east_free  := true;
     node(1,1).west_free  := true;
     
+    node(0,1).north_free := true;
+    node(0,2).south_free := true;
+    
+    node(1,1).south_free := true;
     node(1,0).north_free := true;
-    node(1,0).west_free  := true;
     
+    node(0,2).east_free  := true;
+    node(1,2).west_free  := true;
     
-    #DO NOT EDIT THESE - THIS REPRESENTS PERMANENT LINKS THAT DON'T EXIST
-    node(0,0).south_free := false;
-    node(0,0).west_free  := false;
-    node(0,1).north_free := false;
-    node(0,1).west_free  := false;
-    node(1,1).north_free := false;
-    node(1,1).east_free  := false;
-    node(1,0).east_free  := false;
-    node(1,0).south_free := false;
+    node(1,0).east_free  := true;
+    node(2,0).west_free  := true;
+    
+    node(1,1).north_free := true;
+    node(1,2).south_free := true; 
+    
+    node(1,1).east_free  := true;
+    node(2,1).west_free  := true;
+    
+    node(1,2).east_free  := true;
+    node(2,2).west_free  := true;
+    
+    node(2,0).north_free := true;
+    node(2,1).south_free := true;
+
+    node(2,1).north_free := true;
+    node(2,2).south_free := true;
     
   }
   
@@ -108,21 +128,45 @@ object spec = {
     flit.current_x := flit.dest_x;
     flit.current_y := flit.dest_y;
     node(flit.current_x,flit.current_y).has_flit := true;
-  }
+  } #end one_hop
+  
+  action go_west = {
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_x := flit.current_x - 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+  } #end go_west
+  
+  action go_south = {
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_y := flit.current_y - 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+  } #end go_west
+  
+  action go_east = {
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_x := flit.current_x + 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+  } #end go_west
+  
+  action go_north = {
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_y := flit.current_y + 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+  } #end go_west
 
 } #end spec
 
 
 object flit = {
 
-  individual current_x : location
-  individual current_y : location
+  individual current_x : coord
+  individual current_y : coord
   
-  individual dest_x : location
-  individual dest_y : location
+  individual dest_x : coord
+  individual dest_y : coord
   
-  individual x_distance : location
-  individual y_distance : location
+  individual x_distance : coord
+  individual y_distance : coord
   
   individual delivered : bool #successful delivery of the flit
   
@@ -134,25 +178,31 @@ object flit = {
     dest_x := *;
     dest_y := *;
     assume ~(dest_x = current_x & dest_y = current_y);
+    assume (X:coord <= 2);
     delivered := false;
     traveling := new;
     call get_distances;
+    call send;
   } #after init
+
+  action send = {
+    call node(current_x,current_y).route;
+  } #end send
   
   action get_distances = {
-    if current_x < dest_x {
+    if current_x > dest_x {
       x_distance := current_x - dest_x;
     } 
-    else if current_x > dest_x {
+    else if current_x < dest_x {
       x_distance := dest_x - current_x;
     }
     else if current_x = dest_x {
       x_distance := 0;
     };
-    if current_y < dest_y {
+    if current_y > dest_y {
       y_distance := current_y - dest_y;
     } 
-    else if current_y > dest_y {
+    else if current_y < dest_y {
       y_distance := dest_x - current_x;
     }
     else if current_y = dest_y {
@@ -160,13 +210,15 @@ object flit = {
     };
     
   } #end get_distances
-  
+
 } #end flit
+
+export flit.send
 
 
 module node_template = {
-  individual this_node_x : location
-  individual this_node_y : location
+  individual this_node_x : coord
+  individual this_node_y : coord
   individual has_flit : bool
 
   individual north_free : bool #where the path is open
@@ -175,11 +227,8 @@ module node_template = {
   individual west_free : bool
   
   after init {
-    north_free := false;
-    east_free  := false;
-    south_free := false;
-    west_free  := false;
-  } #after init
+    
+  } 
   
   action route = {
     if has_flit {
@@ -191,53 +240,52 @@ module node_template = {
         call spec.one_hop;        
       }
       else if spec.west_ok & west_free { #this takes care of 1) and 3) in the pseudocode 
-        #go west
+        call spec.go_west; #go west
         flit.traveling := west;
       }
       else if spec.south_ok & south_free {
-        #go south
+        call spec.go_south; #go south
         flit.traveling := south;
       }
       else if spec.east_ok & east_free {
-        #go east
+        call spec.go_east; #go east
         flit.traveling := east;
       }
       else if spec.north_ok & north_free {
-        #go north
+        call spec.go_north; #go north
         flit.traveling := north;
       }
       else {
         call spec.second_check;
-      };
-      
-      if spec.west_ok & west_free { #this takes care of 1) and 3) in the pseudocode 
-        #go west
-        flit.traveling := west;
+        if spec.west_ok & west_free { #this takes care of 1) and 3) in the pseudocode 
+          call spec.go_west; #go west
+          flit.traveling := west;
+        }
+        else if spec.south_ok & south_free {
+          call spec.go_south; #go south
+          flit.traveling := south;
+        }
+        else if spec.east_ok & east_free {
+          call spec.go_east; #go east
+          flit.traveling := east;
+        }
+        else if spec.north_ok & north_free {
+          call spec.go_north; #go north
+          flit.traveling := north;
+        }
+        else {
+          #drop the flit? maybe?
+        }
       }
-      else if spec.south_ok & south_free {
-        #go south
-        flit.traveling := south;
-      }
-      else if spec.east_ok & east_free {
-        #go east
-        flit.traveling := east;
-      }
-      else if spec.north_ok & north_free {
-        #go north
-        flit.traveling := north;
-      }
-      else {
-        #drop the flit? maybe?
-      };
-      
-      
     }; #endif has_flit
   } #end route
   
+  conjecture (flit.dest_x = this_node_x) & (flit.dest_y = this_node_y) -> flit.delivered
+  conjecture ~(flit.dest_x = this_node_x) & (flit.dest_y = this_node_y) -> ~flit.delivered
   
 } #end node
 
-instance node(X:location,Y:location) : node_template
+instance node(X:coord,Y:coord) : node_template
 
 invariant node(X,Y).this_node_x = X
 invariant node(X,Y).this_node_y = Y

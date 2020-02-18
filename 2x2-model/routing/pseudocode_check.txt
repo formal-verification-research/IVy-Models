@@ -2,21 +2,50 @@
 Isolate this:
 
     The inductive invariant consists of the following conjectures:
-        pseudocode.ivy: line 242: invar6
-        pseudocode.ivy: line 243: invar7
+        pseudocode.ivy: line 283: node.conj6(X:coord, Y:coord)
+        pseudocode.ivy: line 284: node.conj7(X:coord, Y:coord)
+        pseudocode.ivy: line 290: invar8
+        pseudocode.ivy: line 291: invar9
 
     The following action implementations are present:
-        pseudocode.ivy: line 142: implementation of flit.get_distances
+        pseudocode.ivy: line 192: implementation of flit.get_distances
+        pseudocode.ivy: line 188: implementation of flit.send
+        pseudocode.ivy: line 229: implementation of node.init[after5]
+        pseudocode.ivy: line 233: implementation of node.route
+        pseudocode.ivy: line 84: implementation of spec.check
+        pseudocode.ivy: line 145: implementation of spec.go_east
+        pseudocode.ivy: line 151: implementation of spec.go_north
+        pseudocode.ivy: line 139: implementation of spec.go_south
+        pseudocode.ivy: line 133: implementation of spec.go_west
+        pseudocode.ivy: line 126: implementation of spec.one_hop
+        pseudocode.ivy: line 108: implementation of spec.second_check
+
+    The following action monitors are present:
+        pseudocode.ivy: line 74: monitor of spec.second_check
+        pseudocode.ivy: line 74: monitor of spec.check
 
     The following initializers are present:
-        pseudocode.ivy: line 131: flit.init[after4]
-        pseudocode.ivy: line 177: node.init[after5]
+        pseudocode.ivy: line 175: flit.init[after4]
         pseudocode.ivy: line 20: spec.init[after3]
 
     Initialization must establish the invariant
-        pseudocode.ivy: line 242: invar6 ... PASS
-        pseudocode.ivy: line 243: invar7 ... PASS
+        pseudocode.ivy: line 283: node.conj6(X:coord, Y:coord) ... PASS
+        pseudocode.ivy: line 284: node.conj7(X:coord, Y:coord) ... PASS
+        pseudocode.ivy: line 290: invar8 ... PASS
+        pseudocode.ivy: line 291: invar9 ... PASS
 
     Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:flit.send
+            pseudocode.ivy: line 283: node.conj6(X:coord, Y:coord) ... PASS
+            pseudocode.ivy: line 284: node.conj7(X:coord, Y:coord) ... PASS
+            pseudocode.ivy: line 290: invar8 ... PASS
+            pseudocode.ivy: line 291: invar9 ... PASS
+        (internal) ext:node.init[after5]
+            pseudocode.ivy: line 283: node.conj6(X:coord, Y:coord) ... PASS
+            pseudocode.ivy: line 284: node.conj7(X:coord, Y:coord) ... PASS
+            pseudocode.ivy: line 290: invar8 ... PASS
+            pseudocode.ivy: line 291: invar9 ... PASS
 
 OK
