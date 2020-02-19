@@ -1,0 +1,7 @@
+
+Isolate this:
+error: The verification condition is not in the fragment FAU.
+
+An interpreted symbol is applied to a universally quantified variable:
+pseudocode.ivy: line 327: node.this_node_x(X,Y) = X
+pseudocode.ivy: line 327: The quantified variable is X:coord
