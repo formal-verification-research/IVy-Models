@@ -212,7 +212,11 @@ object flit = {
     dest_x := *;
     dest_y := *;
     assume ~(dest_x = current_x & dest_y = current_y);
-    assume A:coord <= 2;
+    # assume A:coord <= 2;
+    assume current_x <= 2;
+    assume current_y <= 2;
+    assume dest_x <= 2;
+    assume dest_y <= 2;
     node(flit.current_x,flit.current_y).has_flit := true;
     traveling := new;
     call get_distances;
@@ -264,7 +268,7 @@ object flit = {
   
   # conjecture test1 = test2
   conjecture delivered -> ((dest_x = current_x) & (dest_y = current_y)) # -> delivered
-  conjecture ~delivered -> ((dest_x = current_x) & (dest_y = current_y)) # -> delivered
+  # conjecture ~delivered -> ((dest_x = current_x) & (dest_y = current_y)) # -> delivered
   
   #but this one failed (it was just order of operations):
   conjecture ((dest_x = current_x) & (dest_y = current_y)) -> delivered
@@ -336,7 +340,7 @@ module node_template = {
     }; #endif has_flit
   } #end route
   
-  conjecture has_flit -> (flit.current_x = this_node_x) & (flit.current_y = this_node_y)
+  conjecture has_flit -> ((flit.current_x = this_node_x) & (flit.current_y = this_node_y))
   conjecture ((flit.current_x = this_node_x) & (flit.current_y = this_node_y)) -> has_flit
   
   #this should fail (order of operations):
@@ -353,4 +357,4 @@ invariant Y:coord = Y & node(X,Y).this_node_y = Y
 
 
 #this isn't failing like I expected...
-conjecture flit.delivered -> ~flit.delivered
+invariant ~flit.delivered -> flit.delivered
