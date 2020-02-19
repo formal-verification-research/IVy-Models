@@ -1,0 +1,348 @@
+#lang ivy1.7
+
+type coord
+interpret coord -> bv[2] #this always has to be bigger than the max to prevent overflow.
+#maybe delare axioms instead?
+
+# axiom A:coord <= 2
+# it was the axiom that broke it.
+
+type moves
+interpret moves -> nat
+
+type directions = {north,south,east,west,new}
+#new means just injected
+
+type flit
+
+# var length : moves
+
+object spec = {
+  individual north_ok : bool # These variables are more temporary.
+  individual east_ok : bool  # They are set only for a moment while
+  individual south_ok : bool # the node is routing the flit. They
+  individual west_ok : bool  # indicate where the flit is OK to go.
+  # individual max_moves : moves
+  # individual moves_made : moves
+  
+  after init {
+    # length := 3;
+    # max_moves := length * length;
+    # moves_made := 0;
+    
+    north_ok := false;
+    east_ok := false;
+    south_ok := false;
+    west_ok := false;
+    node(X,Y).this_node_x := X;
+    node(X,Y).this_node_y := Y;
+    
+    node(X,Y).north_free := false;
+    node(X,Y).east_free  := false;
+    node(X,Y).south_free := false;
+    node(X,Y).west_free  := false;
+    
+    # EDIT THESE TO CHANGE FAULTY LINKS
+    # GROUPED BY "EQUIVALENT" LINKS
+    
+    # Make sure to change both at once.
+    
+    node(0,0).north_free := true;
+    node(0,1).south_free := true;
+    
+    node(0,0).east_free  := true;
+    node(1,0).west_free  := true;
+
+    node(0,1).east_free  := true;
+    node(1,1).west_free  := true;
+    
+    node(0,1).north_free := true;
+    node(0,2).south_free := true;
+    
+    node(1,1).south_free := true;
+    node(1,0).north_free := true;
+    
+    node(0,2).east_free  := true;
+    node(1,2).west_free  := true;
+    
+    node(1,0).east_free  := true;
+    node(2,0).west_free  := true;
+    
+    node(1,1).north_free := true;
+    node(1,2).south_free := true; 
+    
+    node(1,1).east_free  := true;
+    node(2,1).west_free  := true;
+    
+    node(1,2).east_free  := true;
+    node(2,2).west_free  := true;
+    
+    node(2,0).north_free := true;
+    node(2,1).south_free := true;
+
+    node(2,1).north_free := true;
+    node(2,2).south_free := true;
+    
+  }
+  
+  action clear = {
+    north_ok := false;
+    east_ok := false;
+    south_ok := false;
+    west_ok := false;
+  } #end clear
+  
+  execute clear before check
+  execute clear before second_check
+  
+  action check = {
+    if (flit.traveling = west | flit.traveling = south | flit.traveling = new) & 
+       (flit.current_x >= flit.dest_x | 
+       (flit.current_y <= flit.dest_y & ~node(flit.current_x,flit.current_y).south_free)) {
+      west_ok := true;
+    };
+    
+    if (flit.traveling = south | flit.traveling = west | flit.traveling = new) & 
+    (flit.current_y >= flit.dest_y | 
+    (flit.current_x <= flit.dest_x & ~node(flit.current_x,flit.current_y).west_free)) {
+      south_ok := true;
+    };
+    
+    if (flit.dest_x > (flit.current_x + 1)) | 
+       ((flit.dest_x = (flit.current_x + 1)) & flit.dest_y = (flit.current_y + 1)) & 
+       (flit.traveling ~= west) {
+      east_ok := true;
+    };
+    
+    if (flit.dest_y > flit.current_y) & (flit.traveling ~= south) {
+      north_ok := true;
+    };
+  } #end check
+  
+  action second_check = {
+    if (flit.current_x >= flit.dest_x) & 
+       (flit.traveling ~= east | (flit.dest_x = flit.current_x & flit.dest_y = flit.current_y + 1)) {
+      west_ok := true;
+    };
+    if (flit.current_y >= flit.dest_y) & (flit.traveling ~= north) {
+      south_ok := true;
+    };
+    if (flit.current_x <= flit.dest_x) & 
+       (flit.traveling ~= west | flit.current_y = flit.dest_y | 
+       ((flit.current_x = flit.dest_x + 1) & (flit.current_y ~= flit.dest_y - 1))) {
+      east_ok := true;
+    };
+    if (flit.current_y <= flit.dest_y) & (flit.traveling ~= south | flit.current_x <= flit.dest_x) {
+      north_ok := true;
+    };
+  } #end second_check
+
+  action one_hop = {
+    assert flit.delivered;
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_x := flit.dest_x;
+    flit.current_y := flit.dest_y;
+    node(flit.current_x,flit.current_y).has_flit := true;
+    call incr;
+  } #end one_hop
+  
+  action go_west = {
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_x := flit.current_x - 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+    call incr;
+  } #end go_west
+  
+  action go_south = {
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_y := flit.current_y - 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+    call incr;
+  } #end go_west
+  
+  action go_east = {
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_x := flit.current_x + 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+    call incr;
+  } #end go_west
+  
+  action go_north = {
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_y := flit.current_y + 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+    call incr;
+  } #end go_west
+  
+  action is_delivered = {
+    flit.delivered := true;
+  } #end is_delivered
+  
+  action incr = {
+    # moves_made := moves_made + 1;
+  } #end incr
+  
+} #end spec
+
+# conjecture (spec.moves_made < spec.max_moves) -> flit.delivered
+
+object flit = {
+
+  individual current_x : coord
+  individual current_y : coord
+  
+  individual dest_x : coord
+  individual dest_y : coord
+  
+  individual x_distance : coord
+  individual y_distance : coord
+  
+  individual delivered : bool #successful delivery of the flit
+  
+  individual traveling : directions
+  
+  after init {
+    delivered := false;
+    current_x := *;
+    current_y := *;
+    dest_x := *;
+    dest_y := *;
+    assume ~(dest_x = current_x & dest_y = current_y);
+    assume X:coord <= 2;
+    node(flit.current_x,flit.current_y).has_flit := true;
+    traveling := new;
+    call get_distances;
+    call send;
+    
+    # test1 := 3;
+    # test2 := 2;
+    # assert test1 = test2;
+    
+  } #after init
+
+  # individual test1 : coord
+  # individual test2 : coord
+  
+  action send = {
+    call node(current_x,current_y).route;
+  } #end send
+  
+  after send {
+    if (flit.dest_x = current_x) & (flit.dest_y = current_y) {
+        call spec.is_delivered;
+    } else {
+        assert ~flit.delivered;
+    };
+  }
+  
+  action get_distances = {
+    if current_x > dest_x {
+      x_distance := current_x - dest_x;
+    } 
+    else if current_x < dest_x {
+      x_distance := dest_x - current_x;
+    }
+    else if current_x = dest_x {
+      x_distance := 0;
+    };
+    if current_y > dest_y {
+      y_distance := current_y - dest_y;
+    } 
+    else if current_y < dest_y {
+      y_distance := dest_x - current_x;
+    }
+    else if current_y = dest_y {
+      y_distance := 0;
+    };
+    
+  } #end get_distances
+  
+  # conjecture test1 = test2
+  conjecture delivered -> ((dest_x = current_x) & (dest_y = current_y)) # -> delivered
+  
+  #but this one failed (it was just order of operations):
+  conjecture ((dest_x = current_x) & (dest_y = current_y)) -> delivered
+
+} #end flit
+
+export flit.send
+
+
+module node_template = {
+  individual this_node_x : coord
+  individual this_node_y : coord
+  individual has_flit : bool
+
+  individual north_free : bool #where the path is open
+  individual east_free : bool
+  individual south_free : bool
+  individual west_free : bool
+  
+  after init {
+
+  } 
+  
+  action route = {
+    if has_flit {
+      # require ~has_flit; #this was just here to see if this got called ever
+      call spec.check;
+      if (flit.dest_x = this_node_x) & (flit.dest_y = this_node_y) {
+        call spec.is_delivered;
+      }
+      else if (flit.x_distance = 1 & flit.y_distance = 0) & (flit.y_distance = 1 & flit.x_distance = 0) {
+        call spec.one_hop;        
+      }
+      else if spec.west_ok & west_free { #this takes care of 1) and 3) in the pseudocode 
+        call spec.go_west; #go west
+        flit.traveling := west;
+      }
+      else if spec.south_ok & south_free {
+        call spec.go_south; #go south
+        flit.traveling := south;
+      }
+      else if spec.east_ok & east_free {
+        call spec.go_east; #go east
+        flit.traveling := east;
+      }
+      else if spec.north_ok & north_free {
+        call spec.go_north; #go north
+        flit.traveling := north;
+      }
+      else {
+        call spec.second_check;
+        if spec.west_ok & west_free { #this takes care of 1) and 3) in the pseudocode 
+          call spec.go_west; #go west
+          flit.traveling := west;
+        }
+        else if spec.south_ok & south_free {
+          call spec.go_south; #go south
+          flit.traveling := south;
+        }
+        else if spec.east_ok & east_free {
+          call spec.go_east; #go east
+          flit.traveling := east;
+        }
+        else if spec.north_ok & north_free {
+          call spec.go_north; #go north
+          flit.traveling := north;
+        }
+        else {
+          #drop the flit? maybe?
+        }
+      }
+    }; #endif has_flit
+  } #end route
+  
+  conjecture has_flit -> (flit.current_x = this_node_x) & (flit.current_y = this_node_y)
+  
+  #this should fail (I added it in wrong):
+  # conjecture (flit.dest_x = this_node_x) & (flit.dest_y = this_node_y) -> flit.delivered
+  # conjecture ~(flit.dest_x = this_node_x) | ~(flit.dest_y = this_node_y) -> ~flit.delivered
+  
+} #end node
+
+instance node(X:coord,Y:coord) : node_template
+
+invariant X:coord = X & node(X,Y).this_node_x = X
+invariant node(X,Y).this_node_y = Y
+
