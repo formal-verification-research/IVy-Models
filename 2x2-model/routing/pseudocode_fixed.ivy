@@ -138,7 +138,7 @@ object spec = {
   } #end second_check
 
   action one_hop = {
-    assert flit.delivered;
+    assert ~flit.delivered;
     node(flit.current_x,flit.current_y).has_flit := false;
     flit.current_x := flit.dest_x;
     flit.current_y := flit.dest_y;
@@ -147,6 +147,7 @@ object spec = {
   } #end one_hop
   
   action go_west = {
+    assert ~flit.delivered;
     node(flit.current_x,flit.current_y).has_flit := false;
     flit.current_x := flit.current_x - 1;
     node(flit.current_x,flit.current_y).has_flit := true;
@@ -154,6 +155,7 @@ object spec = {
   } #end go_west
   
   action go_south = {
+    assert ~flit.delivered;
     node(flit.current_x,flit.current_y).has_flit := false;
     flit.current_y := flit.current_y - 1;
     node(flit.current_x,flit.current_y).has_flit := true;
@@ -161,6 +163,7 @@ object spec = {
   } #end go_west
   
   action go_east = {
+    assert ~flit.delivered;
     node(flit.current_x,flit.current_y).has_flit := false;
     flit.current_x := flit.current_x + 1;
     node(flit.current_x,flit.current_y).has_flit := true;
@@ -168,6 +171,7 @@ object spec = {
   } #end go_west
   
   action go_north = {
+    assert ~flit.delivered;
     node(flit.current_x,flit.current_y).has_flit := false;
     flit.current_y := flit.current_y + 1;
     node(flit.current_x,flit.current_y).has_flit := true;
@@ -208,7 +212,7 @@ object flit = {
     dest_x := *;
     dest_y := *;
     assume ~(dest_x = current_x & dest_y = current_y);
-    assume X:coord <= 2;
+    assume A:coord <= 2;
     node(flit.current_x,flit.current_y).has_flit := true;
     traveling := new;
     call get_distances;
@@ -230,6 +234,7 @@ object flit = {
   after send {
     if (flit.dest_x = current_x) & (flit.dest_y = current_y) {
         call spec.is_delivered;
+        assert flit.delivered;
     } else {
         assert ~flit.delivered;
     };
@@ -259,9 +264,11 @@ object flit = {
   
   # conjecture test1 = test2
   conjecture delivered -> ((dest_x = current_x) & (dest_y = current_y)) # -> delivered
+  conjecture ~delivered -> ((dest_x = current_x) & (dest_y = current_y)) # -> delivered
   
   #but this one failed (it was just order of operations):
   conjecture ((dest_x = current_x) & (dest_y = current_y)) -> delivered
+  conjecture ~((dest_x = current_x) & (dest_y = current_y)) -> ~delivered
 
 } #end flit
 
@@ -277,11 +284,7 @@ module node_template = {
   individual east_free : bool
   individual south_free : bool
   individual west_free : bool
-  
-  after init {
-
-  } 
-  
+    
   action route = {
     if has_flit {
       # require ~has_flit; #this was just here to see if this got called ever
@@ -334,8 +337,9 @@ module node_template = {
   } #end route
   
   conjecture has_flit -> (flit.current_x = this_node_x) & (flit.current_y = this_node_y)
+  conjecture ((flit.current_x = this_node_x) & (flit.current_y = this_node_y)) -> has_flit
   
-  #this should fail (I added it in wrong):
+  #this should fail (order of operations):
   # conjecture (flit.dest_x = this_node_x) & (flit.dest_y = this_node_y) -> flit.delivered
   # conjecture ~(flit.dest_x = this_node_x) | ~(flit.dest_y = this_node_y) -> ~flit.delivered
   
@@ -343,6 +347,10 @@ module node_template = {
 
 instance node(X:coord,Y:coord) : node_template
 
-invariant X:coord = X & node(X,Y).this_node_x = X
-invariant node(X,Y).this_node_y = Y
 
+invariant X:coord = X & node(X,Y).this_node_x = X
+invariant Y:coord = Y & node(X,Y).this_node_y = Y
+
+
+#this isn't failing like I expected...
+conjecture flit.delivered -> ~flit.delivered
