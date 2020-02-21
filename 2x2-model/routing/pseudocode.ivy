@@ -2,6 +2,9 @@
 
 type coord
 interpret coord -> bv[2] #this always has to be bigger than the max to prevent overflow.
+var max_x : coord
+var max_y : coord
+
 
 type directions = {north,south,east,west,new}
 #new means just injected
@@ -12,16 +15,23 @@ object spec = {
   individual south_ok : bool # the node is routing the flit. They
   individual west_ok : bool  # indicate where the flit is OK to go.
   
+  individual livelock_exists : bool
+  
   after init {
-
     north_ok := false;
     east_ok := false;
     south_ok := false;
     west_ok := false;
+    livelock_exists := false;
+    max_x := 2;
+    max_y := 2;
     node(X,Y).this_node_x := X;
     node(X,Y).this_node_y := Y;
     node(X,Y).has_flit := false;
-    
+    call confirm_links;
+  }
+  
+  action confirm_links = {
     node(X,Y).north_free := false;
     node(X,Y).east_free  := false;
     node(X,Y).south_free := false;
@@ -31,9 +41,10 @@ object spec = {
     # GROUPED BY "EQUIVALENT" LINKS
     
     # Make sure to change both at once.
+    # It's easiest just to comment out the lines.
     
-    node(0,0).north_free := true;
-    node(0,1).south_free := true;
+    # node(0,0).north_free := true;
+    # node(0,1).south_free := true;
     
     node(0,0).east_free  := true;
     node(1,0).west_free  := true;
@@ -67,7 +78,8 @@ object spec = {
 
     node(2,1).north_free := true;
     node(2,2).south_free := true;
-  }
+    
+  } #end confirm_links
   
   action clear = {
     north_ok := false;
@@ -93,7 +105,7 @@ object spec = {
     };
     
     if (flit.dest_x > (flit.current_x + 1)) | 
-       ((flit.dest_x = (flit.current_x + 1)) & flit.dest_y = (flit.current_y + 1)) & 
+       ((flit.dest_x > flit.current_x) & flit.dest_y = (flit.current_y + 1)) & 
        (flit.traveling ~= west) {
       east_ok := true;
     };
@@ -161,6 +173,9 @@ object spec = {
     flit.delivered := true;
   } #end is_delivered
   
+  conjecture ~livelock_exists #I think I found a way to test for livelock!
+  
+  conjecture ~(node(3,Y).has_flit) & ~(node(X,3).has_flit)
 } #end spec
 
 
@@ -195,16 +210,15 @@ object flit = {
     traveling := new;
     call get_distances;
     call send;
-    
   } #after init
 
-  
   action send = {
     require ~delivered;
     call node(current_x,current_y).route;
   } #end send
   
   after send {
+    call get_distances;
     if (dest_x = current_x) & (dest_y = current_y) {
         call spec.is_delivered;
         assert delivered;
@@ -227,7 +241,7 @@ object flit = {
       y_distance := current_y - dest_y;
     } 
     else if current_y < dest_y {
-      y_distance := dest_x - current_x;
+      y_distance := dest_y - current_y;
     }
     else if current_y = dest_y {
       y_distance := 0;
@@ -240,7 +254,13 @@ object flit = {
   
   conjecture ((dest_x = current_x) & (dest_y = current_y)) -> delivered
   conjecture ~((dest_x = current_x) & (dest_y = current_y)) -> ~delivered
-
+  
+  conjecture delivered -> (x_distance = 0 & y_distance = 0)
+  # conjecture delivered -> (x_distance = 0 & y_distance = 1) #failed on purpose
+  
+  conjecture ((x_distance > 0) | (y_distance > 0)) -> ~delivered
+  conjecture (dest_x <= 2) & (dest_y <= 2) & (current_x <= 2) & (current_y <= 2)
+  
 } #end flit
 
 export flit.send
@@ -256,8 +276,24 @@ module node_template = {
   individual south_free : bool
   individual west_free : bool
   
+  # #action confirm_links = {
+    # if this_node_x >= max_x {
+      # east_free := false;
+    # }
+    # else if this_node_x = 0 {
+      # west_free := false;
+    # };
+    # if this_node_y >= max_y {
+      # north_free := false;
+    # }
+    # else if this_node_y = 0 {
+      # south_free := false;
+    # };
+  # } #end confirm_links
+  
   action route = {
     if has_flit {
+      call spec.confirm_links;
       call spec.check;
       if (flit.dest_x = this_node_x) & (flit.dest_y = this_node_y) {
         call spec.is_delivered;
@@ -300,7 +336,7 @@ module node_template = {
           flit.traveling := north;
         }
         else {
-          #drop the flit? maybe?
+          spec.livelock_exists := true;
         }
       }
     }; #endif has_flit
