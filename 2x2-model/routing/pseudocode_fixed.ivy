@@ -269,16 +269,9 @@ object flit = {
   # conjecture test1 = test2
   conjecture delivered -> ((dest_x = current_x) & (dest_y =
     current_y)) # -> delivered
-  conjecture ~delivered -> ~((dest_x = current_x) & (dest_y = current_y)) # -> not delivered, should fail, buy Ivy passes. WHY?
-  conjecture ~(~delivered -> ~((dest_x = current_x) & (dest_y =
-  current_y))) # should pass, but ivy_check fails. Need to look at the
-    # error trace to see why the last conjecture, namely "~delivered
-    # -> ~((dest_x = current_x) & (dest_y = current_y))", holds.
-    
-  #conjecture delivered -> ~((dest_x = current_x) & (dest_y =
-  #current_y)) # should fail. 
-  #conjecture ~delivered -> ((dest_x = current_x) & (dest_y =
-    #current_y)) # should fail.
+  conjecture ~delivered -> ~((dest_x = current_x) & (dest_y = current_y)) # -> not delivered
+  # conjecture delivered -> ~((dest_x = current_x) & (dest_y = current_y)) # should fail. 
+  # conjecture ~delivered -> ((dest_x = current_x) & (dest_y = current_y)) # should fail.
   
   #but this one failed (it was just order of operations):
   conjecture ((dest_x = current_x) & (dest_y = current_y)) -> delivered
