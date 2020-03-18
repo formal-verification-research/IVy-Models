@@ -1,0 +1,13 @@
+ORIGINAL ROUTE: 
+west to 01
+south to 00
+east to 10
+north to 11
+east to 21
+north to 22
+
+
+MODIFIED ROUTE: 
+west to 01
+north to 02
+
