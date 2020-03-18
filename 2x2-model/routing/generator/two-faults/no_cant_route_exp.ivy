@@ -165,22 +165,26 @@ object spec = {
   
   after go_west {
     assert ~node(flit.current_x + 1, flit.current_y).has_flit & node(flit.current_x, flit.current_y).has_flit;
+    assert node(flit.current_x + 1, flit.current_y).had_flit;
     ensure flit.traveling = west;
   }
   
   after go_east {
     assert ~node(flit.current_x - 1, flit.current_y).has_flit & node(flit.current_x, flit.current_y).has_flit;
+    assert node(flit.current_x - 1, flit.current_y).had_flit;
     # assert ~node(flit.current_x - 1, flit.current_y).has_flit;
     ensure flit.traveling = east;
   }
   
   after go_south {
     assert ~node(flit.current_x, flit.current_y + 1).has_flit & node(flit.current_x, flit.current_y).has_flit;
+    assert node(flit.current_x, flit.current_y + 1).had_flit;
     ensure flit.traveling = south;
   }
   
   after go_north {
     assert ~node(flit.current_x, flit.current_y - 1).has_flit & node(flit.current_x, flit.current_y).has_flit;
+    assert node(flit.current_x, flit.current_y - 1).had_flit;
     ensure flit.traveling = north;
   }
   
@@ -382,7 +386,7 @@ module node_template = {
   invariant (flit.delivered & has_flit) -> ((flit.dest_x = this_node_x) & (flit.dest_y = this_node_y))
   invariant (~flit.delivered & has_flit) -> ((~(flit.dest_x = this_node_x) | ~(flit.dest_y = this_node_y)))
   
-  invariant has_flit -> ~had_flit #Maybe checks for livelock
+  # invariant has_flit -> ~had_flit #Maybe checks for livelock
   
 } #end node
 
@@ -394,12 +398,16 @@ invariant flit.dest_y = 2
 
 invariant X:coord = X & node(X,Y).this_node_x = X
 invariant Y:coord = Y & node(X,Y).this_node_y = Y
-invariant ~(node(3,Y).has_flit) & ~(node(X,3).has_flit)
+invariant ~(node(3,Y).has_flit) & ~(node(X,3).has_flit) & ~(node(3,Y).had_flit) & ~(node(X,3).had_flit)
 invariant node(flit.current_x, flit.current_y).has_flit
 
-# invariant ~(node(0,2).has_flit)
+invariant ~(node(0,2).has_flit) & ~(node(0,2).had_flit)
+invariant ~(node(0,1).has_flit) & ~(node(0,1).had_flit)
+invariant ~(node(0,0).has_flit) & ~(node(0,0).had_flit)
+invariant ~(node(1,0).has_flit) & ~(node(1,0).had_flit)
+invariant ~(node(1,1).has_flit) & ~(node(1,1).had_flit)
 
 # invariant ~spec.can_route -> ~flit.delivered
 
 # invariant spec.can_route
-# invariant ~flit.delivered
+invariant ~flit.delivered
