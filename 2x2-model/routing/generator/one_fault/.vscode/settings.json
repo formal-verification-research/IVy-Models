@@ -1,0 +1,8 @@
+{
+  "git.ignoreLimitWarning": true,
+  "files.associations": {
+    "iosfwd": "cpp",
+    "fstream": "cpp",
+    "iostream": "cpp"
+  }
+}

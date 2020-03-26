@@ -1,0 +1,197 @@
+#lang ivy1.7
+
+type location
+interpret location -> bv[2]
+type directions = {north,south,east,west,new}
+#new means just injected
+
+type flit
+#relation flit_is(flit,location)
+
+object spec = {
+  individual north_ok : bool
+  individual east_ok : bool
+  individual south_ok : bool
+  individual west_ok : bool
+  
+  after init {
+    # node(X,Y).this_node_x := X;
+    # node(X,Y).this_node_y := Y;
+    
+    n00.this_node_x := 0;
+    n01.this_node_x := 0;
+    n10.this_node_x := 1;
+    n11.this_node_x := 1;
+    n00.this_node_y := 0;
+    n01.this_node_y := 1;
+    n10.this_node_y := 0;
+    n11.this_node_y := 1;
+    
+    #EDIT THESE TO CHANGE FAULTY LINKS
+    
+    n00.north_free := true;
+    n00.east_free  := true;
+    n00.south_free := false;
+    n00.west_free  := false;
+    
+    n01.north_free := false;
+    n01.east_free  := true;
+    n01.south_free := true;
+    n01.west_free  := false;
+    
+    n11.north_free := false;
+    n11.east_free  := false;
+    n11.south_free := true;
+    n11.west_free  := true;
+    
+    n10.north_free := true;
+    n10.east_free  := false;
+    n10.south_free := false;
+    n10.west_free  := true;
+    
+    #DO NOT EDIT THESE - THIS REPRESENTS PERMANENT LINKS THAT DON'T EXIST
+    
+    
+    
+    
+    # if node(0,1).this_node_x > 0 { #not far west edge
+      # node(X,Y).west_free := true;
+    # };
+    # if node(X,Y).this_node_x < 1 { #not far east edge
+      # node(X,Y).east_free := true;
+    # };
+    # if node(X,Y).this_node_y > 0 { #not far south edge
+      # node(X,Y).south_free := true;
+    # };
+    # if node(X,Y).this_node_y < 1 { #not far north edge
+      # node(X,Y).north_free := true;
+    # };
+    
+  }
+  
+  action check = {
+    # if (flit.traveling = west | flit.traveling = south | flit.traveling = new)  {
+    
+    # };
+    # if (flit.current_loc = 00) {
+    
+    # };
+    # if (flit.current_loc = 00) {
+    
+    # };
+    # if (flit.current_loc = 00) {
+    
+    # };
+  
+  } #end check
+
+  action one_hop = {
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_x := flit.dest_x;
+    flit.current_y := flit.dest_y;
+    node(flit.current_x,flit.current_y).has_flit := true;
+  }
+
+} #end spec
+
+
+object flit = {
+
+  individual current_x : location
+  individual current_y : location
+  
+  individual dest_x : location
+  individual dest_y : location
+  
+  individual delivered : bool #successful delivery of the flit
+  
+  individual traveling : directions
+  
+  after init {
+    current_x := *;
+    current_y := *;
+    dest_x := *;
+    dest_y := *;
+    assume ~(dest_x = current_x & dest_y = current_y);
+    delivered := false;
+    traveling := new;
+  } #after init
+  
+} #end flit
+
+
+module node_template(X:location,Y:location) = {
+  individual this_node_x : location
+  individual this_node_y : location
+  individual has_flit : bool
+
+  individual north_free : bool #where the path is open
+  individual east_free : bool
+  individual south_free : bool
+  individual west_free : bool
+  
+  after init {
+    north_free := false;
+    east_free  := false;
+    south_free := false;
+    west_free  := false;
+    
+    #comment out any of these sections to produce a faulty link (and add to spec)
+    
+    call check_edges;
+    
+  } #after init
+  
+  action check_edges = {
+    
+    if this_node_x > 0 { #not far west edge
+      west_free := true;
+    };
+    if node(X,Y).this_node_x < 1 { #not far east edge
+      node(X,Y).east_free := true;
+    };
+    if node(X,Y).this_node_y > 0 { #not far south edge
+      node(X,Y).south_free := true;
+    };
+    if node(X,Y).this_node_y < 1 { #not far north edge
+      node(X,Y).north_free := true;
+    };
+  
+  } #end check_edges
+  
+  action route = {
+    if has_flit {
+      call spec.check;
+      if (flit.dest_x = this_node_x) & (flit.dest_y = this_node_y) {
+        flit.delivered := true;
+      }
+      else if ((flit.dest_y = this_node_y) | (flit.dest_x = this_node_x)) {
+        call spec.one_hop;        
+      }
+      else if spec.west_ok & west_free { #this takes care of 1) and 3) in the pseudocode 
+        #go west
+        flit.traveling := west;
+      }
+      else if spec.south_ok & south_free {
+        #go south
+        flit.traveling := south;
+      }
+      else if spec.east_ok & east_free {
+        #go east
+        flit.traveling := east;
+      }
+      else if spec.north_ok & north_free {
+        #go north
+        flit.traveling := north;
+      };
+      
+    }; #endif has_flit
+  } #end route
+  
+  
+} #end node
+
+instance n00(X:location,Y:location) : node_template(X:location,Y:location)
+instance n01(X:location,Y:location) : node_template(X:location,Y:location)
+instance n11(X:location,Y:location) : node_template(X:location,Y:location)
+instance n10(X:location,Y:location) : node_template(X:location,Y:location)

@@ -13,22 +13,25 @@ interpret moves -> nat
 type directions = {north,south,east,west,new}
 #new means just injected
 
-type flit
-
-# var length : moves
 
 object spec = {
   individual north_ok : bool # These variables are more temporary.
   individual east_ok : bool  # They are set only for a moment while
   individual south_ok : bool # the node is routing the flit. They
   individual west_ok : bool  # indicate where the flit is OK to go.
-  # individual max_moves : moves
-  # individual moves_made : moves
+  
+  individual length : moves
+  individual max_moves : moves
+  individual moves_made : moves
+  individual livelock_exists : bool
+  
+  axiom length = 3
+  axiom max_moves = 9
   
   after init {
     # length := 3;
-    # max_moves := length * length;
-    # moves_made := 0;
+    # max_moves := 9;
+    moves_made := 0;
     
     north_ok := false;
     east_ok := false;
@@ -82,7 +85,6 @@ object spec = {
 
     node(2,1).north_free := true;
     node(2,2).south_free := true;
-    
   }
   
   action clear = {
@@ -90,6 +92,7 @@ object spec = {
     east_ok := false;
     south_ok := false;
     west_ok := false;
+    assert moves_made < max_moves;
   } #end clear
   
   execute clear before check
@@ -179,7 +182,7 @@ object spec = {
   } #end is_delivered
   
   action incr = {
-    # moves_made := moves_made + 1;
+    moves_made := moves_made + 1;
   } #end incr
   
 } #end spec

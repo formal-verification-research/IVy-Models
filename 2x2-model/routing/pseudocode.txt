@@ -21,7 +21,7 @@ it is at or west of the destination and the west link is faulty
 the destination is east of the current node AND exactly one row north,
 2) the packet is not traveling west, and
 3) the east link is fault-free
-
+ 
 – else go north if:
 1) the destination is north of the current node,
 2) the packet is not traveling south, and
