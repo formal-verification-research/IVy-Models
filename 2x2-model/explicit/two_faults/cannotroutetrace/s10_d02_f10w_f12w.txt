@@ -2,6 +2,7 @@ ORIGINAL ROUTE:
 west to 00
 north to 01
 north to 02
+DELIVERED!
 
 
 MODIFIED ROUTE: 

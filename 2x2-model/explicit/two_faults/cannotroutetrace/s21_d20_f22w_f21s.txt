@@ -1,7 +1,0 @@
-ORIGINAL ROUTE: 
-south to 20
-
-
-MODIFIED ROUTE: 
-north to 22
-

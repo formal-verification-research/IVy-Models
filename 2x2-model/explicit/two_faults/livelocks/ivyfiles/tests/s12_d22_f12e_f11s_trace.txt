@@ -1,0 +1,190 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        s12_d22_f12e_f11s.ivy: line 274: flit.invar9
+        s12_d22_f12e_f11s.ivy: line 275: flit.invar10
+        s12_d22_f12e_f11s.ivy: line 277: flit.invar11
+        s12_d22_f12e_f11s.ivy: line 278: flit.invar12
+        s12_d22_f12e_f11s.ivy: line 280: flit.invar13
+        s12_d22_f12e_f11s.ivy: line 282: flit.invar14
+        s12_d22_f12e_f11s.ivy: line 283: flit.invar15
+        s12_d22_f12e_f11s.ivy: line 284: flit.invar16
+        s12_d22_f12e_f11s.ivy: line 285: flit.invar17
+        s12_d22_f12e_f11s.ivy: line 286: flit.invar18
+        s12_d22_f12e_f11s.ivy: line 288: flit.invar19
+        s12_d22_f12e_f11s.ivy: line 290: flit.invar20
+        s12_d22_f12e_f11s.ivy: line 291: flit.invar21
+        s12_d22_f12e_f11s.ivy: line 292: flit.invar22
+        s12_d22_f12e_f11s.ivy: line 293: flit.invar23
+        s12_d22_f12e_f11s.ivy: line 294: flit.invar24
+        s12_d22_f12e_f11s.ivy: line 386: node.invar25(X:coord, Y:coord)
+        s12_d22_f12e_f11s.ivy: line 387: node.invar26(X:coord, Y:coord)
+        s12_d22_f12e_f11s.ivy: line 389: node.invar27(X:coord, Y:coord)
+        s12_d22_f12e_f11s.ivy: line 390: node.invar28(X:coord, Y:coord)
+        s12_d22_f12e_f11s.ivy: line 392: node.invar29(X:coord, Y:coord)
+        s12_d22_f12e_f11s.ivy: line 393: node.invar30(X:coord, Y:coord)
+        s12_d22_f12e_f11s.ivy: line 399: invar31
+        s12_d22_f12e_f11s.ivy: line 400: invar32
+        s12_d22_f12e_f11s.ivy: line 401: invar33
+        s12_d22_f12e_f11s.ivy: line 402: invar34
+        s12_d22_f12e_f11s.ivy: line 404: invar35
+        s12_d22_f12e_f11s.ivy: line 406: invar36
+        s12_d22_f12e_f11s.ivy: line 407: invar37
+        s12_d22_f12e_f11s.ivy: line 408: invar38
+        s12_d22_f12e_f11s.ivy: line 409: invar39
+        s12_d22_f12e_f11s.ivy: line 410: invar40
+        s12_d22_f12e_f11s.ivy: line 411: invar41
+        s12_d22_f12e_f11s.ivy: line 412: invar42
+        s12_d22_f12e_f11s.ivy: line 413: invar43
+        s12_d22_f12e_f11s.ivy: line 414: invar44
+        s12_d22_f12e_f11s.ivy: line 415: invar45
+        s12_d22_f12e_f11s.ivy: line 416: invar46
+        s12_d22_f12e_f11s.ivy: line 417: invar47
+        s12_d22_f12e_f11s.ivy: line 418: invar48
+        s12_d22_f12e_f11s.ivy: line 419: invar49
+        s12_d22_f12e_f11s.ivy: line 420: invar50
+
+    The following action implementations are present:
+        s12_d22_f12e_f11s.ivy: line 252: implementation of flit.get_distances
+        s12_d22_f12e_f11s.ivy: line 237: implementation of flit.send
+        s12_d22_f12e_f11s.ivy: line 320: implementation of node.route
+        s12_d22_f12e_f11s.ivy: line 86: implementation of spec.check
+        s12_d22_f12e_f11s.ivy: line 32: implementation of spec.confirm_links
+        s12_d22_f12e_f11s.ivy: line 162: implementation of spec.go_east
+        s12_d22_f12e_f11s.ivy: line 170: implementation of spec.go_north
+        s12_d22_f12e_f11s.ivy: line 154: implementation of spec.go_south
+        s12_d22_f12e_f11s.ivy: line 146: implementation of spec.go_west
+        s12_d22_f12e_f11s.ivy: line 198: implementation of spec.is_delivered
+        s12_d22_f12e_f11s.ivy: line 117: implementation of spec.second_check
+
+    The following action monitors are present:
+        s12_d22_f12e_f11s.ivy: line 242: monitor of flit.send
+        s12_d22_f12e_f11s.ivy: line 76: monitor of spec.second_check
+        s12_d22_f12e_f11s.ivy: line 76: monitor of spec.check
+        s12_d22_f12e_f11s.ivy: line 183: monitor of spec.go_east
+        s12_d22_f12e_f11s.ivy: line 193: monitor of spec.go_north
+        s12_d22_f12e_f11s.ivy: line 188: monitor of spec.go_south
+        s12_d22_f12e_f11s.ivy: line 178: monitor of spec.go_west
+
+    The following initializers are present:
+        s12_d22_f12e_f11s.ivy: line 220: flit.init[after7]
+        s12_d22_f12e_f11s.ivy: line 19: spec.init[after2]
+
+    Initialization must establish the invariant
+        s12_d22_f12e_f11s.ivy: line 274: flit.invar9 ... PASS
+        s12_d22_f12e_f11s.ivy: line 275: flit.invar10 ... PASS
+        s12_d22_f12e_f11s.ivy: line 277: flit.invar11 ... PASS
+        s12_d22_f12e_f11s.ivy: line 278: flit.invar12 ... PASS
+        s12_d22_f12e_f11s.ivy: line 280: flit.invar13 ... PASS
+        s12_d22_f12e_f11s.ivy: line 282: flit.invar14 ... PASS
+        s12_d22_f12e_f11s.ivy: line 283: flit.invar15 ... PASS
+        s12_d22_f12e_f11s.ivy: line 284: flit.invar16 ... PASS
+        s12_d22_f12e_f11s.ivy: line 285: flit.invar17 ... PASS
+        s12_d22_f12e_f11s.ivy: line 286: flit.invar18 ... PASS
+        s12_d22_f12e_f11s.ivy: line 288: flit.invar19 ... PASS
+        s12_d22_f12e_f11s.ivy: line 290: flit.invar20 ... PASS
+        s12_d22_f12e_f11s.ivy: line 291: flit.invar21 ... PASS
+        s12_d22_f12e_f11s.ivy: line 292: flit.invar22 ... PASS
+        s12_d22_f12e_f11s.ivy: line 293: flit.invar23 ... PASS
+        s12_d22_f12e_f11s.ivy: line 294: flit.invar24 ... PASS
+        s12_d22_f12e_f11s.ivy: line 386: node.invar25(X:coord, Y:coord) ... PASS
+        s12_d22_f12e_f11s.ivy: line 387: node.invar26(X:coord, Y:coord) ... PASS
+        s12_d22_f12e_f11s.ivy: line 389: node.invar27(X:coord, Y:coord) ... PASS
+        s12_d22_f12e_f11s.ivy: line 390: node.invar28(X:coord, Y:coord) ... PASS
+        s12_d22_f12e_f11s.ivy: line 392: node.invar29(X:coord, Y:coord) ... PASS
+        s12_d22_f12e_f11s.ivy: line 393: node.invar30(X:coord, Y:coord) ... PASS
+        s12_d22_f12e_f11s.ivy: line 399: invar31 ... PASS
+        s12_d22_f12e_f11s.ivy: line 400: invar32 ... PASS
+        s12_d22_f12e_f11s.ivy: line 401: invar33 ... PASS
+        s12_d22_f12e_f11s.ivy: line 402: invar34 ... PASS
+        s12_d22_f12e_f11s.ivy: line 404: invar35 ... PASS
+        s12_d22_f12e_f11s.ivy: line 406: invar36 ... PASS
+        s12_d22_f12e_f11s.ivy: line 407: invar37 ... PASS
+        s12_d22_f12e_f11s.ivy: line 408: invar38 ... PASS
+        s12_d22_f12e_f11s.ivy: line 409: invar39 ... PASS
+        s12_d22_f12e_f11s.ivy: line 410: invar40 ... PASS
+        s12_d22_f12e_f11s.ivy: line 411: invar41 ... PASS
+        s12_d22_f12e_f11s.ivy: line 412: invar42 ... PASS
+        s12_d22_f12e_f11s.ivy: line 413: invar43 ... PASS
+        s12_d22_f12e_f11s.ivy: line 414: invar44 ... PASS
+        s12_d22_f12e_f11s.ivy: line 415: invar45 ... PASS
+        s12_d22_f12e_f11s.ivy: line 416: invar46 ... PASS
+        s12_d22_f12e_f11s.ivy: line 417: invar47 ... PASS
+        s12_d22_f12e_f11s.ivy: line 418: invar48 ... PASS
+        s12_d22_f12e_f11s.ivy: line 419: invar49 ... PASS
+        s12_d22_f12e_f11s.ivy: line 420: invar50 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:flit.send
+            s12_d22_f12e_f11s.ivy: line 274: flit.invar9 ... PASS
+            s12_d22_f12e_f11s.ivy: line 275: flit.invar10 ... PASS
+            s12_d22_f12e_f11s.ivy: line 277: flit.invar11 ... PASS
+            s12_d22_f12e_f11s.ivy: line 278: flit.invar12 ... PASS
+            s12_d22_f12e_f11s.ivy: line 280: flit.invar13 ... PASS
+            s12_d22_f12e_f11s.ivy: line 282: flit.invar14 ... PASS
+            s12_d22_f12e_f11s.ivy: line 283: flit.invar15 ... PASS
+            s12_d22_f12e_f11s.ivy: line 284: flit.invar16 ... PASS
+            s12_d22_f12e_f11s.ivy: line 285: flit.invar17 ... PASS
+            s12_d22_f12e_f11s.ivy: line 286: flit.invar18 ... PASS
+            s12_d22_f12e_f11s.ivy: line 288: flit.invar19 ... PASS
+            s12_d22_f12e_f11s.ivy: line 290: flit.invar20 ... PASS
+            s12_d22_f12e_f11s.ivy: line 291: flit.invar21 ... PASS
+            s12_d22_f12e_f11s.ivy: line 292: flit.invar22 ... PASS
+            s12_d22_f12e_f11s.ivy: line 293: flit.invar23 ... PASS
+            s12_d22_f12e_f11s.ivy: line 294: flit.invar24 ... PASS
+            s12_d22_f12e_f11s.ivy: line 386: node.invar25(X:coord, Y:coord) ... PASS
+            s12_d22_f12e_f11s.ivy: line 387: node.invar26(X:coord, Y:coord) ... PASS
+            s12_d22_f12e_f11s.ivy: line 389: node.invar27(X:coord, Y:coord) ... PASS
+            s12_d22_f12e_f11s.ivy: line 390: node.invar28(X:coord, Y:coord) ... PASS
+            s12_d22_f12e_f11s.ivy: line 392: node.invar29(X:coord, Y:coord) ... PASS
+            s12_d22_f12e_f11s.ivy: line 393: node.invar30(X:coord, Y:coord) ... PASS
+            s12_d22_f12e_f11s.ivy: line 399: invar31 ... PASS
+            s12_d22_f12e_f11s.ivy: line 400: invar32 ... PASS
+            s12_d22_f12e_f11s.ivy: line 401: invar33 ... PASS
+            s12_d22_f12e_f11s.ivy: line 402: invar34 ... PASS
+            s12_d22_f12e_f11s.ivy: line 404: invar35 ... PASS
+            s12_d22_f12e_f11s.ivy: line 406: invar36 ... PASS
+            s12_d22_f12e_f11s.ivy: line 407: invar37 ... PASS
+            s12_d22_f12e_f11s.ivy: line 408: invar38 ... PASS
+            s12_d22_f12e_f11s.ivy: line 409: invar39 ... PASS
+            s12_d22_f12e_f11s.ivy: line 410: invar40 ... PASS
+            s12_d22_f12e_f11s.ivy: line 411: invar41 ... PASS
+            s12_d22_f12e_f11s.ivy: line 412: invar42 ... PASS
+            s12_d22_f12e_f11s.ivy: line 413: invar43 ... PASS
+            s12_d22_f12e_f11s.ivy: line 414: invar44 ... PASS
+            s12_d22_f12e_f11s.ivy: line 415: invar45 ... PASS
+            s12_d22_f12e_f11s.ivy: line 416: invar46 ... PASS
+            s12_d22_f12e_f11s.ivy: line 417: invar47 ... PASS
+            s12_d22_f12e_f11s.ivy: line 418: invar48 ... PASS
+            s12_d22_f12e_f11s.ivy: line 419: invar49 ... PASS
+            s12_d22_f12e_f11s.ivy: line 420: invar50 ... PASS
+
+    The following program assertions are treated as assumptions:
+        in action flit.send when called from the environment:
+            s12_d22_f12e_f11s.ivy: line 238: assumption
+
+    The following program assertions are treated as guarantees:
+        in action spec.go_east when called from node.route,node.route,node.route:
+            s12_d22_f12e_f11s.ivy: line 184: guarantee ... PASS
+            s12_d22_f12e_f11s.ivy: line 185: guarantee ... PASS
+        in action flit.send when called from the environment,the environment:
+            s12_d22_f12e_f11s.ivy: line 246: guarantee ... PASS
+            s12_d22_f12e_f11s.ivy: line 248: guarantee ... PASS
+        in action spec.go_north when called from node.route,node.route,node.route:
+            s12_d22_f12e_f11s.ivy: line 194: guarantee ... PASS
+            s12_d22_f12e_f11s.ivy: line 195: guarantee ... PASS
+        in action flit.send when called from :
+            s12_d22_f12e_f11s.ivy: line 238: guarantee 
+            s12_d22_f12e_f11s.ivy: line 246: guarantee 
+            s12_d22_f12e_f11s.ivy: line 248: guarantee 
+        in action spec.go_south when called from node.route,node.route,node.route:
+            s12_d22_f12e_f11s.ivy: line 189: guarantee ... PASS
+            s12_d22_f12e_f11s.ivy: line 190: guarantee ... PASS
+        in action spec.go_west when called from node.route,node.route,node.route:
+            s12_d22_f12e_f11s.ivy: line 179: guarantee ... PASS
+            s12_d22_f12e_f11s.ivy: line 180: guarantee ... PASS
+
+OK

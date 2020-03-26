@@ -87,7 +87,7 @@ void route(int cur_x, int cur_y, int dest_x, int dest_y, int faulty_x1, int faul
         traveling = "east";
         ss << traveling << " to " << cur_x << cur_y << endl;
     }
-    else if (cur_y + 1 == dest_x && cur_x == dest_x && node[cur_x][cur_y].north_ok) { // 1 node north
+    else if (cur_y + 1 == dest_y && cur_x == dest_x && node[cur_x][cur_y].north_ok) { // 1 node north
         cur_y++;
         traveling = "north";
         ss << traveling << " to " << cur_x << cur_y << endl;
@@ -110,7 +110,7 @@ void route(int cur_x, int cur_y, int dest_x, int dest_y, int faulty_x1, int faul
     }
 
     // go east if:
-    else if (cur_x != 2 && (traveling != "west") && node[cur_x][cur_y].east_ok && (dest_x > cur_x + 1 || (dest_x == cur_x + 1 && dest_y == cur_y + 1))) {
+    else if (cur_x != 2 && (traveling != "west") && node[cur_x][cur_y].east_ok && (dest_x > cur_x + 1 || (dest_x > cur_x && dest_y == cur_y + 1))) {
       cur_x++;
       traveling = "east";
       ss << traveling << " to " << cur_x << cur_y << endl;
@@ -124,31 +124,33 @@ void route(int cur_x, int cur_y, int dest_x, int dest_y, int faulty_x1, int faul
     }
 
     //ELSE go west if
-    else if (cur_x != 0 && cur_x >= dest_x && traveling != "east" && node[cur_x][cur_y].west_ok) {
+    // else if (cur_x != 0 && cur_x >= dest_x && (traveling != "east" || (cur_y < dest_y && cur_x == dest_x)) && node[cur_x][cur_y].west_ok) { // JUST COLUMN
+    else if (cur_x != 0 && cur_x >= dest_x && (traveling != "east" || (cur_y + 1 == dest_y && cur_x == dest_x)) && node[cur_x][cur_y].west_ok) { // ONE NODE ABOVE 
       cur_x--;
       traveling = "west";
-      ss << traveling << " to " << cur_x << cur_y << endl;
+      ss << traveling << " two " << cur_x << cur_y << endl;
     }
 
     //ELSE go south if
-    else if (cur_y != 0 && cur_y >= dest_x && traveling != "north" && node[cur_x][cur_y].south_ok) {
+    else if (cur_y != 0 && cur_y >= dest_y && traveling != "north" && node[cur_x][cur_y].south_ok) {
       cur_y--;
       traveling = "south";
-      ss << traveling << " to " << cur_x << cur_y << endl;
+      ss << traveling << " two " << cur_x << cur_y << endl;
     }
 
     //ELSE go east if
-    else if (cur_x != 2 && cur_x <= dest_x && (traveling != "west" || cur_x == dest_x || (cur_x + 1 == dest_x && cur_y + 1 != dest_x)) && node[cur_x][cur_y].east_ok) {
+    else if (cur_x != 2 && cur_x <= dest_x && (traveling != "west" || cur_x == dest_x || (cur_x + 1 == dest_x && cur_y + 1 != dest_y)) 
+            && node[cur_x][cur_y].east_ok) {
       cur_x++;
       traveling = "east";
-      ss << traveling << " to " << cur_x << cur_y << endl;
+      ss << traveling << " two " << cur_x << cur_y << endl;
     }
 
     //ELSE go north if
     else if (cur_y != 2 && cur_y <= dest_y && (traveling != "south" || cur_x <= dest_x) && node[cur_x][cur_y].north_ok) {
       cur_y++;
       traveling = "north";
-      ss << traveling << " to " << cur_x << cur_y << endl;
+      ss << traveling << " two " << cur_x << cur_y << endl;
     }
 
     // UNROUTABLE
@@ -156,8 +158,8 @@ void route(int cur_x, int cur_y, int dest_x, int dest_y, int faulty_x1, int faul
       unroutable = true;
       ofstream noroute("_cannotroute.txt", ios::out | ios::app);
       noroute << filename.str() << endl;
-      ofstream livefile("cannotroutetrace/" + filename.str() + ".txt", ios::out | ios::app);
-      livefile << "ORIGINAL ROUTE: \n" << compare << "\n\nMODIFIED ROUTE: \n" << ss.str() << endl;
+      ofstream noroutefile("cannotroutetrace/" + filename.str() + ".txt", ios::out | ios::app);
+      noroutefile << "ORIGINAL ROUTE: \n" << compare << "\n\nMODIFIED ROUTE: \n" << ss.str() << endl;
       break;
     }
 
@@ -176,30 +178,17 @@ void route(int cur_x, int cur_y, int dest_x, int dest_y, int faulty_x1, int faul
 
   }
 
-  // if (ss.str() == compare) {
-  //   ofstream nochange("_nochange.txt", ios::out | ios::app);
-  //   nochange << filename.str() << endl;
-  // }
-  // else 
-  
+  if (ss.str() == compare) {
+    ofstream nochange("_nochange.txt", ios::out | ios::app);
+    nochange << filename.str() << endl;
+  }
+  else  
   if (delivered) {
     ofstream deliv("_delivered.txt", ios::out | ios::app);
     deliv << filename.str() << endl;
-
+    ofstream delivered("deliveredtrace/" + filename.str() + ".txt", ios::out | ios::app);
+    delivered << "ORIGINAL ROUTE: \n" << compare << "\n\nMODIFIED ROUTE: \n" << ss.str() << endl;
   }
-
-
-
-  // for(int i = 0; i < 3; i++) {
-  //   for(int j = 0; j < 3; j++) {
-  //     if (node[i][j].has_had_flit) {
-  //       cout << "---" << i << j << endl;
-  //     }
-  //     else {
-  //       cout << "NO FLITS ALLOWED: " << i << j << endl;
-  //     }
-  //   }
-  // }
 
 }
 
@@ -225,31 +214,31 @@ string route_default(int cur_x, int cur_y, int dest_x, int dest_y)
   while (!delivered) //routing with faulty link checks
   {
     node[cur_x][cur_y].has_flit(); //make sure all current nodes are counted
-    
 
     // If the packet has reached its destination, deliver the packet.
     if (cur_x == dest_x && cur_y == dest_y) { //delivered
       delivered = true;
+      ss << "DELIVERED!" << endl;
       break;
     }
 
     // else if the packet is one hop away and the corresponding link is available, send on that link
-    else if (cur_x - dest_x == 1 && cur_y == dest_y) { // 1 node west
+    else if (cur_x - dest_x == 1 && cur_y == dest_y && node[cur_x][cur_y].west_ok) { // 1 node west
         cur_x--;
         traveling = "west";
         ss << traveling << " to " << cur_x << cur_y << endl;
     }
-    else if (cur_y - 1 == dest_y && cur_x == dest_x) { // 1 node south
+    else if (cur_y - 1 == dest_y && cur_x == dest_x && node[cur_x][cur_y].south_ok) { // 1 node south
         cur_y--;
         traveling = "south";
         ss << traveling << " to " << cur_x << cur_y << endl;
     }
-    else if (cur_x + 1 == dest_x && cur_y == dest_y) { // 1 node east
+    else if (cur_x + 1 == dest_x && cur_y == dest_y && node[cur_x][cur_y].east_ok) { // 1 node east
         cur_x++;
         traveling = "east";
         ss << traveling << " to " << cur_x << cur_y << endl;
     }
-    else if (cur_y + 1 == dest_x && cur_x == dest_x) { // 1 node north
+    else if (cur_y + 1 == dest_y && cur_x == dest_x && node[cur_x][cur_y].north_ok) { // 1 node north
         cur_y++;
         traveling = "north";
         ss << traveling << " to " << cur_x << cur_y << endl;
@@ -257,60 +246,62 @@ string route_default(int cur_x, int cur_y, int dest_x, int dest_y)
 
     // go west if:
     else if (cur_x != 0 && (traveling == "west" || traveling == "south" || traveling == "new") && node[cur_x][cur_y].west_ok && 
-              (cur_x >= dest_x || cur_y <= dest_y)) {
+              (cur_x >= dest_x || (cur_y <= dest_y && !node[cur_x][cur_y].south_ok))) {
       cur_x--;
       traveling = "west";
       ss << traveling << " to " << cur_x << cur_y << endl;
     }
 
     // go south if:
-    else if (cur_y != 0 && (traveling == "west" || traveling == "south" || traveling == "new") && 
-              (cur_y >= dest_y || (cur_x <= dest_x))) {
+    else if (cur_y != 0 && (traveling == "west" || traveling == "south" || traveling == "new") && node[cur_x][cur_y].south_ok && 
+              (cur_y >= dest_y || (cur_x <= dest_x && !node[cur_x][cur_y].west_ok))) {
       cur_y--;
       traveling = "south";
       ss << traveling << " to " << cur_x << cur_y << endl;
     }
 
     // go east if:
-    else if (cur_x != 2 && (traveling != "west") && (dest_x > cur_x + 1 || (dest_x == cur_x + 1 && dest_y == cur_y + 1))) {
+    else if (cur_x != 2 && (traveling != "west") && node[cur_x][cur_y].east_ok && (dest_x > cur_x + 1 || (dest_x > cur_x && dest_y == cur_y + 1))) {
       cur_x++;
       traveling = "east";
       ss << traveling << " to " << cur_x << cur_y << endl;
     }
 
     // go north if:
-    else if (cur_y != 2 && (traveling != "south") && dest_y > cur_y) {
+    else if (cur_y != 2 && (traveling != "south") && node[cur_x][cur_y].north_ok && dest_y > cur_y) {
       cur_y++;
       traveling = "north";
       ss << traveling << " to " << cur_x << cur_y << endl;
     }
 
     //ELSE go west if
-    else if (cur_x != 0 && cur_x >= dest_x && traveling != "east") {
+    // else if (cur_x != 0 && cur_x >= dest_x && (traveling != "east" || (cur_y < dest_y && cur_x == dest_x)) && node[cur_x][cur_y].west_ok) { // JUST COLUMN
+    else if (cur_x != 0 && cur_x >= dest_x && (traveling != "east" || (cur_y + 1 == dest_y && cur_x == dest_x)) && node[cur_x][cur_y].west_ok) { // ONE NODE ABOVE 
       cur_x--;
       traveling = "west";
-      ss << traveling << " to " << cur_x << cur_y << endl;
+      ss << traveling << " two " << cur_x << cur_y << endl;
     }
 
     //ELSE go south if
-    else if (cur_y != 0 && cur_y >= dest_x && traveling != "north") {
+    else if (cur_y != 0 && cur_y >= dest_y && traveling != "north" && node[cur_x][cur_y].south_ok) {
       cur_y--;
       traveling = "south";
-      ss << traveling << " to " << cur_x << cur_y << endl;
+      ss << traveling << " two " << cur_x << cur_y << endl;
     }
 
     //ELSE go east if
-    else if (cur_x != 2 && cur_x <= dest_x && (traveling != "west" || cur_x == dest_x || (cur_x + 1 == dest_x && cur_y + 1 != dest_x))) {
+    else if (cur_x != 2 && cur_x <= dest_x && (traveling != "west" || cur_x == dest_x || (cur_x + 1 == dest_x && cur_y + 1 != dest_y)) 
+            && node[cur_x][cur_y].east_ok) {
       cur_x++;
       traveling = "east";
-      ss << traveling << " to " << cur_x << cur_y << endl;
+      ss << traveling << " two " << cur_x << cur_y << endl;
     }
 
     //ELSE go north if
-    else if (cur_y != 2 && cur_y <= dest_y && (traveling != "south" || cur_x <= dest_x)) {
+    else if (cur_y != 2 && cur_y <= dest_y && (traveling != "south" || cur_x <= dest_x) && node[cur_x][cur_y].north_ok) {
       cur_y++;
       traveling = "north";
-      ss << traveling << " to " << cur_x << cur_y << endl;
+      ss << traveling << " two " << cur_x << cur_y << endl;
     }
 
     // UNROUTABLE

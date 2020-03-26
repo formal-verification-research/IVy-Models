@@ -3,10 +3,12 @@ south to 00
 east to 10
 east to 20
 north to 21
+DELIVERED!
 
 
 MODIFIED ROUTE: 
 south to 00
 east to 10
 east to 20
+west two 10
 

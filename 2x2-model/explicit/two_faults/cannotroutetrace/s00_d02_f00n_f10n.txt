@@ -1,8 +1,9 @@
 ORIGINAL ROUTE: 
 north to 01
 north to 02
+DELIVERED!
 
 
 MODIFIED ROUTE: 
-east to 10
+east two 10
 

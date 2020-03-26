@@ -1,9 +1,0 @@
-ORIGINAL ROUTE: 
-east to 10
-east to 20
-
-
-MODIFIED ROUTE: 
-north to 01
-east to 11
-
