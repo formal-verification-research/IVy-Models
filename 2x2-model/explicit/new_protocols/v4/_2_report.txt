@@ -1,0 +1,6 @@
+Total Scenarios: 15408 (100%)
+Delivered:       15135 (98.22819315%)
+Undeliverable:   251 (1.629023884%)
+Livelocks Found: 22 (0.1427829699%)
+--- end of report ---
+

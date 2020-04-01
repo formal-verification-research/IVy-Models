@@ -1,0 +1,4 @@
+Second west, require north to also be ok
+(ln 243)
+
+! BETTER THAN V1

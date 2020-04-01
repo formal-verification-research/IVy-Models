@@ -1,0 +1,4 @@
+// 1st North if the destination is 1 north and 1 east
+Don't go south if dest is 1 north and 1 east
+
+! BETTER THAN V3
