@@ -1,0 +1,2 @@
+p_north02_east12_south*11_west01_ 2s11_d22_f11s_f12e
+p_west01_north02_east12_south*11_ 2s12_d22_f11s_f12e
