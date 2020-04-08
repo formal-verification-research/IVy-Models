@@ -1,6 +1,0 @@
-Don't go south if:
-- on top row
-- headed east
-- east link faulty
-
-//- destination is to east

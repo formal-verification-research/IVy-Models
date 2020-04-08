@@ -86,7 +86,7 @@ void route(int cur_x, int cur_y, int dest_x, int dest_y, int faulty_x1, int faul
     }
 
     // else if the packet is one hop away and the corresponding link is available, send on that link
-    else if (cur_x - dest_x == 1 && cur_y == dest_y && node[cur_x][cur_y].west_ok) { // 1 node west
+    else if (cur_x - 1 == dest_x && cur_y == dest_y && node[cur_x][cur_y].west_ok) { // 1 node west
         cur_x--;
         traveling = "west";
         ss << traveling << " to " << cur_x << cur_y << endl;
