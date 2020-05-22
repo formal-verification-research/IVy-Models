@@ -1,0 +1,449 @@
+#lang ivy1.7
+
+
+# NOTE ########################################
+# This model was made only to test for livelock
+# and is not necessarily accurate for each node
+###############################################
+
+
+#############
+# VARIABLES #
+#############
+
+
+type int #maybe there's a good way to use abstract datatypes ( http://microsoft.github.io/ivy/examples/datatypes.html ) instead of integers...
+interpret int -> bv[3] #right now, int just means it has the integer type.
+
+type flit
+type flit_id
+function id(X:flit) : flit_id
+
+type count = {a,b,c,d,e}
+
+type arbiter = {an10,aw10,as11,ae00,an00,aw11,ape10} #list of arbiters (no underscores to differentiate)
+type router = {rn10,rw10,rs11,re00,rpe10} #list of routers (no underscores to differentiate)
+type coord = {0,1} #simple 0s and 1s the destination can be set to
+
+relation sending(S:router,R:router,A:arbiter) #a link between an arbiter and the routers sending and receiving the packet
+
+var flit_to_watch : flit
+var packet : flit #the only packet in the system right now
+
+
+#############
+# INTERFACE #
+#############
+
+object intf = { 
+	action choose_flit_to_watch = { # nondeterministically choose
+		flit_to_watch := *;
+	}
+	action check(s:router,r:router,a:arbiter) #arbiter checks routers to see if they have packets - not super accurate, but the best I could come up with so far
+	action arbitrate(s:router,r:router,a:arbiter) #if simultaneous requests, choose which to get
+	action send(s:router,r:router,a:arbiter) = { #once the router order is chosen, get flits from those routers and send to the next router
+		sending(s,r,a) := true;
+		sending(s,r,a) := false;
+	}
+} #closeob
+
+object spec = { #The specifications for actions to run
+
+    after init { #on startup, nothing is faulty
+       	arb_N_10.faulty := false;
+		arb_S_11.faulty := false;
+		flit_to_watch := *;
+		r_S_11.tally :=0;
+		r_N_10.tally :=0;
+	}
+	
+	before intf.choose_flit_to_watch {
+		
+	}
+	
+	before intf.check {
+	
+	}
+	
+	before intf.arbitrate {
+		
+	}
+	
+	before intf.send {
+		
+	}
+	
+} #closeob 
+
+object clock = {
+    type t
+    relation (X:t < Y:t)
+    action incr(inp:t) returns (out:t)
+
+    object spec = {
+        property [transitivity] X:t < Y & Y < Z -> X < Z
+        property [antisymmetry] ~(X:t < Y & Y < X)
+
+        after incr {
+            assert inp < out
+        }
+    } #closeob
+	
+} #closeob
+
+
+
+
+#############################
+# r_PE_10 GENERATES PACKETS #
+#############################
+
+object r_PE_10 = { 
+	
+	individual has_flit : bool #whether or not there exists a flit
+	individual ready : bool
+	
+	individual x_dest : coord
+	individual y_dest : coord
+	individual assigned : arbiter
+	
+	individual last_generated : int
+	individual has_id : flit_id #the ID of the flit that is currently here
+	
+	after init {
+		has_flit := true; #maybe it has a flit, maybe it doesn't
+		ready := false; #it's not ready to send the flit quite yet.
+		last_generated := 0; #start off with an ID of 1.
+	}
+
+	#this one only generates a single flit.
+	action generate = { #choosing the destination
+		require has_flit {
+			x_dest := 0; #arbitrarily chooses
+	        y_dest := 0; #arbitrarily chooses
+			id(f) := last_generated + 1; #give the flit a sequential ID
+			id(flit_to_watch) := id(f);
+			assume id > last_generated;
+			last_generated := id;
+	        assigned := an10; #send north if it needs to go to (1,1)
+			ready := true;
+		}
+    }
+	
+	action send_flit = {
+		require has_flit & ready;
+		call intf.check(s,r,a);
+		has_flit := false;
+	}
+
+   
+} export r_PE_10.generate
+export r_PE_10.send_flit
+
+
+
+
+
+
+
+
+####################
+#                  #
+# ALL THE ARBITERS #
+#                  #
+####################
+
+# The arbiters only check which arbiter is assigned, not the eventual destination.
+
+object arb_N_10 = {
+
+	individual faulty : bool
+	individual busy : bool
+	
+	type can_get_from = {r_pe_10,r_w_10,r_n_10,void} #possibilities of routers that can have a packet to send
+	individual get_from : can_get_from #where the arbiter decides to get from
+	individual rand : bool
+	
+	after init { #before the arbiter can get a flit, make sure that it's not blocked, that a flit exists, and that it's assigned here.
+		require ~busy & ((r_PE_10.has_flit & r_PE_10.assigned = an10) | (r_W_10.has_flit & r_W_10.assigned = an10) | (r_N_10.has_flit & r_N_10.assigned = an10)); 
+		rand := *; #arbitrarily choose either a true or a false.
+	}
+	
+	before move_flit(s:router,r:router,a:arbiter) { #check for simultaneous requests
+		if r_PE_10.has_flit & r_PE_10.assigned = an10 {
+			if r_W_10.has_flit & r_W_10.assigned = an10 {
+				if r_N_10.has_flit & r_N_10.assigned = an10 {
+					get_from := *;
+				}
+				else {
+					if rand {
+						get_from := r_pe_10;
+					}
+					else {
+						get_from := r_w_10;
+					}
+				}
+			}
+			else {
+				get_from := r_pe_10;
+			}
+		}
+		else if r_W_10.has_flit & r_W_10.assigned = an10 {
+			if r_N_10.has_flit & r_N_10.assigned = an10 {
+				if rand {
+					get_from := r_w_10;
+				}
+				else {
+					get_from := r_n_10;
+				}
+			}
+			else {
+				get_from := r_w_10;
+			}
+		}
+		else if r_N_10.has_flit & r_N_10.assigned = an10 {
+			get_from := r_n_10;
+		}
+	}
+	
+	action move_flit(s:router,r:router,a:arbiter) = { 
+		call intf.send(s,r,a); #modify the sending relation
+		if get_from = r_pe_10 {
+			r_PE_10.has_flit := false; #copy over the packet and all its information
+			r_S_11.x_dest := r_PE_10.x_dest;
+			r_S_11.y_dest := r_PE_10.y_dest;
+			r_S_11.id := r_PE_10.id;
+			r_S_11.has_flit := true;
+		}
+		else if get_from = r_w_10 {
+			r_W_10.has_flit := false;
+			r_S_11.x_dest := r_W_10.x_dest;
+			r_S_11.y_dest := r_W_10.y_dest;
+			r_S_11.id := r_W_10.id;
+			r_S_11.has_flit := true;
+		}
+		else if get_from = r_n_10 {
+			r_N_10.has_flit := false;
+			r_S_11.x_dest := r_N_10.x_dest;
+			r_S_11.y_dest := r_N_10.y_dest;
+			r_S_11.id := r_N_10.id;
+			r_S_11.has_flit := true;
+		}
+	}
+} export arb_N_10.move_flit
+
+
+####################
+#                  #
+# ALL THE ROUTERS  #
+#                  #
+####################
+
+
+object r_N_10 = {
+	individual has_flit : bool
+	individual x_dest : coord
+	individual y_dest : coord
+	individual assigned : arbiter
+	individual ready : bool
+	individual id : int #the ID of the flit that is currently here
+	individual tally : int
+	
+	after init {
+		has_flit := false; #it may already have a flit when r_PE_10 generates a flit
+		tally := 0;
+		if has_flit {
+			#arb_S_11.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
+			#this arbiter isn't modeled yet
+			id := 0; #don't give it an individual ID if it was in the system to begin with.
+		}
+	}
+	
+	action assigner = { #check the destination to determine which arbiter to assign.
+		require has_flit;
+		if x_dest = 1 & y_dest = 0 {
+			assigned := ape10;
+			ready := true;	
+		} 
+		else if x_dest = 1 & y_dest = 1 { #only if it's going directly north
+			if arb_N_10.faulty & ~arb_W_10.faulty & ~arb_W_10.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
+				assigned := aw10; #send it to the other arbiter if an10 is blocked.	
+				ready := true; #mark that it's ready to receive a packet
+			}
+			else if arb_N_10.busy { #if the receiver is busy, 
+				has_flit := false; #drop the flit to prevent deadlock
+				ready := false;
+			}
+			else { #if it's going north and everything's clear
+				require ~arb_N_10.faulty & ~arb_N_10.busy; #double check that it's clear
+				assigned := an10; #send north if it needs to go to (1,1)
+				ready := true;
+			}
+		}
+		else { #same as 110-123 but for packets not going to (1,1).
+			if arb_W_10.faulty & ~arb_N_10.faulty & ~arb_N_10.busy {
+				assigned := an10; #send it to the other arbiter if aw10 is blocked.
+				ready := true;
+			}
+			else if arb_W_10.busy {
+				has_flit := false;
+				ready := false;
+			}
+			else {
+				require ~arb_W_10.faulty & ~arb_N_10.busy;
+				assigned := aw10; #if it's not going to (1,1), send it west by default.
+				ready := true;
+			}
+		};
+		call counter
+	}
+	
+	action counter = {
+		require has_flit & (id = flit_to_watch); #only proceed
+	#if it has a flit and the ID is the assigned ID to watch
+                assert id = flit_to_watch;
+		# if tally < 5 {
+		# 	tally := tally + 1;
+		# 	assert tally <= 5;
+		# }
+		# else {
+		# 	has_flit := false;
+		# 	call intf.choose_flit_to_watch;
+		# 	tally := 0;
+	    # }
+	        tally := tally + 1;
+	}
+	
+	execute counter before assigner
+	
+} export r_N_10.assigner 
+
+
+  
+############################
+# NODE 11 ##################
+############################
+
+object arb_S_11 = {
+
+	#individual blocked : bool #now local, tells if arbiter is blocked
+	
+	individual faulty : bool
+	individual busy : bool
+	
+	type can_get_from = {r_pe_11,r_w_11,r_s_11,void} #possibilities of routers that can have a packet to send
+	individual get_from : can_get_from #where the arbiter decides to get from
+	individual rand : bool
+	
+	after init { #before the arbiter can get a flit, make sure that it's not blocked, that a flit exists, and that it's assigned here.
+		require ~busy & (r_S_11.has_flit & r_S_11.assigned = as11); 
+	}
+	
+	before move_flit(s:router,r:router,a:arbiter) { #check for simultaneous requests
+		get_from := r_s_11; #for now, always send to r_S_11 to create livelock
+	}
+	
+	action move_flit(s:router,r:router,a:arbiter) = { 
+		call intf.send(s,r,a); #modify the sending relation
+		require get_from = r_s_11;
+			r_S_11.has_flit := false;
+			r_N_10.x_dest := r_S_11.x_dest;
+			r_N_10.y_dest := r_S_11.y_dest;
+			r_N_10.id := r_S_11.id;
+			r_N_10.has_flit := true;
+	}
+} export arb_S_11.move_flit
+
+
+object r_S_11 = { #this will be more relevant once more parts are added
+	individual has_flit : bool
+	individual x_dest : coord
+	individual y_dest : coord
+	individual assigned : arbiter
+	individual ready : bool
+	individual id : int #the ID of the flit that is currently here
+	individual tally : int
+	
+	after init {
+		has_flit := false; #it may already have a flit when r_PE_10 generates a flit
+		# tally := 0;
+		if has_flit {
+			arb_N_10.busy := true; #when there is already a flit here, it appears to be blocked (the arbiter can't send another)
+			id := 0; #don't give it an individual ID if it was in the system to begin with.
+		}
+	}
+	
+	action assigner = { #check the destination to determine which arbiter to assign.
+		require has_flit;
+		if x_dest = 1 & y_dest = 1 {
+			#assigned := ape11;
+			#ready := true;	
+		} 
+		else if x_dest = 1 & y_dest = 1 { #only if it's going directly north
+			if arb_N_10.faulty & ~arb_W_10.faulty & ~arb_W_10.busy { #if the link to (1,1) is faulty #the receiving arbiter cannot be blocked or faulty either
+				#assigned := aw10; #send it to the other arbiter if an10 is blocked.	
+				#ready := true; #mark that it's ready to receive a packet
+			}
+			else if arb_N_10.busy { #if the receiver is busy, 
+				has_flit := false; #drop the flit to prevent deadlock
+				ready := false;
+			}
+			else { #if it's going north and everything's clear
+				#require ~arb_N_10.faulty & ~arb_N_10.busy; #double check that it's clear
+				#assigned := an10; #send north if it needs to go to (1,1)
+				#ready := true;
+			}
+		}
+		else { #same as 110-123 but for packets not going to (1,1).
+			if arb_W_10.faulty & ~arb_N_10.faulty & ~arb_N_10.busy {
+				#assigned := an10; #send it to the other arbiter if aw10 is blocked.
+				#ready := true;
+			}
+			else if arb_W_10.busy {
+				has_flit := false;
+				ready := false;
+			}
+			else {
+				#require ~arb_W_10.faulty & ~arb_N_10.busy;
+				#assigned := aw10; #if it's not going to (1,1), send it west by default.
+				#ready := true;
+			}
+		};
+		call counter;
+	}
+	
+	action counter = {
+		assume tally < 5;
+		require has_flit & (id = flit_to_watch); #only proceed if it has a flit and the ID is the assigned ID to watch
+		assert id = flit_to_watch;
+		tally := tally + 1;
+		assume tally < 5;
+	}
+
+} export r_S_11.assigner
+
+
+
+####################
+#                  #
+#  THE INVARIANTS  #
+#                  #
+####################
+
+#None needed by ivy_check. I'll see if I can come up with some.
+
+
+#CHECKING FOR POSSIBILITIES OF DEADLOCK
+#Because there are only a few routers, this is not complete yet.
+#invariant ~(r_W_10.has_flit & (r_W_10.assigned = an10) & r_S_11.has_flit & (r_W_10.assigned = aw11)) #preventing deadlock???
+	#this will work much better once the model has been expanded to include the other nodes.
+
+
+#CHECKING FOR POSSIBILITIES OF LIVELOCK
+invariant r_S_11.tally <= 5
+# invariant r_E_00.tally <= 5
+# invariant r_N_10.tally <= 5
+# invariant r_W_10.tally <= 5 #when you change the 5 to a 4 on any of
+# these, it fails ivy_check... that seems promising.
+#invariant ~(r_S_11.tally > 5) & ~(r_N_10.tally > 5)
+

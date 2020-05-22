@@ -1,0 +1,503 @@
+#lang ivy1.7
+
+type sources = {void,rc1,rc2,rc3,rc4} #rc is router chosen
+
+object spec = { 
+  
+  individual copy_finished : bool
+  
+  after init {
+    #flit_count_ok := false;
+    copy_finished := false;
+
+    # others may or may not have a flit
+    b.r_recv.hf := *;
+    c.r_recv.hf := *;
+    d.r_recv.hf := *;
+    e.r_recv.hf := *;
+    
+    # make sure they all match
+    a.r1.hf := b.r_recv.hf;
+    a.r2.hf := c.r_recv.hf;
+    a.r3.hf := d.r_recv.hf;
+    a.r4.hf := e.r_recv.hf;
+    
+    b.r1.hf := *;
+    b.r2.hf := *;
+    b.r3.hf := *;
+    b.r4.hf := *;
+    
+    c.r1.hf := *;
+    c.r2.hf := *;
+    c.r3.hf := *;
+    c.r4.hf := *;
+    
+    d.r1.hf := *;
+    d.r2.hf := *;
+    d.r3.hf := *;
+    d.r4.hf := *;
+    
+    e.r1.hf := *;
+    e.r2.hf := *;
+    e.r3.hf := *;
+    e.r4.hf := *;
+  }
+  
+  action copy_data = {
+    copy_finished := false;
+    a.r1.hf := b.r_recv.hf;
+    a.r2.hf := c.r_recv.hf;
+    a.r3.hf := d.r_recv.hf;
+    a.r4.hf := e.r_recv.hf;
+    copy_finished := true;
+  } #end copy_data
+  
+  action clear_upstream = {
+      
+      if (a.arbiter.get_from = rc1 & a.arbiter.ready) {
+        b.r_recv.hf := false;
+      };
+      if (a.arbiter.get_from = rc2 & a.arbiter.ready) {
+        c.r_recv.hf := false;
+      };
+      if (a.arbiter.get_from = rc3 & a.arbiter.ready) {
+        d.r_recv.hf := false;
+      };
+      if (a.arbiter.get_from = rc4 & a.arbiter.ready) {
+        e.r_recv.hf := false;
+      };
+     
+  } # end clear_upstream
+
+  conjecture copy_finished -> (a.r1.hf = b.r_recv.hf) & (a.r2.hf = c.r_recv.hf) & (a.r3.hf = d.r_recv.hf) & (a.r4.hf = e.r_recv.hf)
+  conjecture a.r1.hf -> (b.r_recv.hf)
+  conjecture a.r2.hf -> (c.r_recv.hf)
+  conjecture a.r3.hf -> (d.r_recv.hf)
+  conjecture a.r4.hf -> (e.r_recv.hf)
+  
+} #end spec
+
+
+module edge = {
+
+  module r_send = {
+    
+    individual hf : bool 
+    
+    before send {
+      require hf;
+    }
+    
+    action send = {
+      call arbiter.check;
+    } #end send
+    
+    action has_sent = {
+      hf := false;
+    } #end has_sent
+    
+  } #end r_send 
+  
+  instance r1 : r_send
+  instance r2 : r_send
+  instance r3 : r_send
+  instance r4 : r_send
+  
+  object arbiter = {
+    
+    individual get_from : sources 
+    individual ready : bool
+    
+    after init {
+      get_from := void;
+      ready := false;
+    }
+    
+    before choose {
+      get_from := void;
+      ready := false;
+    }
+    
+    action choose = {
+      if r1.hf {
+        if r2.hf {
+          if r3.hf { 
+            if r4.hf { # 1 2 3 4
+              get_from := *;
+              assume get_from = rc1 | get_from = rc2 | get_from = rc3 | get_from = rc4;
+            }
+            else { # 1 2 3 _
+              get_from := *;
+              assume get_from = rc1 | get_from = rc2 | get_from = rc3;
+            }
+          }
+          else if r4.hf { # 1 2 _ 4
+            get_from := *;
+            assume get_from = rc1 | get_from = rc2 | get_from = rc4;
+          }
+          else { # 1 2 _ _
+            get_from := *;
+            assume get_from = rc1 | get_from = rc2;
+          };
+        }
+        else if r3.hf {
+          if r4.hf { # 1 _ 3 4
+            get_from := *;
+            assume get_from = rc1 | get_from = rc3 | get_from = rc4;
+          }
+          else { # 1 _ 3 _
+            get_from := *;
+            assume get_from = rc1 | get_from = rc3;
+          };
+        }
+        else if r4.hf { # 1 _ _ 4
+          get_from := *;
+          assume get_from = rc1 | get_from = rc4;
+        }
+        else { # 1 _ _ _
+          get_from := rc1;
+        };
+        ready := true;
+      }
+      else if r2.hf {     
+        if r3.hf {
+          if r4.hf { # _ 2 3 4
+            get_from := *;
+            assume get_from = rc2 | get_from = rc3 | get_from = rc4;
+          }
+          else { # _ 2 3 _
+            get_from := *;
+            assume get_from = rc2 | get_from = rc3;
+          }
+        }
+        else if r4.hf { # _ 2 _ 4
+          get_from := *;
+          assume get_from = rc2 | get_from = rc4;
+        }
+        else { # _ 2 _ _
+          get_from := rc2;
+        };
+        ready := true;
+      }
+      else if r3.hf {
+        if r4.hf { # _ _ 3 4
+          get_from := *;
+          assume get_from = rc3 | get_from = rc4;
+        }
+        else { # _ _ 3 _
+          get_from := rc3;
+        };
+        ready := true;
+      }
+      else if r4.hf {
+        get_from := rc4;
+        ready := true;
+      }
+      else {
+        get_from := void;
+        ready := false;
+      };
+      # call spec.remove_duplicates;
+    } #end choose
+    
+    action check = {
+      if ~r_recv.hf & ready & (get_from = rc1 | get_from = rc2 | get_from = rc3 | get_from = rc4) {
+        call send; 
+      }
+      else {
+        ready := false;
+        get_from := void;
+      };
+    } #end check
+    
+    execute choose before check
+    
+    action send = {
+      ready := false;
+      if get_from = rc1 {
+        assert r1.hf;
+        call r1.has_sent;
+        call r_recv.get_flit;
+        call spec.copy_data;
+      };
+      if get_from = rc2 {
+        assert r2.hf;
+        call r2.has_sent;
+        call r_recv.get_flit;
+
+        call spec.copy_data;
+
+      };
+      if get_from = rc3 {
+        assert r3.hf;
+        call r3.has_sent;
+        call r_recv.get_flit;
+        call spec.copy_data;
+      };
+      if get_from = rc4 {
+        assert r4.hf;
+        call r4.has_sent;
+        call r_recv.get_flit;
+        call spec.copy_data;
+      };
+      
+      get_from := void;
+      
+    } #end send
+        
+    conjecture (ready & (r1.hf | r2.hf | r3.hf | r4.hf)) -> get_from ~= void
+    conjecture ready -> get_from ~= void
+    
+    conjecture ready -> (r1.hf | r2.hf | r3.hf | r4.hf)
+    
+    conjecture (ready & r1.hf & ~r2.hf & ~r3.hf & ~r4.hf) -> get_from = rc1
+    conjecture (ready & ~r1.hf & r2.hf & ~r3.hf & ~r4.hf) -> get_from = rc2
+    conjecture (ready & ~r1.hf & ~r2.hf & r3.hf & ~r4.hf) -> get_from = rc3
+    conjecture (ready & ~r1.hf & ~r2.hf & ~r3.hf & r4.hf) -> get_from = rc4
+    
+    conjecture (ready & r1.hf & r2.hf & ~r3.hf & ~r4.hf) -> (get_from = rc1 | get_from = rc2)
+    conjecture (ready & ~r1.hf & r2.hf & r3.hf & ~r4.hf) -> (get_from = rc2 | get_from = rc3)
+    conjecture (ready & r1.hf & ~r2.hf & r3.hf & ~r4.hf) -> (get_from = rc1 | get_from = rc3)
+    conjecture (ready & r1.hf & ~r2.hf & r3.hf & ~r4.hf) -> (get_from = rc1 | get_from = rc3)
+    
+    conjecture (ready & r1.hf & r2.hf & r3.hf & ~r4.hf) -> (get_from = rc1 | get_from = rc2 | get_from = rc3)
+    conjecture (ready & r1.hf & r2.hf & ~r3.hf & r4.hf) -> (get_from = rc2 | get_from = rc3 | get_from = rc4)
+    conjecture (ready & r1.hf & ~r2.hf & r3.hf & r4.hf) -> (get_from = rc1 | get_from = rc3 | get_from = rc4)
+    conjecture (ready & ~r1.hf & r2.hf & r3.hf & r4.hf) -> (get_from = rc1 | get_from = rc3 | get_from = rc4)
+    
+    
+    conjecture (ready & get_from = rc1) -> (r1.hf)
+    conjecture (ready & get_from = rc2) -> (r2.hf)
+    conjecture (ready & get_from = rc3) -> (r3.hf)
+    conjecture (ready & get_from = rc4) -> (r4.hf)
+    
+  } #end arbiter
+  
+  object r_recv = {
+    
+    individual hf : bool #whether or not there is a flit here
+  
+    before get_flit {
+      require ~hf; #make sure there is no flit here before getting one
+    }
+    
+    action get_flit = {
+      hf := true; #get the flit
+    } #end get_flit 
+    
+  } #end r_recv
+
+  export r1.send
+  export r2.send
+  export r3.send
+  export r4.send
+
+  invariant ~(arbiter.ready & arbiter.get_from = void)
+  
+} #end top_row
+
+instance b : edge
+instance c : edge
+instance d : edge
+instance e : edge
+
+module absorb4 = {
+
+  module r_send = {
+    
+    individual hf : bool 
+    
+    before send {
+      require hf;
+    }
+    
+    action send = {
+      call arbiter.check;
+    } #end send
+    
+    action has_sent = {
+      hf := false;
+    } #end has_sent
+    
+  } #end r_send 
+  
+  instance r1 : r_send
+  instance r2 : r_send
+  instance r3 : r_send
+  instance r4 : r_send
+  
+  
+  object arbiter = {
+    
+    individual get_from : sources 
+    individual ready : bool
+    
+    after init {
+      get_from := void;
+      ready := false;
+    }
+    
+    before choose {
+      get_from := void;
+      ready := false;
+    }
+    
+    action choose = {
+      if r1.hf {
+        if r2.hf {
+          if r3.hf { 
+            if r4.hf { # 1 2 3 4
+              get_from := *;
+              assume get_from = rc1 | get_from = rc2 | get_from = rc3 | get_from = rc4;
+            }
+            else { # 1 2 3 _
+              get_from := *;
+              assume get_from = rc1 | get_from = rc2 | get_from = rc3;
+            }
+          }
+          else if r4.hf { # 1 2 _ 4
+            get_from := *;
+            assume get_from = rc1 | get_from = rc2 | get_from = rc4;
+          }
+          else { # 1 2 _ _
+            get_from := *;
+            assume get_from = rc1 | get_from = rc2;
+          };
+        }
+        else if r3.hf {
+          if r4.hf { # 1 _ 3 4
+            get_from := *;
+            assume get_from = rc1 | get_from = rc3 | get_from = rc4;
+          }
+          else { # 1 _ 3 _
+            get_from := *;
+            assume get_from = rc1 | get_from = rc3;
+          };
+        }
+        else if r4.hf { # 1 _ _ 4
+          get_from := *;
+          assume get_from = rc1 | get_from = rc4;
+        }
+        else { # 1 _ _ _
+          get_from := rc1;
+        };
+        ready := true;
+      }
+      else if r2.hf {     
+        if r3.hf {
+          if r4.hf { # _ 2 3 4
+            get_from := *;
+            assume get_from = rc2 | get_from = rc3 | get_from = rc4;
+          }
+          else { # _ 2 3 _
+            get_from := *;
+            assume get_from = rc2 | get_from = rc3;
+          }
+        }
+        else if r4.hf { # _ 2 _ 4
+          get_from := *;
+          assume get_from = rc2 | get_from = rc4;
+        }
+        else { # _ 2 _ _
+          get_from := rc2;
+        };
+        ready := true;
+      }
+      else if r3.hf {
+        if r4.hf { # _ _ 3 4
+          get_from := *;
+          assume get_from = rc3 | get_from = rc4;
+        }
+        else { # _ _ 3 _
+          get_from := rc3;
+        };
+        ready := true;
+      }
+      else if r4.hf {
+        get_from := rc4;
+        ready := true;
+      }
+      else {
+        get_from := void;
+        ready := false;
+      };
+    } #end choose
+    
+    action check = {
+      if ready & (get_from = rc1 | get_from = rc2 | get_from = rc3 | get_from = rc4) {
+        call send; 
+      }
+      else {
+        ready := false;
+        get_from := void;
+      };
+    } #end check
+    
+    execute choose before check
+    
+    action send = {
+      call spec.clear_upstream;
+      ready := false;
+      if get_from = rc1 {
+        assert r1.hf;
+        call r1.has_sent;
+      };
+      if get_from = rc2 {
+        assert r2.hf;
+        call r2.has_sent;
+      };
+      if get_from = rc3 {
+        assert r3.hf;
+        call r3.has_sent;
+      };
+      if get_from = rc4 {
+        assert r4.hf;
+        call r4.has_sent;
+      };
+      get_from := void;
+      
+    } #end send
+        
+    conjecture (ready & r1.hf) -> get_from ~= void
+    conjecture (ready & r2.hf) -> get_from ~= void
+    conjecture (ready & r3.hf) -> get_from ~= void
+    conjecture (ready & r4.hf) -> get_from ~= void
+    
+    conjecture ready -> get_from ~= void
+    conjecture ready -> (r1.hf | r2.hf | r3.hf | r4.hf)
+    
+    conjecture (ready & r1.hf & ~r2.hf & ~r3.hf & ~r4.hf) -> get_from = rc1
+    conjecture (ready & ~r1.hf & r2.hf & ~r3.hf & ~r4.hf) -> get_from = rc2
+    conjecture (ready & ~r1.hf & ~r2.hf & ~r3.hf & r4.hf) -> get_from = rc3
+    
+    conjecture (ready & r1.hf & r2.hf & ~r3.hf & ~r4.hf) -> (get_from = rc1 | get_from = rc2)
+    conjecture (ready & r1.hf & ~r2.hf & r3.hf & ~r4.hf) -> (get_from = rc1 | get_from = rc3)
+    conjecture (ready & r1.hf & ~r2.hf & ~r3.hf & r4.hf) -> (get_from = rc1 | get_from = rc4)
+    conjecture (ready & ~r1.hf & r2.hf & r3.hf & ~r4.hf) -> (get_from = rc2 | get_from = rc3)
+    conjecture (ready & ~r1.hf & r2.hf & ~r3.hf & r4.hf) -> (get_from = rc2 | get_from = rc4)
+    conjecture (ready & ~r1.hf & ~r2.hf & r3.hf & r4.hf) -> (get_from = rc3 | get_from = rc4)
+    
+    conjecture (ready & r1.hf & r2.hf & r3.hf & ~r4.hf) -> (get_from = rc1 | get_from = rc2 | get_from = rc3)
+    conjecture (ready & r1.hf & r2.hf & ~r3.hf & r4.hf) -> (get_from = rc1 | get_from = rc2 | get_from = rc4)
+    conjecture (ready & r1.hf & ~r2.hf & r3.hf & r4.hf) -> (get_from = rc1 | get_from = rc3 | get_from = rc4)
+    conjecture (ready & ~r1.hf & r2.hf & r3.hf & r4.hf) -> (get_from = rc2 | get_from = rc3 | get_from = rc4)
+    
+    conjecture (ready & get_from = rc1) -> (r1.hf)
+    conjecture (ready & get_from = rc2) -> (r2.hf)
+    conjecture (ready & get_from = rc3) -> (r3.hf)
+    conjecture (ready & get_from = rc4) -> (r4.hf)
+    
+  } #end arbiter
+  
+
+
+  export r1.send
+  export r2.send
+  export r3.send
+  export r4.send
+
+  invariant ~(arbiter.ready & arbiter.get_from = void)
+  
+} #end top_row
+
+instance a : absorb4

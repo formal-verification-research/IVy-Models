@@ -1,0 +1,112 @@
+    # Next input file begins (for debugging)
+    
+  } #end confirm_links
+  
+  action clear = {
+    north_ok := false;
+    east_ok := false;
+    south_ok := false;
+    west_ok := false;
+  } #end clear
+  
+  execute clear before check
+  execute clear before second_check
+  
+  action check = {
+    if (flit.traveling = west | flit.traveling = south | flit.traveling = new) & 
+       (flit.current_x >= flit.dest_x | 
+       (flit.current_y <= flit.dest_y & ~node(flit.current_x,flit.current_y).south_free)) {
+      west_ok := true;
+    };
+    
+    if (flit.traveling = south | flit.traveling = west | flit.traveling = new) & 
+    (flit.current_y >= flit.dest_y | 
+    (flit.current_x <= flit.dest_x & ~node(flit.current_x,flit.current_y).west_free)) {
+      south_ok := true;
+    };
+    
+    if (flit.dest_x > (flit.current_x + 1)) | 
+       ((flit.dest_x > flit.current_x) & flit.dest_y = (flit.current_y + 1)) & 
+       (flit.traveling ~= west) {
+      east_ok := true;
+    };
+    
+    if (flit.dest_y > flit.current_y) & (flit.traveling ~= south) {
+      north_ok := true;
+    };
+  } #end check
+  
+  action second_check = {
+    if (flit.current_x >= flit.dest_x) & 
+       (flit.traveling ~= east | (flit.dest_x = flit.current_x & flit.dest_y = flit.current_y + 1)) {
+      west_ok := true;
+    };
+    if (flit.current_y >= flit.dest_y) & (flit.traveling ~= north) {
+      south_ok := true;
+    };
+    if (flit.current_x <= flit.dest_x) & 
+       (flit.traveling ~= west | flit.current_y = flit.dest_y | 
+       ((flit.current_x = flit.dest_x + 1) & (flit.current_y ~= flit.dest_y - 1))) {
+      east_ok := true;
+    };
+    if (flit.current_y <= flit.dest_y) & (flit.traveling ~= south | flit.current_x <= flit.dest_x) {
+      north_ok := true;
+    };
+  } #end second_check
+
+  action go_west = {
+    assert ~flit.delivered;
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_x := flit.current_x - 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+  } #end go_west
+  
+  action go_south = {
+    assert ~flit.delivered;
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_y := flit.current_y - 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+  } #end go_west
+  
+  action go_east = {
+    assert ~flit.delivered;
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_x := flit.current_x + 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+  } #end go_west
+  
+  action go_north = {
+    assert ~flit.delivered;
+    node(flit.current_x,flit.current_y).has_flit := false;
+    flit.current_y := flit.current_y + 1;
+    node(flit.current_x,flit.current_y).has_flit := true;
+  } #end go_west
+  
+  action is_delivered = {
+    flit.delivered := true;
+  } #end is_delivered
+    
+  conjecture ~(node(3,Y).has_flit) & ~(node(X,3).has_flit)
+} #end spec
+
+
+object flit = {
+
+  individual current_x : coord
+  individual current_y : coord
+  
+  individual dest_x : coord
+  individual dest_y : coord
+  
+  individual x_distance : coord
+  individual y_distance : coord
+  
+  individual delivered : bool #successful delivery of the flit
+  
+  individual traveling : directions
+  
+  after init {
+    delivered := false;
+
+    #INJECTED:
+

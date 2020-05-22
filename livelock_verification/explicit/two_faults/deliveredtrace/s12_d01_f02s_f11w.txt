@@ -1,0 +1,15 @@
+ORIGINAL ROUTE: 
+west to 02
+south to 01
+DELIVERED!
+
+
+MODIFIED ROUTE: 
+west to 02
+east two 12
+south two 11
+south to 10
+west to 00
+north to 01
+DELIVERED!
+

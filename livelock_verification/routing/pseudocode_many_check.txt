@@ -1,0 +1,38 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        pseudocode_many.ivy: line 195: flit.conj5(A:coord, B:coord)
+        pseudocode_many.ivy: line 196: flit.conj6(A:coord, B:coord)
+        pseudocode_many.ivy: line 198: flit.conj7(A:coord, B:coord)
+        pseudocode_many.ivy: line 199: flit.conj8(A:coord, B:coord)
+        pseudocode_many.ivy: line 331: invar9
+        pseudocode_many.ivy: line 332: invar10
+        pseudocode_many.ivy: line 334: invar11
+        pseudocode_many.ivy: line 335: invar12
+
+    The following action implementations are present:
+        pseudocode_many.ivy: line 212: implementation of flit.check
+        pseudocode_many.ivy: line 173: implementation of flit.get_distances
+        pseudocode_many.ivy: line 236: implementation of flit.second_check
+        pseudocode_many.ivy: line 159: implementation of flit.send
+        pseudocode_many.ivy: line 271: implementation of node.route
+        pseudocode_many.ivy: line 94: implementation of spec.go_east
+        pseudocode_many.ivy: line 102: implementation of spec.go_north
+        pseudocode_many.ivy: line 86: implementation of spec.go_south
+        pseudocode_many.ivy: line 78: implementation of spec.go_west
+        pseudocode_many.ivy: line 110: implementation of spec.is_delivered
+        pseudocode_many.ivy: line 69: implementation of spec.one_hop
+
+    The following action monitors are present:
+        pseudocode_many.ivy: line 204: monitor of flit.check
+        pseudocode_many.ivy: line 204: monitor of flit.second_check
+        pseudocode_many.ivy: line 164: monitor of flit.send
+
+    The following initializers are present:
+        pseudocode_many.ivy: line 137: flit.init[after3]
+        pseudocode_many.ivy: line 11: spec.init[after2]
+
+    Initialization must establish the invariant
+prm:A := Yprm:A:coord
+error: multiply assigned: prm:A

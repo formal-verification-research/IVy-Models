@@ -1,0 +1,8 @@
+Hybrid of v1 and v2, only excludes if:
+- dest is top right corner
+- north is faulty
+
+!BETTER THAN V2
+
+
+//- currently on east edge

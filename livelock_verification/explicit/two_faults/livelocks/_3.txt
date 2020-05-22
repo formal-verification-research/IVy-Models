@@ -1,0 +1,175 @@
+    #END INJECTED
+    node(current_x,current_y).has_flit := true;
+    call get_distances;
+    call send;
+  } #after init
+
+  action send = {
+    require ~delivered;
+    call node(current_x,current_y).route;
+  } #end send
+  
+  after send {
+    call get_distances;
+    if (dest_x = current_x) & (dest_y = current_y) {
+        call spec.is_delivered;
+        assert delivered;
+    } else {
+        assert ~delivered;
+    };
+  }
+  
+  action get_distances = {
+    if current_x > dest_x {
+      x_distance := current_x - dest_x;
+    } 
+    else if current_x < dest_x {
+      x_distance := dest_x - current_x;
+    }
+    else if current_x = dest_x {
+      x_distance := 0;
+    };
+    if current_y > dest_y {
+      y_distance := current_y - dest_y;
+    } 
+    else if current_y < dest_y {
+      y_distance := dest_y - current_y;
+    }
+    else if current_y = dest_y {
+      y_distance := 0;
+    };
+    
+  } #end get_distances
+  
+  invariant delivered -> ((dest_x = current_x) & (dest_y = current_y))
+  invariant ~delivered -> ~((dest_x = current_x) & (dest_y = current_y))
+  
+  invariant ((dest_x = current_x) & (dest_y = current_y)) -> delivered
+  invariant ~((dest_x = current_x) & (dest_y = current_y)) -> ~delivered
+  
+  invariant delivered -> (x_distance = 0 & y_distance = 0)
+  
+  invariant ((x_distance > 0) | (y_distance > 0)) -> ~delivered
+  invariant (current_x > dest_x) -> (x_distance = current_x - dest_x)
+  invariant (current_x < dest_x) -> (x_distance = dest_x - current_x) 
+  invariant (current_y > dest_y) -> (y_distance = current_y - dest_y)
+  invariant (current_y < dest_y) -> (y_distance = dest_y - current_y)
+  
+  invariant (dest_x <= 2) & (dest_y <= 2) & (current_x <= 2) & (current_y <= 2)
+  
+  invariant delivered -> (traveling ~= new) #NEW
+  invariant (current_x = 2) -> (traveling ~= west) #NEW
+  invariant (current_x = 0) -> (traveling ~= east) #NEW
+  invariant (current_y = 2) -> (traveling ~= south) #NEW
+  invariant (current_y = 0) -> (traveling ~= north) #NEW
+  
+} #end flit
+
+export flit.send
+
+
+module node_template = {
+  individual this_node_x : coord
+  individual this_node_y : coord
+  individual has_flit : bool
+  
+  # individual had_flit : bool
+
+  individual north_free : bool #where the path is open
+  individual east_free : bool
+  individual south_free : bool
+  individual west_free : bool
+  
+  individual north_faulty : bool #where the path is open
+  individual east_faulty : bool
+  individual south_faulty : bool
+  individual west_faulty : bool
+  
+  individual sent : bool
+  
+  action route = {
+    if has_flit {
+      call spec.confirm_links;
+      call spec.check;
+      if (flit.dest_x = this_node_x) & (flit.dest_y = this_node_y) {
+        call spec.is_delivered;
+      }
+      else if (flit.x_distance = 1 & flit.y_distance = 0) | (flit.y_distance = 1 & flit.x_distance = 0) {
+        if west_free & flit.current_x > this_node_x {
+          call spec.go_west;
+          sent := true;
+        } else
+        if south_free & flit.current_y > this_node_y {
+          call spec.go_south;
+          sent := true;
+        } else
+        if east_free & flit.current_x < this_node_x {
+          call spec.go_east;
+          sent := true;
+        } else
+        if north_free & flit.current_y < this_node_y {
+          call spec.go_north;
+          sent := true;
+        };
+      }
+      else if spec.west_ok & west_free { #this takes care of 1) and 3) in the pseudocode 
+        call spec.go_west; #go west
+        sent := true;
+      }
+      else if spec.south_ok & south_free {
+        call spec.go_south; #go south
+        sent := true;
+      }
+      else if spec.east_ok & east_free {
+        call spec.go_east; #go east
+        sent := true;
+      }
+      else if spec.north_ok & north_free {
+        call spec.go_north; #go north
+        sent := true;
+      }
+      else {
+        call spec.second_check;
+        if spec.west_ok & west_free { #this takes care of 1) and 3) in the pseudocode 
+          call spec.go_west; #go west
+          sent := true;
+        }
+        else if spec.south_ok & south_free {
+          call spec.go_south; #go south
+          sent := true;
+        }
+        else if spec.east_ok & east_free {
+          call spec.go_east; #go east
+          sent := true;
+        }
+        else if spec.north_ok & north_free {
+          call spec.go_north; #go north
+          sent := true;
+        }
+        else {
+          sent := false;
+        }
+      }
+    }; #endif has_flit
+  } #end route
+  
+  invariant has_flit -> ((flit.current_x = this_node_x) & (flit.current_y = this_node_y))
+  invariant ((flit.current_x = this_node_x) & (flit.current_y = this_node_y)) -> has_flit
+  
+  invariant ((flit.dest_x = this_node_x) & (flit.dest_y = this_node_y) & has_flit) -> flit.delivered
+  invariant ((~(flit.dest_x = this_node_x) | ~(flit.dest_y = this_node_y)) & has_flit) -> ~flit.delivered
+  
+  invariant (flit.delivered & has_flit) -> ((flit.dest_x = this_node_x) & (flit.dest_y = this_node_y))
+  invariant (~flit.delivered & has_flit) -> ((~(flit.dest_x = this_node_x) | ~(flit.dest_y = this_node_y)))
+    
+} #end node
+
+instance node(X:coord,Y:coord) : node_template
+
+invariant X:coord = X & node(X,Y).this_node_x = X
+invariant Y:coord = Y & node(X,Y).this_node_y = Y
+invariant ~(node(3,Y).has_flit) & ~(node(X,3).has_flit)
+invariant node(flit.current_x, flit.current_y).has_flit
+
+invariant ~flit.delivered
+

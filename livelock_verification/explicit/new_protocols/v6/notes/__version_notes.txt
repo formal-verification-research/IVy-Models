@@ -1,0 +1,10 @@
+Don't go south if:
+- on top row
+- headed east
+- east link faulty
+
+
+Statistical note with 2 faults:
+Removed 9 livelocks, produced only 5
+extra undeliverable flits.
+

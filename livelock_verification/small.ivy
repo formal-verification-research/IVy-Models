@@ -1,0 +1,227 @@
+#lang ivy1.7
+
+
+# NOTE ########################################
+# This model was made only to test for livelock
+# and is not necessarily accurate for each node
+###############################################
+
+
+#############
+# VARIABLES #
+#############
+
+
+type int #maybe there's a good way to use abstract datatypes ( http://microsoft.github.io/ivy/examples/datatypes.html ) instead of integers...
+interpret int -> bv[3] #right now, int just means it has the integer type.
+
+type flit #this way, the IDs seem to work without integers.
+type flit_id
+function id(X:flit) : flit_id #assigns an ID to a flit when called
+
+type arbiter = {an10,as11} #list of arbiters (no underscores to differentiate)
+type coord = {0,1} #simple 0s and 1s the destination can be set to
+
+var flit_to_watch : flit
+var packet : flit #the only packet in the system right now
+
+
+#############
+# INTERFACE #
+#############
+
+object spec = { #The specifications for actions to run
+
+    after init { #on startup, tallies are 0 and the packet is assigned the id chosen to watch.
+		id(packet) := id(flit_to_watch); #for now, the only flit that exists is the one to watch.
+		r_S_11.tally := 0; #start with 0 on the tallies
+		r_N_10.tally := 0;
+		#call r_PE_10.generate #start the process
+	}
+	
+} #closeob 
+
+
+#############################
+# r_PE_10 GENERATES PACKETS #
+#############################
+
+object r_PE_10 = { 
+	
+	individual has_flit : bool #whether or not there exists a flit
+	individual ready : bool
+	individual assigned : arbiter
+	
+	after init {
+		has_flit := true; #starts with a flit
+		ready := false; #not ready to send quite yet
+	}
+
+	action generate = { #this one only generates a single flit.
+		require has_flit;
+		id(flit_to_watch) := id(packet); #the ID is always the one to watch in this small model
+		ensure id(flit_to_watch) = id(packet);
+		assigned := an10; #send north
+		ready := true;
+		call send_flit;
+    }
+	
+	action send_flit = {
+		ensure has_flit & ready; #make sure the action is called at the right time
+		call arb_N_10.move_flit; #tell the arbiter it's ready
+	}
+
+} 
+#closeob
+
+export r_PE_10.generate 
+
+
+
+####################
+# ALL THE ARBITERS #
+####################
+
+
+object arb_N_10 = {
+	
+	type can_get_from = {r_pe_10,r_n_10} #possibilities of routers that can have a packet to send
+	individual get_from : can_get_from #where the arbiter decides to get from
+	
+	after init { #before the arbiter can get a flit, make sure that a flit exists, and that it's assigned here.
+		require (r_PE_10.has_flit & r_PE_10.assigned = an10) | (r_N_10.has_flit & r_N_10.assigned = an10); 
+	}
+	
+	before move_flit { #check for simultaneous requests
+		if r_PE_10.has_flit & r_PE_10.assigned = an10 {
+			if r_N_10.has_flit & r_N_10.assigned = an10 {
+				get_from := *; #nondeterministically choose
+			}
+			else {
+				get_from := r_pe_10;
+			}
+		}
+		else if r_N_10.has_flit & r_N_10.assigned = an10 {
+			get_from := r_n_10;
+		}
+	}
+	
+	action move_flit = { 
+		require get_from = r_pe_10 | get_from = r_n_10;
+		if get_from = r_pe_10 {
+			r_PE_10.has_flit := false; #copy over the packet
+			r_S_11.has_flit := true;
+			#call r_S_11.assigner; #the downstream router then assigns and forwards the packet
+		}
+		else if get_from = r_n_10 {
+			r_N_10.has_flit := false;
+			r_S_11.has_flit := true;
+			#call r_S_11.assigner;
+		}
+	}
+	
+} 
+#closeob
+
+
+
+object arb_S_11 = { #very similar to arb_N_10
+
+	type can_get_from = {r_pe_11,r_s_11} #possibilities of routers that can have a packet to send
+	individual get_from : can_get_from #where the arbiter decides to get from
+	
+	after init { #before the arbiter can get a flit, make sure that a flit exists, and that it's assigned here.
+		require r_S_11.has_flit & r_S_11.assigned = as11; 
+	}
+	
+	before move_flit { 
+		get_from := r_s_11; 
+	}
+	
+	action move_flit = { 
+		require get_from = r_s_11;
+		r_S_11.has_flit := false;
+		r_N_10.has_flit := true;
+		#call r_N_10.assigner;
+	}
+	
+} 
+#closeob
+
+
+
+###################
+# ALL THE ROUTERS #
+###################
+
+
+object r_N_10 = {
+	individual has_flit : bool
+	individual assigned : arbiter
+	individual ready : bool
+	individual tally : int
+	
+	after init {
+		has_flit := false; 
+		tally := 0;
+		id(packet) := id(flit_to_watch);
+	}
+	
+	action assigner = { 
+		require has_flit & (id(packet) = id(flit_to_watch)); 
+		assigned := an10; #send north
+		ready := true;
+		call counter; #count the flit once it's been assigned
+	}
+	
+	action counter = {
+		require has_flit & (id(packet) = id(flit_to_watch)); 
+		tally := tally + 1;
+		call arb_N_10.move_flit; #tell the arbiter it's ready
+	}
+	
+
+}  
+#closeob
+
+
+
+object r_S_11 = {
+	individual has_flit : bool
+	individual assigned : arbiter
+	individual ready : bool
+	individual tally : int
+	
+	after init {
+		has_flit := false; 
+		tally := 0;
+	}
+	
+	action assigner = { 
+		require has_flit & (id(packet) = id(flit_to_watch)); 
+		assigned := as11; #send south 
+		ready := true;
+		call counter; #count the flit once it's been assigned
+	}
+	
+	action counter = {
+		require has_flit & (id(packet) = id(flit_to_watch)); 
+		tally := tally + 1;
+		call arb_S_11.move_flit; #tell the arbiter it's ready
+	}
+}  
+#closeob
+
+export r_N_10.assigner
+export r_S_11.assigner
+
+##################
+# THE INVARIANTS #
+##################
+
+# invariant ~(1 ~= 5 & 1 ~= 6 & 0 ~= 1 & 0 ~= 5 & 0
+# ~= 6 & 5 ~= 6)
+#invariant ((r_S_11.tally <= 5) | (r_S_11.tally <= 5 & r_N_10.tally <= 5))
+invariant r_N_10.tally <= 5
+# invariant ((r_N_10.tally - r_S_11.tally) < 2) & ((r_S_11.tally - r_N_10.tally) < 2)
+

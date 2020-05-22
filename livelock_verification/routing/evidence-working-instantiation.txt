@@ -1,0 +1,250 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        pseudocode_broken.ivy: line 328: node.conj7(X:coord, Y:coord)
+        pseudocode_broken.ivy: line 329: node.conj8(X:coord, Y:coord)
+        pseudocode_broken.ivy: line 335: invar9
+        pseudocode_broken.ivy: line 336: invar10
+
+    The following action implementations are present:
+        pseudocode_broken.ivy: line 234: implementation of flit.get_distances
+        pseudocode_broken.ivy: line 230: implementation of flit.send
+        pseudocode_broken.ivy: line 273: implementation of node.init[after6]
+        pseudocode_broken.ivy: line 277: implementation of node.route
+        pseudocode_broken.ivy: line 98: implementation of spec.check
+        pseudocode_broken.ivy: line 163: implementation of spec.go_east
+        pseudocode_broken.ivy: line 170: implementation of spec.go_north
+        pseudocode_broken.ivy: line 156: implementation of spec.go_south
+        pseudocode_broken.ivy: line 149: implementation of spec.go_west
+        pseudocode_broken.ivy: line 177: implementation of spec.incr
+        pseudocode_broken.ivy: line 140: implementation of spec.one_hop
+        pseudocode_broken.ivy: line 122: implementation of spec.second_check
+
+    The following action monitors are present:
+        pseudocode_broken.ivy: line 221: monitor of flit.send
+        pseudocode_broken.ivy: line 88: monitor of spec.check
+        pseudocode_broken.ivy: line 88: monitor of spec.second_check
+
+    The following initializers are present:
+        pseudocode_broken.ivy: line 200: flit.init[after4]
+        pseudocode_broken.ivy: line 28: spec.init[after3]
+
+    Initialization must establish the invariant
+        pseudocode_broken.ivy: line 328: node.conj7(X:coord, Y:coord) ... FAIL
+searching for a small model... done
+
+Trace follows...
+********************************************************************************
+    2:coord = 2
+    1:coord = 1
+    0:coord - 0 = 0
+    0:coord - 2 = 2
+    1:coord - 0 = 1
+    1:coord - 1 = 0
+    2:coord - 0 = 2
+    2:coord - 1 = 1
+    2:coord - 2 = 0
+    @X = 1
+    0:coord + 0 = 0
+    0:coord + 1 = 1
+    0:coord + 2 = 2
+    1:coord + 0 = 1
+    1:coord + 1 = 2
+    2:coord + 0 = 2
+    2:coord + 2 = 0
+    0:coord < 1 = true
+    0:coord < 2 = true
+    1:coord < 2 = true
+    0:coord < 0 = false
+    1:coord < 0 = false
+    1:coord < 1 = false
+    2:coord < 0 = false
+    2:coord < 1 = false
+    2:coord < 2 = false
+    0:coord = 0
+    @Y = 0
+    node.has_flit(0,0) = false
+    node.has_flit(0,1) = false
+    node.has_flit(0,2) = false
+    node.has_flit(1,0) = false
+    node.has_flit(1,1) = false
+    node.has_flit(1,2) = false
+    node.has_flit(2,0) = false
+    node.has_flit(2,1) = false
+    node.has_flit(2,2) = false
+    flit.y_distance = 0
+    flit.x_distance = 0
+pseudocode_broken.ivy: line 33: spec.north_ok := false
+    spec.north_ok = false
+pseudocode_broken.ivy: line 34: spec.east_ok := false
+    spec.east_ok = false
+pseudocode_broken.ivy: line 35: spec.south_ok := false
+    spec.south_ok = false
+pseudocode_broken.ivy: line 36: spec.west_ok := false
+    spec.west_ok = false
+pseudocode_broken.ivy: line 37: node.this_node_x(X,Y) := X:coord
+    node.this_node_x(0,0) = 0
+    node.this_node_x(0,1) = 0
+    node.this_node_x(0,2) = 0
+    node.this_node_x(1,0) = 1
+    node.this_node_x(1,1) = 1
+    node.this_node_x(1,2) = 1
+    node.this_node_x(2,0) = 2
+    node.this_node_x(2,1) = 2
+    node.this_node_x(2,2) = 2
+pseudocode_broken.ivy: line 38: node.this_node_y(X,Y) := Y:coord
+    node.this_node_y(0,0) = 0
+    node.this_node_y(0,1) = 1
+    node.this_node_y(0,2) = 2
+    node.this_node_y(1,0) = 0
+    node.this_node_y(1,1) = 1
+    node.this_node_y(1,2) = 2
+    node.this_node_y(2,0) = 0
+    node.this_node_y(2,1) = 1
+    node.this_node_y(2,2) = 2
+pseudocode_broken.ivy: line 40: node.north_free(X,Y) := false
+    node.north_free(0,0) = false
+    node.north_free(0,1) = false
+    node.north_free(0,2) = false
+    node.north_free(1,0) = false
+    node.north_free(1,1) = false
+    node.north_free(1,2) = false
+    node.north_free(2,0) = false
+    node.north_free(2,1) = false
+    node.north_free(2,2) = false
+pseudocode_broken.ivy: line 41: node.east_free(X,Y) := false
+    node.east_free(0,0) = false
+    node.east_free(0,1) = false
+    node.east_free(0,2) = false
+    node.east_free(1,0) = false
+    node.east_free(1,1) = false
+    node.east_free(1,2) = false
+    node.east_free(2,0) = false
+    node.east_free(2,1) = false
+    node.east_free(2,2) = false
+pseudocode_broken.ivy: line 42: node.south_free(X,Y) := false
+    node.south_free(0,0) = false
+    node.south_free(0,1) = false
+    node.south_free(0,2) = false
+    node.south_free(1,0) = false
+    node.south_free(1,1) = false
+    node.south_free(1,2) = false
+    node.south_free(2,0) = false
+    node.south_free(2,1) = false
+    node.south_free(2,2) = false
+pseudocode_broken.ivy: line 43: node.west_free(X,Y) := false
+    node.west_free(0,0) = false
+    node.west_free(0,1) = false
+    node.west_free(0,2) = false
+    node.west_free(1,0) = false
+    node.west_free(1,1) = false
+    node.west_free(1,2) = false
+    node.west_free(2,0) = false
+    node.west_free(2,1) = false
+    node.west_free(2,2) = false
+pseudocode_broken.ivy: line 50: node.north_free(0,0) := true
+    node.north_free(0,0) = true
+pseudocode_broken.ivy: line 51: node.south_free(0,1) := true
+    node.south_free(0,1) = true
+pseudocode_broken.ivy: line 53: node.east_free(0,0) := true
+    node.east_free(0,0) = true
+pseudocode_broken.ivy: line 54: node.west_free(1,0) := true
+    node.west_free(1,0) = true
+pseudocode_broken.ivy: line 56: node.east_free(0,1) := true
+    node.east_free(0,1) = true
+pseudocode_broken.ivy: line 57: node.west_free(1,1) := true
+    node.west_free(1,1) = true
+pseudocode_broken.ivy: line 59: node.north_free(0,1) := true
+    node.north_free(0,1) = true
+pseudocode_broken.ivy: line 60: node.south_free(0,2) := true
+    node.south_free(0,2) = true
+pseudocode_broken.ivy: line 62: node.south_free(1,1) := true
+    node.south_free(1,1) = true
+pseudocode_broken.ivy: line 63: node.north_free(1,0) := true
+    node.north_free(1,0) = true
+pseudocode_broken.ivy: line 65: node.east_free(0,2) := true
+    node.east_free(0,2) = true
+pseudocode_broken.ivy: line 66: node.west_free(1,2) := true
+    node.west_free(1,2) = true
+pseudocode_broken.ivy: line 68: node.east_free(1,0) := true
+    node.east_free(1,0) = true
+pseudocode_broken.ivy: line 69: node.west_free(2,0) := true
+    node.west_free(2,0) = true
+pseudocode_broken.ivy: line 71: node.north_free(1,1) := true
+    node.north_free(1,1) = true
+pseudocode_broken.ivy: line 72: node.south_free(1,2) := true
+    node.south_free(1,2) = true
+pseudocode_broken.ivy: line 74: node.east_free(1,1) := true
+    node.east_free(1,1) = true
+pseudocode_broken.ivy: line 75: node.west_free(2,1) := true
+    node.west_free(2,1) = true
+pseudocode_broken.ivy: line 77: node.east_free(1,2) := true
+    node.east_free(1,2) = true
+pseudocode_broken.ivy: line 78: node.west_free(2,2) := true
+    node.west_free(2,2) = true
+pseudocode_broken.ivy: line 80: node.north_free(2,0) := true
+    node.north_free(2,0) = true
+pseudocode_broken.ivy: line 81: node.south_free(2,1) := true
+    node.south_free(2,1) = true
+pseudocode_broken.ivy: line 83: node.north_free(2,1) := true
+    node.north_free(2,1) = true
+pseudocode_broken.ivy: line 84: node.south_free(2,2) := true
+    node.south_free(2,2) = true
+pseudocode_broken.ivy: line 201: flit.delivered := false
+    flit.delivered = false
+pseudocode_broken.ivy: line 202: flit.current_x := *
+    flit.current_x = 0
+pseudocode_broken.ivy: line 203: flit.current_y := *
+    flit.current_y = 0
+pseudocode_broken.ivy: line 204: flit.dest_x := *
+    flit.dest_x = 1
+pseudocode_broken.ivy: line 205: flit.dest_y := *
+    flit.dest_y = 0
+pseudocode_broken.ivy: line 206: assume ~(flit.dest_x = flit.current_x & flit.dest_y = flit.current_y)
+pseudocode_broken.ivy: line 207: node.has_flit(flit.current_x,flit.current_y) := true
+    node.has_flit(0,0) = true
+pseudocode_broken.ivy: line 208: flit.traveling := new
+    flit.traveling = new
+pseudocode_broken.ivy: line 209: call flit.get_distances
+pseudocode_broken.ivy: line 239: flit.x_distance := flit.dest_x - flit.current_x
+    flit.x_distance = 1
+pseudocode_broken.ivy: line 251: flit.y_distance := 0:coord
+pseudocode_broken.ivy: line 210: call flit.send
+pseudocode_broken.ivy: line 225: assert ~flit.delivered
+pseudocode_broken.ivy: line 231: call node.route(flit.current_x, flit.current_y)
+    prm:Y = 0
+    prm:X = 0
+pseudocode_broken.ivy: line 279: assert ~node.has_flit(prm:X,prm:Y)
+pseudocode_broken.ivy: line 280: call spec.check
+pseudocode_broken.ivy: line 89: spec.north_ok := false
+pseudocode_broken.ivy: line 90: spec.east_ok := false
+pseudocode_broken.ivy: line 91: spec.south_ok := false
+pseudocode_broken.ivy: line 92: spec.west_ok := false
+pseudocode_broken.ivy: line 102: spec.west_ok := true
+    spec.west_ok = true
+pseudocode_broken.ivy: line 108: spec.south_ok := true
+    spec.south_ok = true
+pseudocode_broken.ivy: line 304: call spec.second_check
+pseudocode_broken.ivy: line 89: spec.north_ok := false
+pseudocode_broken.ivy: line 90: spec.east_ok := false
+pseudocode_broken.ivy: line 91: spec.south_ok := false
+    spec.south_ok = false
+pseudocode_broken.ivy: line 92: spec.west_ok := false
+    spec.west_ok = false
+pseudocode_broken.ivy: line 128: spec.south_ok := true
+    spec.south_ok = true
+pseudocode_broken.ivy: line 133: spec.east_ok := true
+    spec.east_ok = true
+pseudocode_broken.ivy: line 136: spec.north_ok := true
+    spec.north_ok = true
+pseudocode_broken.ivy: line 314: call spec.go_east
+pseudocode_broken.ivy: line 164: node.has_flit(flit.current_x,flit.current_y) := false
+    node.has_flit(0,0) = false
+pseudocode_broken.ivy: line 165: flit.current_x := flit.current_x + 1
+    flit.current_x = 1
+pseudocode_broken.ivy: line 166: node.has_flit(flit.current_x,flit.current_y) := true
+    node.has_flit(1,0) = true
+pseudocode_broken.ivy: line 167: call spec.incr
+pseudocode_broken.ivy: line 315: flit.traveling := east
+    flit.traveling = east

@@ -1,0 +1,2453 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        combined-modules.ivy: line 150: spec.invar3
+        combined-modules.ivy: line 199: spec.conj4
+        combined-modules.ivy: line 200: spec.conj5
+        combined-modules.ivy: line 201: spec.conj6
+        combined-modules.ivy: line 202: spec.conj7
+        combined-modules.ivy: line 203: spec.conj8
+        combined-modules.ivy: line 204: spec.conj9
+        combined-modules.ivy: line 206: spec.conj10
+        combined-modules.ivy: line 207: spec.conj11
+        combined-modules.ivy: line 208: spec.conj12
+        combined-modules.ivy: line 209: spec.conj13
+        combined-modules.ivy: line 210: spec.conj14
+        combined-modules.ivy: line 211: spec.conj15
+        combined-modules.ivy: line 213: spec.conj16
+        combined-modules.ivy: line 214: spec.conj17
+        combined-modules.ivy: line 215: spec.conj18
+        combined-modules.ivy: line 216: spec.conj19
+        combined-modules.ivy: line 217: spec.conj20
+        combined-modules.ivy: line 218: spec.conj21
+        combined-modules.ivy: line 353: a.arbiter.conj25
+        combined-modules.ivy: line 354: a.arbiter.conj26
+        combined-modules.ivy: line 355: a.arbiter.conj27
+        combined-modules.ivy: line 357: a.arbiter.conj28
+        combined-modules.ivy: line 359: a.arbiter.conj29
+        combined-modules.ivy: line 361: a.arbiter.conj30
+        combined-modules.ivy: line 362: a.arbiter.conj31
+        combined-modules.ivy: line 363: a.arbiter.conj32
+        combined-modules.ivy: line 365: a.arbiter.conj33
+        combined-modules.ivy: line 366: a.arbiter.conj34
+        combined-modules.ivy: line 367: a.arbiter.conj35
+        combined-modules.ivy: line 369: a.arbiter.conj36
+        combined-modules.ivy: line 370: a.arbiter.conj37
+        combined-modules.ivy: line 371: a.arbiter.conj38
+        combined-modules.ivy: line 393: a.invar40
+        combined-modules.ivy: line 353: b.arbiter.conj25
+        combined-modules.ivy: line 354: b.arbiter.conj26
+        combined-modules.ivy: line 355: b.arbiter.conj27
+        combined-modules.ivy: line 357: b.arbiter.conj28
+        combined-modules.ivy: line 359: b.arbiter.conj29
+        combined-modules.ivy: line 361: b.arbiter.conj30
+        combined-modules.ivy: line 362: b.arbiter.conj31
+        combined-modules.ivy: line 363: b.arbiter.conj32
+        combined-modules.ivy: line 365: b.arbiter.conj33
+        combined-modules.ivy: line 366: b.arbiter.conj34
+        combined-modules.ivy: line 367: b.arbiter.conj35
+        combined-modules.ivy: line 369: b.arbiter.conj36
+        combined-modules.ivy: line 370: b.arbiter.conj37
+        combined-modules.ivy: line 371: b.arbiter.conj38
+        combined-modules.ivy: line 393: b.invar40
+        combined-modules.ivy: line 353: c.arbiter.conj25
+        combined-modules.ivy: line 354: c.arbiter.conj26
+        combined-modules.ivy: line 355: c.arbiter.conj27
+        combined-modules.ivy: line 357: c.arbiter.conj28
+        combined-modules.ivy: line 359: c.arbiter.conj29
+        combined-modules.ivy: line 361: c.arbiter.conj30
+        combined-modules.ivy: line 362: c.arbiter.conj31
+        combined-modules.ivy: line 363: c.arbiter.conj32
+        combined-modules.ivy: line 365: c.arbiter.conj33
+        combined-modules.ivy: line 366: c.arbiter.conj34
+        combined-modules.ivy: line 367: c.arbiter.conj35
+        combined-modules.ivy: line 369: c.arbiter.conj36
+        combined-modules.ivy: line 370: c.arbiter.conj37
+        combined-modules.ivy: line 371: c.arbiter.conj38
+        combined-modules.ivy: line 393: c.invar40
+        combined-modules.ivy: line 353: d.arbiter.conj25
+        combined-modules.ivy: line 354: d.arbiter.conj26
+        combined-modules.ivy: line 355: d.arbiter.conj27
+        combined-modules.ivy: line 357: d.arbiter.conj28
+        combined-modules.ivy: line 359: d.arbiter.conj29
+        combined-modules.ivy: line 361: d.arbiter.conj30
+        combined-modules.ivy: line 362: d.arbiter.conj31
+        combined-modules.ivy: line 363: d.arbiter.conj32
+        combined-modules.ivy: line 365: d.arbiter.conj33
+        combined-modules.ivy: line 366: d.arbiter.conj34
+        combined-modules.ivy: line 367: d.arbiter.conj35
+        combined-modules.ivy: line 369: d.arbiter.conj36
+        combined-modules.ivy: line 370: d.arbiter.conj37
+        combined-modules.ivy: line 371: d.arbiter.conj38
+        combined-modules.ivy: line 393: d.invar40
+        combined-modules.ivy: line 353: e.arbiter.conj25
+        combined-modules.ivy: line 354: e.arbiter.conj26
+        combined-modules.ivy: line 355: e.arbiter.conj27
+        combined-modules.ivy: line 357: e.arbiter.conj28
+        combined-modules.ivy: line 359: e.arbiter.conj29
+        combined-modules.ivy: line 361: e.arbiter.conj30
+        combined-modules.ivy: line 362: e.arbiter.conj31
+        combined-modules.ivy: line 363: e.arbiter.conj32
+        combined-modules.ivy: line 365: e.arbiter.conj33
+        combined-modules.ivy: line 366: e.arbiter.conj34
+        combined-modules.ivy: line 367: e.arbiter.conj35
+        combined-modules.ivy: line 369: e.arbiter.conj36
+        combined-modules.ivy: line 370: e.arbiter.conj37
+        combined-modules.ivy: line 371: e.arbiter.conj38
+        combined-modules.ivy: line 393: e.invar40
+        combined-modules.ivy: line 353: f.arbiter.conj25
+        combined-modules.ivy: line 354: f.arbiter.conj26
+        combined-modules.ivy: line 355: f.arbiter.conj27
+        combined-modules.ivy: line 357: f.arbiter.conj28
+        combined-modules.ivy: line 359: f.arbiter.conj29
+        combined-modules.ivy: line 361: f.arbiter.conj30
+        combined-modules.ivy: line 362: f.arbiter.conj31
+        combined-modules.ivy: line 363: f.arbiter.conj32
+        combined-modules.ivy: line 365: f.arbiter.conj33
+        combined-modules.ivy: line 366: f.arbiter.conj34
+        combined-modules.ivy: line 367: f.arbiter.conj35
+        combined-modules.ivy: line 369: f.arbiter.conj36
+        combined-modules.ivy: line 370: f.arbiter.conj37
+        combined-modules.ivy: line 371: f.arbiter.conj38
+        combined-modules.ivy: line 393: f.invar40
+
+    The following action implementations are present:
+        combined-modules.ivy: line 311: implementation of a.arbiter.check
+        combined-modules.ivy: line 325: implementation of a.arbiter.send
+        combined-modules.ivy: line 242: implementation of a.r1.has_sent
+        combined-modules.ivy: line 238: implementation of a.r1.send
+        combined-modules.ivy: line 242: implementation of a.r2.has_sent
+        combined-modules.ivy: line 238: implementation of a.r2.send
+        combined-modules.ivy: line 242: implementation of a.r3.has_sent
+        combined-modules.ivy: line 238: implementation of a.r3.send
+        combined-modules.ivy: line 383: implementation of a.r_recv.get_flit
+        combined-modules.ivy: line 311: implementation of b.arbiter.check
+        combined-modules.ivy: line 325: implementation of b.arbiter.send
+        combined-modules.ivy: line 242: implementation of b.r1.has_sent
+        combined-modules.ivy: line 238: implementation of b.r1.send
+        combined-modules.ivy: line 242: implementation of b.r2.has_sent
+        combined-modules.ivy: line 238: implementation of b.r2.send
+        combined-modules.ivy: line 242: implementation of b.r3.has_sent
+        combined-modules.ivy: line 238: implementation of b.r3.send
+        combined-modules.ivy: line 383: implementation of b.r_recv.get_flit
+        combined-modules.ivy: line 311: implementation of c.arbiter.check
+        combined-modules.ivy: line 325: implementation of c.arbiter.send
+        combined-modules.ivy: line 242: implementation of c.r1.has_sent
+        combined-modules.ivy: line 238: implementation of c.r1.send
+        combined-modules.ivy: line 242: implementation of c.r2.has_sent
+        combined-modules.ivy: line 238: implementation of c.r2.send
+        combined-modules.ivy: line 242: implementation of c.r3.has_sent
+        combined-modules.ivy: line 238: implementation of c.r3.send
+        combined-modules.ivy: line 383: implementation of c.r_recv.get_flit
+        combined-modules.ivy: line 311: implementation of d.arbiter.check
+        combined-modules.ivy: line 325: implementation of d.arbiter.send
+        combined-modules.ivy: line 242: implementation of d.r1.has_sent
+        combined-modules.ivy: line 238: implementation of d.r1.send
+        combined-modules.ivy: line 242: implementation of d.r2.has_sent
+        combined-modules.ivy: line 238: implementation of d.r2.send
+        combined-modules.ivy: line 242: implementation of d.r3.has_sent
+        combined-modules.ivy: line 238: implementation of d.r3.send
+        combined-modules.ivy: line 383: implementation of d.r_recv.get_flit
+        combined-modules.ivy: line 311: implementation of e.arbiter.check
+        combined-modules.ivy: line 325: implementation of e.arbiter.send
+        combined-modules.ivy: line 242: implementation of e.r1.has_sent
+        combined-modules.ivy: line 238: implementation of e.r1.send
+        combined-modules.ivy: line 242: implementation of e.r2.has_sent
+        combined-modules.ivy: line 238: implementation of e.r2.send
+        combined-modules.ivy: line 242: implementation of e.r3.has_sent
+        combined-modules.ivy: line 238: implementation of e.r3.send
+        combined-modules.ivy: line 383: implementation of e.r_recv.get_flit
+        combined-modules.ivy: line 311: implementation of f.arbiter.check
+        combined-modules.ivy: line 325: implementation of f.arbiter.send
+        combined-modules.ivy: line 242: implementation of f.r1.has_sent
+        combined-modules.ivy: line 238: implementation of f.r1.send
+        combined-modules.ivy: line 242: implementation of f.r2.has_sent
+        combined-modules.ivy: line 238: implementation of f.r2.send
+        combined-modules.ivy: line 242: implementation of f.r3.has_sent
+        combined-modules.ivy: line 238: implementation of f.r3.send
+        combined-modules.ivy: line 383: implementation of f.r_recv.get_flit
+        combined-modules.ivy: line 101: implementation of spec.clear_upstream
+        combined-modules.ivy: line 40: implementation of spec.copy_data
+        combined-modules.ivy: line 130: implementation of spec.count_flits
+        combined-modules.ivy: line 152: implementation of spec.remove_duplicates
+
+    The following action monitors are present:
+        combined-modules.ivy: line 269: monitor of a.arbiter.check
+        combined-modules.ivy: line 232: monitor of a.r1.send
+        combined-modules.ivy: line 232: monitor of a.r2.send
+        combined-modules.ivy: line 232: monitor of a.r3.send
+        combined-modules.ivy: line 379: monitor of a.r_recv.get_flit
+        combined-modules.ivy: line 269: monitor of b.arbiter.check
+        combined-modules.ivy: line 232: monitor of b.r1.send
+        combined-modules.ivy: line 232: monitor of b.r2.send
+        combined-modules.ivy: line 232: monitor of b.r3.send
+        combined-modules.ivy: line 379: monitor of b.r_recv.get_flit
+        combined-modules.ivy: line 269: monitor of c.arbiter.check
+        combined-modules.ivy: line 232: monitor of c.r1.send
+        combined-modules.ivy: line 232: monitor of c.r2.send
+        combined-modules.ivy: line 232: monitor of c.r3.send
+        combined-modules.ivy: line 379: monitor of c.r_recv.get_flit
+        combined-modules.ivy: line 269: monitor of d.arbiter.check
+        combined-modules.ivy: line 232: monitor of d.r1.send
+        combined-modules.ivy: line 232: monitor of d.r2.send
+        combined-modules.ivy: line 232: monitor of d.r3.send
+        combined-modules.ivy: line 379: monitor of d.r_recv.get_flit
+        combined-modules.ivy: line 269: monitor of e.arbiter.check
+        combined-modules.ivy: line 232: monitor of e.r1.send
+        combined-modules.ivy: line 232: monitor of e.r2.send
+        combined-modules.ivy: line 232: monitor of e.r3.send
+        combined-modules.ivy: line 379: monitor of e.r_recv.get_flit
+        combined-modules.ivy: line 269: monitor of f.arbiter.check
+        combined-modules.ivy: line 232: monitor of f.r1.send
+        combined-modules.ivy: line 232: monitor of f.r2.send
+        combined-modules.ivy: line 232: monitor of f.r3.send
+        combined-modules.ivy: line 379: monitor of f.r_recv.get_flit
+
+    The following initializers are present:
+        combined-modules.ivy: line 259: a.arbiter.init[after23]
+        combined-modules.ivy: line 259: b.arbiter.init[after23]
+        combined-modules.ivy: line 259: c.arbiter.init[after23]
+        combined-modules.ivy: line 259: d.arbiter.init[after23]
+        combined-modules.ivy: line 259: e.arbiter.init[after23]
+        combined-modules.ivy: line 259: f.arbiter.init[after23]
+        combined-modules.ivy: line 9: spec.init[after1]
+
+    Initialization must establish the invariant
+        combined-modules.ivy: line 150: spec.invar3 ... PASS
+        combined-modules.ivy: line 199: spec.conj4 ... PASS
+        combined-modules.ivy: line 200: spec.conj5 ... PASS
+        combined-modules.ivy: line 201: spec.conj6 ... PASS
+        combined-modules.ivy: line 202: spec.conj7 ... PASS
+        combined-modules.ivy: line 203: spec.conj8 ... PASS
+        combined-modules.ivy: line 204: spec.conj9 ... PASS
+        combined-modules.ivy: line 206: spec.conj10 ... PASS
+        combined-modules.ivy: line 207: spec.conj11 ... PASS
+        combined-modules.ivy: line 208: spec.conj12 ... PASS
+        combined-modules.ivy: line 209: spec.conj13 ... PASS
+        combined-modules.ivy: line 210: spec.conj14 ... PASS
+        combined-modules.ivy: line 211: spec.conj15 ... PASS
+        combined-modules.ivy: line 213: spec.conj16 ... PASS
+        combined-modules.ivy: line 214: spec.conj17 ... PASS
+        combined-modules.ivy: line 215: spec.conj18 ... PASS
+        combined-modules.ivy: line 216: spec.conj19 ... PASS
+        combined-modules.ivy: line 217: spec.conj20 ... PASS
+        combined-modules.ivy: line 218: spec.conj21 ... PASS
+        combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+        combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+        combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+        combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+        combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+        combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+        combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+        combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+        combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+        combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+        combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+        combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+        combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+        combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+        combined-modules.ivy: line 393: a.invar40 ... PASS
+        combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+        combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+        combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+        combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+        combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+        combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+        combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+        combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+        combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+        combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+        combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+        combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+        combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+        combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+        combined-modules.ivy: line 393: b.invar40 ... PASS
+        combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+        combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+        combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+        combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+        combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+        combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+        combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+        combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+        combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+        combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+        combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+        combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+        combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+        combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+        combined-modules.ivy: line 393: c.invar40 ... PASS
+        combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+        combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+        combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+        combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+        combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+        combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+        combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+        combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+        combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+        combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+        combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+        combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+        combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+        combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+        combined-modules.ivy: line 393: d.invar40 ... PASS
+        combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+        combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+        combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+        combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+        combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+        combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+        combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+        combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+        combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+        combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+        combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+        combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+        combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+        combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+        combined-modules.ivy: line 393: e.invar40 ... PASS
+        combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+        combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+        combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+        combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+        combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+        combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+        combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+        combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+        combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+        combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+        combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+        combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+        combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+        combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+        combined-modules.ivy: line 393: f.invar40 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:a.r1.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:a.r2.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:a.r3.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:b.r1.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:b.r2.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:b.r3.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:c.r1.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:c.r2.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:c.r3.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:d.r1.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:d.r2.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:d.r3.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:e.r1.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:e.r2.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:e.r3.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:f.r1.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:f.r2.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+        (internal) ext:f.r3.send
+            combined-modules.ivy: line 150: spec.invar3 ... PASS
+            combined-modules.ivy: line 199: spec.conj4 ... PASS
+            combined-modules.ivy: line 200: spec.conj5 ... PASS
+            combined-modules.ivy: line 201: spec.conj6 ... PASS
+            combined-modules.ivy: line 202: spec.conj7 ... PASS
+            combined-modules.ivy: line 203: spec.conj8 ... PASS
+            combined-modules.ivy: line 204: spec.conj9 ... PASS
+            combined-modules.ivy: line 206: spec.conj10 ... PASS
+            combined-modules.ivy: line 207: spec.conj11 ... PASS
+            combined-modules.ivy: line 208: spec.conj12 ... PASS
+            combined-modules.ivy: line 209: spec.conj13 ... PASS
+            combined-modules.ivy: line 210: spec.conj14 ... PASS
+            combined-modules.ivy: line 211: spec.conj15 ... PASS
+            combined-modules.ivy: line 213: spec.conj16 ... PASS
+            combined-modules.ivy: line 214: spec.conj17 ... PASS
+            combined-modules.ivy: line 215: spec.conj18 ... PASS
+            combined-modules.ivy: line 216: spec.conj19 ... PASS
+            combined-modules.ivy: line 217: spec.conj20 ... PASS
+            combined-modules.ivy: line 218: spec.conj21 ... PASS
+            combined-modules.ivy: line 353: a.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: a.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: a.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: a.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: a.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: a.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: a.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: a.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: a.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: a.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: a.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: a.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: a.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: a.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: a.invar40 ... PASS
+            combined-modules.ivy: line 353: b.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: b.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: b.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: b.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: b.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: b.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: b.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: b.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: b.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: b.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: b.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: b.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: b.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: b.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: b.invar40 ... PASS
+            combined-modules.ivy: line 353: c.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: c.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: c.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: c.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: c.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: c.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: c.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: c.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: c.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: c.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: c.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: c.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: c.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: c.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: c.invar40 ... PASS
+            combined-modules.ivy: line 353: d.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: d.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: d.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: d.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: d.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: d.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: d.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: d.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: d.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: d.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: d.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: d.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: d.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: d.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: d.invar40 ... PASS
+            combined-modules.ivy: line 353: e.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: e.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: e.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: e.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: e.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: e.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: e.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: e.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: e.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: e.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: e.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: e.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: e.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: e.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: e.invar40 ... PASS
+            combined-modules.ivy: line 353: f.arbiter.conj25 ... PASS
+            combined-modules.ivy: line 354: f.arbiter.conj26 ... PASS
+            combined-modules.ivy: line 355: f.arbiter.conj27 ... PASS
+            combined-modules.ivy: line 357: f.arbiter.conj28 ... PASS
+            combined-modules.ivy: line 359: f.arbiter.conj29 ... PASS
+            combined-modules.ivy: line 361: f.arbiter.conj30 ... PASS
+            combined-modules.ivy: line 362: f.arbiter.conj31 ... PASS
+            combined-modules.ivy: line 363: f.arbiter.conj32 ... PASS
+            combined-modules.ivy: line 365: f.arbiter.conj33 ... PASS
+            combined-modules.ivy: line 366: f.arbiter.conj34 ... PASS
+            combined-modules.ivy: line 367: f.arbiter.conj35 ... PASS
+            combined-modules.ivy: line 369: f.arbiter.conj36 ... PASS
+            combined-modules.ivy: line 370: f.arbiter.conj37 ... PASS
+            combined-modules.ivy: line 371: f.arbiter.conj38 ... PASS
+            combined-modules.ivy: line 393: f.invar40 ... PASS
+
+    The following program assertions are treated as assumptions:
+        in action b.r3.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action e.r2.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action e.r3.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action d.r3.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action d.arbiter.check when called from d.r3.send,d.r1.send,d.r2.send:
+            combined-modules.ivy: line 274: assumption
+            combined-modules.ivy: line 278: assumption
+            combined-modules.ivy: line 283: assumption
+            combined-modules.ivy: line 293: assumption
+        in action d.r1.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action c.r1.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action a.arbiter.check when called from a.r2.send,a.r3.send,a.r1.send:
+            combined-modules.ivy: line 274: assumption
+            combined-modules.ivy: line 278: assumption
+            combined-modules.ivy: line 283: assumption
+            combined-modules.ivy: line 293: assumption
+        in action f.r3.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action f.r1.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action f.arbiter.check when called from f.r3.send,f.r1.send,f.r2.send:
+            combined-modules.ivy: line 274: assumption
+            combined-modules.ivy: line 278: assumption
+            combined-modules.ivy: line 283: assumption
+            combined-modules.ivy: line 293: assumption
+        in action f.r2.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action c.r3.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action b.r2.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action c.r2.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action a.r2.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action b.arbiter.check when called from b.r3.send,b.r2.send,b.r1.send:
+            combined-modules.ivy: line 274: assumption
+            combined-modules.ivy: line 278: assumption
+            combined-modules.ivy: line 283: assumption
+            combined-modules.ivy: line 293: assumption
+        in action e.arbiter.check when called from e.r2.send,e.r3.send,e.r1.send:
+            combined-modules.ivy: line 274: assumption
+            combined-modules.ivy: line 278: assumption
+            combined-modules.ivy: line 283: assumption
+            combined-modules.ivy: line 293: assumption
+        in action e.r1.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action d.r2.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action a.r3.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action c.arbiter.check when called from c.r1.send,c.r3.send,c.r2.send:
+            combined-modules.ivy: line 274: assumption
+            combined-modules.ivy: line 278: assumption
+            combined-modules.ivy: line 283: assumption
+            combined-modules.ivy: line 293: assumption
+        in action b.r1.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+        in action a.r1.send when called from the environment:
+            combined-modules.ivy: line 233: assumption
+            combined-modules.ivy: line 235: assumption
+
+    The following program assertions are treated as guarantees:
+        in action f.r_recv.get_flit when called from f.arbiter.send,f.arbiter.send,f.arbiter.send:
+            combined-modules.ivy: line 380: guarantee ... PASS
+        in action b.r_recv.get_flit when called from b.arbiter.send,b.arbiter.send,b.arbiter.send:
+            combined-modules.ivy: line 380: guarantee ... PASS
+        in action d.arbiter.check when called from d.r3.send,d.r1.send,d.r2.send:
+            combined-modules.ivy: line 313: guarantee ... PASS
+            combined-modules.ivy: line 314: guarantee ... PASS
+        in action a.arbiter.check when called from a.r2.send,a.r3.send,a.r1.send:
+            combined-modules.ivy: line 313: guarantee ... PASS
+            combined-modules.ivy: line 314: guarantee ... PASS
+        in action b.arbiter.send when called from b.arbiter.check:
+            combined-modules.ivy: line 329: guarantee ... PASS
+            combined-modules.ivy: line 335: guarantee ... PASS
+            combined-modules.ivy: line 343: guarantee ... PASS
+        in action f.arbiter.check when called from f.r3.send,f.r1.send,f.r2.send:
+            combined-modules.ivy: line 313: guarantee ... PASS
+            combined-modules.ivy: line 314: guarantee ... PASS
+        in action c.r_recv.get_flit when called from c.arbiter.send,c.arbiter.send,c.arbiter.send:
+            combined-modules.ivy: line 380: guarantee ... PASS
+        in action d.arbiter.send when called from d.arbiter.check:
+            combined-modules.ivy: line 329: guarantee ... PASS
+            combined-modules.ivy: line 335: guarantee ... PASS
+            combined-modules.ivy: line 343: guarantee ... PASS
+        in action b.arbiter.check when called from b.r3.send,b.r2.send,b.r1.send:
+            combined-modules.ivy: line 313: guarantee ... PASS
+            combined-modules.ivy: line 314: guarantee ... PASS
+        in action e.arbiter.send when called from e.arbiter.check:
+            combined-modules.ivy: line 329: guarantee ... PASS
+            combined-modules.ivy: line 335: guarantee ... PASS
+            combined-modules.ivy: line 343: guarantee ... PASS
+        in action d.r_recv.get_flit when called from d.arbiter.send,d.arbiter.send,d.arbiter.send:
+            combined-modules.ivy: line 380: guarantee ... PASS
+        in action e.arbiter.check when called from e.r2.send,e.r3.send,e.r1.send:
+            combined-modules.ivy: line 313: guarantee ... PASS
+            combined-modules.ivy: line 314: guarantee ... PASS
+        in action f.arbiter.send when called from f.arbiter.check:
+            combined-modules.ivy: line 329: guarantee ... PASS
+            combined-modules.ivy: line 335: guarantee ... PASS
+            combined-modules.ivy: line 343: guarantee ... PASS
+        in action a.r_recv.get_flit when called from a.arbiter.send,a.arbiter.send,a.arbiter.send:
+            combined-modules.ivy: line 380: guarantee ... PASS
+        in action e.r_recv.get_flit when called from e.arbiter.send,e.arbiter.send,e.arbiter.send:
+            combined-modules.ivy: line 380: guarantee ... PASS
+        in action c.arbiter.check when called from c.r1.send,c.r3.send,c.r2.send:
+            combined-modules.ivy: line 313: guarantee ... PASS
+            combined-modules.ivy: line 314: guarantee ... PASS
+        in action c.arbiter.send when called from c.arbiter.check:
+            combined-modules.ivy: line 329: guarantee ... PASS
+            combined-modules.ivy: line 335: guarantee ... PASS
+            combined-modules.ivy: line 343: guarantee ... PASS
+        in action a.arbiter.send when called from a.arbiter.check:
+            combined-modules.ivy: line 329: guarantee ... PASS
+            combined-modules.ivy: line 335: guarantee ... PASS
+            combined-modules.ivy: line 343: guarantee ... PASS
+
+OK

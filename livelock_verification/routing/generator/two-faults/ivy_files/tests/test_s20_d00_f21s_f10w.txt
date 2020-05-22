@@ -1,0 +1,351 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        s20_d00_f21s_f10w.ivy: line 154: spec.conj3
+        s20_d00_f21s_f10w.ivy: line 227: flit.conj6
+        s20_d00_f21s_f10w.ivy: line 228: flit.conj7
+        s20_d00_f21s_f10w.ivy: line 230: flit.conj8
+        s20_d00_f21s_f10w.ivy: line 231: flit.conj9
+        s20_d00_f21s_f10w.ivy: line 233: flit.conj10
+        s20_d00_f21s_f10w.ivy: line 235: flit.conj11
+        s20_d00_f21s_f10w.ivy: line 236: flit.conj12
+        s20_d00_f21s_f10w.ivy: line 319: node.conj13(X:coord, Y:coord)
+        s20_d00_f21s_f10w.ivy: line 320: node.conj14(X:coord, Y:coord)
+        s20_d00_f21s_f10w.ivy: line 322: node.conj15(X:coord, Y:coord)
+        s20_d00_f21s_f10w.ivy: line 323: node.conj16(X:coord, Y:coord)
+        s20_d00_f21s_f10w.ivy: line 325: node.conj17(X:coord, Y:coord)
+        s20_d00_f21s_f10w.ivy: line 326: node.conj18(X:coord, Y:coord)
+        s20_d00_f21s_f10w.ivy: line 334: invar19
+        s20_d00_f21s_f10w.ivy: line 335: invar20
+        s20_d00_f21s_f10w.ivy: line 337: invar21
+        s20_d00_f21s_f10w.ivy: line 339: invar22
+        s20_d00_f21s_f10w.ivy: line 340: invar23
+
+    The following action implementations are present:
+        s20_d00_f21s_f10w.ivy: line 205: implementation of flit.get_distances
+        s20_d00_f21s_f10w.ivy: line 190: implementation of flit.send
+        s20_d00_f21s_f10w.ivy: line 253: implementation of node.route
+        s20_d00_f21s_f10w.ivy: line 80: implementation of spec.check
+        s20_d00_f21s_f10w.ivy: line 32: implementation of spec.confirm_links
+        s20_d00_f21s_f10w.ivy: line 136: implementation of spec.go_east
+        s20_d00_f21s_f10w.ivy: line 143: implementation of spec.go_north
+        s20_d00_f21s_f10w.ivy: line 129: implementation of spec.go_south
+        s20_d00_f21s_f10w.ivy: line 122: implementation of spec.go_west
+        s20_d00_f21s_f10w.ivy: line 150: implementation of spec.is_delivered
+        s20_d00_f21s_f10w.ivy: line 104: implementation of spec.second_check
+
+    The following action monitors are present:
+        s20_d00_f21s_f10w.ivy: line 195: monitor of flit.send
+        s20_d00_f21s_f10w.ivy: line 70: monitor of spec.check
+        s20_d00_f21s_f10w.ivy: line 70: monitor of spec.second_check
+
+    The following initializers are present:
+        s20_d00_f21s_f10w.ivy: line 173: flit.init[after4]
+        s20_d00_f21s_f10w.ivy: line 20: spec.init[after2]
+
+    Initialization must establish the invariant
+        s20_d00_f21s_f10w.ivy: line 154: spec.conj3 ... PASS
+        s20_d00_f21s_f10w.ivy: line 227: flit.conj6 ... PASS
+        s20_d00_f21s_f10w.ivy: line 228: flit.conj7 ... PASS
+        s20_d00_f21s_f10w.ivy: line 230: flit.conj8 ... PASS
+        s20_d00_f21s_f10w.ivy: line 231: flit.conj9 ... PASS
+        s20_d00_f21s_f10w.ivy: line 233: flit.conj10 ... PASS
+        s20_d00_f21s_f10w.ivy: line 235: flit.conj11 ... PASS
+        s20_d00_f21s_f10w.ivy: line 236: flit.conj12 ... PASS
+        s20_d00_f21s_f10w.ivy: line 319: node.conj13(X:coord, Y:coord) ... PASS
+        s20_d00_f21s_f10w.ivy: line 320: node.conj14(X:coord, Y:coord) ... PASS
+        s20_d00_f21s_f10w.ivy: line 322: node.conj15(X:coord, Y:coord) ... PASS
+        s20_d00_f21s_f10w.ivy: line 323: node.conj16(X:coord, Y:coord) ... PASS
+        s20_d00_f21s_f10w.ivy: line 325: node.conj17(X:coord, Y:coord) ... PASS
+        s20_d00_f21s_f10w.ivy: line 326: node.conj18(X:coord, Y:coord) ... PASS
+        s20_d00_f21s_f10w.ivy: line 334: invar19 ... PASS
+        s20_d00_f21s_f10w.ivy: line 335: invar20 ... PASS
+        s20_d00_f21s_f10w.ivy: line 337: invar21 ... PASS
+        s20_d00_f21s_f10w.ivy: line 339: invar22 ... PASS
+        s20_d00_f21s_f10w.ivy: line 340: invar23 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:flit.send
+            s20_d00_f21s_f10w.ivy: line 154: spec.conj3 ... PASS
+            s20_d00_f21s_f10w.ivy: line 227: flit.conj6 ... PASS
+            s20_d00_f21s_f10w.ivy: line 228: flit.conj7 ... PASS
+            s20_d00_f21s_f10w.ivy: line 230: flit.conj8 ... PASS
+            s20_d00_f21s_f10w.ivy: line 231: flit.conj9 ... PASS
+            s20_d00_f21s_f10w.ivy: line 233: flit.conj10 ... PASS
+            s20_d00_f21s_f10w.ivy: line 235: flit.conj11 ... PASS
+            s20_d00_f21s_f10w.ivy: line 236: flit.conj12 ... PASS
+            s20_d00_f21s_f10w.ivy: line 319: node.conj13(X:coord, Y:coord) ... PASS
+            s20_d00_f21s_f10w.ivy: line 320: node.conj14(X:coord, Y:coord) ... PASS
+            s20_d00_f21s_f10w.ivy: line 322: node.conj15(X:coord, Y:coord) ... PASS
+            s20_d00_f21s_f10w.ivy: line 323: node.conj16(X:coord, Y:coord) ... PASS
+            s20_d00_f21s_f10w.ivy: line 325: node.conj17(X:coord, Y:coord) ... PASS
+            s20_d00_f21s_f10w.ivy: line 326: node.conj18(X:coord, Y:coord) ... PASS
+            s20_d00_f21s_f10w.ivy: line 334: invar19 ... PASS
+            s20_d00_f21s_f10w.ivy: line 335: invar20 ... PASS
+            s20_d00_f21s_f10w.ivy: line 337: invar21 ... PASS
+            s20_d00_f21s_f10w.ivy: line 339: invar22 ... FAIL
+searching for a small model... done
+
+Trace follows...
+********************************************************************************
+    node.this_node_y(0,0) = 0
+    node.this_node_y(0,3) = 3
+    node.this_node_y(0,1) = 1
+    node.this_node_y(0,2) = 2
+    node.this_node_y(3,0) = 0
+    node.this_node_y(3,3) = 3
+    node.this_node_y(3,1) = 1
+    node.this_node_y(3,2) = 2
+    node.this_node_y(1,0) = 0
+    node.this_node_y(1,3) = 3
+    node.this_node_y(1,1) = 1
+    node.this_node_y(1,2) = 2
+    node.this_node_y(2,0) = 0
+    node.this_node_y(2,3) = 3
+    node.this_node_y(2,1) = 1
+    node.this_node_y(2,2) = 2
+    2:coord = 2
+    flit.dest_x = 0
+    1:coord = 1
+    0:coord - 0 = 0
+    0:coord - 3 = 1
+    0:coord - 1 = 3
+    0:coord - 2 = 2
+    3:coord - 0 = 3
+    3:coord - 3 = 0
+    3:coord - 1 = 2
+    3:coord - 2 = 1
+    1:coord - 0 = 1
+    1:coord - 3 = 2
+    1:coord - 1 = 0
+    1:coord - 2 = 3
+    2:coord - 0 = 2
+    2:coord - 3 = 3
+    2:coord - 1 = 1
+    2:coord - 2 = 0
+    flit.dest_y = 0
+    0:coord + 0 = 0
+    0:coord + 3 = 3
+    0:coord + 1 = 1
+    0:coord + 2 = 2
+    3:coord + 0 = 3
+    3:coord + 3 = 2
+    3:coord + 1 = 0
+    3:coord + 2 = 1
+    1:coord + 0 = 1
+    1:coord + 3 = 0
+    1:coord + 1 = 2
+    1:coord + 2 = 3
+    2:coord + 0 = 2
+    2:coord + 3 = 1
+    2:coord + 1 = 3
+    2:coord + 2 = 0
+    node.this_node_x(0,0) = 0
+    node.this_node_x(0,3) = 0
+    node.this_node_x(0,1) = 0
+    node.this_node_x(0,2) = 0
+    node.this_node_x(3,0) = 3
+    node.this_node_x(3,3) = 3
+    node.this_node_x(3,1) = 3
+    node.this_node_x(3,2) = 3
+    node.this_node_x(1,0) = 1
+    node.this_node_x(1,3) = 1
+    node.this_node_x(1,1) = 1
+    node.this_node_x(1,2) = 1
+    node.this_node_x(2,0) = 2
+    node.this_node_x(2,3) = 2
+    node.this_node_x(2,1) = 2
+    node.this_node_x(2,2) = 2
+    0:coord < 3 = true
+    0:coord < 1 = true
+    0:coord < 2 = true
+    1:coord < 3 = true
+    1:coord < 2 = true
+    2:coord < 3 = true
+    0:coord < 0 = false
+    3:coord < 0 = false
+    3:coord < 3 = false
+    3:coord < 1 = false
+    3:coord < 2 = false
+    1:coord < 0 = false
+    1:coord < 1 = false
+    2:coord < 0 = false
+    2:coord < 1 = false
+    2:coord < 2 = false
+    3:coord = 3
+    0:coord = 0
+    spec.north_ok = false
+    spec.can_route = true
+    node.east_free(0,0) = false
+    node.east_free(0,3) = false
+    node.east_free(0,1) = false
+    node.east_free(0,2) = false
+    node.east_free(3,0) = false
+    node.east_free(3,3) = false
+    node.east_free(3,1) = false
+    node.east_free(3,2) = false
+    node.east_free(1,0) = false
+    node.east_free(1,3) = false
+    node.east_free(1,1) = false
+    node.east_free(1,2) = false
+    node.east_free(2,0) = false
+    node.east_free(2,3) = false
+    node.east_free(2,1) = false
+    node.east_free(2,2) = false
+    node.has_flit(2,1) = true
+    node.has_flit(0,0) = false
+    node.has_flit(0,3) = false
+    node.has_flit(0,1) = false
+    node.has_flit(0,2) = false
+    node.has_flit(3,0) = false
+    node.has_flit(3,3) = false
+    node.has_flit(3,1) = false
+    node.has_flit(3,2) = false
+    node.has_flit(1,0) = false
+    node.has_flit(1,3) = false
+    node.has_flit(1,1) = false
+    node.has_flit(1,2) = false
+    node.has_flit(2,0) = false
+    node.has_flit(2,3) = false
+    node.has_flit(2,2) = false
+    node.north_free(0,0) = false
+    node.north_free(0,3) = false
+    node.north_free(0,1) = false
+    node.north_free(0,2) = false
+    node.north_free(3,0) = false
+    node.north_free(3,3) = false
+    node.north_free(3,1) = false
+    node.north_free(3,2) = false
+    node.north_free(1,0) = false
+    node.north_free(1,3) = false
+    node.north_free(1,1) = false
+    node.north_free(1,2) = false
+    node.north_free(2,0) = false
+    node.north_free(2,3) = false
+    node.north_free(2,1) = false
+    node.north_free(2,2) = false
+    flit.current_y = 1
+    spec.east_ok = false
+    flit.delivered = false
+    flit.traveling = east
+    node.west_free(0,0) = false
+    node.west_free(0,3) = false
+    node.west_free(0,1) = false
+    node.west_free(0,2) = false
+    node.west_free(3,0) = false
+    node.west_free(3,3) = false
+    node.west_free(3,1) = false
+    node.west_free(3,2) = false
+    node.west_free(1,0) = false
+    node.west_free(1,3) = false
+    node.west_free(1,1) = false
+    node.west_free(1,2) = false
+    node.west_free(2,0) = false
+    node.west_free(2,3) = false
+    node.west_free(2,1) = false
+    node.west_free(2,2) = false
+    spec.south_ok = false
+    flit.current_x = 2
+    node.south_free(0,0) = false
+    node.south_free(0,3) = false
+    node.south_free(0,1) = false
+    node.south_free(0,2) = false
+    node.south_free(3,0) = false
+    node.south_free(3,3) = false
+    node.south_free(3,1) = false
+    node.south_free(3,2) = false
+    node.south_free(1,0) = false
+    node.south_free(1,3) = false
+    node.south_free(1,1) = false
+    node.south_free(1,2) = false
+    node.south_free(2,0) = false
+    node.south_free(2,3) = false
+    node.south_free(2,1) = false
+    node.south_free(2,2) = false
+    spec.west_ok = false
+    flit.y_distance = 2
+    flit.x_distance = 0
+s20_d00_f21s_f10w.ivy: line 191: assume ~flit.delivered
+s20_d00_f21s_f10w.ivy: line 192: call node.route(flit.current_x, flit.current_y)
+    prm:Y = 1
+    prm:X = 2
+s20_d00_f21s_f10w.ivy: line 255: call spec.confirm_links
+s20_d00_f21s_f10w.ivy: line 33: node.north_free(X,Y) := false
+s20_d00_f21s_f10w.ivy: line 34: node.east_free(X,Y) := false
+s20_d00_f21s_f10w.ivy: line 35: node.south_free(X,Y) := false
+s20_d00_f21s_f10w.ivy: line 36: node.west_free(X,Y) := false
+s20_d00_f21s_f10w.ivy: line 38: node.north_free(0,0) := true
+    node.north_free(0,0) = true
+s20_d00_f21s_f10w.ivy: line 39: node.south_free(0,1) := true
+    node.south_free(0,1) = true
+s20_d00_f21s_f10w.ivy: line 40: node.east_free(0,0) := true
+    node.east_free(0,0) = true
+s20_d00_f21s_f10w.ivy: line 41: node.west_free(1,0) := true
+    node.west_free(1,0) = true
+s20_d00_f21s_f10w.ivy: line 42: node.east_free(0,1) := true
+    node.east_free(0,1) = true
+s20_d00_f21s_f10w.ivy: line 43: node.west_free(1,1) := true
+    node.west_free(1,1) = true
+s20_d00_f21s_f10w.ivy: line 44: node.north_free(0,1) := true
+    node.north_free(0,1) = true
+s20_d00_f21s_f10w.ivy: line 45: node.south_free(0,2) := true
+    node.south_free(0,2) = true
+s20_d00_f21s_f10w.ivy: line 46: node.south_free(1,1) := true
+    node.south_free(1,1) = true
+s20_d00_f21s_f10w.ivy: line 47: node.north_free(1,0) := true
+    node.north_free(1,0) = true
+s20_d00_f21s_f10w.ivy: line 48: node.east_free(0,2) := true
+    node.east_free(0,2) = true
+s20_d00_f21s_f10w.ivy: line 49: node.west_free(1,2) := true
+    node.west_free(1,2) = true
+s20_d00_f21s_f10w.ivy: line 50: node.east_free(1,0) := true
+    node.east_free(1,0) = true
+s20_d00_f21s_f10w.ivy: line 51: node.west_free(2,0) := true
+    node.west_free(2,0) = true
+s20_d00_f21s_f10w.ivy: line 52: node.north_free(1,1) := true
+    node.north_free(1,1) = true
+s20_d00_f21s_f10w.ivy: line 53: node.south_free(1,2) := true
+    node.south_free(1,2) = true
+s20_d00_f21s_f10w.ivy: line 54: node.east_free(1,1) := true
+    node.east_free(1,1) = true
+s20_d00_f21s_f10w.ivy: line 55: node.west_free(2,1) := true
+    node.west_free(2,1) = true
+s20_d00_f21s_f10w.ivy: line 56: node.east_free(1,2) := true
+    node.east_free(1,2) = true
+s20_d00_f21s_f10w.ivy: line 57: node.west_free(2,2) := true
+    node.west_free(2,2) = true
+s20_d00_f21s_f10w.ivy: line 58: node.north_free(2,0) := true
+    node.north_free(2,0) = true
+s20_d00_f21s_f10w.ivy: line 59: node.south_free(2,1) := true
+    node.south_free(2,1) = true
+s20_d00_f21s_f10w.ivy: line 60: node.north_free(2,1) := true
+    node.north_free(2,1) = true
+s20_d00_f21s_f10w.ivy: line 61: node.south_free(2,2) := true
+    node.south_free(2,2) = true
+s20_d00_f21s_f10w.ivy: line 64: node.south_free(2,1) := false
+    node.south_free(2,1) = false
+s20_d00_f21s_f10w.ivy: line 65: node.west_free(1,0) := false
+    node.west_free(1,0) = false
+s20_d00_f21s_f10w.ivy: line 256: call spec.check
+s20_d00_f21s_f10w.ivy: line 71: spec.north_ok := false
+s20_d00_f21s_f10w.ivy: line 72: spec.east_ok := false
+s20_d00_f21s_f10w.ivy: line 73: spec.south_ok := false
+s20_d00_f21s_f10w.ivy: line 74: spec.west_ok := false
+s20_d00_f21s_f10w.ivy: line 295: call spec.second_check
+s20_d00_f21s_f10w.ivy: line 71: spec.north_ok := false
+s20_d00_f21s_f10w.ivy: line 72: spec.east_ok := false
+s20_d00_f21s_f10w.ivy: line 73: spec.south_ok := false
+s20_d00_f21s_f10w.ivy: line 74: spec.west_ok := false
+s20_d00_f21s_f10w.ivy: line 110: spec.south_ok := true
+    spec.south_ok = true
+s20_d00_f21s_f10w.ivy: line 313: spec.can_route := false
+    spec.can_route = false
+s20_d00_f21s_f10w.ivy: line 196: call ext:flit.get_distances
+s20_d00_f21s_f10w.ivy: line 207: flit.x_distance := flit.current_x - flit.dest_x
+    flit.x_distance = 2
+s20_d00_f21s_f10w.ivy: line 216: flit.y_distance := flit.current_y - flit.dest_y
+    flit.y_distance = 1
+s20_d00_f21s_f10w.ivy: line 201: assert ~flit.delivered

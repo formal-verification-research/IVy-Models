@@ -1,0 +1,10 @@
+ 
+  conjecture has_flit -> ((flit.current_x = this_node_x) & (flit.current_y = this_node_y))
+  conjecture ((flit.current_x = this_node_x) & (flit.current_y = this_node_y)) -> has_flit
+  
+  conjecture ((flit.dest_x = this_node_x) & (flit.dest_y = this_node_y) & has_flit) -> flit.delivered
+  conjecture ((~(flit.dest_x = this_node_x) | ~(flit.dest_y = this_node_y)) & has_flit) -> ~flit.delivered
+  
+  conjecture (flit.delivered & has_flit) -> ((flit.dest_x = this_node_x) & (flit.dest_y = this_node_y))
+  conjecture (~flit.delivered & has_flit) -> ((~(flit.dest_x = this_node_x) | ~(flit.dest_y = this_node_y)))
+  

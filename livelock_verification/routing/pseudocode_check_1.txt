@@ -1,0 +1,66 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        pseudocode_broken.ivy: line 261: flit.conj6
+        pseudocode_broken.ivy: line 264: flit.conj7
+        pseudocode_broken.ivy: line 337: node.conj9(X:coord, Y:coord)
+        pseudocode_broken.ivy: line 347: invar10
+        pseudocode_broken.ivy: line 348: invar11
+
+    The following action implementations are present:
+        pseudocode_broken.ivy: line 238: implementation of flit.get_distances
+        pseudocode_broken.ivy: line 226: implementation of flit.send
+        pseudocode_broken.ivy: line 282: implementation of node.init[after8]
+        pseudocode_broken.ivy: line 286: implementation of node.route
+        pseudocode_broken.ivy: line 98: implementation of spec.check
+        pseudocode_broken.ivy: line 163: implementation of spec.go_east
+        pseudocode_broken.ivy: line 170: implementation of spec.go_north
+        pseudocode_broken.ivy: line 156: implementation of spec.go_south
+        pseudocode_broken.ivy: line 149: implementation of spec.go_west
+        pseudocode_broken.ivy: line 181: implementation of spec.incr
+        pseudocode_broken.ivy: line 177: implementation of spec.is_delivered
+        pseudocode_broken.ivy: line 140: implementation of spec.one_hop
+        pseudocode_broken.ivy: line 122: implementation of spec.second_check
+
+    The following action monitors are present:
+        pseudocode_broken.ivy: line 230: monitor of flit.send
+        pseudocode_broken.ivy: line 88: monitor of spec.check
+        pseudocode_broken.ivy: line 88: monitor of spec.second_check
+
+    The following initializers are present:
+        pseudocode_broken.ivy: line 204: flit.init[after4]
+        pseudocode_broken.ivy: line 28: spec.init[after3]
+
+    Initialization must establish the invariant
+        pseudocode_broken.ivy: line 261: flit.conj6 ... PASS
+        pseudocode_broken.ivy: line 264: flit.conj7 ... PASS
+        pseudocode_broken.ivy: line 337: node.conj9(X:coord, Y:coord) ... PASS
+        pseudocode_broken.ivy: line 347: invar10 ... PASS
+        pseudocode_broken.ivy: line 348: invar11 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:flit.send
+            pseudocode_broken.ivy: line 261: flit.conj6 ... PASS
+            pseudocode_broken.ivy: line 264: flit.conj7 ... PASS
+            pseudocode_broken.ivy: line 337: node.conj9(X:coord, Y:coord) ... PASS
+            pseudocode_broken.ivy: line 347: invar10 ... PASS
+            pseudocode_broken.ivy: line 348: invar11 ... PASS
+        (internal) ext:node.init[after8]
+            pseudocode_broken.ivy: line 261: flit.conj6 ... PASS
+            pseudocode_broken.ivy: line 264: flit.conj7 ... PASS
+            pseudocode_broken.ivy: line 337: node.conj9(X:coord, Y:coord) ... PASS
+            pseudocode_broken.ivy: line 347: invar10 ... PASS
+            pseudocode_broken.ivy: line 348: invar11 ... PASS
+
+    The following program assertions are treated as guarantees:
+        in action spec.one_hop when called from node.route:
+            pseudocode_broken.ivy: line 141: guarantee ... PASS
+        in action flit.send when called from the environment:
+            pseudocode_broken.ivy: line 234: guarantee ... PASS
+        in action flit.send when called from :
+            pseudocode_broken.ivy: line 234: guarantee 
+
+OK

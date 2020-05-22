@@ -1,0 +1,55 @@
+– If the packet has reached its destination, deliver the packet.
+– else if the packet is one hop away and the corresponding link is available, send on that link
+– else
+
+– go west if:
+1) the current node is not on the west edge,
+2) the packet is going in the west/south direction or just injected,
+3) the west link is fault-free, and
+4) the current node is at or east of the destination OR
+it is at or south of the destination and the south link is faulty
+
+– else go south if:
+1) the current node is not on the south edge,
+2) the packet is going in the west/south direction or just injected,
+3) the south link is fault-free, and
+4) the current node is at or north of the destination OR
+it is at or west of the destination and the west link is faulty
+
+– else go east if:
+1) the destination is more than one node to the east OR
+the destination is east of the current node AND exactly one row north,
+2) the packet is not traveling west, and
+3) the east link is fault-free
+ 
+– else go north if:
+1) the destination is north of the current node,
+2) the packet is not traveling south, and
+3) the north link is fault-free
+
+– else
+
+– go west if:
+1) the current node is not the west edge,
+2) the current node is at or east of the destination,
+3) the packet is not traveling east OR the destination is directly north, and
+4) the west link is fault-free
+
+– else south if:
+1) the current node is not the south edge,
+2) the current node is at or north of the destination,
+3) the packet is not traveling north, and
+4) the south link is fault-free
+
+– else go east if:
+1) the current node is at or west of the destination,
+2) the east link is fault-free, and
+3) the packet is not traveling west OR
+the destination is in the current column OR
+the destination is one node to the east AND not one node north
+
+– else go north if:
+1) the current node is at or south of the destination,
+2) the north link is fault-free, and
+3) the packet is not traveling south OR
+the current node is at or west of the destination
