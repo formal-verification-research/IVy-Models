@@ -1,8 +1,0 @@
-MODIFIED ROUTE: 
-south two 1-1
-west to 0-1
-south two 0-2
-south two 0-3
-south two 0-4
-
---- no routing decision available

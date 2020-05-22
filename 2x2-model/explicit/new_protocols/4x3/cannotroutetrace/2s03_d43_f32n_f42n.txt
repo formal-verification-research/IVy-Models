@@ -1,9 +1,0 @@
-MODIFIED ROUTE: 
-south to 02
-east to 12
-east to 22
-east to 32
-east to 42
-west two 32
-
---- no routing decision available
