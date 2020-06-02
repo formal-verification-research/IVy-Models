@@ -1,0 +1,31 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        corner_sw.ivy: line 138: invar2
+        corner_sw.ivy: line 139: invar3
+        corner_sw.ivy: line 140: invar4
+        corner_sw.ivy: line 141: invar5
+
+    The following action implementations are present:
+        corner_sw.ivy: line 52: implementation of node.route
+
+    The following initializers are present:
+        corner_sw.ivy: line 20: spec.init[after1]
+
+    Initialization must establish the invariant
+        corner_sw.ivy: line 138: invar2 ... PASS
+        corner_sw.ivy: line 139: invar3 ... PASS
+        corner_sw.ivy: line 140: invar4 ... PASS
+        corner_sw.ivy: line 141: invar5 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:node.route
+            corner_sw.ivy: line 138: invar2 ... PASS
+            corner_sw.ivy: line 139: invar3 ... PASS
+            corner_sw.ivy: line 140: invar4 ... PASS
+            corner_sw.ivy: line 141: invar5 ... PASS
+
+OK

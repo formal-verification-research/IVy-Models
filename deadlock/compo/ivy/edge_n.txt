@@ -1,0 +1,31 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        edge_n.ivy: line 138: invar2
+        edge_n.ivy: line 139: invar3
+        edge_n.ivy: line 140: invar4
+        edge_n.ivy: line 141: invar5
+
+    The following action implementations are present:
+        edge_n.ivy: line 52: implementation of node.route
+
+    The following initializers are present:
+        edge_n.ivy: line 20: spec.init[after1]
+
+    Initialization must establish the invariant
+        edge_n.ivy: line 138: invar2 ... PASS
+        edge_n.ivy: line 139: invar3 ... PASS
+        edge_n.ivy: line 140: invar4 ... PASS
+        edge_n.ivy: line 141: invar5 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:node.route
+            edge_n.ivy: line 138: invar2 ... PASS
+            edge_n.ivy: line 139: invar3 ... PASS
+            edge_n.ivy: line 140: invar4 ... PASS
+            edge_n.ivy: line 141: invar5 ... PASS
+
+OK

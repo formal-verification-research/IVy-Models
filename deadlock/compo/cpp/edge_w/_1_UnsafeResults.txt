@@ -1,0 +1,1790 @@
+1782 Total Scenarios Tested.
+1782 Passed Scenarios (100%)
+0 Failed Scenarios (0%)
+---------
+PASS: Zone C, inDir NORTH, Links ***- -- 
+PASS: Zone C, inDir NORTH, Links **F- -- 
+PASS: Zone C, inDir NORTH, Links **B- -- 
+PASS: Zone C, inDir NORTH, Links *F*- -- 
+PASS: Zone C, inDir NORTH, Links *FF- -- 
+PASS: Zone C, inDir NORTH, Links *FB- -- 
+PASS: Zone C, inDir NORTH, Links *B*- -- 
+PASS: Zone C, inDir NORTH, Links *BF- -- 
+PASS: Zone C, inDir NORTH, Links *BB- -- 
+PASS: Zone C, inDir NORTH, Links F**- -- 
+PASS: Zone C, inDir NORTH, Links F*F- -- 
+PASS: Zone C, inDir NORTH, Links F*B- -- 
+PASS: Zone C, inDir NORTH, Links FF*- -- 
+PASS: Zone C, inDir NORTH, Links FFF- -- 
+PASS: Zone C, inDir NORTH, Links FFB- -- 
+PASS: Zone C, inDir NORTH, Links FB*- -- 
+PASS: Zone C, inDir NORTH, Links FBF- -- 
+PASS: Zone C, inDir NORTH, Links FBB- -- 
+PASS: Zone C, inDir NORTH, Links B**- -- 
+PASS: Zone C, inDir NORTH, Links B*F- -- 
+PASS: Zone C, inDir NORTH, Links B*B- -- 
+PASS: Zone C, inDir NORTH, Links BF*- -- 
+PASS: Zone C, inDir NORTH, Links BFF- -- 
+PASS: Zone C, inDir NORTH, Links BFB- -- 
+PASS: Zone C, inDir NORTH, Links BB*- -- 
+PASS: Zone C, inDir NORTH, Links BBF- -- 
+PASS: Zone C, inDir NORTH, Links BBB- -- 
+PASS: Zone C, inDir EAST , Links ***- -- 
+PASS: Zone C, inDir EAST , Links **F- -- 
+PASS: Zone C, inDir EAST , Links **B- -- 
+PASS: Zone C, inDir EAST , Links *F*- -- 
+PASS: Zone C, inDir EAST , Links *FF- -- 
+PASS: Zone C, inDir EAST , Links *FB- -- 
+PASS: Zone C, inDir EAST , Links *B*- -- 
+PASS: Zone C, inDir EAST , Links *BF- -- 
+PASS: Zone C, inDir EAST , Links *BB- -- 
+PASS: Zone C, inDir EAST , Links F**- -- 
+PASS: Zone C, inDir EAST , Links F*F- -- 
+PASS: Zone C, inDir EAST , Links F*B- -- 
+PASS: Zone C, inDir EAST , Links FF*- -- 
+PASS: Zone C, inDir EAST , Links FFF- -- 
+PASS: Zone C, inDir EAST , Links FFB- -- 
+PASS: Zone C, inDir EAST , Links FB*- -- 
+PASS: Zone C, inDir EAST , Links FBF- -- 
+PASS: Zone C, inDir EAST , Links FBB- -- 
+PASS: Zone C, inDir EAST , Links B**- -- 
+PASS: Zone C, inDir EAST , Links B*F- -- 
+PASS: Zone C, inDir EAST , Links B*B- -- 
+PASS: Zone C, inDir EAST , Links BF*- -- 
+PASS: Zone C, inDir EAST , Links BFF- -- 
+PASS: Zone C, inDir EAST , Links BFB- -- 
+PASS: Zone C, inDir EAST , Links BB*- -- 
+PASS: Zone C, inDir EAST , Links BBF- -- 
+PASS: Zone C, inDir EAST , Links BBB- -- 
+PASS: Zone C, inDir WEST , Links ***- -- 
+PASS: Zone C, inDir WEST , Links **F- -- 
+PASS: Zone C, inDir WEST , Links **B- -- 
+PASS: Zone C, inDir WEST , Links *F*- -- 
+PASS: Zone C, inDir WEST , Links *FF- -- 
+PASS: Zone C, inDir WEST , Links *FB- -- 
+PASS: Zone C, inDir WEST , Links *B*- -- 
+PASS: Zone C, inDir WEST , Links *BF- -- 
+PASS: Zone C, inDir WEST , Links *BB- -- 
+PASS: Zone C, inDir WEST , Links F**- -- 
+PASS: Zone C, inDir WEST , Links F*F- -- 
+PASS: Zone C, inDir WEST , Links F*B- -- 
+PASS: Zone C, inDir WEST , Links FF*- -- 
+PASS: Zone C, inDir WEST , Links FFF- -- 
+PASS: Zone C, inDir WEST , Links FFB- -- 
+PASS: Zone C, inDir WEST , Links FB*- -- 
+PASS: Zone C, inDir WEST , Links FBF- -- 
+PASS: Zone C, inDir WEST , Links FBB- -- 
+PASS: Zone C, inDir WEST , Links B**- -- 
+PASS: Zone C, inDir WEST , Links B*F- -- 
+PASS: Zone C, inDir WEST , Links B*B- -- 
+PASS: Zone C, inDir WEST , Links BF*- -- 
+PASS: Zone C, inDir WEST , Links BFF- -- 
+PASS: Zone C, inDir WEST , Links BFB- -- 
+PASS: Zone C, inDir WEST , Links BB*- -- 
+PASS: Zone C, inDir WEST , Links BBF- -- 
+PASS: Zone C, inDir WEST , Links BBB- -- 
+PASS: Zone D, inDir NORTH, Links ***- -- 
+PASS: Zone D, inDir NORTH, Links **F- -- 
+PASS: Zone D, inDir NORTH, Links **B- -- 
+PASS: Zone D, inDir NORTH, Links *F*- -- 
+PASS: Zone D, inDir NORTH, Links *FF- -- 
+PASS: Zone D, inDir NORTH, Links *FB- -- 
+PASS: Zone D, inDir NORTH, Links *B*- -- 
+PASS: Zone D, inDir NORTH, Links *BF- -- 
+PASS: Zone D, inDir NORTH, Links *BB- -- 
+PASS: Zone D, inDir NORTH, Links F**- -- 
+PASS: Zone D, inDir NORTH, Links F*F- -- 
+PASS: Zone D, inDir NORTH, Links F*B- -- 
+PASS: Zone D, inDir NORTH, Links FF*- -- 
+PASS: Zone D, inDir NORTH, Links FFF- -- 
+PASS: Zone D, inDir NORTH, Links FFB- -- 
+PASS: Zone D, inDir NORTH, Links FB*- -- 
+PASS: Zone D, inDir NORTH, Links FBF- -- 
+PASS: Zone D, inDir NORTH, Links FBB- -- 
+PASS: Zone D, inDir NORTH, Links B**- -- 
+PASS: Zone D, inDir NORTH, Links B*F- -- 
+PASS: Zone D, inDir NORTH, Links B*B- -- 
+PASS: Zone D, inDir NORTH, Links BF*- -- 
+PASS: Zone D, inDir NORTH, Links BFF- -- 
+PASS: Zone D, inDir NORTH, Links BFB- -- 
+PASS: Zone D, inDir NORTH, Links BB*- -- 
+PASS: Zone D, inDir NORTH, Links BBF- -- 
+PASS: Zone D, inDir NORTH, Links BBB- -- 
+PASS: Zone D, inDir EAST , Links ***- -- 
+PASS: Zone D, inDir EAST , Links **F- -- 
+PASS: Zone D, inDir EAST , Links **B- -- 
+PASS: Zone D, inDir EAST , Links *F*- -- 
+PASS: Zone D, inDir EAST , Links *FF- -- 
+PASS: Zone D, inDir EAST , Links *FB- -- 
+PASS: Zone D, inDir EAST , Links *B*- -- 
+PASS: Zone D, inDir EAST , Links *BF- -- 
+PASS: Zone D, inDir EAST , Links *BB- -- 
+PASS: Zone D, inDir EAST , Links F**- -- 
+PASS: Zone D, inDir EAST , Links F*F- -- 
+PASS: Zone D, inDir EAST , Links F*B- -- 
+PASS: Zone D, inDir EAST , Links FF*- -- 
+PASS: Zone D, inDir EAST , Links FFF- -- 
+PASS: Zone D, inDir EAST , Links FFB- -- 
+PASS: Zone D, inDir EAST , Links FB*- -- 
+PASS: Zone D, inDir EAST , Links FBF- -- 
+PASS: Zone D, inDir EAST , Links FBB- -- 
+PASS: Zone D, inDir EAST , Links B**- -- 
+PASS: Zone D, inDir EAST , Links B*F- -- 
+PASS: Zone D, inDir EAST , Links B*B- -- 
+PASS: Zone D, inDir EAST , Links BF*- -- 
+PASS: Zone D, inDir EAST , Links BFF- -- 
+PASS: Zone D, inDir EAST , Links BFB- -- 
+PASS: Zone D, inDir EAST , Links BB*- -- 
+PASS: Zone D, inDir EAST , Links BBF- -- 
+PASS: Zone D, inDir EAST , Links BBB- -- 
+PASS: Zone D, inDir WEST , Links ***- -- 
+PASS: Zone D, inDir WEST , Links **F- -- 
+PASS: Zone D, inDir WEST , Links **B- -- 
+PASS: Zone D, inDir WEST , Links *F*- -- 
+PASS: Zone D, inDir WEST , Links *FF- -- 
+PASS: Zone D, inDir WEST , Links *FB- -- 
+PASS: Zone D, inDir WEST , Links *B*- -- 
+PASS: Zone D, inDir WEST , Links *BF- -- 
+PASS: Zone D, inDir WEST , Links *BB- -- 
+PASS: Zone D, inDir WEST , Links F**- -- 
+PASS: Zone D, inDir WEST , Links F*F- -- 
+PASS: Zone D, inDir WEST , Links F*B- -- 
+PASS: Zone D, inDir WEST , Links FF*- -- 
+PASS: Zone D, inDir WEST , Links FFF- -- 
+PASS: Zone D, inDir WEST , Links FFB- -- 
+PASS: Zone D, inDir WEST , Links FB*- -- 
+PASS: Zone D, inDir WEST , Links FBF- -- 
+PASS: Zone D, inDir WEST , Links FBB- -- 
+PASS: Zone D, inDir WEST , Links B**- -- 
+PASS: Zone D, inDir WEST , Links B*F- -- 
+PASS: Zone D, inDir WEST , Links B*B- -- 
+PASS: Zone D, inDir WEST , Links BF*- -- 
+PASS: Zone D, inDir WEST , Links BFF- -- 
+PASS: Zone D, inDir WEST , Links BFB- -- 
+PASS: Zone D, inDir WEST , Links BB*- -- 
+PASS: Zone D, inDir WEST , Links BBF- -- 
+PASS: Zone D, inDir WEST , Links BBB- -- 
+PASS: Zone E, inDir NORTH, Links ***- -- 
+PASS: Zone E, inDir NORTH, Links **F- -- 
+PASS: Zone E, inDir NORTH, Links **B- -- 
+PASS: Zone E, inDir NORTH, Links *F*- -- 
+PASS: Zone E, inDir NORTH, Links *FF- -- 
+PASS: Zone E, inDir NORTH, Links *FB- -- 
+PASS: Zone E, inDir NORTH, Links *B*- -- 
+PASS: Zone E, inDir NORTH, Links *BF- -- 
+PASS: Zone E, inDir NORTH, Links *BB- -- 
+PASS: Zone E, inDir NORTH, Links F**- -- 
+PASS: Zone E, inDir NORTH, Links F*F- -- 
+PASS: Zone E, inDir NORTH, Links F*B- -- 
+PASS: Zone E, inDir NORTH, Links FF*- -- 
+PASS: Zone E, inDir NORTH, Links FFF- -- 
+PASS: Zone E, inDir NORTH, Links FFB- -- 
+PASS: Zone E, inDir NORTH, Links FB*- -- 
+PASS: Zone E, inDir NORTH, Links FBF- -- 
+PASS: Zone E, inDir NORTH, Links FBB- -- 
+PASS: Zone E, inDir NORTH, Links B**- -- 
+PASS: Zone E, inDir NORTH, Links B*F- -- 
+PASS: Zone E, inDir NORTH, Links B*B- -- 
+PASS: Zone E, inDir NORTH, Links BF*- -- 
+PASS: Zone E, inDir NORTH, Links BFF- -- 
+PASS: Zone E, inDir NORTH, Links BFB- -- 
+PASS: Zone E, inDir NORTH, Links BB*- -- 
+PASS: Zone E, inDir NORTH, Links BBF- -- 
+PASS: Zone E, inDir NORTH, Links BBB- -- 
+PASS: Zone E, inDir EAST , Links ***- -- 
+PASS: Zone E, inDir EAST , Links **F- -- 
+PASS: Zone E, inDir EAST , Links **B- -- 
+PASS: Zone E, inDir EAST , Links *F*- -- 
+PASS: Zone E, inDir EAST , Links *FF- -- 
+PASS: Zone E, inDir EAST , Links *FB- -- 
+PASS: Zone E, inDir EAST , Links *B*- -- 
+PASS: Zone E, inDir EAST , Links *BF- -- 
+PASS: Zone E, inDir EAST , Links *BB- -- 
+PASS: Zone E, inDir EAST , Links F**- -- 
+PASS: Zone E, inDir EAST , Links F*F- -- 
+PASS: Zone E, inDir EAST , Links F*B- -- 
+PASS: Zone E, inDir EAST , Links FF*- -- 
+PASS: Zone E, inDir EAST , Links FFF- -- 
+PASS: Zone E, inDir EAST , Links FFB- -- 
+PASS: Zone E, inDir EAST , Links FB*- -- 
+PASS: Zone E, inDir EAST , Links FBF- -- 
+PASS: Zone E, inDir EAST , Links FBB- -- 
+PASS: Zone E, inDir EAST , Links B**- -- 
+PASS: Zone E, inDir EAST , Links B*F- -- 
+PASS: Zone E, inDir EAST , Links B*B- -- 
+PASS: Zone E, inDir EAST , Links BF*- -- 
+PASS: Zone E, inDir EAST , Links BFF- -- 
+PASS: Zone E, inDir EAST , Links BFB- -- 
+PASS: Zone E, inDir EAST , Links BB*- -- 
+PASS: Zone E, inDir EAST , Links BBF- -- 
+PASS: Zone E, inDir EAST , Links BBB- -- 
+PASS: Zone E, inDir WEST , Links ***- -- 
+PASS: Zone E, inDir WEST , Links **F- -- 
+PASS: Zone E, inDir WEST , Links **B- -- 
+PASS: Zone E, inDir WEST , Links *F*- -- 
+PASS: Zone E, inDir WEST , Links *FF- -- 
+PASS: Zone E, inDir WEST , Links *FB- -- 
+PASS: Zone E, inDir WEST , Links *B*- -- 
+PASS: Zone E, inDir WEST , Links *BF- -- 
+PASS: Zone E, inDir WEST , Links *BB- -- 
+PASS: Zone E, inDir WEST , Links F**- -- 
+PASS: Zone E, inDir WEST , Links F*F- -- 
+PASS: Zone E, inDir WEST , Links F*B- -- 
+PASS: Zone E, inDir WEST , Links FF*- -- 
+PASS: Zone E, inDir WEST , Links FFF- -- 
+PASS: Zone E, inDir WEST , Links FFB- -- 
+PASS: Zone E, inDir WEST , Links FB*- -- 
+PASS: Zone E, inDir WEST , Links FBF- -- 
+PASS: Zone E, inDir WEST , Links FBB- -- 
+PASS: Zone E, inDir WEST , Links B**- -- 
+PASS: Zone E, inDir WEST , Links B*F- -- 
+PASS: Zone E, inDir WEST , Links B*B- -- 
+PASS: Zone E, inDir WEST , Links BF*- -- 
+PASS: Zone E, inDir WEST , Links BFF- -- 
+PASS: Zone E, inDir WEST , Links BFB- -- 
+PASS: Zone E, inDir WEST , Links BB*- -- 
+PASS: Zone E, inDir WEST , Links BBF- -- 
+PASS: Zone E, inDir WEST , Links BBB- -- 
+PASS: Zone F, inDir NORTH, Links ***- NE 
+PASS: Zone F, inDir NORTH, Links ***- -- 
+PASS: Zone F, inDir NORTH, Links **F- NE 
+PASS: Zone F, inDir NORTH, Links **F- -- 
+PASS: Zone F, inDir NORTH, Links **B- NE 
+PASS: Zone F, inDir NORTH, Links **B- -- 
+PASS: Zone F, inDir NORTH, Links *F*- NE 
+PASS: Zone F, inDir NORTH, Links *F*- -- 
+PASS: Zone F, inDir NORTH, Links *FF- NE 
+PASS: Zone F, inDir NORTH, Links *FF- -- 
+PASS: Zone F, inDir NORTH, Links *FB- NE 
+PASS: Zone F, inDir NORTH, Links *FB- -- 
+PASS: Zone F, inDir NORTH, Links *B*- NE 
+PASS: Zone F, inDir NORTH, Links *B*- -- 
+PASS: Zone F, inDir NORTH, Links *BF- NE 
+PASS: Zone F, inDir NORTH, Links *BF- -- 
+PASS: Zone F, inDir NORTH, Links *BB- NE 
+PASS: Zone F, inDir NORTH, Links *BB- -- 
+PASS: Zone F, inDir NORTH, Links F**- NE 
+PASS: Zone F, inDir NORTH, Links F**- -- 
+PASS: Zone F, inDir NORTH, Links F*F- NE 
+PASS: Zone F, inDir NORTH, Links F*F- -- 
+PASS: Zone F, inDir NORTH, Links F*B- NE 
+PASS: Zone F, inDir NORTH, Links F*B- -- 
+PASS: Zone F, inDir NORTH, Links FF*- NE 
+PASS: Zone F, inDir NORTH, Links FF*- -- 
+PASS: Zone F, inDir NORTH, Links FFF- NE 
+PASS: Zone F, inDir NORTH, Links FFF- -- 
+PASS: Zone F, inDir NORTH, Links FFB- NE 
+PASS: Zone F, inDir NORTH, Links FFB- -- 
+PASS: Zone F, inDir NORTH, Links FB*- NE 
+PASS: Zone F, inDir NORTH, Links FB*- -- 
+PASS: Zone F, inDir NORTH, Links FBF- NE 
+PASS: Zone F, inDir NORTH, Links FBF- -- 
+PASS: Zone F, inDir NORTH, Links FBB- NE 
+PASS: Zone F, inDir NORTH, Links FBB- -- 
+PASS: Zone F, inDir NORTH, Links B**- NE 
+PASS: Zone F, inDir NORTH, Links B**- -- 
+PASS: Zone F, inDir NORTH, Links B*F- NE 
+PASS: Zone F, inDir NORTH, Links B*F- -- 
+PASS: Zone F, inDir NORTH, Links B*B- NE 
+PASS: Zone F, inDir NORTH, Links B*B- -- 
+PASS: Zone F, inDir NORTH, Links BF*- NE 
+PASS: Zone F, inDir NORTH, Links BF*- -- 
+PASS: Zone F, inDir NORTH, Links BFF- NE 
+PASS: Zone F, inDir NORTH, Links BFF- -- 
+PASS: Zone F, inDir NORTH, Links BFB- NE 
+PASS: Zone F, inDir NORTH, Links BFB- -- 
+PASS: Zone F, inDir NORTH, Links BB*- NE 
+PASS: Zone F, inDir NORTH, Links BB*- -- 
+PASS: Zone F, inDir NORTH, Links BBF- NE 
+PASS: Zone F, inDir NORTH, Links BBF- -- 
+PASS: Zone F, inDir NORTH, Links BBB- NE 
+PASS: Zone F, inDir NORTH, Links BBB- -- 
+PASS: Zone F, inDir EAST , Links ***- NE 
+PASS: Zone F, inDir EAST , Links ***- -- 
+PASS: Zone F, inDir EAST , Links **F- NE 
+PASS: Zone F, inDir EAST , Links **F- -- 
+PASS: Zone F, inDir EAST , Links **B- NE 
+PASS: Zone F, inDir EAST , Links **B- -- 
+PASS: Zone F, inDir EAST , Links *F*- NE 
+PASS: Zone F, inDir EAST , Links *F*- -- 
+PASS: Zone F, inDir EAST , Links *FF- NE 
+PASS: Zone F, inDir EAST , Links *FF- -- 
+PASS: Zone F, inDir EAST , Links *FB- NE 
+PASS: Zone F, inDir EAST , Links *FB- -- 
+PASS: Zone F, inDir EAST , Links *B*- NE 
+PASS: Zone F, inDir EAST , Links *B*- -- 
+PASS: Zone F, inDir EAST , Links *BF- NE 
+PASS: Zone F, inDir EAST , Links *BF- -- 
+PASS: Zone F, inDir EAST , Links *BB- NE 
+PASS: Zone F, inDir EAST , Links *BB- -- 
+PASS: Zone F, inDir EAST , Links F**- NE 
+PASS: Zone F, inDir EAST , Links F**- -- 
+PASS: Zone F, inDir EAST , Links F*F- NE 
+PASS: Zone F, inDir EAST , Links F*F- -- 
+PASS: Zone F, inDir EAST , Links F*B- NE 
+PASS: Zone F, inDir EAST , Links F*B- -- 
+PASS: Zone F, inDir EAST , Links FF*- NE 
+PASS: Zone F, inDir EAST , Links FF*- -- 
+PASS: Zone F, inDir EAST , Links FFF- NE 
+PASS: Zone F, inDir EAST , Links FFF- -- 
+PASS: Zone F, inDir EAST , Links FFB- NE 
+PASS: Zone F, inDir EAST , Links FFB- -- 
+PASS: Zone F, inDir EAST , Links FB*- NE 
+PASS: Zone F, inDir EAST , Links FB*- -- 
+PASS: Zone F, inDir EAST , Links FBF- NE 
+PASS: Zone F, inDir EAST , Links FBF- -- 
+PASS: Zone F, inDir EAST , Links FBB- NE 
+PASS: Zone F, inDir EAST , Links FBB- -- 
+PASS: Zone F, inDir EAST , Links B**- NE 
+PASS: Zone F, inDir EAST , Links B**- -- 
+PASS: Zone F, inDir EAST , Links B*F- NE 
+PASS: Zone F, inDir EAST , Links B*F- -- 
+PASS: Zone F, inDir EAST , Links B*B- NE 
+PASS: Zone F, inDir EAST , Links B*B- -- 
+PASS: Zone F, inDir EAST , Links BF*- NE 
+PASS: Zone F, inDir EAST , Links BF*- -- 
+PASS: Zone F, inDir EAST , Links BFF- NE 
+PASS: Zone F, inDir EAST , Links BFF- -- 
+PASS: Zone F, inDir EAST , Links BFB- NE 
+PASS: Zone F, inDir EAST , Links BFB- -- 
+PASS: Zone F, inDir EAST , Links BB*- NE 
+PASS: Zone F, inDir EAST , Links BB*- -- 
+PASS: Zone F, inDir EAST , Links BBF- NE 
+PASS: Zone F, inDir EAST , Links BBF- -- 
+PASS: Zone F, inDir EAST , Links BBB- NE 
+PASS: Zone F, inDir EAST , Links BBB- -- 
+PASS: Zone F, inDir WEST , Links ***- NE 
+PASS: Zone F, inDir WEST , Links ***- -- 
+PASS: Zone F, inDir WEST , Links **F- NE 
+PASS: Zone F, inDir WEST , Links **F- -- 
+PASS: Zone F, inDir WEST , Links **B- NE 
+PASS: Zone F, inDir WEST , Links **B- -- 
+PASS: Zone F, inDir WEST , Links *F*- NE 
+PASS: Zone F, inDir WEST , Links *F*- -- 
+PASS: Zone F, inDir WEST , Links *FF- NE 
+PASS: Zone F, inDir WEST , Links *FF- -- 
+PASS: Zone F, inDir WEST , Links *FB- NE 
+PASS: Zone F, inDir WEST , Links *FB- -- 
+PASS: Zone F, inDir WEST , Links *B*- NE 
+PASS: Zone F, inDir WEST , Links *B*- -- 
+PASS: Zone F, inDir WEST , Links *BF- NE 
+PASS: Zone F, inDir WEST , Links *BF- -- 
+PASS: Zone F, inDir WEST , Links *BB- NE 
+PASS: Zone F, inDir WEST , Links *BB- -- 
+PASS: Zone F, inDir WEST , Links F**- NE 
+PASS: Zone F, inDir WEST , Links F**- -- 
+PASS: Zone F, inDir WEST , Links F*F- NE 
+PASS: Zone F, inDir WEST , Links F*F- -- 
+PASS: Zone F, inDir WEST , Links F*B- NE 
+PASS: Zone F, inDir WEST , Links F*B- -- 
+PASS: Zone F, inDir WEST , Links FF*- NE 
+PASS: Zone F, inDir WEST , Links FF*- -- 
+PASS: Zone F, inDir WEST , Links FFF- NE 
+PASS: Zone F, inDir WEST , Links FFF- -- 
+PASS: Zone F, inDir WEST , Links FFB- NE 
+PASS: Zone F, inDir WEST , Links FFB- -- 
+PASS: Zone F, inDir WEST , Links FB*- NE 
+PASS: Zone F, inDir WEST , Links FB*- -- 
+PASS: Zone F, inDir WEST , Links FBF- NE 
+PASS: Zone F, inDir WEST , Links FBF- -- 
+PASS: Zone F, inDir WEST , Links FBB- NE 
+PASS: Zone F, inDir WEST , Links FBB- -- 
+PASS: Zone F, inDir WEST , Links B**- NE 
+PASS: Zone F, inDir WEST , Links B**- -- 
+PASS: Zone F, inDir WEST , Links B*F- NE 
+PASS: Zone F, inDir WEST , Links B*F- -- 
+PASS: Zone F, inDir WEST , Links B*B- NE 
+PASS: Zone F, inDir WEST , Links B*B- -- 
+PASS: Zone F, inDir WEST , Links BF*- NE 
+PASS: Zone F, inDir WEST , Links BF*- -- 
+PASS: Zone F, inDir WEST , Links BFF- NE 
+PASS: Zone F, inDir WEST , Links BFF- -- 
+PASS: Zone F, inDir WEST , Links BFB- NE 
+PASS: Zone F, inDir WEST , Links BFB- -- 
+PASS: Zone F, inDir WEST , Links BB*- NE 
+PASS: Zone F, inDir WEST , Links BB*- -- 
+PASS: Zone F, inDir WEST , Links BBF- NE 
+PASS: Zone F, inDir WEST , Links BBF- -- 
+PASS: Zone F, inDir WEST , Links BBB- NE 
+PASS: Zone F, inDir WEST , Links BBB- -- 
+PASS: Zone G, inDir NORTH, Links ***- NE 
+PASS: Zone G, inDir NORTH, Links ***- -- 
+PASS: Zone G, inDir NORTH, Links **F- NE 
+PASS: Zone G, inDir NORTH, Links **F- -- 
+PASS: Zone G, inDir NORTH, Links **B- NE 
+PASS: Zone G, inDir NORTH, Links **B- -- 
+PASS: Zone G, inDir NORTH, Links *F*- NE 
+PASS: Zone G, inDir NORTH, Links *F*- -- 
+PASS: Zone G, inDir NORTH, Links *FF- NE 
+PASS: Zone G, inDir NORTH, Links *FF- -- 
+PASS: Zone G, inDir NORTH, Links *FB- NE 
+PASS: Zone G, inDir NORTH, Links *FB- -- 
+PASS: Zone G, inDir NORTH, Links *B*- NE 
+PASS: Zone G, inDir NORTH, Links *B*- -- 
+PASS: Zone G, inDir NORTH, Links *BF- NE 
+PASS: Zone G, inDir NORTH, Links *BF- -- 
+PASS: Zone G, inDir NORTH, Links *BB- NE 
+PASS: Zone G, inDir NORTH, Links *BB- -- 
+PASS: Zone G, inDir NORTH, Links F**- NE 
+PASS: Zone G, inDir NORTH, Links F**- -- 
+PASS: Zone G, inDir NORTH, Links F*F- NE 
+PASS: Zone G, inDir NORTH, Links F*F- -- 
+PASS: Zone G, inDir NORTH, Links F*B- NE 
+PASS: Zone G, inDir NORTH, Links F*B- -- 
+PASS: Zone G, inDir NORTH, Links FF*- NE 
+PASS: Zone G, inDir NORTH, Links FF*- -- 
+PASS: Zone G, inDir NORTH, Links FFF- NE 
+PASS: Zone G, inDir NORTH, Links FFF- -- 
+PASS: Zone G, inDir NORTH, Links FFB- NE 
+PASS: Zone G, inDir NORTH, Links FFB- -- 
+PASS: Zone G, inDir NORTH, Links FB*- NE 
+PASS: Zone G, inDir NORTH, Links FB*- -- 
+PASS: Zone G, inDir NORTH, Links FBF- NE 
+PASS: Zone G, inDir NORTH, Links FBF- -- 
+PASS: Zone G, inDir NORTH, Links FBB- NE 
+PASS: Zone G, inDir NORTH, Links FBB- -- 
+PASS: Zone G, inDir NORTH, Links B**- NE 
+PASS: Zone G, inDir NORTH, Links B**- -- 
+PASS: Zone G, inDir NORTH, Links B*F- NE 
+PASS: Zone G, inDir NORTH, Links B*F- -- 
+PASS: Zone G, inDir NORTH, Links B*B- NE 
+PASS: Zone G, inDir NORTH, Links B*B- -- 
+PASS: Zone G, inDir NORTH, Links BF*- NE 
+PASS: Zone G, inDir NORTH, Links BF*- -- 
+PASS: Zone G, inDir NORTH, Links BFF- NE 
+PASS: Zone G, inDir NORTH, Links BFF- -- 
+PASS: Zone G, inDir NORTH, Links BFB- NE 
+PASS: Zone G, inDir NORTH, Links BFB- -- 
+PASS: Zone G, inDir NORTH, Links BB*- NE 
+PASS: Zone G, inDir NORTH, Links BB*- -- 
+PASS: Zone G, inDir NORTH, Links BBF- NE 
+PASS: Zone G, inDir NORTH, Links BBF- -- 
+PASS: Zone G, inDir NORTH, Links BBB- NE 
+PASS: Zone G, inDir NORTH, Links BBB- -- 
+PASS: Zone G, inDir EAST , Links ***- NE 
+PASS: Zone G, inDir EAST , Links ***- -- 
+PASS: Zone G, inDir EAST , Links **F- NE 
+PASS: Zone G, inDir EAST , Links **F- -- 
+PASS: Zone G, inDir EAST , Links **B- NE 
+PASS: Zone G, inDir EAST , Links **B- -- 
+PASS: Zone G, inDir EAST , Links *F*- NE 
+PASS: Zone G, inDir EAST , Links *F*- -- 
+PASS: Zone G, inDir EAST , Links *FF- NE 
+PASS: Zone G, inDir EAST , Links *FF- -- 
+PASS: Zone G, inDir EAST , Links *FB- NE 
+PASS: Zone G, inDir EAST , Links *FB- -- 
+PASS: Zone G, inDir EAST , Links *B*- NE 
+PASS: Zone G, inDir EAST , Links *B*- -- 
+PASS: Zone G, inDir EAST , Links *BF- NE 
+PASS: Zone G, inDir EAST , Links *BF- -- 
+PASS: Zone G, inDir EAST , Links *BB- NE 
+PASS: Zone G, inDir EAST , Links *BB- -- 
+PASS: Zone G, inDir EAST , Links F**- NE 
+PASS: Zone G, inDir EAST , Links F**- -- 
+PASS: Zone G, inDir EAST , Links F*F- NE 
+PASS: Zone G, inDir EAST , Links F*F- -- 
+PASS: Zone G, inDir EAST , Links F*B- NE 
+PASS: Zone G, inDir EAST , Links F*B- -- 
+PASS: Zone G, inDir EAST , Links FF*- NE 
+PASS: Zone G, inDir EAST , Links FF*- -- 
+PASS: Zone G, inDir EAST , Links FFF- NE 
+PASS: Zone G, inDir EAST , Links FFF- -- 
+PASS: Zone G, inDir EAST , Links FFB- NE 
+PASS: Zone G, inDir EAST , Links FFB- -- 
+PASS: Zone G, inDir EAST , Links FB*- NE 
+PASS: Zone G, inDir EAST , Links FB*- -- 
+PASS: Zone G, inDir EAST , Links FBF- NE 
+PASS: Zone G, inDir EAST , Links FBF- -- 
+PASS: Zone G, inDir EAST , Links FBB- NE 
+PASS: Zone G, inDir EAST , Links FBB- -- 
+PASS: Zone G, inDir EAST , Links B**- NE 
+PASS: Zone G, inDir EAST , Links B**- -- 
+PASS: Zone G, inDir EAST , Links B*F- NE 
+PASS: Zone G, inDir EAST , Links B*F- -- 
+PASS: Zone G, inDir EAST , Links B*B- NE 
+PASS: Zone G, inDir EAST , Links B*B- -- 
+PASS: Zone G, inDir EAST , Links BF*- NE 
+PASS: Zone G, inDir EAST , Links BF*- -- 
+PASS: Zone G, inDir EAST , Links BFF- NE 
+PASS: Zone G, inDir EAST , Links BFF- -- 
+PASS: Zone G, inDir EAST , Links BFB- NE 
+PASS: Zone G, inDir EAST , Links BFB- -- 
+PASS: Zone G, inDir EAST , Links BB*- NE 
+PASS: Zone G, inDir EAST , Links BB*- -- 
+PASS: Zone G, inDir EAST , Links BBF- NE 
+PASS: Zone G, inDir EAST , Links BBF- -- 
+PASS: Zone G, inDir EAST , Links BBB- NE 
+PASS: Zone G, inDir EAST , Links BBB- -- 
+PASS: Zone G, inDir WEST , Links ***- NE 
+PASS: Zone G, inDir WEST , Links ***- -- 
+PASS: Zone G, inDir WEST , Links **F- NE 
+PASS: Zone G, inDir WEST , Links **F- -- 
+PASS: Zone G, inDir WEST , Links **B- NE 
+PASS: Zone G, inDir WEST , Links **B- -- 
+PASS: Zone G, inDir WEST , Links *F*- NE 
+PASS: Zone G, inDir WEST , Links *F*- -- 
+PASS: Zone G, inDir WEST , Links *FF- NE 
+PASS: Zone G, inDir WEST , Links *FF- -- 
+PASS: Zone G, inDir WEST , Links *FB- NE 
+PASS: Zone G, inDir WEST , Links *FB- -- 
+PASS: Zone G, inDir WEST , Links *B*- NE 
+PASS: Zone G, inDir WEST , Links *B*- -- 
+PASS: Zone G, inDir WEST , Links *BF- NE 
+PASS: Zone G, inDir WEST , Links *BF- -- 
+PASS: Zone G, inDir WEST , Links *BB- NE 
+PASS: Zone G, inDir WEST , Links *BB- -- 
+PASS: Zone G, inDir WEST , Links F**- NE 
+PASS: Zone G, inDir WEST , Links F**- -- 
+PASS: Zone G, inDir WEST , Links F*F- NE 
+PASS: Zone G, inDir WEST , Links F*F- -- 
+PASS: Zone G, inDir WEST , Links F*B- NE 
+PASS: Zone G, inDir WEST , Links F*B- -- 
+PASS: Zone G, inDir WEST , Links FF*- NE 
+PASS: Zone G, inDir WEST , Links FF*- -- 
+PASS: Zone G, inDir WEST , Links FFF- NE 
+PASS: Zone G, inDir WEST , Links FFF- -- 
+PASS: Zone G, inDir WEST , Links FFB- NE 
+PASS: Zone G, inDir WEST , Links FFB- -- 
+PASS: Zone G, inDir WEST , Links FB*- NE 
+PASS: Zone G, inDir WEST , Links FB*- -- 
+PASS: Zone G, inDir WEST , Links FBF- NE 
+PASS: Zone G, inDir WEST , Links FBF- -- 
+PASS: Zone G, inDir WEST , Links FBB- NE 
+PASS: Zone G, inDir WEST , Links FBB- -- 
+PASS: Zone G, inDir WEST , Links B**- NE 
+PASS: Zone G, inDir WEST , Links B**- -- 
+PASS: Zone G, inDir WEST , Links B*F- NE 
+PASS: Zone G, inDir WEST , Links B*F- -- 
+PASS: Zone G, inDir WEST , Links B*B- NE 
+PASS: Zone G, inDir WEST , Links B*B- -- 
+PASS: Zone G, inDir WEST , Links BF*- NE 
+PASS: Zone G, inDir WEST , Links BF*- -- 
+PASS: Zone G, inDir WEST , Links BFF- NE 
+PASS: Zone G, inDir WEST , Links BFF- -- 
+PASS: Zone G, inDir WEST , Links BFB- NE 
+PASS: Zone G, inDir WEST , Links BFB- -- 
+PASS: Zone G, inDir WEST , Links BB*- NE 
+PASS: Zone G, inDir WEST , Links BB*- -- 
+PASS: Zone G, inDir WEST , Links BBF- NE 
+PASS: Zone G, inDir WEST , Links BBF- -- 
+PASS: Zone G, inDir WEST , Links BBB- NE 
+PASS: Zone G, inDir WEST , Links BBB- -- 
+PASS: Zone H, inDir NORTH, Links ***- NE 
+PASS: Zone H, inDir NORTH, Links ***- -- 
+PASS: Zone H, inDir NORTH, Links **F- NE 
+PASS: Zone H, inDir NORTH, Links **F- -- 
+PASS: Zone H, inDir NORTH, Links **B- NE 
+PASS: Zone H, inDir NORTH, Links **B- -- 
+PASS: Zone H, inDir NORTH, Links *F*- NE 
+PASS: Zone H, inDir NORTH, Links *F*- -- 
+PASS: Zone H, inDir NORTH, Links *FF- NE 
+PASS: Zone H, inDir NORTH, Links *FF- -- 
+PASS: Zone H, inDir NORTH, Links *FB- NE 
+PASS: Zone H, inDir NORTH, Links *FB- -- 
+PASS: Zone H, inDir NORTH, Links *B*- NE 
+PASS: Zone H, inDir NORTH, Links *B*- -- 
+PASS: Zone H, inDir NORTH, Links *BF- NE 
+PASS: Zone H, inDir NORTH, Links *BF- -- 
+PASS: Zone H, inDir NORTH, Links *BB- NE 
+PASS: Zone H, inDir NORTH, Links *BB- -- 
+PASS: Zone H, inDir NORTH, Links F**- NE 
+PASS: Zone H, inDir NORTH, Links F**- -- 
+PASS: Zone H, inDir NORTH, Links F*F- NE 
+PASS: Zone H, inDir NORTH, Links F*F- -- 
+PASS: Zone H, inDir NORTH, Links F*B- NE 
+PASS: Zone H, inDir NORTH, Links F*B- -- 
+PASS: Zone H, inDir NORTH, Links FF*- NE 
+PASS: Zone H, inDir NORTH, Links FF*- -- 
+PASS: Zone H, inDir NORTH, Links FFF- NE 
+PASS: Zone H, inDir NORTH, Links FFF- -- 
+PASS: Zone H, inDir NORTH, Links FFB- NE 
+PASS: Zone H, inDir NORTH, Links FFB- -- 
+PASS: Zone H, inDir NORTH, Links FB*- NE 
+PASS: Zone H, inDir NORTH, Links FB*- -- 
+PASS: Zone H, inDir NORTH, Links FBF- NE 
+PASS: Zone H, inDir NORTH, Links FBF- -- 
+PASS: Zone H, inDir NORTH, Links FBB- NE 
+PASS: Zone H, inDir NORTH, Links FBB- -- 
+PASS: Zone H, inDir NORTH, Links B**- NE 
+PASS: Zone H, inDir NORTH, Links B**- -- 
+PASS: Zone H, inDir NORTH, Links B*F- NE 
+PASS: Zone H, inDir NORTH, Links B*F- -- 
+PASS: Zone H, inDir NORTH, Links B*B- NE 
+PASS: Zone H, inDir NORTH, Links B*B- -- 
+PASS: Zone H, inDir NORTH, Links BF*- NE 
+PASS: Zone H, inDir NORTH, Links BF*- -- 
+PASS: Zone H, inDir NORTH, Links BFF- NE 
+PASS: Zone H, inDir NORTH, Links BFF- -- 
+PASS: Zone H, inDir NORTH, Links BFB- NE 
+PASS: Zone H, inDir NORTH, Links BFB- -- 
+PASS: Zone H, inDir NORTH, Links BB*- NE 
+PASS: Zone H, inDir NORTH, Links BB*- -- 
+PASS: Zone H, inDir NORTH, Links BBF- NE 
+PASS: Zone H, inDir NORTH, Links BBF- -- 
+PASS: Zone H, inDir NORTH, Links BBB- NE 
+PASS: Zone H, inDir NORTH, Links BBB- -- 
+PASS: Zone H, inDir EAST , Links ***- NE 
+PASS: Zone H, inDir EAST , Links ***- -- 
+PASS: Zone H, inDir EAST , Links **F- NE 
+PASS: Zone H, inDir EAST , Links **F- -- 
+PASS: Zone H, inDir EAST , Links **B- NE 
+PASS: Zone H, inDir EAST , Links **B- -- 
+PASS: Zone H, inDir EAST , Links *F*- NE 
+PASS: Zone H, inDir EAST , Links *F*- -- 
+PASS: Zone H, inDir EAST , Links *FF- NE 
+PASS: Zone H, inDir EAST , Links *FF- -- 
+PASS: Zone H, inDir EAST , Links *FB- NE 
+PASS: Zone H, inDir EAST , Links *FB- -- 
+PASS: Zone H, inDir EAST , Links *B*- NE 
+PASS: Zone H, inDir EAST , Links *B*- -- 
+PASS: Zone H, inDir EAST , Links *BF- NE 
+PASS: Zone H, inDir EAST , Links *BF- -- 
+PASS: Zone H, inDir EAST , Links *BB- NE 
+PASS: Zone H, inDir EAST , Links *BB- -- 
+PASS: Zone H, inDir EAST , Links F**- NE 
+PASS: Zone H, inDir EAST , Links F**- -- 
+PASS: Zone H, inDir EAST , Links F*F- NE 
+PASS: Zone H, inDir EAST , Links F*F- -- 
+PASS: Zone H, inDir EAST , Links F*B- NE 
+PASS: Zone H, inDir EAST , Links F*B- -- 
+PASS: Zone H, inDir EAST , Links FF*- NE 
+PASS: Zone H, inDir EAST , Links FF*- -- 
+PASS: Zone H, inDir EAST , Links FFF- NE 
+PASS: Zone H, inDir EAST , Links FFF- -- 
+PASS: Zone H, inDir EAST , Links FFB- NE 
+PASS: Zone H, inDir EAST , Links FFB- -- 
+PASS: Zone H, inDir EAST , Links FB*- NE 
+PASS: Zone H, inDir EAST , Links FB*- -- 
+PASS: Zone H, inDir EAST , Links FBF- NE 
+PASS: Zone H, inDir EAST , Links FBF- -- 
+PASS: Zone H, inDir EAST , Links FBB- NE 
+PASS: Zone H, inDir EAST , Links FBB- -- 
+PASS: Zone H, inDir EAST , Links B**- NE 
+PASS: Zone H, inDir EAST , Links B**- -- 
+PASS: Zone H, inDir EAST , Links B*F- NE 
+PASS: Zone H, inDir EAST , Links B*F- -- 
+PASS: Zone H, inDir EAST , Links B*B- NE 
+PASS: Zone H, inDir EAST , Links B*B- -- 
+PASS: Zone H, inDir EAST , Links BF*- NE 
+PASS: Zone H, inDir EAST , Links BF*- -- 
+PASS: Zone H, inDir EAST , Links BFF- NE 
+PASS: Zone H, inDir EAST , Links BFF- -- 
+PASS: Zone H, inDir EAST , Links BFB- NE 
+PASS: Zone H, inDir EAST , Links BFB- -- 
+PASS: Zone H, inDir EAST , Links BB*- NE 
+PASS: Zone H, inDir EAST , Links BB*- -- 
+PASS: Zone H, inDir EAST , Links BBF- NE 
+PASS: Zone H, inDir EAST , Links BBF- -- 
+PASS: Zone H, inDir EAST , Links BBB- NE 
+PASS: Zone H, inDir EAST , Links BBB- -- 
+PASS: Zone H, inDir WEST , Links ***- NE 
+PASS: Zone H, inDir WEST , Links ***- -- 
+PASS: Zone H, inDir WEST , Links **F- NE 
+PASS: Zone H, inDir WEST , Links **F- -- 
+PASS: Zone H, inDir WEST , Links **B- NE 
+PASS: Zone H, inDir WEST , Links **B- -- 
+PASS: Zone H, inDir WEST , Links *F*- NE 
+PASS: Zone H, inDir WEST , Links *F*- -- 
+PASS: Zone H, inDir WEST , Links *FF- NE 
+PASS: Zone H, inDir WEST , Links *FF- -- 
+PASS: Zone H, inDir WEST , Links *FB- NE 
+PASS: Zone H, inDir WEST , Links *FB- -- 
+PASS: Zone H, inDir WEST , Links *B*- NE 
+PASS: Zone H, inDir WEST , Links *B*- -- 
+PASS: Zone H, inDir WEST , Links *BF- NE 
+PASS: Zone H, inDir WEST , Links *BF- -- 
+PASS: Zone H, inDir WEST , Links *BB- NE 
+PASS: Zone H, inDir WEST , Links *BB- -- 
+PASS: Zone H, inDir WEST , Links F**- NE 
+PASS: Zone H, inDir WEST , Links F**- -- 
+PASS: Zone H, inDir WEST , Links F*F- NE 
+PASS: Zone H, inDir WEST , Links F*F- -- 
+PASS: Zone H, inDir WEST , Links F*B- NE 
+PASS: Zone H, inDir WEST , Links F*B- -- 
+PASS: Zone H, inDir WEST , Links FF*- NE 
+PASS: Zone H, inDir WEST , Links FF*- -- 
+PASS: Zone H, inDir WEST , Links FFF- NE 
+PASS: Zone H, inDir WEST , Links FFF- -- 
+PASS: Zone H, inDir WEST , Links FFB- NE 
+PASS: Zone H, inDir WEST , Links FFB- -- 
+PASS: Zone H, inDir WEST , Links FB*- NE 
+PASS: Zone H, inDir WEST , Links FB*- -- 
+PASS: Zone H, inDir WEST , Links FBF- NE 
+PASS: Zone H, inDir WEST , Links FBF- -- 
+PASS: Zone H, inDir WEST , Links FBB- NE 
+PASS: Zone H, inDir WEST , Links FBB- -- 
+PASS: Zone H, inDir WEST , Links B**- NE 
+PASS: Zone H, inDir WEST , Links B**- -- 
+PASS: Zone H, inDir WEST , Links B*F- NE 
+PASS: Zone H, inDir WEST , Links B*F- -- 
+PASS: Zone H, inDir WEST , Links B*B- NE 
+PASS: Zone H, inDir WEST , Links B*B- -- 
+PASS: Zone H, inDir WEST , Links BF*- NE 
+PASS: Zone H, inDir WEST , Links BF*- -- 
+PASS: Zone H, inDir WEST , Links BFF- NE 
+PASS: Zone H, inDir WEST , Links BFF- -- 
+PASS: Zone H, inDir WEST , Links BFB- NE 
+PASS: Zone H, inDir WEST , Links BFB- -- 
+PASS: Zone H, inDir WEST , Links BB*- NE 
+PASS: Zone H, inDir WEST , Links BB*- -- 
+PASS: Zone H, inDir WEST , Links BBF- NE 
+PASS: Zone H, inDir WEST , Links BBF- -- 
+PASS: Zone H, inDir WEST , Links BBB- NE 
+PASS: Zone H, inDir WEST , Links BBB- -- 
+PASS: Zone I, inDir NORTH, Links ***- NE 
+PASS: Zone I, inDir NORTH, Links ***- -- 
+PASS: Zone I, inDir NORTH, Links **F- NE 
+PASS: Zone I, inDir NORTH, Links **F- -- 
+PASS: Zone I, inDir NORTH, Links **B- NE 
+PASS: Zone I, inDir NORTH, Links **B- -- 
+PASS: Zone I, inDir NORTH, Links *F*- NE 
+PASS: Zone I, inDir NORTH, Links *F*- -- 
+PASS: Zone I, inDir NORTH, Links *FF- NE 
+PASS: Zone I, inDir NORTH, Links *FF- -- 
+PASS: Zone I, inDir NORTH, Links *FB- NE 
+PASS: Zone I, inDir NORTH, Links *FB- -- 
+PASS: Zone I, inDir NORTH, Links *B*- NE 
+PASS: Zone I, inDir NORTH, Links *B*- -- 
+PASS: Zone I, inDir NORTH, Links *BF- NE 
+PASS: Zone I, inDir NORTH, Links *BF- -- 
+PASS: Zone I, inDir NORTH, Links *BB- NE 
+PASS: Zone I, inDir NORTH, Links *BB- -- 
+PASS: Zone I, inDir NORTH, Links F**- NE 
+PASS: Zone I, inDir NORTH, Links F**- -- 
+PASS: Zone I, inDir NORTH, Links F*F- NE 
+PASS: Zone I, inDir NORTH, Links F*F- -- 
+PASS: Zone I, inDir NORTH, Links F*B- NE 
+PASS: Zone I, inDir NORTH, Links F*B- -- 
+PASS: Zone I, inDir NORTH, Links FF*- NE 
+PASS: Zone I, inDir NORTH, Links FF*- -- 
+PASS: Zone I, inDir NORTH, Links FFF- NE 
+PASS: Zone I, inDir NORTH, Links FFF- -- 
+PASS: Zone I, inDir NORTH, Links FFB- NE 
+PASS: Zone I, inDir NORTH, Links FFB- -- 
+PASS: Zone I, inDir NORTH, Links FB*- NE 
+PASS: Zone I, inDir NORTH, Links FB*- -- 
+PASS: Zone I, inDir NORTH, Links FBF- NE 
+PASS: Zone I, inDir NORTH, Links FBF- -- 
+PASS: Zone I, inDir NORTH, Links FBB- NE 
+PASS: Zone I, inDir NORTH, Links FBB- -- 
+PASS: Zone I, inDir NORTH, Links B**- NE 
+PASS: Zone I, inDir NORTH, Links B**- -- 
+PASS: Zone I, inDir NORTH, Links B*F- NE 
+PASS: Zone I, inDir NORTH, Links B*F- -- 
+PASS: Zone I, inDir NORTH, Links B*B- NE 
+PASS: Zone I, inDir NORTH, Links B*B- -- 
+PASS: Zone I, inDir NORTH, Links BF*- NE 
+PASS: Zone I, inDir NORTH, Links BF*- -- 
+PASS: Zone I, inDir NORTH, Links BFF- NE 
+PASS: Zone I, inDir NORTH, Links BFF- -- 
+PASS: Zone I, inDir NORTH, Links BFB- NE 
+PASS: Zone I, inDir NORTH, Links BFB- -- 
+PASS: Zone I, inDir NORTH, Links BB*- NE 
+PASS: Zone I, inDir NORTH, Links BB*- -- 
+PASS: Zone I, inDir NORTH, Links BBF- NE 
+PASS: Zone I, inDir NORTH, Links BBF- -- 
+PASS: Zone I, inDir NORTH, Links BBB- NE 
+PASS: Zone I, inDir NORTH, Links BBB- -- 
+PASS: Zone I, inDir EAST , Links ***- NE 
+PASS: Zone I, inDir EAST , Links ***- -- 
+PASS: Zone I, inDir EAST , Links **F- NE 
+PASS: Zone I, inDir EAST , Links **F- -- 
+PASS: Zone I, inDir EAST , Links **B- NE 
+PASS: Zone I, inDir EAST , Links **B- -- 
+PASS: Zone I, inDir EAST , Links *F*- NE 
+PASS: Zone I, inDir EAST , Links *F*- -- 
+PASS: Zone I, inDir EAST , Links *FF- NE 
+PASS: Zone I, inDir EAST , Links *FF- -- 
+PASS: Zone I, inDir EAST , Links *FB- NE 
+PASS: Zone I, inDir EAST , Links *FB- -- 
+PASS: Zone I, inDir EAST , Links *B*- NE 
+PASS: Zone I, inDir EAST , Links *B*- -- 
+PASS: Zone I, inDir EAST , Links *BF- NE 
+PASS: Zone I, inDir EAST , Links *BF- -- 
+PASS: Zone I, inDir EAST , Links *BB- NE 
+PASS: Zone I, inDir EAST , Links *BB- -- 
+PASS: Zone I, inDir EAST , Links F**- NE 
+PASS: Zone I, inDir EAST , Links F**- -- 
+PASS: Zone I, inDir EAST , Links F*F- NE 
+PASS: Zone I, inDir EAST , Links F*F- -- 
+PASS: Zone I, inDir EAST , Links F*B- NE 
+PASS: Zone I, inDir EAST , Links F*B- -- 
+PASS: Zone I, inDir EAST , Links FF*- NE 
+PASS: Zone I, inDir EAST , Links FF*- -- 
+PASS: Zone I, inDir EAST , Links FFF- NE 
+PASS: Zone I, inDir EAST , Links FFF- -- 
+PASS: Zone I, inDir EAST , Links FFB- NE 
+PASS: Zone I, inDir EAST , Links FFB- -- 
+PASS: Zone I, inDir EAST , Links FB*- NE 
+PASS: Zone I, inDir EAST , Links FB*- -- 
+PASS: Zone I, inDir EAST , Links FBF- NE 
+PASS: Zone I, inDir EAST , Links FBF- -- 
+PASS: Zone I, inDir EAST , Links FBB- NE 
+PASS: Zone I, inDir EAST , Links FBB- -- 
+PASS: Zone I, inDir EAST , Links B**- NE 
+PASS: Zone I, inDir EAST , Links B**- -- 
+PASS: Zone I, inDir EAST , Links B*F- NE 
+PASS: Zone I, inDir EAST , Links B*F- -- 
+PASS: Zone I, inDir EAST , Links B*B- NE 
+PASS: Zone I, inDir EAST , Links B*B- -- 
+PASS: Zone I, inDir EAST , Links BF*- NE 
+PASS: Zone I, inDir EAST , Links BF*- -- 
+PASS: Zone I, inDir EAST , Links BFF- NE 
+PASS: Zone I, inDir EAST , Links BFF- -- 
+PASS: Zone I, inDir EAST , Links BFB- NE 
+PASS: Zone I, inDir EAST , Links BFB- -- 
+PASS: Zone I, inDir EAST , Links BB*- NE 
+PASS: Zone I, inDir EAST , Links BB*- -- 
+PASS: Zone I, inDir EAST , Links BBF- NE 
+PASS: Zone I, inDir EAST , Links BBF- -- 
+PASS: Zone I, inDir EAST , Links BBB- NE 
+PASS: Zone I, inDir EAST , Links BBB- -- 
+PASS: Zone I, inDir WEST , Links ***- NE 
+PASS: Zone I, inDir WEST , Links ***- -- 
+PASS: Zone I, inDir WEST , Links **F- NE 
+PASS: Zone I, inDir WEST , Links **F- -- 
+PASS: Zone I, inDir WEST , Links **B- NE 
+PASS: Zone I, inDir WEST , Links **B- -- 
+PASS: Zone I, inDir WEST , Links *F*- NE 
+PASS: Zone I, inDir WEST , Links *F*- -- 
+PASS: Zone I, inDir WEST , Links *FF- NE 
+PASS: Zone I, inDir WEST , Links *FF- -- 
+PASS: Zone I, inDir WEST , Links *FB- NE 
+PASS: Zone I, inDir WEST , Links *FB- -- 
+PASS: Zone I, inDir WEST , Links *B*- NE 
+PASS: Zone I, inDir WEST , Links *B*- -- 
+PASS: Zone I, inDir WEST , Links *BF- NE 
+PASS: Zone I, inDir WEST , Links *BF- -- 
+PASS: Zone I, inDir WEST , Links *BB- NE 
+PASS: Zone I, inDir WEST , Links *BB- -- 
+PASS: Zone I, inDir WEST , Links F**- NE 
+PASS: Zone I, inDir WEST , Links F**- -- 
+PASS: Zone I, inDir WEST , Links F*F- NE 
+PASS: Zone I, inDir WEST , Links F*F- -- 
+PASS: Zone I, inDir WEST , Links F*B- NE 
+PASS: Zone I, inDir WEST , Links F*B- -- 
+PASS: Zone I, inDir WEST , Links FF*- NE 
+PASS: Zone I, inDir WEST , Links FF*- -- 
+PASS: Zone I, inDir WEST , Links FFF- NE 
+PASS: Zone I, inDir WEST , Links FFF- -- 
+PASS: Zone I, inDir WEST , Links FFB- NE 
+PASS: Zone I, inDir WEST , Links FFB- -- 
+PASS: Zone I, inDir WEST , Links FB*- NE 
+PASS: Zone I, inDir WEST , Links FB*- -- 
+PASS: Zone I, inDir WEST , Links FBF- NE 
+PASS: Zone I, inDir WEST , Links FBF- -- 
+PASS: Zone I, inDir WEST , Links FBB- NE 
+PASS: Zone I, inDir WEST , Links FBB- -- 
+PASS: Zone I, inDir WEST , Links B**- NE 
+PASS: Zone I, inDir WEST , Links B**- -- 
+PASS: Zone I, inDir WEST , Links B*F- NE 
+PASS: Zone I, inDir WEST , Links B*F- -- 
+PASS: Zone I, inDir WEST , Links B*B- NE 
+PASS: Zone I, inDir WEST , Links B*B- -- 
+PASS: Zone I, inDir WEST , Links BF*- NE 
+PASS: Zone I, inDir WEST , Links BF*- -- 
+PASS: Zone I, inDir WEST , Links BFF- NE 
+PASS: Zone I, inDir WEST , Links BFF- -- 
+PASS: Zone I, inDir WEST , Links BFB- NE 
+PASS: Zone I, inDir WEST , Links BFB- -- 
+PASS: Zone I, inDir WEST , Links BB*- NE 
+PASS: Zone I, inDir WEST , Links BB*- -- 
+PASS: Zone I, inDir WEST , Links BBF- NE 
+PASS: Zone I, inDir WEST , Links BBF- -- 
+PASS: Zone I, inDir WEST , Links BBB- NE 
+PASS: Zone I, inDir WEST , Links BBB- -- 
+PASS: Zone J, inDir NORTH, Links ***- NE 
+PASS: Zone J, inDir NORTH, Links ***- -- 
+PASS: Zone J, inDir NORTH, Links **F- NE 
+PASS: Zone J, inDir NORTH, Links **F- -- 
+PASS: Zone J, inDir NORTH, Links **B- NE 
+PASS: Zone J, inDir NORTH, Links **B- -- 
+PASS: Zone J, inDir NORTH, Links *F*- NE 
+PASS: Zone J, inDir NORTH, Links *F*- -- 
+PASS: Zone J, inDir NORTH, Links *FF- NE 
+PASS: Zone J, inDir NORTH, Links *FF- -- 
+PASS: Zone J, inDir NORTH, Links *FB- NE 
+PASS: Zone J, inDir NORTH, Links *FB- -- 
+PASS: Zone J, inDir NORTH, Links *B*- NE 
+PASS: Zone J, inDir NORTH, Links *B*- -- 
+PASS: Zone J, inDir NORTH, Links *BF- NE 
+PASS: Zone J, inDir NORTH, Links *BF- -- 
+PASS: Zone J, inDir NORTH, Links *BB- NE 
+PASS: Zone J, inDir NORTH, Links *BB- -- 
+PASS: Zone J, inDir NORTH, Links F**- NE 
+PASS: Zone J, inDir NORTH, Links F**- -- 
+PASS: Zone J, inDir NORTH, Links F*F- NE 
+PASS: Zone J, inDir NORTH, Links F*F- -- 
+PASS: Zone J, inDir NORTH, Links F*B- NE 
+PASS: Zone J, inDir NORTH, Links F*B- -- 
+PASS: Zone J, inDir NORTH, Links FF*- NE 
+PASS: Zone J, inDir NORTH, Links FF*- -- 
+PASS: Zone J, inDir NORTH, Links FFF- NE 
+PASS: Zone J, inDir NORTH, Links FFF- -- 
+PASS: Zone J, inDir NORTH, Links FFB- NE 
+PASS: Zone J, inDir NORTH, Links FFB- -- 
+PASS: Zone J, inDir NORTH, Links FB*- NE 
+PASS: Zone J, inDir NORTH, Links FB*- -- 
+PASS: Zone J, inDir NORTH, Links FBF- NE 
+PASS: Zone J, inDir NORTH, Links FBF- -- 
+PASS: Zone J, inDir NORTH, Links FBB- NE 
+PASS: Zone J, inDir NORTH, Links FBB- -- 
+PASS: Zone J, inDir NORTH, Links B**- NE 
+PASS: Zone J, inDir NORTH, Links B**- -- 
+PASS: Zone J, inDir NORTH, Links B*F- NE 
+PASS: Zone J, inDir NORTH, Links B*F- -- 
+PASS: Zone J, inDir NORTH, Links B*B- NE 
+PASS: Zone J, inDir NORTH, Links B*B- -- 
+PASS: Zone J, inDir NORTH, Links BF*- NE 
+PASS: Zone J, inDir NORTH, Links BF*- -- 
+PASS: Zone J, inDir NORTH, Links BFF- NE 
+PASS: Zone J, inDir NORTH, Links BFF- -- 
+PASS: Zone J, inDir NORTH, Links BFB- NE 
+PASS: Zone J, inDir NORTH, Links BFB- -- 
+PASS: Zone J, inDir NORTH, Links BB*- NE 
+PASS: Zone J, inDir NORTH, Links BB*- -- 
+PASS: Zone J, inDir NORTH, Links BBF- NE 
+PASS: Zone J, inDir NORTH, Links BBF- -- 
+PASS: Zone J, inDir NORTH, Links BBB- NE 
+PASS: Zone J, inDir NORTH, Links BBB- -- 
+PASS: Zone J, inDir EAST , Links ***- NE 
+PASS: Zone J, inDir EAST , Links ***- -- 
+PASS: Zone J, inDir EAST , Links **F- NE 
+PASS: Zone J, inDir EAST , Links **F- -- 
+PASS: Zone J, inDir EAST , Links **B- NE 
+PASS: Zone J, inDir EAST , Links **B- -- 
+PASS: Zone J, inDir EAST , Links *F*- NE 
+PASS: Zone J, inDir EAST , Links *F*- -- 
+PASS: Zone J, inDir EAST , Links *FF- NE 
+PASS: Zone J, inDir EAST , Links *FF- -- 
+PASS: Zone J, inDir EAST , Links *FB- NE 
+PASS: Zone J, inDir EAST , Links *FB- -- 
+PASS: Zone J, inDir EAST , Links *B*- NE 
+PASS: Zone J, inDir EAST , Links *B*- -- 
+PASS: Zone J, inDir EAST , Links *BF- NE 
+PASS: Zone J, inDir EAST , Links *BF- -- 
+PASS: Zone J, inDir EAST , Links *BB- NE 
+PASS: Zone J, inDir EAST , Links *BB- -- 
+PASS: Zone J, inDir EAST , Links F**- NE 
+PASS: Zone J, inDir EAST , Links F**- -- 
+PASS: Zone J, inDir EAST , Links F*F- NE 
+PASS: Zone J, inDir EAST , Links F*F- -- 
+PASS: Zone J, inDir EAST , Links F*B- NE 
+PASS: Zone J, inDir EAST , Links F*B- -- 
+PASS: Zone J, inDir EAST , Links FF*- NE 
+PASS: Zone J, inDir EAST , Links FF*- -- 
+PASS: Zone J, inDir EAST , Links FFF- NE 
+PASS: Zone J, inDir EAST , Links FFF- -- 
+PASS: Zone J, inDir EAST , Links FFB- NE 
+PASS: Zone J, inDir EAST , Links FFB- -- 
+PASS: Zone J, inDir EAST , Links FB*- NE 
+PASS: Zone J, inDir EAST , Links FB*- -- 
+PASS: Zone J, inDir EAST , Links FBF- NE 
+PASS: Zone J, inDir EAST , Links FBF- -- 
+PASS: Zone J, inDir EAST , Links FBB- NE 
+PASS: Zone J, inDir EAST , Links FBB- -- 
+PASS: Zone J, inDir EAST , Links B**- NE 
+PASS: Zone J, inDir EAST , Links B**- -- 
+PASS: Zone J, inDir EAST , Links B*F- NE 
+PASS: Zone J, inDir EAST , Links B*F- -- 
+PASS: Zone J, inDir EAST , Links B*B- NE 
+PASS: Zone J, inDir EAST , Links B*B- -- 
+PASS: Zone J, inDir EAST , Links BF*- NE 
+PASS: Zone J, inDir EAST , Links BF*- -- 
+PASS: Zone J, inDir EAST , Links BFF- NE 
+PASS: Zone J, inDir EAST , Links BFF- -- 
+PASS: Zone J, inDir EAST , Links BFB- NE 
+PASS: Zone J, inDir EAST , Links BFB- -- 
+PASS: Zone J, inDir EAST , Links BB*- NE 
+PASS: Zone J, inDir EAST , Links BB*- -- 
+PASS: Zone J, inDir EAST , Links BBF- NE 
+PASS: Zone J, inDir EAST , Links BBF- -- 
+PASS: Zone J, inDir EAST , Links BBB- NE 
+PASS: Zone J, inDir EAST , Links BBB- -- 
+PASS: Zone J, inDir WEST , Links ***- NE 
+PASS: Zone J, inDir WEST , Links ***- -- 
+PASS: Zone J, inDir WEST , Links **F- NE 
+PASS: Zone J, inDir WEST , Links **F- -- 
+PASS: Zone J, inDir WEST , Links **B- NE 
+PASS: Zone J, inDir WEST , Links **B- -- 
+PASS: Zone J, inDir WEST , Links *F*- NE 
+PASS: Zone J, inDir WEST , Links *F*- -- 
+PASS: Zone J, inDir WEST , Links *FF- NE 
+PASS: Zone J, inDir WEST , Links *FF- -- 
+PASS: Zone J, inDir WEST , Links *FB- NE 
+PASS: Zone J, inDir WEST , Links *FB- -- 
+PASS: Zone J, inDir WEST , Links *B*- NE 
+PASS: Zone J, inDir WEST , Links *B*- -- 
+PASS: Zone J, inDir WEST , Links *BF- NE 
+PASS: Zone J, inDir WEST , Links *BF- -- 
+PASS: Zone J, inDir WEST , Links *BB- NE 
+PASS: Zone J, inDir WEST , Links *BB- -- 
+PASS: Zone J, inDir WEST , Links F**- NE 
+PASS: Zone J, inDir WEST , Links F**- -- 
+PASS: Zone J, inDir WEST , Links F*F- NE 
+PASS: Zone J, inDir WEST , Links F*F- -- 
+PASS: Zone J, inDir WEST , Links F*B- NE 
+PASS: Zone J, inDir WEST , Links F*B- -- 
+PASS: Zone J, inDir WEST , Links FF*- NE 
+PASS: Zone J, inDir WEST , Links FF*- -- 
+PASS: Zone J, inDir WEST , Links FFF- NE 
+PASS: Zone J, inDir WEST , Links FFF- -- 
+PASS: Zone J, inDir WEST , Links FFB- NE 
+PASS: Zone J, inDir WEST , Links FFB- -- 
+PASS: Zone J, inDir WEST , Links FB*- NE 
+PASS: Zone J, inDir WEST , Links FB*- -- 
+PASS: Zone J, inDir WEST , Links FBF- NE 
+PASS: Zone J, inDir WEST , Links FBF- -- 
+PASS: Zone J, inDir WEST , Links FBB- NE 
+PASS: Zone J, inDir WEST , Links FBB- -- 
+PASS: Zone J, inDir WEST , Links B**- NE 
+PASS: Zone J, inDir WEST , Links B**- -- 
+PASS: Zone J, inDir WEST , Links B*F- NE 
+PASS: Zone J, inDir WEST , Links B*F- -- 
+PASS: Zone J, inDir WEST , Links B*B- NE 
+PASS: Zone J, inDir WEST , Links B*B- -- 
+PASS: Zone J, inDir WEST , Links BF*- NE 
+PASS: Zone J, inDir WEST , Links BF*- -- 
+PASS: Zone J, inDir WEST , Links BFF- NE 
+PASS: Zone J, inDir WEST , Links BFF- -- 
+PASS: Zone J, inDir WEST , Links BFB- NE 
+PASS: Zone J, inDir WEST , Links BFB- -- 
+PASS: Zone J, inDir WEST , Links BB*- NE 
+PASS: Zone J, inDir WEST , Links BB*- -- 
+PASS: Zone J, inDir WEST , Links BBF- NE 
+PASS: Zone J, inDir WEST , Links BBF- -- 
+PASS: Zone J, inDir WEST , Links BBB- NE 
+PASS: Zone J, inDir WEST , Links BBB- -- 
+PASS: Zone M, inDir NORTH, Links ***- NE 
+PASS: Zone M, inDir NORTH, Links ***- -- 
+PASS: Zone M, inDir NORTH, Links **F- NE 
+PASS: Zone M, inDir NORTH, Links **F- -- 
+PASS: Zone M, inDir NORTH, Links **B- NE 
+PASS: Zone M, inDir NORTH, Links **B- -- 
+PASS: Zone M, inDir NORTH, Links *F*- NE 
+PASS: Zone M, inDir NORTH, Links *F*- -- 
+PASS: Zone M, inDir NORTH, Links *FF- NE 
+PASS: Zone M, inDir NORTH, Links *FF- -- 
+PASS: Zone M, inDir NORTH, Links *FB- NE 
+PASS: Zone M, inDir NORTH, Links *FB- -- 
+PASS: Zone M, inDir NORTH, Links *B*- NE 
+PASS: Zone M, inDir NORTH, Links *B*- -- 
+PASS: Zone M, inDir NORTH, Links *BF- NE 
+PASS: Zone M, inDir NORTH, Links *BF- -- 
+PASS: Zone M, inDir NORTH, Links *BB- NE 
+PASS: Zone M, inDir NORTH, Links *BB- -- 
+PASS: Zone M, inDir NORTH, Links F**- NE 
+PASS: Zone M, inDir NORTH, Links F**- -- 
+PASS: Zone M, inDir NORTH, Links F*F- NE 
+PASS: Zone M, inDir NORTH, Links F*F- -- 
+PASS: Zone M, inDir NORTH, Links F*B- NE 
+PASS: Zone M, inDir NORTH, Links F*B- -- 
+PASS: Zone M, inDir NORTH, Links FF*- NE 
+PASS: Zone M, inDir NORTH, Links FF*- -- 
+PASS: Zone M, inDir NORTH, Links FFF- NE 
+PASS: Zone M, inDir NORTH, Links FFF- -- 
+PASS: Zone M, inDir NORTH, Links FFB- NE 
+PASS: Zone M, inDir NORTH, Links FFB- -- 
+PASS: Zone M, inDir NORTH, Links FB*- NE 
+PASS: Zone M, inDir NORTH, Links FB*- -- 
+PASS: Zone M, inDir NORTH, Links FBF- NE 
+PASS: Zone M, inDir NORTH, Links FBF- -- 
+PASS: Zone M, inDir NORTH, Links FBB- NE 
+PASS: Zone M, inDir NORTH, Links FBB- -- 
+PASS: Zone M, inDir NORTH, Links B**- NE 
+PASS: Zone M, inDir NORTH, Links B**- -- 
+PASS: Zone M, inDir NORTH, Links B*F- NE 
+PASS: Zone M, inDir NORTH, Links B*F- -- 
+PASS: Zone M, inDir NORTH, Links B*B- NE 
+PASS: Zone M, inDir NORTH, Links B*B- -- 
+PASS: Zone M, inDir NORTH, Links BF*- NE 
+PASS: Zone M, inDir NORTH, Links BF*- -- 
+PASS: Zone M, inDir NORTH, Links BFF- NE 
+PASS: Zone M, inDir NORTH, Links BFF- -- 
+PASS: Zone M, inDir NORTH, Links BFB- NE 
+PASS: Zone M, inDir NORTH, Links BFB- -- 
+PASS: Zone M, inDir NORTH, Links BB*- NE 
+PASS: Zone M, inDir NORTH, Links BB*- -- 
+PASS: Zone M, inDir NORTH, Links BBF- NE 
+PASS: Zone M, inDir NORTH, Links BBF- -- 
+PASS: Zone M, inDir NORTH, Links BBB- NE 
+PASS: Zone M, inDir NORTH, Links BBB- -- 
+PASS: Zone M, inDir EAST , Links ***- NE 
+PASS: Zone M, inDir EAST , Links ***- -- 
+PASS: Zone M, inDir EAST , Links **F- NE 
+PASS: Zone M, inDir EAST , Links **F- -- 
+PASS: Zone M, inDir EAST , Links **B- NE 
+PASS: Zone M, inDir EAST , Links **B- -- 
+PASS: Zone M, inDir EAST , Links *F*- NE 
+PASS: Zone M, inDir EAST , Links *F*- -- 
+PASS: Zone M, inDir EAST , Links *FF- NE 
+PASS: Zone M, inDir EAST , Links *FF- -- 
+PASS: Zone M, inDir EAST , Links *FB- NE 
+PASS: Zone M, inDir EAST , Links *FB- -- 
+PASS: Zone M, inDir EAST , Links *B*- NE 
+PASS: Zone M, inDir EAST , Links *B*- -- 
+PASS: Zone M, inDir EAST , Links *BF- NE 
+PASS: Zone M, inDir EAST , Links *BF- -- 
+PASS: Zone M, inDir EAST , Links *BB- NE 
+PASS: Zone M, inDir EAST , Links *BB- -- 
+PASS: Zone M, inDir EAST , Links F**- NE 
+PASS: Zone M, inDir EAST , Links F**- -- 
+PASS: Zone M, inDir EAST , Links F*F- NE 
+PASS: Zone M, inDir EAST , Links F*F- -- 
+PASS: Zone M, inDir EAST , Links F*B- NE 
+PASS: Zone M, inDir EAST , Links F*B- -- 
+PASS: Zone M, inDir EAST , Links FF*- NE 
+PASS: Zone M, inDir EAST , Links FF*- -- 
+PASS: Zone M, inDir EAST , Links FFF- NE 
+PASS: Zone M, inDir EAST , Links FFF- -- 
+PASS: Zone M, inDir EAST , Links FFB- NE 
+PASS: Zone M, inDir EAST , Links FFB- -- 
+PASS: Zone M, inDir EAST , Links FB*- NE 
+PASS: Zone M, inDir EAST , Links FB*- -- 
+PASS: Zone M, inDir EAST , Links FBF- NE 
+PASS: Zone M, inDir EAST , Links FBF- -- 
+PASS: Zone M, inDir EAST , Links FBB- NE 
+PASS: Zone M, inDir EAST , Links FBB- -- 
+PASS: Zone M, inDir EAST , Links B**- NE 
+PASS: Zone M, inDir EAST , Links B**- -- 
+PASS: Zone M, inDir EAST , Links B*F- NE 
+PASS: Zone M, inDir EAST , Links B*F- -- 
+PASS: Zone M, inDir EAST , Links B*B- NE 
+PASS: Zone M, inDir EAST , Links B*B- -- 
+PASS: Zone M, inDir EAST , Links BF*- NE 
+PASS: Zone M, inDir EAST , Links BF*- -- 
+PASS: Zone M, inDir EAST , Links BFF- NE 
+PASS: Zone M, inDir EAST , Links BFF- -- 
+PASS: Zone M, inDir EAST , Links BFB- NE 
+PASS: Zone M, inDir EAST , Links BFB- -- 
+PASS: Zone M, inDir EAST , Links BB*- NE 
+PASS: Zone M, inDir EAST , Links BB*- -- 
+PASS: Zone M, inDir EAST , Links BBF- NE 
+PASS: Zone M, inDir EAST , Links BBF- -- 
+PASS: Zone M, inDir EAST , Links BBB- NE 
+PASS: Zone M, inDir EAST , Links BBB- -- 
+PASS: Zone M, inDir WEST , Links ***- NE 
+PASS: Zone M, inDir WEST , Links ***- -- 
+PASS: Zone M, inDir WEST , Links **F- NE 
+PASS: Zone M, inDir WEST , Links **F- -- 
+PASS: Zone M, inDir WEST , Links **B- NE 
+PASS: Zone M, inDir WEST , Links **B- -- 
+PASS: Zone M, inDir WEST , Links *F*- NE 
+PASS: Zone M, inDir WEST , Links *F*- -- 
+PASS: Zone M, inDir WEST , Links *FF- NE 
+PASS: Zone M, inDir WEST , Links *FF- -- 
+PASS: Zone M, inDir WEST , Links *FB- NE 
+PASS: Zone M, inDir WEST , Links *FB- -- 
+PASS: Zone M, inDir WEST , Links *B*- NE 
+PASS: Zone M, inDir WEST , Links *B*- -- 
+PASS: Zone M, inDir WEST , Links *BF- NE 
+PASS: Zone M, inDir WEST , Links *BF- -- 
+PASS: Zone M, inDir WEST , Links *BB- NE 
+PASS: Zone M, inDir WEST , Links *BB- -- 
+PASS: Zone M, inDir WEST , Links F**- NE 
+PASS: Zone M, inDir WEST , Links F**- -- 
+PASS: Zone M, inDir WEST , Links F*F- NE 
+PASS: Zone M, inDir WEST , Links F*F- -- 
+PASS: Zone M, inDir WEST , Links F*B- NE 
+PASS: Zone M, inDir WEST , Links F*B- -- 
+PASS: Zone M, inDir WEST , Links FF*- NE 
+PASS: Zone M, inDir WEST , Links FF*- -- 
+PASS: Zone M, inDir WEST , Links FFF- NE 
+PASS: Zone M, inDir WEST , Links FFF- -- 
+PASS: Zone M, inDir WEST , Links FFB- NE 
+PASS: Zone M, inDir WEST , Links FFB- -- 
+PASS: Zone M, inDir WEST , Links FB*- NE 
+PASS: Zone M, inDir WEST , Links FB*- -- 
+PASS: Zone M, inDir WEST , Links FBF- NE 
+PASS: Zone M, inDir WEST , Links FBF- -- 
+PASS: Zone M, inDir WEST , Links FBB- NE 
+PASS: Zone M, inDir WEST , Links FBB- -- 
+PASS: Zone M, inDir WEST , Links B**- NE 
+PASS: Zone M, inDir WEST , Links B**- -- 
+PASS: Zone M, inDir WEST , Links B*F- NE 
+PASS: Zone M, inDir WEST , Links B*F- -- 
+PASS: Zone M, inDir WEST , Links B*B- NE 
+PASS: Zone M, inDir WEST , Links B*B- -- 
+PASS: Zone M, inDir WEST , Links BF*- NE 
+PASS: Zone M, inDir WEST , Links BF*- -- 
+PASS: Zone M, inDir WEST , Links BFF- NE 
+PASS: Zone M, inDir WEST , Links BFF- -- 
+PASS: Zone M, inDir WEST , Links BFB- NE 
+PASS: Zone M, inDir WEST , Links BFB- -- 
+PASS: Zone M, inDir WEST , Links BB*- NE 
+PASS: Zone M, inDir WEST , Links BB*- -- 
+PASS: Zone M, inDir WEST , Links BBF- NE 
+PASS: Zone M, inDir WEST , Links BBF- -- 
+PASS: Zone M, inDir WEST , Links BBB- NE 
+PASS: Zone M, inDir WEST , Links BBB- -- 
+PASS: Zone O, inDir NORTH, Links ***- -- 
+PASS: Zone O, inDir NORTH, Links **F- -- 
+PASS: Zone O, inDir NORTH, Links **B- -- 
+PASS: Zone O, inDir NORTH, Links *F*- -- 
+PASS: Zone O, inDir NORTH, Links *FF- -- 
+PASS: Zone O, inDir NORTH, Links *FB- -- 
+PASS: Zone O, inDir NORTH, Links *B*- -- 
+PASS: Zone O, inDir NORTH, Links *BF- -- 
+PASS: Zone O, inDir NORTH, Links *BB- -- 
+PASS: Zone O, inDir NORTH, Links F**- -- 
+PASS: Zone O, inDir NORTH, Links F*F- -- 
+PASS: Zone O, inDir NORTH, Links F*B- -- 
+PASS: Zone O, inDir NORTH, Links FF*- -- 
+PASS: Zone O, inDir NORTH, Links FFF- -- 
+PASS: Zone O, inDir NORTH, Links FFB- -- 
+PASS: Zone O, inDir NORTH, Links FB*- -- 
+PASS: Zone O, inDir NORTH, Links FBF- -- 
+PASS: Zone O, inDir NORTH, Links FBB- -- 
+PASS: Zone O, inDir NORTH, Links B**- -- 
+PASS: Zone O, inDir NORTH, Links B*F- -- 
+PASS: Zone O, inDir NORTH, Links B*B- -- 
+PASS: Zone O, inDir NORTH, Links BF*- -- 
+PASS: Zone O, inDir NORTH, Links BFF- -- 
+PASS: Zone O, inDir NORTH, Links BFB- -- 
+PASS: Zone O, inDir NORTH, Links BB*- -- 
+PASS: Zone O, inDir NORTH, Links BBF- -- 
+PASS: Zone O, inDir NORTH, Links BBB- -- 
+PASS: Zone O, inDir EAST , Links ***- -- 
+PASS: Zone O, inDir EAST , Links **F- -- 
+PASS: Zone O, inDir EAST , Links **B- -- 
+PASS: Zone O, inDir EAST , Links *F*- -- 
+PASS: Zone O, inDir EAST , Links *FF- -- 
+PASS: Zone O, inDir EAST , Links *FB- -- 
+PASS: Zone O, inDir EAST , Links *B*- -- 
+PASS: Zone O, inDir EAST , Links *BF- -- 
+PASS: Zone O, inDir EAST , Links *BB- -- 
+PASS: Zone O, inDir EAST , Links F**- -- 
+PASS: Zone O, inDir EAST , Links F*F- -- 
+PASS: Zone O, inDir EAST , Links F*B- -- 
+PASS: Zone O, inDir EAST , Links FF*- -- 
+PASS: Zone O, inDir EAST , Links FFF- -- 
+PASS: Zone O, inDir EAST , Links FFB- -- 
+PASS: Zone O, inDir EAST , Links FB*- -- 
+PASS: Zone O, inDir EAST , Links FBF- -- 
+PASS: Zone O, inDir EAST , Links FBB- -- 
+PASS: Zone O, inDir EAST , Links B**- -- 
+PASS: Zone O, inDir EAST , Links B*F- -- 
+PASS: Zone O, inDir EAST , Links B*B- -- 
+PASS: Zone O, inDir EAST , Links BF*- -- 
+PASS: Zone O, inDir EAST , Links BFF- -- 
+PASS: Zone O, inDir EAST , Links BFB- -- 
+PASS: Zone O, inDir EAST , Links BB*- -- 
+PASS: Zone O, inDir EAST , Links BBF- -- 
+PASS: Zone O, inDir EAST , Links BBB- -- 
+PASS: Zone O, inDir WEST , Links ***- -- 
+PASS: Zone O, inDir WEST , Links **F- -- 
+PASS: Zone O, inDir WEST , Links **B- -- 
+PASS: Zone O, inDir WEST , Links *F*- -- 
+PASS: Zone O, inDir WEST , Links *FF- -- 
+PASS: Zone O, inDir WEST , Links *FB- -- 
+PASS: Zone O, inDir WEST , Links *B*- -- 
+PASS: Zone O, inDir WEST , Links *BF- -- 
+PASS: Zone O, inDir WEST , Links *BB- -- 
+PASS: Zone O, inDir WEST , Links F**- -- 
+PASS: Zone O, inDir WEST , Links F*F- -- 
+PASS: Zone O, inDir WEST , Links F*B- -- 
+PASS: Zone O, inDir WEST , Links FF*- -- 
+PASS: Zone O, inDir WEST , Links FFF- -- 
+PASS: Zone O, inDir WEST , Links FFB- -- 
+PASS: Zone O, inDir WEST , Links FB*- -- 
+PASS: Zone O, inDir WEST , Links FBF- -- 
+PASS: Zone O, inDir WEST , Links FBB- -- 
+PASS: Zone O, inDir WEST , Links B**- -- 
+PASS: Zone O, inDir WEST , Links B*F- -- 
+PASS: Zone O, inDir WEST , Links B*B- -- 
+PASS: Zone O, inDir WEST , Links BF*- -- 
+PASS: Zone O, inDir WEST , Links BFF- -- 
+PASS: Zone O, inDir WEST , Links BFB- -- 
+PASS: Zone O, inDir WEST , Links BB*- -- 
+PASS: Zone O, inDir WEST , Links BBF- -- 
+PASS: Zone O, inDir WEST , Links BBB- -- 
+PASS: Zone P, inDir NORTH, Links ***- NE 
+PASS: Zone P, inDir NORTH, Links ***- -- 
+PASS: Zone P, inDir NORTH, Links **F- NE 
+PASS: Zone P, inDir NORTH, Links **F- -- 
+PASS: Zone P, inDir NORTH, Links **B- NE 
+PASS: Zone P, inDir NORTH, Links **B- -- 
+PASS: Zone P, inDir NORTH, Links *F*- NE 
+PASS: Zone P, inDir NORTH, Links *F*- -- 
+PASS: Zone P, inDir NORTH, Links *FF- NE 
+PASS: Zone P, inDir NORTH, Links *FF- -- 
+PASS: Zone P, inDir NORTH, Links *FB- NE 
+PASS: Zone P, inDir NORTH, Links *FB- -- 
+PASS: Zone P, inDir NORTH, Links *B*- NE 
+PASS: Zone P, inDir NORTH, Links *B*- -- 
+PASS: Zone P, inDir NORTH, Links *BF- NE 
+PASS: Zone P, inDir NORTH, Links *BF- -- 
+PASS: Zone P, inDir NORTH, Links *BB- NE 
+PASS: Zone P, inDir NORTH, Links *BB- -- 
+PASS: Zone P, inDir NORTH, Links F**- NE 
+PASS: Zone P, inDir NORTH, Links F**- -- 
+PASS: Zone P, inDir NORTH, Links F*F- NE 
+PASS: Zone P, inDir NORTH, Links F*F- -- 
+PASS: Zone P, inDir NORTH, Links F*B- NE 
+PASS: Zone P, inDir NORTH, Links F*B- -- 
+PASS: Zone P, inDir NORTH, Links FF*- NE 
+PASS: Zone P, inDir NORTH, Links FF*- -- 
+PASS: Zone P, inDir NORTH, Links FFF- NE 
+PASS: Zone P, inDir NORTH, Links FFF- -- 
+PASS: Zone P, inDir NORTH, Links FFB- NE 
+PASS: Zone P, inDir NORTH, Links FFB- -- 
+PASS: Zone P, inDir NORTH, Links FB*- NE 
+PASS: Zone P, inDir NORTH, Links FB*- -- 
+PASS: Zone P, inDir NORTH, Links FBF- NE 
+PASS: Zone P, inDir NORTH, Links FBF- -- 
+PASS: Zone P, inDir NORTH, Links FBB- NE 
+PASS: Zone P, inDir NORTH, Links FBB- -- 
+PASS: Zone P, inDir NORTH, Links B**- NE 
+PASS: Zone P, inDir NORTH, Links B**- -- 
+PASS: Zone P, inDir NORTH, Links B*F- NE 
+PASS: Zone P, inDir NORTH, Links B*F- -- 
+PASS: Zone P, inDir NORTH, Links B*B- NE 
+PASS: Zone P, inDir NORTH, Links B*B- -- 
+PASS: Zone P, inDir NORTH, Links BF*- NE 
+PASS: Zone P, inDir NORTH, Links BF*- -- 
+PASS: Zone P, inDir NORTH, Links BFF- NE 
+PASS: Zone P, inDir NORTH, Links BFF- -- 
+PASS: Zone P, inDir NORTH, Links BFB- NE 
+PASS: Zone P, inDir NORTH, Links BFB- -- 
+PASS: Zone P, inDir NORTH, Links BB*- NE 
+PASS: Zone P, inDir NORTH, Links BB*- -- 
+PASS: Zone P, inDir NORTH, Links BBF- NE 
+PASS: Zone P, inDir NORTH, Links BBF- -- 
+PASS: Zone P, inDir NORTH, Links BBB- NE 
+PASS: Zone P, inDir NORTH, Links BBB- -- 
+PASS: Zone P, inDir EAST , Links ***- NE 
+PASS: Zone P, inDir EAST , Links ***- -- 
+PASS: Zone P, inDir EAST , Links **F- NE 
+PASS: Zone P, inDir EAST , Links **F- -- 
+PASS: Zone P, inDir EAST , Links **B- NE 
+PASS: Zone P, inDir EAST , Links **B- -- 
+PASS: Zone P, inDir EAST , Links *F*- NE 
+PASS: Zone P, inDir EAST , Links *F*- -- 
+PASS: Zone P, inDir EAST , Links *FF- NE 
+PASS: Zone P, inDir EAST , Links *FF- -- 
+PASS: Zone P, inDir EAST , Links *FB- NE 
+PASS: Zone P, inDir EAST , Links *FB- -- 
+PASS: Zone P, inDir EAST , Links *B*- NE 
+PASS: Zone P, inDir EAST , Links *B*- -- 
+PASS: Zone P, inDir EAST , Links *BF- NE 
+PASS: Zone P, inDir EAST , Links *BF- -- 
+PASS: Zone P, inDir EAST , Links *BB- NE 
+PASS: Zone P, inDir EAST , Links *BB- -- 
+PASS: Zone P, inDir EAST , Links F**- NE 
+PASS: Zone P, inDir EAST , Links F**- -- 
+PASS: Zone P, inDir EAST , Links F*F- NE 
+PASS: Zone P, inDir EAST , Links F*F- -- 
+PASS: Zone P, inDir EAST , Links F*B- NE 
+PASS: Zone P, inDir EAST , Links F*B- -- 
+PASS: Zone P, inDir EAST , Links FF*- NE 
+PASS: Zone P, inDir EAST , Links FF*- -- 
+PASS: Zone P, inDir EAST , Links FFF- NE 
+PASS: Zone P, inDir EAST , Links FFF- -- 
+PASS: Zone P, inDir EAST , Links FFB- NE 
+PASS: Zone P, inDir EAST , Links FFB- -- 
+PASS: Zone P, inDir EAST , Links FB*- NE 
+PASS: Zone P, inDir EAST , Links FB*- -- 
+PASS: Zone P, inDir EAST , Links FBF- NE 
+PASS: Zone P, inDir EAST , Links FBF- -- 
+PASS: Zone P, inDir EAST , Links FBB- NE 
+PASS: Zone P, inDir EAST , Links FBB- -- 
+PASS: Zone P, inDir EAST , Links B**- NE 
+PASS: Zone P, inDir EAST , Links B**- -- 
+PASS: Zone P, inDir EAST , Links B*F- NE 
+PASS: Zone P, inDir EAST , Links B*F- -- 
+PASS: Zone P, inDir EAST , Links B*B- NE 
+PASS: Zone P, inDir EAST , Links B*B- -- 
+PASS: Zone P, inDir EAST , Links BF*- NE 
+PASS: Zone P, inDir EAST , Links BF*- -- 
+PASS: Zone P, inDir EAST , Links BFF- NE 
+PASS: Zone P, inDir EAST , Links BFF- -- 
+PASS: Zone P, inDir EAST , Links BFB- NE 
+PASS: Zone P, inDir EAST , Links BFB- -- 
+PASS: Zone P, inDir EAST , Links BB*- NE 
+PASS: Zone P, inDir EAST , Links BB*- -- 
+PASS: Zone P, inDir EAST , Links BBF- NE 
+PASS: Zone P, inDir EAST , Links BBF- -- 
+PASS: Zone P, inDir EAST , Links BBB- NE 
+PASS: Zone P, inDir EAST , Links BBB- -- 
+PASS: Zone P, inDir WEST , Links ***- NE 
+PASS: Zone P, inDir WEST , Links ***- -- 
+PASS: Zone P, inDir WEST , Links **F- NE 
+PASS: Zone P, inDir WEST , Links **F- -- 
+PASS: Zone P, inDir WEST , Links **B- NE 
+PASS: Zone P, inDir WEST , Links **B- -- 
+PASS: Zone P, inDir WEST , Links *F*- NE 
+PASS: Zone P, inDir WEST , Links *F*- -- 
+PASS: Zone P, inDir WEST , Links *FF- NE 
+PASS: Zone P, inDir WEST , Links *FF- -- 
+PASS: Zone P, inDir WEST , Links *FB- NE 
+PASS: Zone P, inDir WEST , Links *FB- -- 
+PASS: Zone P, inDir WEST , Links *B*- NE 
+PASS: Zone P, inDir WEST , Links *B*- -- 
+PASS: Zone P, inDir WEST , Links *BF- NE 
+PASS: Zone P, inDir WEST , Links *BF- -- 
+PASS: Zone P, inDir WEST , Links *BB- NE 
+PASS: Zone P, inDir WEST , Links *BB- -- 
+PASS: Zone P, inDir WEST , Links F**- NE 
+PASS: Zone P, inDir WEST , Links F**- -- 
+PASS: Zone P, inDir WEST , Links F*F- NE 
+PASS: Zone P, inDir WEST , Links F*F- -- 
+PASS: Zone P, inDir WEST , Links F*B- NE 
+PASS: Zone P, inDir WEST , Links F*B- -- 
+PASS: Zone P, inDir WEST , Links FF*- NE 
+PASS: Zone P, inDir WEST , Links FF*- -- 
+PASS: Zone P, inDir WEST , Links FFF- NE 
+PASS: Zone P, inDir WEST , Links FFF- -- 
+PASS: Zone P, inDir WEST , Links FFB- NE 
+PASS: Zone P, inDir WEST , Links FFB- -- 
+PASS: Zone P, inDir WEST , Links FB*- NE 
+PASS: Zone P, inDir WEST , Links FB*- -- 
+PASS: Zone P, inDir WEST , Links FBF- NE 
+PASS: Zone P, inDir WEST , Links FBF- -- 
+PASS: Zone P, inDir WEST , Links FBB- NE 
+PASS: Zone P, inDir WEST , Links FBB- -- 
+PASS: Zone P, inDir WEST , Links B**- NE 
+PASS: Zone P, inDir WEST , Links B**- -- 
+PASS: Zone P, inDir WEST , Links B*F- NE 
+PASS: Zone P, inDir WEST , Links B*F- -- 
+PASS: Zone P, inDir WEST , Links B*B- NE 
+PASS: Zone P, inDir WEST , Links B*B- -- 
+PASS: Zone P, inDir WEST , Links BF*- NE 
+PASS: Zone P, inDir WEST , Links BF*- -- 
+PASS: Zone P, inDir WEST , Links BFF- NE 
+PASS: Zone P, inDir WEST , Links BFF- -- 
+PASS: Zone P, inDir WEST , Links BFB- NE 
+PASS: Zone P, inDir WEST , Links BFB- -- 
+PASS: Zone P, inDir WEST , Links BB*- NE 
+PASS: Zone P, inDir WEST , Links BB*- -- 
+PASS: Zone P, inDir WEST , Links BBF- NE 
+PASS: Zone P, inDir WEST , Links BBF- -- 
+PASS: Zone P, inDir WEST , Links BBB- NE 
+PASS: Zone P, inDir WEST , Links BBB- -- 
+PASS: Zone Q, inDir NORTH, Links ***- NE 
+PASS: Zone Q, inDir NORTH, Links ***- -- 
+PASS: Zone Q, inDir NORTH, Links **F- NE 
+PASS: Zone Q, inDir NORTH, Links **F- -- 
+PASS: Zone Q, inDir NORTH, Links **B- NE 
+PASS: Zone Q, inDir NORTH, Links **B- -- 
+PASS: Zone Q, inDir NORTH, Links *F*- NE 
+PASS: Zone Q, inDir NORTH, Links *F*- -- 
+PASS: Zone Q, inDir NORTH, Links *FF- NE 
+PASS: Zone Q, inDir NORTH, Links *FF- -- 
+PASS: Zone Q, inDir NORTH, Links *FB- NE 
+PASS: Zone Q, inDir NORTH, Links *FB- -- 
+PASS: Zone Q, inDir NORTH, Links *B*- NE 
+PASS: Zone Q, inDir NORTH, Links *B*- -- 
+PASS: Zone Q, inDir NORTH, Links *BF- NE 
+PASS: Zone Q, inDir NORTH, Links *BF- -- 
+PASS: Zone Q, inDir NORTH, Links *BB- NE 
+PASS: Zone Q, inDir NORTH, Links *BB- -- 
+PASS: Zone Q, inDir NORTH, Links F**- NE 
+PASS: Zone Q, inDir NORTH, Links F**- -- 
+PASS: Zone Q, inDir NORTH, Links F*F- NE 
+PASS: Zone Q, inDir NORTH, Links F*F- -- 
+PASS: Zone Q, inDir NORTH, Links F*B- NE 
+PASS: Zone Q, inDir NORTH, Links F*B- -- 
+PASS: Zone Q, inDir NORTH, Links FF*- NE 
+PASS: Zone Q, inDir NORTH, Links FF*- -- 
+PASS: Zone Q, inDir NORTH, Links FFF- NE 
+PASS: Zone Q, inDir NORTH, Links FFF- -- 
+PASS: Zone Q, inDir NORTH, Links FFB- NE 
+PASS: Zone Q, inDir NORTH, Links FFB- -- 
+PASS: Zone Q, inDir NORTH, Links FB*- NE 
+PASS: Zone Q, inDir NORTH, Links FB*- -- 
+PASS: Zone Q, inDir NORTH, Links FBF- NE 
+PASS: Zone Q, inDir NORTH, Links FBF- -- 
+PASS: Zone Q, inDir NORTH, Links FBB- NE 
+PASS: Zone Q, inDir NORTH, Links FBB- -- 
+PASS: Zone Q, inDir NORTH, Links B**- NE 
+PASS: Zone Q, inDir NORTH, Links B**- -- 
+PASS: Zone Q, inDir NORTH, Links B*F- NE 
+PASS: Zone Q, inDir NORTH, Links B*F- -- 
+PASS: Zone Q, inDir NORTH, Links B*B- NE 
+PASS: Zone Q, inDir NORTH, Links B*B- -- 
+PASS: Zone Q, inDir NORTH, Links BF*- NE 
+PASS: Zone Q, inDir NORTH, Links BF*- -- 
+PASS: Zone Q, inDir NORTH, Links BFF- NE 
+PASS: Zone Q, inDir NORTH, Links BFF- -- 
+PASS: Zone Q, inDir NORTH, Links BFB- NE 
+PASS: Zone Q, inDir NORTH, Links BFB- -- 
+PASS: Zone Q, inDir NORTH, Links BB*- NE 
+PASS: Zone Q, inDir NORTH, Links BB*- -- 
+PASS: Zone Q, inDir NORTH, Links BBF- NE 
+PASS: Zone Q, inDir NORTH, Links BBF- -- 
+PASS: Zone Q, inDir NORTH, Links BBB- NE 
+PASS: Zone Q, inDir NORTH, Links BBB- -- 
+PASS: Zone Q, inDir EAST , Links ***- NE 
+PASS: Zone Q, inDir EAST , Links ***- -- 
+PASS: Zone Q, inDir EAST , Links **F- NE 
+PASS: Zone Q, inDir EAST , Links **F- -- 
+PASS: Zone Q, inDir EAST , Links **B- NE 
+PASS: Zone Q, inDir EAST , Links **B- -- 
+PASS: Zone Q, inDir EAST , Links *F*- NE 
+PASS: Zone Q, inDir EAST , Links *F*- -- 
+PASS: Zone Q, inDir EAST , Links *FF- NE 
+PASS: Zone Q, inDir EAST , Links *FF- -- 
+PASS: Zone Q, inDir EAST , Links *FB- NE 
+PASS: Zone Q, inDir EAST , Links *FB- -- 
+PASS: Zone Q, inDir EAST , Links *B*- NE 
+PASS: Zone Q, inDir EAST , Links *B*- -- 
+PASS: Zone Q, inDir EAST , Links *BF- NE 
+PASS: Zone Q, inDir EAST , Links *BF- -- 
+PASS: Zone Q, inDir EAST , Links *BB- NE 
+PASS: Zone Q, inDir EAST , Links *BB- -- 
+PASS: Zone Q, inDir EAST , Links F**- NE 
+PASS: Zone Q, inDir EAST , Links F**- -- 
+PASS: Zone Q, inDir EAST , Links F*F- NE 
+PASS: Zone Q, inDir EAST , Links F*F- -- 
+PASS: Zone Q, inDir EAST , Links F*B- NE 
+PASS: Zone Q, inDir EAST , Links F*B- -- 
+PASS: Zone Q, inDir EAST , Links FF*- NE 
+PASS: Zone Q, inDir EAST , Links FF*- -- 
+PASS: Zone Q, inDir EAST , Links FFF- NE 
+PASS: Zone Q, inDir EAST , Links FFF- -- 
+PASS: Zone Q, inDir EAST , Links FFB- NE 
+PASS: Zone Q, inDir EAST , Links FFB- -- 
+PASS: Zone Q, inDir EAST , Links FB*- NE 
+PASS: Zone Q, inDir EAST , Links FB*- -- 
+PASS: Zone Q, inDir EAST , Links FBF- NE 
+PASS: Zone Q, inDir EAST , Links FBF- -- 
+PASS: Zone Q, inDir EAST , Links FBB- NE 
+PASS: Zone Q, inDir EAST , Links FBB- -- 
+PASS: Zone Q, inDir EAST , Links B**- NE 
+PASS: Zone Q, inDir EAST , Links B**- -- 
+PASS: Zone Q, inDir EAST , Links B*F- NE 
+PASS: Zone Q, inDir EAST , Links B*F- -- 
+PASS: Zone Q, inDir EAST , Links B*B- NE 
+PASS: Zone Q, inDir EAST , Links B*B- -- 
+PASS: Zone Q, inDir EAST , Links BF*- NE 
+PASS: Zone Q, inDir EAST , Links BF*- -- 
+PASS: Zone Q, inDir EAST , Links BFF- NE 
+PASS: Zone Q, inDir EAST , Links BFF- -- 
+PASS: Zone Q, inDir EAST , Links BFB- NE 
+PASS: Zone Q, inDir EAST , Links BFB- -- 
+PASS: Zone Q, inDir EAST , Links BB*- NE 
+PASS: Zone Q, inDir EAST , Links BB*- -- 
+PASS: Zone Q, inDir EAST , Links BBF- NE 
+PASS: Zone Q, inDir EAST , Links BBF- -- 
+PASS: Zone Q, inDir EAST , Links BBB- NE 
+PASS: Zone Q, inDir EAST , Links BBB- -- 
+PASS: Zone Q, inDir WEST , Links ***- NE 
+PASS: Zone Q, inDir WEST , Links ***- -- 
+PASS: Zone Q, inDir WEST , Links **F- NE 
+PASS: Zone Q, inDir WEST , Links **F- -- 
+PASS: Zone Q, inDir WEST , Links **B- NE 
+PASS: Zone Q, inDir WEST , Links **B- -- 
+PASS: Zone Q, inDir WEST , Links *F*- NE 
+PASS: Zone Q, inDir WEST , Links *F*- -- 
+PASS: Zone Q, inDir WEST , Links *FF- NE 
+PASS: Zone Q, inDir WEST , Links *FF- -- 
+PASS: Zone Q, inDir WEST , Links *FB- NE 
+PASS: Zone Q, inDir WEST , Links *FB- -- 
+PASS: Zone Q, inDir WEST , Links *B*- NE 
+PASS: Zone Q, inDir WEST , Links *B*- -- 
+PASS: Zone Q, inDir WEST , Links *BF- NE 
+PASS: Zone Q, inDir WEST , Links *BF- -- 
+PASS: Zone Q, inDir WEST , Links *BB- NE 
+PASS: Zone Q, inDir WEST , Links *BB- -- 
+PASS: Zone Q, inDir WEST , Links F**- NE 
+PASS: Zone Q, inDir WEST , Links F**- -- 
+PASS: Zone Q, inDir WEST , Links F*F- NE 
+PASS: Zone Q, inDir WEST , Links F*F- -- 
+PASS: Zone Q, inDir WEST , Links F*B- NE 
+PASS: Zone Q, inDir WEST , Links F*B- -- 
+PASS: Zone Q, inDir WEST , Links FF*- NE 
+PASS: Zone Q, inDir WEST , Links FF*- -- 
+PASS: Zone Q, inDir WEST , Links FFF- NE 
+PASS: Zone Q, inDir WEST , Links FFF- -- 
+PASS: Zone Q, inDir WEST , Links FFB- NE 
+PASS: Zone Q, inDir WEST , Links FFB- -- 
+PASS: Zone Q, inDir WEST , Links FB*- NE 
+PASS: Zone Q, inDir WEST , Links FB*- -- 
+PASS: Zone Q, inDir WEST , Links FBF- NE 
+PASS: Zone Q, inDir WEST , Links FBF- -- 
+PASS: Zone Q, inDir WEST , Links FBB- NE 
+PASS: Zone Q, inDir WEST , Links FBB- -- 
+PASS: Zone Q, inDir WEST , Links B**- NE 
+PASS: Zone Q, inDir WEST , Links B**- -- 
+PASS: Zone Q, inDir WEST , Links B*F- NE 
+PASS: Zone Q, inDir WEST , Links B*F- -- 
+PASS: Zone Q, inDir WEST , Links B*B- NE 
+PASS: Zone Q, inDir WEST , Links B*B- -- 
+PASS: Zone Q, inDir WEST , Links BF*- NE 
+PASS: Zone Q, inDir WEST , Links BF*- -- 
+PASS: Zone Q, inDir WEST , Links BFF- NE 
+PASS: Zone Q, inDir WEST , Links BFF- -- 
+PASS: Zone Q, inDir WEST , Links BFB- NE 
+PASS: Zone Q, inDir WEST , Links BFB- -- 
+PASS: Zone Q, inDir WEST , Links BB*- NE 
+PASS: Zone Q, inDir WEST , Links BB*- -- 
+PASS: Zone Q, inDir WEST , Links BBF- NE 
+PASS: Zone Q, inDir WEST , Links BBF- -- 
+PASS: Zone Q, inDir WEST , Links BBB- NE 
+PASS: Zone Q, inDir WEST , Links BBB- -- 
+PASS: Zone R, inDir NORTH, Links ***- NE 
+PASS: Zone R, inDir NORTH, Links ***- -- 
+PASS: Zone R, inDir NORTH, Links **F- NE 
+PASS: Zone R, inDir NORTH, Links **F- -- 
+PASS: Zone R, inDir NORTH, Links **B- NE 
+PASS: Zone R, inDir NORTH, Links **B- -- 
+PASS: Zone R, inDir NORTH, Links *F*- NE 
+PASS: Zone R, inDir NORTH, Links *F*- -- 
+PASS: Zone R, inDir NORTH, Links *FF- NE 
+PASS: Zone R, inDir NORTH, Links *FF- -- 
+PASS: Zone R, inDir NORTH, Links *FB- NE 
+PASS: Zone R, inDir NORTH, Links *FB- -- 
+PASS: Zone R, inDir NORTH, Links *B*- NE 
+PASS: Zone R, inDir NORTH, Links *B*- -- 
+PASS: Zone R, inDir NORTH, Links *BF- NE 
+PASS: Zone R, inDir NORTH, Links *BF- -- 
+PASS: Zone R, inDir NORTH, Links *BB- NE 
+PASS: Zone R, inDir NORTH, Links *BB- -- 
+PASS: Zone R, inDir NORTH, Links F**- NE 
+PASS: Zone R, inDir NORTH, Links F**- -- 
+PASS: Zone R, inDir NORTH, Links F*F- NE 
+PASS: Zone R, inDir NORTH, Links F*F- -- 
+PASS: Zone R, inDir NORTH, Links F*B- NE 
+PASS: Zone R, inDir NORTH, Links F*B- -- 
+PASS: Zone R, inDir NORTH, Links FF*- NE 
+PASS: Zone R, inDir NORTH, Links FF*- -- 
+PASS: Zone R, inDir NORTH, Links FFF- NE 
+PASS: Zone R, inDir NORTH, Links FFF- -- 
+PASS: Zone R, inDir NORTH, Links FFB- NE 
+PASS: Zone R, inDir NORTH, Links FFB- -- 
+PASS: Zone R, inDir NORTH, Links FB*- NE 
+PASS: Zone R, inDir NORTH, Links FB*- -- 
+PASS: Zone R, inDir NORTH, Links FBF- NE 
+PASS: Zone R, inDir NORTH, Links FBF- -- 
+PASS: Zone R, inDir NORTH, Links FBB- NE 
+PASS: Zone R, inDir NORTH, Links FBB- -- 
+PASS: Zone R, inDir NORTH, Links B**- NE 
+PASS: Zone R, inDir NORTH, Links B**- -- 
+PASS: Zone R, inDir NORTH, Links B*F- NE 
+PASS: Zone R, inDir NORTH, Links B*F- -- 
+PASS: Zone R, inDir NORTH, Links B*B- NE 
+PASS: Zone R, inDir NORTH, Links B*B- -- 
+PASS: Zone R, inDir NORTH, Links BF*- NE 
+PASS: Zone R, inDir NORTH, Links BF*- -- 
+PASS: Zone R, inDir NORTH, Links BFF- NE 
+PASS: Zone R, inDir NORTH, Links BFF- -- 
+PASS: Zone R, inDir NORTH, Links BFB- NE 
+PASS: Zone R, inDir NORTH, Links BFB- -- 
+PASS: Zone R, inDir NORTH, Links BB*- NE 
+PASS: Zone R, inDir NORTH, Links BB*- -- 
+PASS: Zone R, inDir NORTH, Links BBF- NE 
+PASS: Zone R, inDir NORTH, Links BBF- -- 
+PASS: Zone R, inDir NORTH, Links BBB- NE 
+PASS: Zone R, inDir NORTH, Links BBB- -- 
+PASS: Zone R, inDir EAST , Links ***- NE 
+PASS: Zone R, inDir EAST , Links ***- -- 
+PASS: Zone R, inDir EAST , Links **F- NE 
+PASS: Zone R, inDir EAST , Links **F- -- 
+PASS: Zone R, inDir EAST , Links **B- NE 
+PASS: Zone R, inDir EAST , Links **B- -- 
+PASS: Zone R, inDir EAST , Links *F*- NE 
+PASS: Zone R, inDir EAST , Links *F*- -- 
+PASS: Zone R, inDir EAST , Links *FF- NE 
+PASS: Zone R, inDir EAST , Links *FF- -- 
+PASS: Zone R, inDir EAST , Links *FB- NE 
+PASS: Zone R, inDir EAST , Links *FB- -- 
+PASS: Zone R, inDir EAST , Links *B*- NE 
+PASS: Zone R, inDir EAST , Links *B*- -- 
+PASS: Zone R, inDir EAST , Links *BF- NE 
+PASS: Zone R, inDir EAST , Links *BF- -- 
+PASS: Zone R, inDir EAST , Links *BB- NE 
+PASS: Zone R, inDir EAST , Links *BB- -- 
+PASS: Zone R, inDir EAST , Links F**- NE 
+PASS: Zone R, inDir EAST , Links F**- -- 
+PASS: Zone R, inDir EAST , Links F*F- NE 
+PASS: Zone R, inDir EAST , Links F*F- -- 
+PASS: Zone R, inDir EAST , Links F*B- NE 
+PASS: Zone R, inDir EAST , Links F*B- -- 
+PASS: Zone R, inDir EAST , Links FF*- NE 
+PASS: Zone R, inDir EAST , Links FF*- -- 
+PASS: Zone R, inDir EAST , Links FFF- NE 
+PASS: Zone R, inDir EAST , Links FFF- -- 
+PASS: Zone R, inDir EAST , Links FFB- NE 
+PASS: Zone R, inDir EAST , Links FFB- -- 
+PASS: Zone R, inDir EAST , Links FB*- NE 
+PASS: Zone R, inDir EAST , Links FB*- -- 
+PASS: Zone R, inDir EAST , Links FBF- NE 
+PASS: Zone R, inDir EAST , Links FBF- -- 
+PASS: Zone R, inDir EAST , Links FBB- NE 
+PASS: Zone R, inDir EAST , Links FBB- -- 
+PASS: Zone R, inDir EAST , Links B**- NE 
+PASS: Zone R, inDir EAST , Links B**- -- 
+PASS: Zone R, inDir EAST , Links B*F- NE 
+PASS: Zone R, inDir EAST , Links B*F- -- 
+PASS: Zone R, inDir EAST , Links B*B- NE 
+PASS: Zone R, inDir EAST , Links B*B- -- 
+PASS: Zone R, inDir EAST , Links BF*- NE 
+PASS: Zone R, inDir EAST , Links BF*- -- 
+PASS: Zone R, inDir EAST , Links BFF- NE 
+PASS: Zone R, inDir EAST , Links BFF- -- 
+PASS: Zone R, inDir EAST , Links BFB- NE 
+PASS: Zone R, inDir EAST , Links BFB- -- 
+PASS: Zone R, inDir EAST , Links BB*- NE 
+PASS: Zone R, inDir EAST , Links BB*- -- 
+PASS: Zone R, inDir EAST , Links BBF- NE 
+PASS: Zone R, inDir EAST , Links BBF- -- 
+PASS: Zone R, inDir EAST , Links BBB- NE 
+PASS: Zone R, inDir EAST , Links BBB- -- 
+PASS: Zone R, inDir WEST , Links ***- NE 
+PASS: Zone R, inDir WEST , Links ***- -- 
+PASS: Zone R, inDir WEST , Links **F- NE 
+PASS: Zone R, inDir WEST , Links **F- -- 
+PASS: Zone R, inDir WEST , Links **B- NE 
+PASS: Zone R, inDir WEST , Links **B- -- 
+PASS: Zone R, inDir WEST , Links *F*- NE 
+PASS: Zone R, inDir WEST , Links *F*- -- 
+PASS: Zone R, inDir WEST , Links *FF- NE 
+PASS: Zone R, inDir WEST , Links *FF- -- 
+PASS: Zone R, inDir WEST , Links *FB- NE 
+PASS: Zone R, inDir WEST , Links *FB- -- 
+PASS: Zone R, inDir WEST , Links *B*- NE 
+PASS: Zone R, inDir WEST , Links *B*- -- 
+PASS: Zone R, inDir WEST , Links *BF- NE 
+PASS: Zone R, inDir WEST , Links *BF- -- 
+PASS: Zone R, inDir WEST , Links *BB- NE 
+PASS: Zone R, inDir WEST , Links *BB- -- 
+PASS: Zone R, inDir WEST , Links F**- NE 
+PASS: Zone R, inDir WEST , Links F**- -- 
+PASS: Zone R, inDir WEST , Links F*F- NE 
+PASS: Zone R, inDir WEST , Links F*F- -- 
+PASS: Zone R, inDir WEST , Links F*B- NE 
+PASS: Zone R, inDir WEST , Links F*B- -- 
+PASS: Zone R, inDir WEST , Links FF*- NE 
+PASS: Zone R, inDir WEST , Links FF*- -- 
+PASS: Zone R, inDir WEST , Links FFF- NE 
+PASS: Zone R, inDir WEST , Links FFF- -- 
+PASS: Zone R, inDir WEST , Links FFB- NE 
+PASS: Zone R, inDir WEST , Links FFB- -- 
+PASS: Zone R, inDir WEST , Links FB*- NE 
+PASS: Zone R, inDir WEST , Links FB*- -- 
+PASS: Zone R, inDir WEST , Links FBF- NE 
+PASS: Zone R, inDir WEST , Links FBF- -- 
+PASS: Zone R, inDir WEST , Links FBB- NE 
+PASS: Zone R, inDir WEST , Links FBB- -- 
+PASS: Zone R, inDir WEST , Links B**- NE 
+PASS: Zone R, inDir WEST , Links B**- -- 
+PASS: Zone R, inDir WEST , Links B*F- NE 
+PASS: Zone R, inDir WEST , Links B*F- -- 
+PASS: Zone R, inDir WEST , Links B*B- NE 
+PASS: Zone R, inDir WEST , Links B*B- -- 
+PASS: Zone R, inDir WEST , Links BF*- NE 
+PASS: Zone R, inDir WEST , Links BF*- -- 
+PASS: Zone R, inDir WEST , Links BFF- NE 
+PASS: Zone R, inDir WEST , Links BFF- -- 
+PASS: Zone R, inDir WEST , Links BFB- NE 
+PASS: Zone R, inDir WEST , Links BFB- -- 
+PASS: Zone R, inDir WEST , Links BB*- NE 
+PASS: Zone R, inDir WEST , Links BB*- -- 
+PASS: Zone R, inDir WEST , Links BBF- NE 
+PASS: Zone R, inDir WEST , Links BBF- -- 
+PASS: Zone R, inDir WEST , Links BBB- NE 
+PASS: Zone R, inDir WEST , Links BBB- -- 
+
+
+
+.
