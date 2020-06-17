@@ -161,7 +161,7 @@ bool routeUnsafe(char z, char trav, char northLink, char eastLink, char southLin
   // Go north if...
   else if ( 
     northLink != 1 && northLink != '-' && ( trav != 's' ) &&
-    (ZB || ZC || ZD || ZE || ZO) 
+    (ZG || ZH || ZI || ZJ || ZK || ZL || ZM || ZQ)
   ) { dirRouted = 0; }
 
   // ELSE
@@ -183,14 +183,14 @@ bool routeUnsafe(char z, char trav, char northLink, char eastLink, char southLin
   else if ( 
     eastLink != 1 && eastLink != '-' && 
     (ZC || ZD || ZE || ZF || ZG || ZH || ZI || ZJ || ZM || ZO || ZP || ZQ) && 
-    (trav != 'w' || (ZA || ZF || ZN || ZP) || (ZD || ZP || ZI) ) 
+    (trav != 'w' || (ZF || ZN || ZP) || (ZD || ZP || ZI) ) 
   ) { dirRouted = 1; }
 
   // Go north if...
   else if ( 
     northLink != 1 && northLink != '-' && 
     (ZA || ZF || ZG || ZH || ZI || ZJ || ZK || ZL || ZM || ZN || ZP || ZQ) && 
-    (trav != 's' || (ZC || ZD || ZE || ZF || ZG || ZH || ZI || ZJ || ZM || ZO || ZP || ZQ) ) 
+    (trav != 's' || (ZF || ZG || ZH || ZI || ZJ || ZM || ZO || ZP || ZQ) ) 
   ) { dirRouted = 0; }
 
   else {

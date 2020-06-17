@@ -26,13 +26,13 @@ Routed SOUTH: Zone C, trav S, Links BB*- NE: 0 Legal.
 Routed EAST : Zone C, trav S, Links BBF- NE: 0 Legal.
 Routed SOUTH: Zone C, trav S, Links BBB- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links ***- NE: 0 Legal.
-Routed NORTH: Zone C, trav W, Links **F- NE: 0 Legal.
+Routed DROP : Zone C, trav W, Links **F- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links **B- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links *F*- NE: 0 Legal.
-Routed NORTH: Zone C, trav W, Links *FF- NE: 0 Legal.
+Routed DROP : Zone C, trav W, Links *FF- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links *FB- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links *B*- NE: 0 Legal.
-Routed NORTH: Zone C, trav W, Links *BF- NE: 0 Legal.
+Routed DROP : Zone C, trav W, Links *BF- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links *BB- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links F**- NE: 0 Legal.
 Routed DROP : Zone C, trav W, Links F*F- NE: 0 Legal.
@@ -44,23 +44,23 @@ Routed SOUTH: Zone C, trav W, Links FB*- NE: 0 Legal.
 Routed DROP : Zone C, trav W, Links FBF- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links FBB- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links B**- NE: 0 Legal.
-Routed NORTH: Zone C, trav W, Links B*F- NE: 0 Legal.
+Routed DROP : Zone C, trav W, Links B*F- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links B*B- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links BF*- NE: 0 Legal.
-Routed NORTH: Zone C, trav W, Links BFF- NE: 0 Legal.
+Routed DROP : Zone C, trav W, Links BFF- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links BFB- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links BB*- NE: 0 Legal.
-Routed NORTH: Zone C, trav W, Links BBF- NE: 0 Legal.
+Routed DROP : Zone C, trav W, Links BBF- NE: 0 Legal.
 Routed SOUTH: Zone C, trav W, Links BBB- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links ***- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links **F- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links **B- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links *F*- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links *FF- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links *FB- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links *B*- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links *BF- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links *BB- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links ***- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links **F- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links **B- NE: 0 Legal.
+Routed DROP : Zone C, trav N, Links *F*- NE: 0 Legal.
+Routed DROP : Zone C, trav N, Links *FF- NE: 0 Legal.
+Routed DROP : Zone C, trav N, Links *FB- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links *B*- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links *BF- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links *BB- NE: 0 Legal.
 Routed EAST : Zone C, trav N, Links F**- NE: 0 Legal.
 Routed EAST : Zone C, trav N, Links F*F- NE: 0 Legal.
 Routed EAST : Zone C, trav N, Links F*B- NE: 0 Legal.
@@ -70,15 +70,15 @@ Routed DROP : Zone C, trav N, Links FFB- NE: 0 Legal.
 Routed EAST : Zone C, trav N, Links FB*- NE: 0 Legal.
 Routed EAST : Zone C, trav N, Links FBF- NE: 0 Legal.
 Routed EAST : Zone C, trav N, Links FBB- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links B**- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links B*F- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links B*B- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links BF*- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links BFF- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links BFB- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links BB*- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links BBF- NE: 0 Legal.
-Routed NORTH: Zone C, trav N, Links BBB- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links B**- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links B*F- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links B*B- NE: 0 Legal.
+Routed DROP : Zone C, trav N, Links BF*- NE: 0 Legal.
+Routed DROP : Zone C, trav N, Links BFF- NE: 0 Legal.
+Routed DROP : Zone C, trav N, Links BFB- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links BB*- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links BBF- NE: 0 Legal.
+Routed EAST : Zone C, trav N, Links BBB- NE: 0 Legal.
 Routed SOUTH: Zone D, trav S, Links ***- NE: 0 Legal.
 Routed EAST : Zone D, trav S, Links **F- NE: 0 Legal.
 Routed SOUTH: Zone D, trav S, Links **B- NE: 0 Legal.
@@ -107,13 +107,13 @@ Routed SOUTH: Zone D, trav S, Links BB*- NE: 0 Legal.
 Routed EAST : Zone D, trav S, Links BBF- NE: 0 Legal.
 Routed SOUTH: Zone D, trav S, Links BBB- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links ***- NE: 0 Legal.
-Routed NORTH: Zone D, trav W, Links **F- NE: 0 Legal.
+Routed EAST : Zone D, trav W, Links **F- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links **B- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links *F*- NE: 0 Legal.
-Routed NORTH: Zone D, trav W, Links *FF- NE: 0 Legal.
+Routed DROP : Zone D, trav W, Links *FF- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links *FB- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links *B*- NE: 0 Legal.
-Routed NORTH: Zone D, trav W, Links *BF- NE: 0 Legal.
+Routed EAST : Zone D, trav W, Links *BF- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links *BB- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links F**- NE: 0 Legal.
 Routed EAST : Zone D, trav W, Links F*F- NE: 0 Legal.
@@ -125,23 +125,23 @@ Routed SOUTH: Zone D, trav W, Links FB*- NE: 0 Legal.
 Routed EAST : Zone D, trav W, Links FBF- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links FBB- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links B**- NE: 0 Legal.
-Routed NORTH: Zone D, trav W, Links B*F- NE: 0 Legal.
+Routed EAST : Zone D, trav W, Links B*F- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links B*B- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links BF*- NE: 0 Legal.
-Routed NORTH: Zone D, trav W, Links BFF- NE: 0 Legal.
+Routed DROP : Zone D, trav W, Links BFF- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links BFB- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links BB*- NE: 0 Legal.
-Routed NORTH: Zone D, trav W, Links BBF- NE: 0 Legal.
+Routed EAST : Zone D, trav W, Links BBF- NE: 0 Legal.
 Routed SOUTH: Zone D, trav W, Links BBB- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links ***- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links **F- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links **B- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links *F*- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links *FF- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links *FB- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links *B*- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links *BF- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links *BB- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links ***- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links **F- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links **B- NE: 0 Legal.
+Routed DROP : Zone D, trav N, Links *F*- NE: 0 Legal.
+Routed DROP : Zone D, trav N, Links *FF- NE: 0 Legal.
+Routed DROP : Zone D, trav N, Links *FB- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links *B*- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links *BF- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links *BB- NE: 0 Legal.
 Routed EAST : Zone D, trav N, Links F**- NE: 0 Legal.
 Routed EAST : Zone D, trav N, Links F*F- NE: 0 Legal.
 Routed EAST : Zone D, trav N, Links F*B- NE: 0 Legal.
@@ -151,15 +151,15 @@ Routed DROP : Zone D, trav N, Links FFB- NE: 0 Legal.
 Routed EAST : Zone D, trav N, Links FB*- NE: 0 Legal.
 Routed EAST : Zone D, trav N, Links FBF- NE: 0 Legal.
 Routed EAST : Zone D, trav N, Links FBB- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links B**- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links B*F- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links B*B- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links BF*- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links BFF- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links BFB- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links BB*- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links BBF- NE: 0 Legal.
-Routed NORTH: Zone D, trav N, Links BBB- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links B**- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links B*F- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links B*B- NE: 0 Legal.
+Routed DROP : Zone D, trav N, Links BF*- NE: 0 Legal.
+Routed DROP : Zone D, trav N, Links BFF- NE: 0 Legal.
+Routed DROP : Zone D, trav N, Links BFB- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links BB*- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links BBF- NE: 0 Legal.
+Routed EAST : Zone D, trav N, Links BBB- NE: 0 Legal.
 Routed SOUTH: Zone E, trav S, Links ***- NE: 0 Legal.
 Routed EAST : Zone E, trav S, Links **F- NE: 0 Legal.
 Routed SOUTH: Zone E, trav S, Links **B- NE: 0 Legal.
@@ -188,13 +188,13 @@ Routed SOUTH: Zone E, trav S, Links BB*- NE: 0 Legal.
 Routed EAST : Zone E, trav S, Links BBF- NE: 0 Legal.
 Routed SOUTH: Zone E, trav S, Links BBB- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links ***- NE: 0 Legal.
-Routed NORTH: Zone E, trav W, Links **F- NE: 0 Legal.
+Routed DROP : Zone E, trav W, Links **F- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links **B- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links *F*- NE: 0 Legal.
-Routed NORTH: Zone E, trav W, Links *FF- NE: 0 Legal.
+Routed DROP : Zone E, trav W, Links *FF- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links *FB- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links *B*- NE: 0 Legal.
-Routed NORTH: Zone E, trav W, Links *BF- NE: 0 Legal.
+Routed DROP : Zone E, trav W, Links *BF- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links *BB- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links F**- NE: 0 Legal.
 Routed DROP : Zone E, trav W, Links F*F- NE: 0 Legal.
@@ -206,20 +206,20 @@ Routed SOUTH: Zone E, trav W, Links FB*- NE: 0 Legal.
 Routed DROP : Zone E, trav W, Links FBF- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links FBB- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links B**- NE: 0 Legal.
-Routed NORTH: Zone E, trav W, Links B*F- NE: 0 Legal.
+Routed DROP : Zone E, trav W, Links B*F- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links B*B- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links BF*- NE: 0 Legal.
-Routed NORTH: Zone E, trav W, Links BFF- NE: 0 Legal.
+Routed DROP : Zone E, trav W, Links BFF- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links BFB- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links BB*- NE: 0 Legal.
-Routed NORTH: Zone E, trav W, Links BBF- NE: 0 Legal.
+Routed DROP : Zone E, trav W, Links BBF- NE: 0 Legal.
 Routed SOUTH: Zone E, trav W, Links BBB- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links ***- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links **F- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links **B- NE: 0 Legal.
-Routed NORTH: Zone E, trav N, Links *F*- NE: 0 Legal.
-Routed NORTH: Zone E, trav N, Links *FF- NE: 0 Legal.
-Routed NORTH: Zone E, trav N, Links *FB- NE: 0 Legal.
+Routed DROP : Zone E, trav N, Links *F*- NE: 0 Legal.
+Routed DROP : Zone E, trav N, Links *FF- NE: 0 Legal.
+Routed DROP : Zone E, trav N, Links *FB- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links *B*- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links *BF- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links *BB- NE: 0 Legal.
@@ -235,9 +235,9 @@ Routed EAST : Zone E, trav N, Links FBB- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links B**- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links B*F- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links B*B- NE: 0 Legal.
-Routed NORTH: Zone E, trav N, Links BF*- NE: 0 Legal.
-Routed NORTH: Zone E, trav N, Links BFF- NE: 0 Legal.
-Routed NORTH: Zone E, trav N, Links BFB- NE: 0 Legal.
+Routed DROP : Zone E, trav N, Links BF*- NE: 0 Legal.
+Routed DROP : Zone E, trav N, Links BFF- NE: 0 Legal.
+Routed DROP : Zone E, trav N, Links BFB- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links BB*- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links BBF- NE: 0 Legal.
 Routed EAST : Zone E, trav N, Links BBB- NE: 0 Legal.
@@ -781,24 +781,24 @@ Routed EAST : Zone I, trav S, Links BBF- NE: 1 Legal.
 Routed EAST : Zone I, trav S, Links BBF- NE: 0 Legal.
 Routed EAST : Zone I, trav S, Links BBB- NE: 1 Legal.
 Routed EAST : Zone I, trav S, Links BBB- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links ***- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links ***- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links **F- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links **F- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links **B- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links **B- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links ***- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links ***- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links **F- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links **F- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links **B- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links **B- NE: 0 Legal.
 Routed NORTH: Zone I, trav W, Links *F*- NE: 1 Legal.
 Routed NORTH: Zone I, trav W, Links *F*- NE: 0 Legal.
 Routed NORTH: Zone I, trav W, Links *FF- NE: 1 Legal.
 Routed NORTH: Zone I, trav W, Links *FF- NE: 0 Legal.
 Routed NORTH: Zone I, trav W, Links *FB- NE: 1 Legal.
 Routed NORTH: Zone I, trav W, Links *FB- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links *B*- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links *B*- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links *BF- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links *BF- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links *BB- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links *BB- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links *B*- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links *B*- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links *BF- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links *BF- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links *BB- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links *BB- NE: 0 Legal.
 Routed EAST : Zone I, trav W, Links F**- NE: 1 Legal.
 Routed EAST : Zone I, trav W, Links F**- NE: 0 Legal.
 Routed EAST : Zone I, trav W, Links F*F- NE: 1 Legal.
@@ -817,42 +817,42 @@ Routed EAST : Zone I, trav W, Links FBF- NE: 1 Legal.
 Routed EAST : Zone I, trav W, Links FBF- NE: 0 Legal.
 Routed EAST : Zone I, trav W, Links FBB- NE: 1 Legal.
 Routed EAST : Zone I, trav W, Links FBB- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links B**- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links B**- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links B*F- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links B*F- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links B*B- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links B*B- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links B**- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links B**- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links B*F- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links B*F- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links B*B- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links B*B- NE: 0 Legal.
 Routed NORTH: Zone I, trav W, Links BF*- NE: 1 Legal.
 Routed NORTH: Zone I, trav W, Links BF*- NE: 0 Legal.
 Routed NORTH: Zone I, trav W, Links BFF- NE: 1 Legal.
 Routed NORTH: Zone I, trav W, Links BFF- NE: 0 Legal.
 Routed NORTH: Zone I, trav W, Links BFB- NE: 1 Legal.
 Routed NORTH: Zone I, trav W, Links BFB- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links BB*- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links BB*- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links BBF- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links BBF- NE: 0 Legal.
-Routed EAST : Zone I, trav W, Links BBB- NE: 1 Legal.
-Routed EAST : Zone I, trav W, Links BBB- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links ***- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links ***- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links **F- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links **F- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links **B- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links **B- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links BB*- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links BB*- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links BBF- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links BBF- NE: 0 Legal.
+Routed NORTH: Zone I, trav W, Links BBB- NE: 1 Legal.
+Routed NORTH: Zone I, trav W, Links BBB- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links ***- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links ***- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links **F- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links **F- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links **B- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links **B- NE: 0 Legal.
 Routed NORTH: Zone I, trav N, Links *F*- NE: 1 Legal.
 Routed NORTH: Zone I, trav N, Links *F*- NE: 0 Legal.
 Routed NORTH: Zone I, trav N, Links *FF- NE: 1 Legal.
 Routed NORTH: Zone I, trav N, Links *FF- NE: 0 Legal.
 Routed NORTH: Zone I, trav N, Links *FB- NE: 1 Legal.
 Routed NORTH: Zone I, trav N, Links *FB- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links *B*- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links *B*- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links *BF- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links *BF- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links *BB- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links *BB- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links *B*- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links *B*- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links *BF- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links *BF- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links *BB- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links *BB- NE: 0 Legal.
 Routed EAST : Zone I, trav N, Links F**- NE: 1 Legal.
 Routed EAST : Zone I, trav N, Links F**- NE: 0 Legal.
 Routed EAST : Zone I, trav N, Links F*F- NE: 1 Legal.
@@ -871,24 +871,24 @@ Routed EAST : Zone I, trav N, Links FBF- NE: 1 Legal.
 Routed EAST : Zone I, trav N, Links FBF- NE: 0 Legal.
 Routed EAST : Zone I, trav N, Links FBB- NE: 1 Legal.
 Routed EAST : Zone I, trav N, Links FBB- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links B**- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links B**- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links B*F- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links B*F- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links B*B- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links B*B- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links B**- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links B**- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links B*F- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links B*F- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links B*B- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links B*B- NE: 0 Legal.
 Routed NORTH: Zone I, trav N, Links BF*- NE: 1 Legal.
 Routed NORTH: Zone I, trav N, Links BF*- NE: 0 Legal.
 Routed NORTH: Zone I, trav N, Links BFF- NE: 1 Legal.
 Routed NORTH: Zone I, trav N, Links BFF- NE: 0 Legal.
 Routed NORTH: Zone I, trav N, Links BFB- NE: 1 Legal.
 Routed NORTH: Zone I, trav N, Links BFB- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links BB*- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links BB*- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links BBF- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links BBF- NE: 0 Legal.
-Routed EAST : Zone I, trav N, Links BBB- NE: 1 Legal.
-Routed EAST : Zone I, trav N, Links BBB- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links BB*- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links BB*- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links BBF- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links BBF- NE: 0 Legal.
+Routed NORTH: Zone I, trav N, Links BBB- NE: 1 Legal.
+Routed NORTH: Zone I, trav N, Links BBB- NE: 0 Legal.
 Routed EAST : Zone J, trav S, Links ***- NE: 1 Legal.
 Routed EAST : Zone J, trav S, Links ***- NE: 0 Legal.
 Routed EAST : Zone J, trav S, Links **F- NE: 1 Legal.
@@ -997,24 +997,24 @@ Routed NORTH: Zone J, trav W, Links BBF- NE: 1 Legal.
 Routed NORTH: Zone J, trav W, Links BBF- NE: 0 Legal.
 Routed NORTH: Zone J, trav W, Links BBB- NE: 1 Legal.
 Routed NORTH: Zone J, trav W, Links BBB- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links ***- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links ***- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links **F- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links **F- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links **B- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links **B- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links ***- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links ***- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links **F- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links **F- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links **B- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links **B- NE: 0 Legal.
 Routed NORTH: Zone J, trav N, Links *F*- NE: 1 Legal.
 Routed NORTH: Zone J, trav N, Links *F*- NE: 0 Legal.
 Routed NORTH: Zone J, trav N, Links *FF- NE: 1 Legal.
 Routed NORTH: Zone J, trav N, Links *FF- NE: 0 Legal.
 Routed NORTH: Zone J, trav N, Links *FB- NE: 1 Legal.
 Routed NORTH: Zone J, trav N, Links *FB- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links *B*- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links *B*- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links *BF- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links *BF- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links *BB- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links *BB- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links *B*- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links *B*- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links *BF- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links *BF- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links *BB- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links *BB- NE: 0 Legal.
 Routed EAST : Zone J, trav N, Links F**- NE: 1 Legal.
 Routed EAST : Zone J, trav N, Links F**- NE: 0 Legal.
 Routed EAST : Zone J, trav N, Links F*F- NE: 1 Legal.
@@ -1033,24 +1033,24 @@ Routed EAST : Zone J, trav N, Links FBF- NE: 1 Legal.
 Routed EAST : Zone J, trav N, Links FBF- NE: 0 Legal.
 Routed EAST : Zone J, trav N, Links FBB- NE: 1 Legal.
 Routed EAST : Zone J, trav N, Links FBB- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links B**- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links B**- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links B*F- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links B*F- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links B*B- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links B*B- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links B**- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links B**- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links B*F- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links B*F- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links B*B- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links B*B- NE: 0 Legal.
 Routed NORTH: Zone J, trav N, Links BF*- NE: 1 Legal.
 Routed NORTH: Zone J, trav N, Links BF*- NE: 0 Legal.
 Routed NORTH: Zone J, trav N, Links BFF- NE: 1 Legal.
 Routed NORTH: Zone J, trav N, Links BFF- NE: 0 Legal.
 Routed NORTH: Zone J, trav N, Links BFB- NE: 1 Legal.
 Routed NORTH: Zone J, trav N, Links BFB- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links BB*- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links BB*- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links BBF- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links BBF- NE: 0 Legal.
-Routed EAST : Zone J, trav N, Links BBB- NE: 1 Legal.
-Routed EAST : Zone J, trav N, Links BBB- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links BB*- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links BB*- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links BBF- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links BBF- NE: 0 Legal.
+Routed NORTH: Zone J, trav N, Links BBB- NE: 1 Legal.
+Routed NORTH: Zone J, trav N, Links BBB- NE: 0 Legal.
 Routed EAST : Zone M, trav S, Links ***- NE: 1 Legal.
 Routed EAST : Zone M, trav S, Links ***- NE: 0 Legal.
 Routed EAST : Zone M, trav S, Links **F- NE: 1 Legal.
@@ -1241,13 +1241,13 @@ Routed SOUTH: Zone O, trav S, Links BB*- NE: 0 Legal.
 Routed EAST : Zone O, trav S, Links BBF- NE: 0 Legal.
 Routed SOUTH: Zone O, trav S, Links BBB- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links ***- NE: 0 Legal.
-Routed NORTH: Zone O, trav W, Links **F- NE: 0 Legal.
+Routed DROP : Zone O, trav W, Links **F- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links **B- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links *F*- NE: 0 Legal.
-Routed NORTH: Zone O, trav W, Links *FF- NE: 0 Legal.
+Routed DROP : Zone O, trav W, Links *FF- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links *FB- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links *B*- NE: 0 Legal.
-Routed NORTH: Zone O, trav W, Links *BF- NE: 0 Legal.
+Routed DROP : Zone O, trav W, Links *BF- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links *BB- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links F**- NE: 0 Legal.
 Routed DROP : Zone O, trav W, Links F*F- NE: 0 Legal.
@@ -1259,23 +1259,23 @@ Routed SOUTH: Zone O, trav W, Links FB*- NE: 0 Legal.
 Routed DROP : Zone O, trav W, Links FBF- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links FBB- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links B**- NE: 0 Legal.
-Routed NORTH: Zone O, trav W, Links B*F- NE: 0 Legal.
+Routed DROP : Zone O, trav W, Links B*F- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links B*B- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links BF*- NE: 0 Legal.
-Routed NORTH: Zone O, trav W, Links BFF- NE: 0 Legal.
+Routed DROP : Zone O, trav W, Links BFF- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links BFB- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links BB*- NE: 0 Legal.
-Routed NORTH: Zone O, trav W, Links BBF- NE: 0 Legal.
+Routed DROP : Zone O, trav W, Links BBF- NE: 0 Legal.
 Routed SOUTH: Zone O, trav W, Links BBB- NE: 0 Legal.
 Routed SOUTH: Zone O, trav N, Links ***- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links **F- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links **B- NE: 0 Legal.
+Routed EAST : Zone O, trav N, Links **F- NE: 0 Legal.
+Routed EAST : Zone O, trav N, Links **B- NE: 0 Legal.
 Routed SOUTH: Zone O, trav N, Links *F*- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links *FF- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links *FB- NE: 0 Legal.
+Routed DROP : Zone O, trav N, Links *FF- NE: 0 Legal.
+Routed DROP : Zone O, trav N, Links *FB- NE: 0 Legal.
 Routed SOUTH: Zone O, trav N, Links *B*- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links *BF- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links *BB- NE: 0 Legal.
+Routed EAST : Zone O, trav N, Links *BF- NE: 0 Legal.
+Routed EAST : Zone O, trav N, Links *BB- NE: 0 Legal.
 Routed SOUTH: Zone O, trav N, Links F**- NE: 0 Legal.
 Routed EAST : Zone O, trav N, Links F*F- NE: 0 Legal.
 Routed EAST : Zone O, trav N, Links F*B- NE: 0 Legal.
@@ -1286,14 +1286,14 @@ Routed SOUTH: Zone O, trav N, Links FB*- NE: 0 Legal.
 Routed EAST : Zone O, trav N, Links FBF- NE: 0 Legal.
 Routed EAST : Zone O, trav N, Links FBB- NE: 0 Legal.
 Routed SOUTH: Zone O, trav N, Links B**- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links B*F- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links B*B- NE: 0 Legal.
+Routed EAST : Zone O, trav N, Links B*F- NE: 0 Legal.
+Routed EAST : Zone O, trav N, Links B*B- NE: 0 Legal.
 Routed SOUTH: Zone O, trav N, Links BF*- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links BFF- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links BFB- NE: 0 Legal.
+Routed DROP : Zone O, trav N, Links BFF- NE: 0 Legal.
+Routed DROP : Zone O, trav N, Links BFB- NE: 0 Legal.
 Routed SOUTH: Zone O, trav N, Links BB*- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links BBF- NE: 0 Legal.
-Routed NORTH: Zone O, trav N, Links BBB- NE: 0 Legal.
+Routed EAST : Zone O, trav N, Links BBF- NE: 0 Legal.
+Routed EAST : Zone O, trav N, Links BBB- NE: 0 Legal.
 Routed EAST : Zone P, trav S, Links ***- NE: 1 Legal.
 Routed EAST : Zone P, trav S, Links ***- NE: 0 Legal.
 Routed EAST : Zone P, trav S, Links **F- NE: 1 Legal.
@@ -1600,21 +1600,21 @@ Routed EAST : Zone Q, trav N, Links FBF- NE: 1 Legal.
 Routed EAST : Zone Q, trav N, Links FBF- NE: 0 Legal.
 Routed EAST : Zone Q, trav N, Links FBB- NE: 1 Legal.
 Routed EAST : Zone Q, trav N, Links FBB- NE: 0 Legal.
-Routed EAST : Zone Q, trav N, Links B**- NE: 1 Legal.
-Routed EAST : Zone Q, trav N, Links B**- NE: 0 Legal.
-Routed EAST : Zone Q, trav N, Links B*F- NE: 1 Legal.
-Routed EAST : Zone Q, trav N, Links B*F- NE: 0 Legal.
-Routed EAST : Zone Q, trav N, Links B*B- NE: 1 Legal.
-Routed EAST : Zone Q, trav N, Links B*B- NE: 0 Legal.
+Routed NORTH: Zone Q, trav N, Links B**- NE: 1 Legal.
+Routed NORTH: Zone Q, trav N, Links B**- NE: 0 Legal.
+Routed NORTH: Zone Q, trav N, Links B*F- NE: 1 Legal.
+Routed NORTH: Zone Q, trav N, Links B*F- NE: 0 Legal.
+Routed NORTH: Zone Q, trav N, Links B*B- NE: 1 Legal.
+Routed NORTH: Zone Q, trav N, Links B*B- NE: 0 Legal.
 Routed NORTH: Zone Q, trav N, Links BF*- NE: 1 Legal.
 Routed NORTH: Zone Q, trav N, Links BF*- NE: 0 Legal.
 Routed NORTH: Zone Q, trav N, Links BFF- NE: 1 Legal.
 Routed NORTH: Zone Q, trav N, Links BFF- NE: 0 Legal.
 Routed NORTH: Zone Q, trav N, Links BFB- NE: 1 Legal.
 Routed NORTH: Zone Q, trav N, Links BFB- NE: 0 Legal.
-Routed EAST : Zone Q, trav N, Links BB*- NE: 1 Legal.
-Routed EAST : Zone Q, trav N, Links BB*- NE: 0 Legal.
-Routed EAST : Zone Q, trav N, Links BBF- NE: 1 Legal.
-Routed EAST : Zone Q, trav N, Links BBF- NE: 0 Legal.
-Routed EAST : Zone Q, trav N, Links BBB- NE: 1 Legal.
-Routed EAST : Zone Q, trav N, Links BBB- NE: 0 Legal.
+Routed NORTH: Zone Q, trav N, Links BB*- NE: 1 Legal.
+Routed NORTH: Zone Q, trav N, Links BB*- NE: 0 Legal.
+Routed NORTH: Zone Q, trav N, Links BBF- NE: 1 Legal.
+Routed NORTH: Zone Q, trav N, Links BBF- NE: 0 Legal.
+Routed NORTH: Zone Q, trav N, Links BBB- NE: 1 Legal.
+Routed NORTH: Zone Q, trav N, Links BBB- NE: 0 Legal.

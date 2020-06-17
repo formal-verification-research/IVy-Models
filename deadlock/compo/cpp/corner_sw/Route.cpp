@@ -55,7 +55,7 @@ bool routeSafe(char z, char trav, char northLink, char eastLink, char southLink,
   // Go north if...
   else if ( 
     northLink != 1 && northLink != '-' && ( trav != 's' ) &&
-    (ZB || ZC || ZD || ZE || ZO) 
+    (ZG || ZH || ZI || ZJ || ZK || ZL || ZM || ZQ) 
   ) { dirRouted = 0; }
 
   // ELSE
