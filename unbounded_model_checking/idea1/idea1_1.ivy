@@ -1,0 +1,51 @@
+#lang ivy1.7
+
+type zoneIdentifiers = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r}
+type dir = {north,east,south,west,new} #eventually make this extend to north_many...
+
+object flit = {
+  
+  var sent4 : dir
+  var sent3 : dir
+  var sent2 : dir
+  var sent1 : dir
+  var sent0 : dir
+  
+  var currentZone : zoneIdentifiers
+  
+  var delivered : bool
+
+  after init {
+    sent4 := new;
+    sent3 := new;
+    sent2 := new;
+    sent1 := new;
+    sent0 := new;
+    currentZone := *;
+    assume currentZone ~= r;
+    delivered := false;
+  }
+
+} #end flit
+
+
+
+object router = {
+
+  action route = {
+    
+    if flit.currentZone = r {
+      flit.delivered := true;
+    }
+    
+  }
+  export route
+
+} #end router
+
+
+
+action getNextZone = {
+
+
+} #end getNextZone
