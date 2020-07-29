@@ -43,7 +43,8 @@ object flit = {
 
 } #end flit
 
-invariant ~(sent4 = n1 & sent3 = e1 & sent2 = s1 & sent1 = w1 & sent0 = n1)
+invariant ~(sent4 = n1 & sent3 = e1 & sent2 = s1 & sent1 = w1 & sent0 = n1) 
+# invariant (sent4 = n1 & sent3 = e1 & sent2 = s1 & sent1 = w1 & sent0 = n1) -> some_scenario_trace_thing
 
 
 attribute method = mc

@@ -42,7 +42,7 @@ While !delivered
   else if southLink = free & 
           travel = {east,south,west,new} & 
           zone = {a,b,c,d,e,f,n,o,p} & 
-          (travel = {north,south,west,new} | dest_NE)
+          (travel = {north,south,west,new} | ~dest_NE)
     route south
   
   else if eastLink = free & 

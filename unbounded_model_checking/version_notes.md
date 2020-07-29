@@ -1,3 +1,10 @@
+# VERSION 1
+This version is a rough version that only validates that the routing protocol actually routes the flits.
+
+## 1.1
+
+
+
 # VERSION 0
 This version exists only to test the model checking capability in IVy. Nothing real gets tested here.
 
@@ -15,5 +22,3 @@ Playing with the idea of a ~delivered invariant
 
 ## 0.5
 Playing with bit vectors as a move counter (flag likely livelocks?). Works great in model checker, not so much in IVy.
-
-
