@@ -2,7 +2,7 @@
 
 type zoneIdentifiers = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,x}
 type dir = {nm,n1,em,e1,sm,s1,wm,w1,new}
-type linkStatuses = {free,faulty,edge}
+type linkStatuses = {free,faulty,edge,default}
 
 object flit = {
   
@@ -199,27 +199,55 @@ object node = {
   var westLink  : linkStatuses
   var destNE : bool
   
+  after init {
+    northLink := default;
+    eastLink := default;
+    southLink := default;
+    westLink := default;
+  }
+  
   action getLinks = { #eventually change this
-    northLink := *;
-    eastLink  := *;
-    southLink := *;
-    westLink := *;
-    destNE := *;
     
-    if ~abcdefnop {
+    if (northLink = default) {
+    northLink := *;
+    assume northLink ~= default;
+    };
+    if (eastLink = default) {
+    eastLink := *;
+    assume eastLink ~= default;
+    };
+    if (southLink = default) {
+    southLink := *;
+    assume southLink ~= default;
+    };
+    if (westLink = default) {
+    westLink := *;
+    assume westLink ~= default;
+    };
+    
+    if ~((flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = s1 | flit.sent1 = sm) | (flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = w1 | flit.sent1 = wm)) {
+      northLink := *;
+      eastLink  := *;
+      southLink := *;
+      westLink := *;
+      destNE := *;
+      assume northLink ~= default & eastLink ~= default & southLink ~= default & westLink ~= default;
+    };
+    
+    if ~router.abcdefnop {
       assume ~(northLink = edge);
     };
-    if ~abcjklnoq {
+    if ~router.abcjklnoq {
       assume ~(eastLink = edge);
     };
-    if ~afghijklmnpq {
+    if ~router.afghijklmnpq {
       assume ~(southLink = edge);
     };
-    if ~cdefghijmopq {
+    if ~router.cdefghijmopq {
       assume ~(westLink = edge);
     };
     
-    assume ~(northLink = edge & southLink = edge) & ~(eastLink = edge & westLink = edge)
+    assume ~(northLink = edge & southLink = edge) & ~(eastLink = edge & westLink = edge);    
     
   } #end getLinks
   
@@ -505,4 +533,5 @@ object node = {
 
 
 invariant ~(flit.sent4 = n1 & flit.sent3 = e1 & flit.sent2 = s1 & flit.sent1 = w1 & flit.sent0 = n1)
+invariant ~(flit.sent4 = w1 & flit.sent3 = s1 & flit.sent2 = e1 & flit.sent1 = n1 & flit.sent0 = w1)
 
