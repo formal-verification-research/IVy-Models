@@ -205,22 +205,6 @@ object node = {
     southLink := *;
     westLink := *;
     destNE := *;
-    
-    if ~abcdefnop {
-      assume ~(northLink = edge);
-    };
-    if ~abcjklnoq {
-      assume ~(eastLink = edge);
-    };
-    if ~afghijklmnpq {
-      assume ~(southLink = edge);
-    };
-    if ~cdefghijmopq {
-      assume ~(westLink = edge);
-    };
-    
-    assume ~(northLink = edge & southLink = edge) & ~(eastLink = edge & westLink = edge)
-    
   } #end getLinks
   
   action getNextZone = { #this if statement will need MUCH more development... this is just good enough to test.
