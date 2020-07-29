@@ -3,3 +3,4 @@
 2x2-model/ivy.smt2
 *.smt2
 settings.json
+*.ai
