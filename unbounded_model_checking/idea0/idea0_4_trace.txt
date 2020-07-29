@@ -1,0 +1,211 @@
+
+Isolate this:
+
+********************************************************************************
+
+idea0_4.ivy: line 62: Model checking invariant
+idea0_4.ivy: line 63: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpeKC0bS.aig; pdr; write_aiger_cex  /tmp/tmpeKC0bS.out".
+
+Output 0 of miter "/tmp/tmpeKC0bS" was asserted in frame 7.  Time =     0.00 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+idea0_4.ivy: line 16: sent4 := x
+
+[
+    sent4 = x
+]
+idea0_4.ivy: line 17: sent3 := x
+
+[
+    sent3 = x
+]
+idea0_4.ivy: line 18: sent2 := x
+
+[
+    sent2 = x
+]
+idea0_4.ivy: line 19: sent1 := x
+
+[
+    sent1 = x
+]
+idea0_4.ivy: line 20: sent0 := x
+
+[
+    sent0 = x
+]
+idea0_4.ivy: line 21: delivered := false
+
+[
+    delivered = false
+]
+__init := true
+
+err_flag := false
+
+call ext:router.routeWherever
+
+{
+    idea0_4.ivy: line 30: sent4 := sent3
+
+    idea0_4.ivy: line 31: sent3 := sent2
+
+    idea0_4.ivy: line 32: sent2 := sent1
+
+    idea0_4.ivy: line 33: sent1 := sent0
+
+    idea0_4.ivy: line 34: sent0 := *
+
+    [
+        sent0 = nm
+    ]
+}
+
+err_flag := false
+
+call ext:router.routeWherever
+
+{
+    idea0_4.ivy: line 30: sent4 := sent3
+
+    idea0_4.ivy: line 31: sent3 := sent2
+
+    idea0_4.ivy: line 32: sent2 := sent1
+
+    idea0_4.ivy: line 33: sent1 := sent0
+
+    [
+        sent1 = nm
+    ]
+    idea0_4.ivy: line 34: sent0 := *
+
+    [
+        sent0 = e1
+    ]
+}
+
+err_flag := false
+
+call ext:router.routeWherever
+
+{
+    idea0_4.ivy: line 30: sent4 := sent3
+
+    idea0_4.ivy: line 31: sent3 := sent2
+
+    idea0_4.ivy: line 32: sent2 := sent1
+
+    [
+        sent2 = nm
+    ]
+    idea0_4.ivy: line 33: sent1 := sent0
+
+    [
+        sent1 = e1
+    ]
+    idea0_4.ivy: line 34: sent0 := *
+
+    [
+        sent0 = s1
+    ]
+}
+
+err_flag := false
+
+call ext:router.routeWherever
+
+{
+    idea0_4.ivy: line 30: sent4 := sent3
+
+    idea0_4.ivy: line 31: sent3 := sent2
+
+    [
+        sent3 = nm
+    ]
+    idea0_4.ivy: line 32: sent2 := sent1
+
+    [
+        sent2 = e1
+    ]
+    idea0_4.ivy: line 33: sent1 := sent0
+
+    [
+        sent1 = s1
+    ]
+    idea0_4.ivy: line 34: sent0 := *
+
+    [
+        sent0 = w1
+    ]
+}
+
+err_flag := false
+
+call ext:router.routeWherever
+
+{
+    idea0_4.ivy: line 30: sent4 := sent3
+
+    [
+        sent4 = nm
+    ]
+    idea0_4.ivy: line 31: sent3 := sent2
+
+    [
+        sent3 = e1
+    ]
+    idea0_4.ivy: line 32: sent2 := sent1
+
+    [
+        sent2 = s1
+    ]
+    idea0_4.ivy: line 33: sent1 := sent0
+
+    [
+        sent1 = w1
+    ]
+    idea0_4.ivy: line 34: sent0 := *
+
+    [
+        sent0 = nm
+    ]
+    idea0_4.ivy: line 37: sent0 := s1
+
+    [
+        sent0 = s1
+    ]
+}
+
+err_flag := false
+
+call ext:flit.testThing
+
+{
+    idea0_4.ivy: line 52: delivered := true
+
+    [
+        delivered = true
+    ]
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************
