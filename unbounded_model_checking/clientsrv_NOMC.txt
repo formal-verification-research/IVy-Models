@@ -1,0 +1,41 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        clientsrv_mc.ivy: line 27: invar2
+
+    The following action implementations are present:
+        clientsrv_mc.ivy: line 14: implementation of connect
+        clientsrv_mc.ivy: line 21: implementation of disconnect
+
+    The following initializers are present:
+        clientsrv_mc.ivy: line 9: init[after1]
+
+    Initialization must establish the invariant
+        clientsrv_mc.ivy: line 27: invar2 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:connect
+            clientsrv_mc.ivy: line 27: invar2 ... FAIL
+searching for a small model... done
+[
+    @Y = 0
+    @Z = 1
+    @X = 0
+]
+call connect
+
+{
+    [
+        fml:y = 0
+        fml:x = 0
+    ]
+    clientsrv_mc.ivy: line 17: link(fml:x,fml:y) := true
+
+    clientsrv_mc.ivy: line 18: semaphore(fml:y) := false
+
+}
+
+

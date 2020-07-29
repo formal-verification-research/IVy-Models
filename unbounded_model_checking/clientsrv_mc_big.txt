@@ -1,0 +1,136 @@
+
+Isolate this:
+
+********************************************************************************
+
+clientsrv_mc.ivy: line 27: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpT8tu8R.aig; pdr; write_aiger_cex  /tmp/tmpT8tu8R.out".
+
+Output 0 of miter "/tmp/tmpT8tu8R" was asserted in frame 4.  Time =     0.09 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+[
+    __Y = 0
+    __X = 0
+    __Z = 0
+]
+err_flag := false
+
+clientsrv_mc.ivy: line 10: semaphore(W) := true
+
+[
+    semaphore(0) = true
+    semaphore(1) = true
+    semaphore(2) = true
+]
+clientsrv_mc.ivy: line 11: link(X,Y) := false
+
+[
+    link(0,0) = false
+    link(1,0) = false
+    link(2,0) = false
+    link(3,0) = false
+    link(4,0) = false
+    link(5,0) = false
+    link(6,0) = false
+    link(7,0) = false
+    link(8,0) = false
+    link(0,1) = false
+    link(1,1) = false
+    link(2,1) = false
+    link(3,1) = false
+    link(4,1) = false
+    link(5,1) = false
+    link(6,1) = false
+    link(7,1) = false
+    link(8,1) = false
+    link(0,2) = false
+    link(1,2) = false
+    link(2,2) = false
+    link(3,2) = false
+    link(4,2) = false
+    link(5,2) = false
+    link(6,2) = false
+    link(7,2) = false
+    link(8,2) = false
+]
+__init := true
+
+err_flag := false
+
+call ext:connect
+
+{
+    [
+        fml:y = 1
+        fml:x = 8
+    ]
+    clientsrv_mc.ivy: line 17: link(fml:x,fml:y) := true
+
+    [
+        link(8,1) = true
+    ]
+    clientsrv_mc.ivy: line 18: semaphore(fml:y) := false
+
+    [
+        semaphore(1) = false
+    ]
+}
+
+err_flag := false
+
+call ext:connect
+
+{
+    [
+        fml:y = 2
+        fml:x = 1
+    ]
+    clientsrv_mc.ivy: line 17: link(fml:x,fml:y) := true
+
+    [
+        link(1,2) = true
+    ]
+    clientsrv_mc.ivy: line 18: semaphore(fml:y) := false
+
+    [
+        semaphore(2) = false
+    ]
+}
+
+err_flag := false
+
+call ext:connect
+
+{
+    [
+        fml:y = 1
+        fml:x = 7
+    ]
+    clientsrv_mc.ivy: line 17: link(fml:x,fml:y) := true
+
+    [
+        link(7,1) = true
+    ]
+    clientsrv_mc.ivy: line 18: semaphore(fml:y) := false
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************

@@ -1,0 +1,51 @@
+#lang ivy1.7
+
+# type zone = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r}
+type dir = {nm,n1,em,e1,sm,s1,wm,w1,x}
+
+# var current : zone
+var sent4 : dir
+var sent3 : dir
+var sent2 : dir
+var sent1 : dir
+var sent0 : dir
+
+object spec = {
+
+  after init {
+    sent4 := x;
+    sent3 := x;
+    sent2 := x;
+    sent1 := x;
+    sent0 := x;
+  }
+
+} #end spec
+
+
+object router = {
+
+  action routeWherever = {
+    sent4 := sent3;
+    sent3 := sent2;
+    sent2 := sent1;
+    sent1 := sent0;
+    sent0 := *;
+  } #end changeA
+  
+  export routeWherever
+
+} #end router
+
+
+object flit = {
+
+  
+
+} #end flit
+
+invariant !(
+
+# invariant current = a
+
+attribute method = mc

@@ -1,0 +1,113 @@
+
+Isolate this:
+
+********************************************************************************
+
+clientsrv_mc.ivy: line 27: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpfC_ALl.aig; pdr; write_aiger_cex  /tmp/tmpfC_ALl.out".
+
+Output 0 of miter "/tmp/tmpfC_ALl" was asserted in frame 4.  Time =     0.02 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+[
+    __X = 0
+    __Z = 0
+    __Y = 0
+]
+err_flag := false
+
+clientsrv_mc.ivy: line 10: semaphore(W) := true
+
+[
+    semaphore(0) = true
+    semaphore(1) = true
+]
+clientsrv_mc.ivy: line 11: link(X,Y) := false
+
+[
+    link(0,0) = false
+    link(1,0) = false
+    link(2,0) = false
+    link(0,1) = false
+    link(1,1) = false
+    link(2,1) = false
+]
+__init := true
+
+err_flag := false
+
+call ext:connect
+
+{
+    [
+        fml:y = 0
+        fml:x = 0
+    ]
+    clientsrv_mc.ivy: line 17: link(fml:x,fml:y) := true
+
+    [
+        link(0,0) = true
+    ]
+    clientsrv_mc.ivy: line 18: semaphore(fml:y) := false
+
+    [
+        semaphore(0) = false
+    ]
+}
+
+err_flag := false
+
+call ext:connect
+
+{
+    [
+        fml:y = 1
+    ]
+    clientsrv_mc.ivy: line 17: link(fml:x,fml:y) := true
+
+    [
+        link(0,1) = true
+    ]
+    clientsrv_mc.ivy: line 18: semaphore(fml:y) := false
+
+    [
+        semaphore(1) = false
+    ]
+}
+
+err_flag := false
+
+call ext:connect
+
+{
+    [
+        fml:y = 0
+        fml:x = 1
+    ]
+    clientsrv_mc.ivy: line 17: link(fml:x,fml:y) := true
+
+    [
+        link(1,0) = true
+    ]
+    clientsrv_mc.ivy: line 18: semaphore(fml:y) := false
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************
