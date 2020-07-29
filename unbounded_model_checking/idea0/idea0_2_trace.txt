@@ -1,0 +1,24 @@
+
+Isolate this:
+
+********************************************************************************
+
+idea0_1.ivy: line 49: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpb4YDIA.aig; pdr; write_aiger_cex  /tmp/tmpb4YDIA.out".
+
+Invariant F[2] : 1 clauses with 9 flops (out of 23) (cex = 0, ave = 22.00)
+Verification of invariant with 1 clauses was successful.  Time =     0.00 sec
+Property proved.  Time =     0.00 sec
+There is no current CEX.
+--------------------------------------------------------------------------------
+
+PASS
+
+OK

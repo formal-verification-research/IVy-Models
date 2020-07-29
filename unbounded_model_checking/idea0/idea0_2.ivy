@@ -30,6 +30,11 @@ object router = {
     sent1 := sent0;
     sent0 := *;
     
+    if sent1 = w1 {
+      require sent0 ~= n1;
+    };
+    
+    
   } #end routeWherever
   
   export routeWherever
