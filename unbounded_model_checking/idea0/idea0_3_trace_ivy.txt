@@ -1,0 +1,44 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        idea0_3.ivy: line 61: invar2
+        idea0_3.ivy: line 62: invar3
+
+    The following action implementations are present:
+        idea0_3.ivy: line 49: implementation of flit.testThing
+        idea0_3.ivy: line 29: implementation of router.routeWherever
+
+    The following initializers are present:
+        idea0_3.ivy: line 15: spec.init[after1]
+
+    Initialization must establish the invariant
+        idea0_3.ivy: line 61: invar2 ... PASS
+        idea0_3.ivy: line 62: invar3 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:flit.testThing
+            idea0_3.ivy: line 61: invar2 ... PASS
+            idea0_3.ivy: line 62: invar3 ... FAIL
+searching for a small model... done
+[
+    sent3 = n1
+    sent4 = nm
+    sent1 = w1
+    sent2 = n1
+    sent0 = n1
+    test = false
+]
+call flit.testThing
+
+{
+    idea0_3.ivy: line 52: test := true
+
+    [
+        test = true
+    ]
+}
+
+
