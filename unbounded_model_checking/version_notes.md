@@ -1,9 +1,27 @@
+# Just a note
+Do we really need the indicators of many vs one if we're livelock-free in a system that considers the option of a flit going an arbitrary number of times in one direction? See version 1.3 lines 359-772
+
 # VERSION 1
 This version is a rough version that only validates that the routing protocol actually routes the flits.
 
 ## 1.1
+First glimpse at successful livelock detection!
 
+## 1.2
+Livelock-free with very limited rules
 
+## 1.3
+Same great features as 1.2 plus better fault recall!
+First glimpse at actually livelock free system!
+
+### 1.4
+Fault tolerance up to 3 faults? because why not
+
+### 1.5
+What. It's fault tolerant up to 4 faults. This is exciting!
+
+### 1.6
+Okay but 5 faults definitely crashes it. Whoops!
 
 # VERSION 0
 This version exists only to test the model checking capability in IVy. Nothing real gets tested here.
