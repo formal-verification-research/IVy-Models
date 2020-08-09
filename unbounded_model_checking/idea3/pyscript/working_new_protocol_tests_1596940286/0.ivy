@@ -223,7 +223,7 @@ object router = {
       # flit.sent0 := west;
       call west1;
     }
-    else if node.southLink = free & negTrav & (abcdefnop | (cdefghijmopq & node.westLink = faulty)) { #& (abcefghjklnoq | cdefghijmopq) { #removed from former new protocol
+    else if node.southLink = free & negTrav & (abcdefnop | (cdefghijmopq & node.westLink = faulty)) { #& (abcefghjklnoq | cdefghijmopq) {
       # flit.sent0 := south;
       call south1;
     }
@@ -241,7 +241,7 @@ object router = {
       # flit.sent0 := west;
       call west2;
     }
-    else if node.southLink = free & notNorth & abcdefnop { #& (notEast | ~destNE)  { #removed from former new protocol
+    else if node.southLink = free & notNorth & abcdefnop { #& (notEast | ~destNE)  { #removed from old protocol
       # flit.sent0 := south;
       call south2;
     }
