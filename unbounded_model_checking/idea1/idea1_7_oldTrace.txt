@@ -1,0 +1,35 @@
+
+Isolate this:
+
+********************************************************************************
+
+idea1_7_old_protocol.ivy: line 740: Model checking invariant
+idea1_7_old_protocol.ivy: line 741: Model checking invariant
+idea1_7_old_protocol.ivy: line 742: Model checking invariant
+idea1_7_old_protocol.ivy: line 743: Model checking invariant
+idea1_7_old_protocol.ivy: line 745: Model checking invariant
+idea1_7_old_protocol.ivy: line 746: Model checking invariant
+idea1_7_old_protocol.ivy: line 747: Model checking invariant
+idea1_7_old_protocol.ivy: line 748: Model checking invariant
+idea1_7_old_protocol.ivy: line 751: Model checking invariant
+idea1_7_old_protocol.ivy: line 752: Model checking invariant
+idea1_7_old_protocol.ivy: line 754: Model checking invariant
+idea1_7_old_protocol.ivy: line 755: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpK53GTW.aig; pdr; write_aiger_cex  /tmp/tmpK53GTW.out".
+
+Invariant F[5] : 92 clauses with 38 flops (out of 111) (cex = 0, ave = 28.60)
+Verification of invariant with 92 clauses was successful.  Time =     0.02 sec
+Property proved.  Time =     0.36 sec
+There is no current CEX.
+--------------------------------------------------------------------------------
+
+PASS
+
+OK

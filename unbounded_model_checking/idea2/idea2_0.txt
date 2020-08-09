@@ -1,0 +1,1141 @@
+
+Isolate this:
+
+********************************************************************************
+
+idea2_0.ivy: line 758: Model checking invariant
+idea2_0.ivy: line 759: Model checking invariant
+idea2_0.ivy: line 760: Model checking invariant
+idea2_0.ivy: line 761: Model checking invariant
+idea2_0.ivy: line 763: Model checking invariant
+idea2_0.ivy: line 764: Model checking invariant
+idea2_0.ivy: line 765: Model checking invariant
+idea2_0.ivy: line 766: Model checking invariant
+idea2_0.ivy: line 768: Model checking invariant
+idea2_0.ivy: line 769: Model checking invariant
+idea2_0.ivy: line 771: Model checking invariant
+idea2_0.ivy: line 772: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpeRf4cn.aig; pdr; write_aiger_cex  /tmp/tmpeRf4cn.out".
+
+Output 0 of miter "/tmp/tmpeRf4cn" was asserted in frame 6.  Time =     0.09 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+idea2_0.ivy: line 28: flit.sent4 := new
+
+[
+    flit.sent4 = new
+]
+idea2_0.ivy: line 29: flit.sent3 := new
+
+[
+    flit.sent3 = new
+]
+idea2_0.ivy: line 30: flit.sent2 := new
+
+[
+    flit.sent2 = new
+]
+idea2_0.ivy: line 31: flit.sent1 := new
+
+[
+    flit.sent1 = new
+]
+idea2_0.ivy: line 32: flit.sent0 := new
+
+[
+    flit.sent0 = new
+]
+idea2_0.ivy: line 34: flit.zn4 := x
+
+idea2_0.ivy: line 35: flit.zn3 := x
+
+[
+    flit.zn3 = x
+]
+idea2_0.ivy: line 36: flit.zn2 := x
+
+[
+    flit.zn2 = x
+]
+idea2_0.ivy: line 37: flit.zn1 := x
+
+[
+    flit.zn1 = x
+]
+idea2_0.ivy: line 39: node.northLink := default
+
+idea2_0.ivy: line 40: node.eastLink := default
+
+idea2_0.ivy: line 41: node.southLink := default
+
+idea2_0.ivy: line 42: node.westLink := default
+
+idea2_0.ivy: line 43: node.northLink1 := default
+
+idea2_0.ivy: line 44: node.eastLink1 := default
+
+idea2_0.ivy: line 45: node.southLink1 := default
+
+idea2_0.ivy: line 46: node.westLink1 := default
+
+idea2_0.ivy: line 47: node.northLink2 := default
+
+idea2_0.ivy: line 48: node.eastLink2 := default
+
+idea2_0.ivy: line 49: node.southLink2 := default
+
+idea2_0.ivy: line 50: node.westLink2 := default
+
+idea2_0.ivy: line 51: node.northLink3 := default
+
+idea2_0.ivy: line 52: node.eastLink3 := default
+
+idea2_0.ivy: line 53: node.southLink3 := default
+
+idea2_0.ivy: line 54: node.westLink3 := default
+
+idea2_0.ivy: line 55: node.northLink4 := default
+
+idea2_0.ivy: line 56: node.eastLink4 := default
+
+idea2_0.ivy: line 57: node.southLink4 := default
+
+idea2_0.ivy: line 58: node.westLink4 := default
+
+idea2_0.ivy: line 60: flit.zn0 := *
+
+[
+    flit.zn0 = j
+]
+idea2_0.ivy: line 61: assume err_flag | flit.zn0 ~= x
+
+idea2_0.ivy: line 63: destNE := *
+
+[
+    destNE = false
+]
+idea2_0.ivy: line 65: flit.livelock_free := false
+
+[
+    flit.livelock_free = false
+]
+idea2_0.ivy: line 250: call node.getLinks
+{
+    [
+        0:number = new_node.faultCounter = true
+    ]
+    idea2_0.ivy: line 259: node.isLoop := false
+
+    idea2_0.ivy: line 312: node.northLink := *
+
+    idea2_0.ivy: line 312: assume err_flag | node.northLink ~= default
+
+    idea2_0.ivy: line 313: node.eastLink := *
+
+    idea2_0.ivy: line 313: assume err_flag | node.eastLink ~= default
+
+    idea2_0.ivy: line 314: node.southLink := *
+
+    idea2_0.ivy: line 314: assume err_flag | node.southLink ~= default
+
+    idea2_0.ivy: line 315: node.westLink := *
+
+    idea2_0.ivy: line 315: assume err_flag | node.westLink ~= default
+
+    idea2_0.ivy: line 319: assume err_flag | node.northLink ~= edge
+
+    idea2_0.ivy: line 328: assume err_flag | node.westLink ~= edge
+
+    idea2_0.ivy: line 344: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+    idea2_0.ivy: line 347: node.faultCounter := 0:number
+
+    [
+        node.faultCounter = new_node.faultCounter = false
+        node.faultCounter + 1 = new_node.faultCounter = true
+    ]
+    idea2_0.ivy: line 367: node.faultCounter := node.faultCounter + 1
+
+    idea2_0.ivy: line 374: assume err_flag | node.faultCounter <= 2
+
+    __init := true
+
+    [
+        router.acefghijklnoq = true
+        router.notWest = true
+        router.fghijmpq = false
+        router.westNew = false
+        node.westLink = faulty
+        router.abcdefnop = false
+        router.ghijklmnpq = false
+        router.abcjklnoq = true
+        router.abcfhijknop = false
+        node.northLink = free
+        router.afghijklmnpq = true
+        router.negTrav = true
+        router.cjoqdip = false
+        router.notNorth = false
+        router.cdefghijmopq = false
+        router.efghm = true
+        router.notEast = false
+        node.isLoop = false
+        node.eastLink = edge
+        node.southLink = free
+        router.notSouth = true
+        node.faultCounter < 2 = true
+        2:number = node.faultCounter = false
+    ]
+}
+
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    idea2_0.ivy: line 70: flit.sent4 := flit.sent3
+
+    idea2_0.ivy: line 71: flit.sent3 := flit.sent2
+
+    idea2_0.ivy: line 72: flit.sent2 := flit.sent1
+
+    idea2_0.ivy: line 73: flit.sent1 := flit.sent0
+
+    idea2_0.ivy: line 75: flit.zn4 := flit.zn3
+
+    idea2_0.ivy: line 76: flit.zn3 := flit.zn2
+
+    idea2_0.ivy: line 77: flit.zn2 := flit.zn1
+
+    idea2_0.ivy: line 78: flit.zn1 := flit.zn0
+
+    [
+        flit.zn1 = j
+    ]
+    idea2_0.ivy: line 80: node.northLink1 := node.northLink
+
+    idea2_0.ivy: line 81: node.eastLink1 := node.eastLink
+
+    idea2_0.ivy: line 82: node.southLink1 := node.southLink
+
+    idea2_0.ivy: line 83: node.westLink1 := node.westLink
+
+    idea2_0.ivy: line 84: node.northLink2 := node.northLink1
+
+    idea2_0.ivy: line 85: node.eastLink2 := node.eastLink1
+
+    idea2_0.ivy: line 86: node.southLink2 := node.southLink1
+
+    idea2_0.ivy: line 87: node.westLink2 := node.westLink1
+
+    idea2_0.ivy: line 88: node.northLink3 := node.northLink2
+
+    idea2_0.ivy: line 89: node.eastLink3 := node.eastLink2
+
+    idea2_0.ivy: line 90: node.southLink3 := node.southLink2
+
+    idea2_0.ivy: line 91: node.westLink3 := node.westLink2
+
+    idea2_0.ivy: line 92: node.northLink4 := node.northLink3
+
+    idea2_0.ivy: line 93: node.eastLink4 := node.eastLink3
+
+    idea2_0.ivy: line 94: node.southLink4 := node.southLink3
+
+    idea2_0.ivy: line 95: node.westLink4 := node.westLink3
+
+    idea2_0.ivy: line 98: call router.route
+    {
+        idea2_0.ivy: line 154: call router.setConditions
+        {
+            idea2_0.ivy: line 131: router.negTrav := flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            idea2_0.ivy: line 132: router.westNew := flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = new
+
+            [
+                router.westNew = true
+            ]
+            idea2_0.ivy: line 133: router.notWest := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = new
+
+            idea2_0.ivy: line 134: router.notSouth := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = new
+
+            idea2_0.ivy: line 135: router.notEast := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            [
+                router.notEast = true
+            ]
+            idea2_0.ivy: line 136: router.notNorth := flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            [
+                router.notNorth = true
+            ]
+            idea2_0.ivy: line 138: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            idea2_0.ivy: line 139: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 140: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            [
+                router.abcfhijknop = true
+            ]
+            idea2_0.ivy: line 141: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            [
+                router.cdefghijmopq = true
+            ]
+            idea2_0.ivy: line 142: router.acefghijklnoq := flit.zn1 = a | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            idea2_0.ivy: line 143: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            [
+                router.efghm = false
+            ]
+            idea2_0.ivy: line 144: router.ghijklmnpq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            [
+                router.ghijklmnpq = true
+            ]
+            idea2_0.ivy: line 145: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            idea2_0.ivy: line 146: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            [
+                router.cjoqdip = true
+            ]
+            idea2_0.ivy: line 147: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            [
+                router.fghijmpq = true
+            ]
+            idea2_0.ivy: line 155: call node.getLinks
+            {
+                idea2_0.ivy: line 259: node.isLoop := false
+
+                idea2_0.ivy: line 312: node.northLink := *
+
+                idea2_0.ivy: line 312: assume err_flag | node.northLink ~= default
+
+                idea2_0.ivy: line 313: node.eastLink := *
+
+                idea2_0.ivy: line 313: assume err_flag | node.eastLink ~= default
+
+                idea2_0.ivy: line 314: node.southLink := *
+
+                [
+                    node.southLink = faulty
+                ]
+                idea2_0.ivy: line 314: assume err_flag | node.southLink ~= default
+
+                idea2_0.ivy: line 315: node.westLink := *
+
+                idea2_0.ivy: line 315: assume err_flag | node.westLink ~= default
+
+                idea2_0.ivy: line 319: assume err_flag | node.northLink ~= edge
+
+                idea2_0.ivy: line 344: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                idea2_0.ivy: line 347: node.faultCounter := 0:number
+
+                [
+                    node.faultCounter = new_node.faultCounter = true
+                ]
+                idea2_0.ivy: line 361: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 367: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 368: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 369: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 370: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 371: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 374: assume err_flag | node.faultCounter <= 2
+
+                idea2_0.ivy: line 190: flit.sent0 := n1
+
+                [
+                    flit.sent0 = n1
+                ]
+                idea2_0.ivy: line 214: call node.getNextZone
+                {
+                    idea2_0.ivy: line 604: flit.zn0 := *
+
+                    idea2_0.ivy: line 605: assume err_flag | (flit.zn0 = j | flit.zn0 = q)
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    idea2_0.ivy: line 70: flit.sent4 := flit.sent3
+
+    idea2_0.ivy: line 71: flit.sent3 := flit.sent2
+
+    idea2_0.ivy: line 72: flit.sent2 := flit.sent1
+
+    idea2_0.ivy: line 73: flit.sent1 := flit.sent0
+
+    [
+        flit.sent1 = n1
+    ]
+    idea2_0.ivy: line 75: flit.zn4 := flit.zn3
+
+    idea2_0.ivy: line 76: flit.zn3 := flit.zn2
+
+    idea2_0.ivy: line 77: flit.zn2 := flit.zn1
+
+    [
+        flit.zn2 = j
+    ]
+    idea2_0.ivy: line 78: flit.zn1 := flit.zn0
+
+    idea2_0.ivy: line 80: node.northLink1 := node.northLink
+
+    idea2_0.ivy: line 81: node.eastLink1 := node.eastLink
+
+    idea2_0.ivy: line 82: node.southLink1 := node.southLink
+
+    idea2_0.ivy: line 83: node.westLink1 := node.westLink
+
+    idea2_0.ivy: line 84: node.northLink2 := node.northLink1
+
+    idea2_0.ivy: line 85: node.eastLink2 := node.eastLink1
+
+    idea2_0.ivy: line 86: node.southLink2 := node.southLink1
+
+    idea2_0.ivy: line 87: node.westLink2 := node.westLink1
+
+    idea2_0.ivy: line 88: node.northLink3 := node.northLink2
+
+    idea2_0.ivy: line 89: node.eastLink3 := node.eastLink2
+
+    idea2_0.ivy: line 90: node.southLink3 := node.southLink2
+
+    idea2_0.ivy: line 91: node.westLink3 := node.westLink2
+
+    idea2_0.ivy: line 92: node.northLink4 := node.northLink3
+
+    idea2_0.ivy: line 93: node.eastLink4 := node.eastLink3
+
+    idea2_0.ivy: line 94: node.southLink4 := node.southLink3
+
+    idea2_0.ivy: line 95: node.westLink4 := node.westLink3
+
+    idea2_0.ivy: line 98: call router.route
+    {
+        idea2_0.ivy: line 154: call router.setConditions
+        {
+            idea2_0.ivy: line 131: router.negTrav := flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            [
+                router.negTrav = false
+            ]
+            idea2_0.ivy: line 132: router.westNew := flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = new
+
+            [
+                router.westNew = false
+            ]
+            idea2_0.ivy: line 133: router.notWest := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = new
+
+            idea2_0.ivy: line 134: router.notSouth := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = new
+
+            idea2_0.ivy: line 135: router.notEast := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            idea2_0.ivy: line 136: router.notNorth := flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            [
+                router.notNorth = false
+            ]
+            idea2_0.ivy: line 138: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            idea2_0.ivy: line 139: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 140: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            idea2_0.ivy: line 141: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 142: router.acefghijklnoq := flit.zn1 = a | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            idea2_0.ivy: line 143: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            idea2_0.ivy: line 144: router.ghijklmnpq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 145: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            idea2_0.ivy: line 146: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            idea2_0.ivy: line 147: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 155: call node.getLinks
+            {
+                idea2_0.ivy: line 259: node.isLoop := false
+
+                idea2_0.ivy: line 300: node.northLink := *
+
+                [
+                    node.northLink = faulty
+                ]
+                idea2_0.ivy: line 300: assume err_flag | node.northLink ~= default
+
+                idea2_0.ivy: line 301: node.southLink := *
+
+                idea2_0.ivy: line 301: assume err_flag | node.southLink ~= default
+
+                idea2_0.ivy: line 303: node.westLink := *
+
+                [
+                    node.westLink = free
+                ]
+                idea2_0.ivy: line 303: assume err_flag | node.westLink ~= edge & node.westLink ~= default
+
+                idea2_0.ivy: line 319: assume err_flag | node.northLink ~= edge
+
+                idea2_0.ivy: line 332: assume err_flag | node.southLink ~= edge
+
+                idea2_0.ivy: line 344: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                idea2_0.ivy: line 347: node.faultCounter := 0:number
+
+                [
+                    0:number = node.faultCounter = true
+                ]
+                idea2_0.ivy: line 349: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 361: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 362: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 363: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 364: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 365: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 368: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 369: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 370: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 371: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 374: assume err_flag | node.faultCounter <= 2
+
+                idea2_0.ivy: line 196: flit.sent0 := w1
+
+                [
+                    flit.sent0 = w1
+                ]
+                idea2_0.ivy: line 214: call node.getNextZone
+                {
+                    idea2_0.ivy: line 615: flit.zn0 := i
+
+                    [
+                        flit.zn0 = i
+                    ]
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    idea2_0.ivy: line 70: flit.sent4 := flit.sent3
+
+    idea2_0.ivy: line 71: flit.sent3 := flit.sent2
+
+    idea2_0.ivy: line 72: flit.sent2 := flit.sent1
+
+    [
+        flit.sent2 = n1
+    ]
+    idea2_0.ivy: line 73: flit.sent1 := flit.sent0
+
+    [
+        flit.sent1 = w1
+    ]
+    idea2_0.ivy: line 75: flit.zn4 := flit.zn3
+
+    idea2_0.ivy: line 76: flit.zn3 := flit.zn2
+
+    [
+        flit.zn3 = j
+    ]
+    idea2_0.ivy: line 77: flit.zn2 := flit.zn1
+
+    idea2_0.ivy: line 78: flit.zn1 := flit.zn0
+
+    [
+        flit.zn1 = i
+    ]
+    idea2_0.ivy: line 80: node.northLink1 := node.northLink
+
+    idea2_0.ivy: line 81: node.eastLink1 := node.eastLink
+
+    idea2_0.ivy: line 82: node.southLink1 := node.southLink
+
+    idea2_0.ivy: line 83: node.westLink1 := node.westLink
+
+    idea2_0.ivy: line 84: node.northLink2 := node.northLink1
+
+    idea2_0.ivy: line 85: node.eastLink2 := node.eastLink1
+
+    idea2_0.ivy: line 86: node.southLink2 := node.southLink1
+
+    idea2_0.ivy: line 87: node.westLink2 := node.westLink1
+
+    idea2_0.ivy: line 88: node.northLink3 := node.northLink2
+
+    idea2_0.ivy: line 89: node.eastLink3 := node.eastLink2
+
+    idea2_0.ivy: line 90: node.southLink3 := node.southLink2
+
+    idea2_0.ivy: line 91: node.westLink3 := node.westLink2
+
+    idea2_0.ivy: line 92: node.northLink4 := node.northLink3
+
+    idea2_0.ivy: line 93: node.eastLink4 := node.eastLink3
+
+    idea2_0.ivy: line 94: node.southLink4 := node.southLink3
+
+    idea2_0.ivy: line 95: node.westLink4 := node.westLink3
+
+    idea2_0.ivy: line 98: call router.route
+    {
+        idea2_0.ivy: line 154: call router.setConditions
+        {
+            idea2_0.ivy: line 131: router.negTrav := flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            [
+                router.negTrav = true
+            ]
+            idea2_0.ivy: line 132: router.westNew := flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = new
+
+            [
+                router.westNew = true
+            ]
+            idea2_0.ivy: line 133: router.notWest := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = new
+
+            [
+                router.notWest = false
+            ]
+            idea2_0.ivy: line 134: router.notSouth := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = new
+
+            idea2_0.ivy: line 135: router.notEast := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            idea2_0.ivy: line 136: router.notNorth := flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            [
+                router.notNorth = true
+            ]
+            idea2_0.ivy: line 138: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            [
+                router.abcjklnoq = false
+            ]
+            idea2_0.ivy: line 139: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 140: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            idea2_0.ivy: line 141: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 142: router.acefghijklnoq := flit.zn1 = a | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            idea2_0.ivy: line 143: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            idea2_0.ivy: line 144: router.ghijklmnpq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 145: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            idea2_0.ivy: line 146: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            idea2_0.ivy: line 147: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 155: call node.getLinks
+            {
+                idea2_0.ivy: line 259: node.isLoop := false
+
+                idea2_0.ivy: line 306: node.eastLink := *
+
+                [
+                    node.eastLink = free
+                ]
+                idea2_0.ivy: line 306: assume err_flag | node.eastLink ~= default
+
+                idea2_0.ivy: line 307: node.westLink := *
+
+                [
+                    node.westLink = faulty
+                ]
+                idea2_0.ivy: line 307: assume err_flag | node.westLink ~= default
+
+                idea2_0.ivy: line 308: node.northLink := *
+
+                [
+                    node.northLink = free
+                ]
+                idea2_0.ivy: line 308: assume err_flag | node.northLink ~= edge & node.northLink ~= default
+
+                idea2_0.ivy: line 309: node.southLink := *
+
+                [
+                    node.southLink = free
+                ]
+                idea2_0.ivy: line 309: assume err_flag | node.southLink ~= edge & node.southLink ~= default
+
+                idea2_0.ivy: line 319: assume err_flag | node.northLink ~= edge
+
+                idea2_0.ivy: line 322: assume err_flag | node.eastLink ~= edge
+
+                idea2_0.ivy: line 341: assume err_flag | node.eastLink ~= edge
+
+                idea2_0.ivy: line 344: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                idea2_0.ivy: line 347: node.faultCounter := 0:number
+
+                idea2_0.ivy: line 350: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 351: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 352: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 353: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 362: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 363: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 364: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 365: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 367: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 374: assume err_flag | node.faultCounter <= 2
+
+                idea2_0.ivy: line 184: flit.sent0 := s1
+
+                [
+                    flit.sent0 = s1
+                ]
+                idea2_0.ivy: line 214: call node.getNextZone
+                {
+                    idea2_0.ivy: line 591: flit.zn0 := i
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    idea2_0.ivy: line 70: flit.sent4 := flit.sent3
+
+    idea2_0.ivy: line 71: flit.sent3 := flit.sent2
+
+    [
+        flit.sent3 = n1
+    ]
+    idea2_0.ivy: line 72: flit.sent2 := flit.sent1
+
+    [
+        flit.sent2 = w1
+    ]
+    idea2_0.ivy: line 73: flit.sent1 := flit.sent0
+
+    [
+        flit.sent1 = s1
+    ]
+    idea2_0.ivy: line 75: flit.zn4 := flit.zn3
+
+    idea2_0.ivy: line 76: flit.zn3 := flit.zn2
+
+    idea2_0.ivy: line 77: flit.zn2 := flit.zn1
+
+    [
+        flit.zn2 = i
+    ]
+    idea2_0.ivy: line 78: flit.zn1 := flit.zn0
+
+    idea2_0.ivy: line 80: node.northLink1 := node.northLink
+
+    idea2_0.ivy: line 81: node.eastLink1 := node.eastLink
+
+    idea2_0.ivy: line 82: node.southLink1 := node.southLink
+
+    idea2_0.ivy: line 83: node.westLink1 := node.westLink
+
+    idea2_0.ivy: line 84: node.northLink2 := node.northLink1
+
+    idea2_0.ivy: line 85: node.eastLink2 := node.eastLink1
+
+    idea2_0.ivy: line 86: node.southLink2 := node.southLink1
+
+    idea2_0.ivy: line 87: node.westLink2 := node.westLink1
+
+    idea2_0.ivy: line 88: node.northLink3 := node.northLink2
+
+    idea2_0.ivy: line 89: node.eastLink3 := node.eastLink2
+
+    idea2_0.ivy: line 90: node.southLink3 := node.southLink2
+
+    idea2_0.ivy: line 91: node.westLink3 := node.westLink2
+
+    idea2_0.ivy: line 92: node.northLink4 := node.northLink3
+
+    idea2_0.ivy: line 93: node.eastLink4 := node.eastLink3
+
+    idea2_0.ivy: line 94: node.southLink4 := node.southLink3
+
+    idea2_0.ivy: line 95: node.westLink4 := node.westLink3
+
+    idea2_0.ivy: line 98: call router.route
+    {
+        idea2_0.ivy: line 154: call router.setConditions
+        {
+            idea2_0.ivy: line 131: router.negTrav := flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            idea2_0.ivy: line 132: router.westNew := flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = new
+
+            [
+                router.westNew = false
+            ]
+            idea2_0.ivy: line 133: router.notWest := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = new
+
+            [
+                router.notWest = true
+            ]
+            idea2_0.ivy: line 134: router.notSouth := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = new
+
+            [
+                router.notSouth = false
+            ]
+            idea2_0.ivy: line 135: router.notEast := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            idea2_0.ivy: line 136: router.notNorth := flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            idea2_0.ivy: line 138: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            idea2_0.ivy: line 139: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 140: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            idea2_0.ivy: line 141: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 142: router.acefghijklnoq := flit.zn1 = a | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            idea2_0.ivy: line 143: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            idea2_0.ivy: line 144: router.ghijklmnpq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 145: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            idea2_0.ivy: line 146: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            idea2_0.ivy: line 147: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 155: call node.getLinks
+            {
+                idea2_0.ivy: line 259: node.isLoop := false
+
+                idea2_0.ivy: line 300: node.northLink := *
+
+                idea2_0.ivy: line 300: assume err_flag | node.northLink ~= default
+
+                idea2_0.ivy: line 301: node.southLink := *
+
+                [
+                    node.southLink = faulty
+                ]
+                idea2_0.ivy: line 301: assume err_flag | node.southLink ~= default
+
+                idea2_0.ivy: line 302: node.eastLink := *
+
+                idea2_0.ivy: line 302: assume err_flag | node.eastLink ~= edge & node.eastLink ~= default
+
+                idea2_0.ivy: line 303: node.westLink := *
+
+                idea2_0.ivy: line 303: assume err_flag | node.westLink ~= edge & node.westLink ~= default
+
+                idea2_0.ivy: line 319: assume err_flag | node.northLink ~= edge
+
+                idea2_0.ivy: line 322: assume err_flag | node.eastLink ~= edge
+
+                idea2_0.ivy: line 338: assume err_flag | node.northLink ~= edge
+
+                idea2_0.ivy: line 344: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                idea2_0.ivy: line 347: node.faultCounter := 0:number
+
+                [
+                    node.faultCounter = new_node.faultCounter = false
+                ]
+                idea2_0.ivy: line 361: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 367: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 368: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 369: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 370: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 371: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 374: assume err_flag | node.faultCounter <= 2
+
+                idea2_0.ivy: line 202: flit.sent0 := e1
+
+                [
+                    flit.sent0 = e1
+                ]
+                idea2_0.ivy: line 214: call node.getNextZone
+                {
+                    idea2_0.ivy: line 588: flit.zn0 := j
+
+                    [
+                        flit.zn0 = j
+                    ]
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    idea2_0.ivy: line 70: flit.sent4 := flit.sent3
+
+    [
+        flit.sent4 = n1
+    ]
+    idea2_0.ivy: line 71: flit.sent3 := flit.sent2
+
+    [
+        flit.sent3 = w1
+    ]
+    idea2_0.ivy: line 72: flit.sent2 := flit.sent1
+
+    [
+        flit.sent2 = s1
+    ]
+    idea2_0.ivy: line 73: flit.sent1 := flit.sent0
+
+    [
+        flit.sent1 = e1
+    ]
+    idea2_0.ivy: line 75: flit.zn4 := flit.zn3
+
+    idea2_0.ivy: line 76: flit.zn3 := flit.zn2
+
+    [
+        flit.zn3 = i
+    ]
+    idea2_0.ivy: line 77: flit.zn2 := flit.zn1
+
+    idea2_0.ivy: line 78: flit.zn1 := flit.zn0
+
+    [
+        flit.zn1 = j
+    ]
+    idea2_0.ivy: line 80: node.northLink1 := node.northLink
+
+    idea2_0.ivy: line 81: node.eastLink1 := node.eastLink
+
+    idea2_0.ivy: line 82: node.southLink1 := node.southLink
+
+    idea2_0.ivy: line 83: node.westLink1 := node.westLink
+
+    idea2_0.ivy: line 84: node.northLink2 := node.northLink1
+
+    idea2_0.ivy: line 85: node.eastLink2 := node.eastLink1
+
+    idea2_0.ivy: line 86: node.southLink2 := node.southLink1
+
+    idea2_0.ivy: line 87: node.westLink2 := node.westLink1
+
+    idea2_0.ivy: line 88: node.northLink3 := node.northLink2
+
+    idea2_0.ivy: line 89: node.eastLink3 := node.eastLink2
+
+    idea2_0.ivy: line 90: node.southLink3 := node.southLink2
+
+    idea2_0.ivy: line 91: node.westLink3 := node.westLink2
+
+    idea2_0.ivy: line 92: node.northLink4 := node.northLink3
+
+    idea2_0.ivy: line 93: node.eastLink4 := node.eastLink3
+
+    idea2_0.ivy: line 94: node.southLink4 := node.southLink3
+
+    idea2_0.ivy: line 95: node.westLink4 := node.westLink3
+
+    idea2_0.ivy: line 98: call router.route
+    {
+        idea2_0.ivy: line 154: call router.setConditions
+        {
+            idea2_0.ivy: line 131: router.negTrav := flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            [
+                router.negTrav = false
+            ]
+            idea2_0.ivy: line 132: router.westNew := flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = new
+
+            idea2_0.ivy: line 133: router.notWest := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = new
+
+            idea2_0.ivy: line 134: router.notSouth := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = new
+
+            [
+                router.notSouth = true
+            ]
+            idea2_0.ivy: line 135: router.notEast := flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            [
+                router.notEast = false
+            ]
+            idea2_0.ivy: line 136: router.notNorth := flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = w1 | flit.sent1 = wm | flit.sent1 = s1 | flit.sent1 = sm | flit.sent1 = new
+
+            idea2_0.ivy: line 138: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            [
+                router.abcjklnoq = true
+            ]
+            idea2_0.ivy: line 139: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 140: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            idea2_0.ivy: line 141: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 142: router.acefghijklnoq := flit.zn1 = a | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            idea2_0.ivy: line 143: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            idea2_0.ivy: line 144: router.ghijklmnpq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 145: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            idea2_0.ivy: line 146: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            idea2_0.ivy: line 147: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            idea2_0.ivy: line 155: call node.getLinks
+            {
+                idea2_0.ivy: line 259: node.isLoop := false
+
+                idea2_0.ivy: line 293: node.northLink := node.northLink4
+
+                idea2_0.ivy: line 294: node.eastLink := node.eastLink4
+
+                idea2_0.ivy: line 295: node.southLink := node.southLink4
+
+                idea2_0.ivy: line 296: node.southLink := node.southLink4
+
+                idea2_0.ivy: line 297: node.isLoop := true
+
+                idea2_0.ivy: line 319: assume err_flag | node.northLink ~= edge
+
+                idea2_0.ivy: line 335: assume err_flag | node.westLink ~= edge
+
+                idea2_0.ivy: line 344: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                idea2_0.ivy: line 347: node.faultCounter := 0:number
+
+                [
+                    node.faultCounter = new_node.faultCounter = true
+                ]
+                idea2_0.ivy: line 361: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 362: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 363: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 364: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 367: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 368: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 369: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 370: node.faultCounter := node.faultCounter + 1
+
+                idea2_0.ivy: line 374: assume err_flag | node.faultCounter <= 2
+
+                idea2_0.ivy: line 190: flit.sent0 := n1
+
+                [
+                    flit.sent0 = n1
+                ]
+                idea2_0.ivy: line 214: call node.getNextZone
+                {
+                    idea2_0.ivy: line 604: flit.zn0 := *
+
+                    idea2_0.ivy: line 605: assume err_flag | (flit.zn0 = j | flit.zn0 = q)
+
+                    [
+                        node.isLoop = true
+                    ]
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************

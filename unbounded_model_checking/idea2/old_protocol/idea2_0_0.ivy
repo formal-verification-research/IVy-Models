@@ -2,9 +2,9 @@
 
 type zoneIdentifiers = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,x}
 type dir = {nm,n1,em,e1,sm,s1,wm,w1,new}
-type linkStatuses = {free,faulty,edge}#,default}
+type linkStatuses = {free,faulty,edge,default}
 type number
-interpret number -> bv[5]
+interpret number -> int
 
 var destNE : bool
 
@@ -25,24 +25,37 @@ object flit = {
   var livelock_free : bool
   
   after init {
-    # sent8 := new;
-    # sent7 := new;
-    # sent6 := new;
-    # sent5 := new;
     sent4 := new;
     sent3 := new;
     sent2 := new;
     sent1 := new;    
     sent0 := new;    
-    
-    # zn8 := x;
-    # zn7 := x;
-    # zn6 := x;
-    # zn5 := x;
+
     zn4 := x;
     zn3 := x;
     zn2 := x;
     zn1 := x;  
+    
+    node.northLink  := default;
+    node.eastLink   := default;
+    node.southLink  := default;
+    node.westLink   := default;
+    node.northLink1 := default;
+    node.eastLink1  := default;
+    node.southLink1 := default;
+    node.westLink1  := default;
+    node.northLink2 := default;
+    node.eastLink2  := default;
+    node.southLink2 := default;
+    node.westLink2  := default;
+    node.northLink3 := default;
+    node.eastLink3  := default;
+    node.southLink3 := default;
+    node.westLink3  := default;
+    node.northLink4 := default;
+    node.eastLink4  := default;
+    node.southLink4 := default;
+    node.westLink4  := default;
     
     zn0 := *;
     assume zn0 ~= x;
@@ -164,10 +177,10 @@ object router = {
     
     ### ------------
     
-    else if node.westLink = free & negTrav & (abcjklnoq | (afghijklmnpq & node.southLink = faulty)) & (abcfhijknop | westNew) {
+    else if node.westLink = free & negTrav & (abcjklnoq | (afghijklmnpq & node.southLink = faulty)) { # & (abcfhijknop | westNew) {
       flit.sent0 := w1;
     }
-    else if node.southLink = free & negTrav & (afghijklmnpq | (cdefghijmopq & node.westLink = faulty)) & acefghijklnoq {
+    else if node.southLink = free & negTrav & (afghijklmnpq | (cdefghijmopq & node.westLink = faulty)) { # & acefghijklnoq {
       flit.sent0 := s1;
     }
     else if node.eastLink = free & notWest & efghm {
@@ -182,7 +195,7 @@ object router = {
     else if node.westLink = free & (notEast | flit.zn1 = q) {
       flit.sent0 := w1;
     }
-    else if node.southLink = free & notNorth & abcdefnop & (notEast | ~destNE) {
+    else if node.southLink = free & notNorth & abcdefnop { # & (notEast | ~destNE) {
       flit.sent0 := s1;
     }
     else if node.eastLink = free & cdefghijmopq & (notWest | cjoqdip) {
@@ -231,6 +244,7 @@ object node = {
   var westLink4  : linkStatuses
   
   individual faultCounter : number
+  individual isLoop : bool
   
   after init {
     call getLinks;
@@ -242,53 +256,57 @@ object node = {
   
   action getLinks = { #eventually change this
     
-    # if (northLink = default) {
-    # northLink := *;
-    # assume northLink ~= default;
-    # };
-    # if (eastLink = default) {
-    # eastLink := *;
-    # assume eastLink ~= default;
-    # };
-    # if (southLink = default) {
-    # southLink := *;
-    # assume southLink ~= default;
-    # };
-    # if (westLink = default) {
-    # westLink := *;
-    # assume westLink ~= default;
-    # };
+    isLoop := false;
     
-    if (flit.sent2 = n1 & flit.sent1 = s1) | (flit.sent2 = s1 & flit.sent1 = n1) | (flit.sent2 = e1 & flit.sent1 = w1) | (flit.sent2 = w1 & flit.sent1 = e1) {
-      northLink := northLink1;
-      eastLink := eastLink1;
-      southLink := southLink1;
-      southLink := southLink1;
+    if (northLink = default) {
+    northLink := *;
+    assume northLink ~= default;
+    };
+    if (eastLink = default) {
+    eastLink := *;
+    assume eastLink ~= default;
+    };
+    if (southLink = default) {
+    southLink := *;
+    assume southLink ~= default;
+    };
+    if (westLink = default) {
+    westLink := *;
+    assume westLink ~= default;
+    };
+    
+    if northLink2 ~= default & ( (flit.sent2 = n1 & flit.sent1 = s1) | (flit.sent2 = s1 & flit.sent1 = n1) | (flit.sent2 = e1 & flit.sent1 = w1) | (flit.sent2 = w1 & flit.sent1 = e1) ) {
+      northLink := northLink2;
+      eastLink := eastLink2;
+      southLink := southLink2;
+      southLink := southLink2;
     }
-    else if (flit.sent4 = n1 & flit.sent3 = e1 & flit.sent2 = s1 & flit.sent1 = w1) | 
+    else if northLink4 ~= default & 
+       ((flit.sent4 = n1 & flit.sent3 = e1 & flit.sent2 = s1 & flit.sent1 = w1) | 
        (flit.sent4 = e1 & flit.sent3 = s1 & flit.sent2 = w1 & flit.sent1 = n1) |
        (flit.sent4 = s1 & flit.sent3 = w1 & flit.sent2 = n1 & flit.sent1 = e1) | 
        (flit.sent4 = w1 & flit.sent3 = n1 & flit.sent2 = e1 & flit.sent1 = s1) | 
        (flit.sent4 = s1 & flit.sent3 = e1 & flit.sent2 = n1 & flit.sent1 = w1) | 
        (flit.sent4 = e1 & flit.sent3 = n1 & flit.sent2 = w1 & flit.sent1 = s1) |
        (flit.sent4 = n1 & flit.sent3 = w1 & flit.sent2 = s1 & flit.sent1 = e1) | 
-       (flit.sent4 = w1 & flit.sent3 = s1 & flit.sent2 = e1 & flit.sent1 = n1) {
+       (flit.sent4 = w1 & flit.sent3 = s1 & flit.sent2 = e1 & flit.sent1 = n1)) {
       northLink := northLink4;
       eastLink := eastLink4;
       southLink := southLink4;
       southLink := southLink4;
+      isLoop := true;
     }
     else if flit.sent1 = n1 | flit.sent1 = nm | flit.sent1 = s1 | flit.sent1 = sm {
       northLink := *;
       southLink := *;
-      if eastLink ~= edge { eastLink := *; };
-      if westLink ~= edge { westLink := *; };
+      if eastLink ~= edge { eastLink := *; assume eastLink ~= edge; };
+      if westLink ~= edge { westLink := *; assume westLink ~= edge; };
     }
     else if flit.sent1 = e1 | flit.sent1 = em | flit.sent1 = w1 | flit.sent1 = wm {
       eastLink := *;
       westLink := *;
-      if northLink ~= edge { northLink := *; };
-      if southLink ~= edge { southLink := *; };
+      if northLink ~= edge { northLink := *; assume northLink ~= edge };
+      if southLink ~= edge { southLink := *; assume southLink ~= edge };
     }
     else {
       northLink := *;
@@ -332,25 +350,25 @@ object node = {
     if northLink1 = faulty { faultCounter := faultCounter + 1 };
     if northLink2 = faulty { faultCounter := faultCounter + 1 };
     if northLink3 = faulty { faultCounter := faultCounter + 1 };
-    # if northLink4 = faulty { faultCounter := faultCounter + 1 };
+    if northLink4 = faulty & ~isLoop { faultCounter := faultCounter + 1 };
     
     if eastLink  = faulty { faultCounter := faultCounter + 1 };
     if eastLink1 = faulty { faultCounter := faultCounter + 1 };
     if eastLink2 = faulty { faultCounter := faultCounter + 1 };
     if eastLink3 = faulty { faultCounter := faultCounter + 1 };
-    # if eastLink4 = faulty { faultCounter := faultCounter + 1 };
+    if eastLink4 = faulty & ~isLoop { faultCounter := faultCounter + 1 };
     
     if southLink  = faulty { faultCounter := faultCounter + 1 };
     if southLink1 = faulty { faultCounter := faultCounter + 1 };
     if southLink2 = faulty { faultCounter := faultCounter + 1 };
     if southLink3 = faulty { faultCounter := faultCounter + 1 };
-    # if southLink4 = faulty { faultCounter := faultCounter + 1 };
+    if southLink4 = faulty & ~isLoop { faultCounter := faultCounter + 1 };
 
     if westLink  = faulty { faultCounter := faultCounter + 1 };    
     if westLink1 = faulty { faultCounter := faultCounter + 1 };
     if westLink2 = faulty { faultCounter := faultCounter + 1 };
     if westLink3 = faulty { faultCounter := faultCounter + 1 };
-    # if westLink4 = faulty { faultCounter := faultCounter + 1 };
+    if westLink4 = faulty & ~isLoop { faultCounter := faultCounter + 1 };
     
     #This is how we can set fault tolerance specification
     assume faultCounter <= 2;
@@ -746,7 +764,6 @@ invariant ~(flit.sent4 = w1 & flit.sent3 = s1 & flit.sent2 = e1 & flit.sent1 = n
 invariant ~(flit.sent4 = s1 & flit.sent3 = e1 & flit.sent2 = n1 & flit.sent1 = w1 & flit.sent0 = s1) #PASS WHEN ISOLATED
 invariant ~(flit.sent4 = e1 & flit.sent3 = n1 & flit.sent2 = w1 & flit.sent1 = s1 & flit.sent0 = e1) #PASS WHEN ISOLATED
 invariant ~(flit.sent4 = n1 & flit.sent3 = w1 & flit.sent2 = s1 & flit.sent1 = e1 & flit.sent0 = n1) #PASS WHEN ISOLATED
-
 
 invariant ~(flit.sent4 = w1 & flit.sent3 = e1 & flit.sent2 = w1 & flit.sent1 = e1 & flit.sent0 = w1) #PASS WHEN ISOLATED
 invariant ~(flit.sent4 = e1 & flit.sent3 = w1 & flit.sent2 = e1 & flit.sent1 = w1 & flit.sent0 = e1) #PASS WHEN ISOLATED

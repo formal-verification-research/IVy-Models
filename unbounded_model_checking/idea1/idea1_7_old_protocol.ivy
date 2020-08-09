@@ -164,10 +164,10 @@ object router = {
     
     ### ------------
     
-    else if node.westLink = free & negTrav & (abcjklnoq | (afghijklmnpq & node.southLink = faulty)) & (abcfhijknop | westNew) {
+    else if node.westLink = free & negTrav & (abcjklnoq | (afghijklmnpq & node.southLink = faulty)) { # & (abcfhijknop | westNew) {
       flit.sent0 := w1;
     }
-    else if node.southLink = free & negTrav & (afghijklmnpq | (cdefghijmopq & node.westLink = faulty)) & acefghijklnoq {
+    else if node.southLink = free & negTrav & (afghijklmnpq | (cdefghijmopq & node.westLink = faulty)) { # & acefghijklnoq {
       flit.sent0 := s1;
     }
     else if node.eastLink = free & notWest & efghm {
@@ -182,7 +182,7 @@ object router = {
     else if node.westLink = free & (notEast | flit.zn1 = q) {
       flit.sent0 := w1;
     }
-    else if node.southLink = free & notNorth & abcdefnop & (notEast | ~destNE) {
+    else if node.southLink = free & notNorth & abcdefnop { # & (notEast | ~destNE) {
       flit.sent0 := s1;
     }
     else if node.eastLink = free & cdefghijmopq & (notWest | cjoqdip) {

@@ -1,0 +1,3364 @@
+
+Isolate this:
+
+********************************************************************************
+
+pyscript/no_cw_newp.ivy: line 881: Model checking invariant
+pyscript/no_cw_newp.ivy: line 883: Model checking invariant
+pyscript/no_cw_newp.ivy: line 884: Model checking invariant
+pyscript/no_cw_newp.ivy: line 885: Model checking invariant
+pyscript/no_cw_newp.ivy: line 886: Model checking invariant
+pyscript/no_cw_newp.ivy: line 887: Model checking invariant
+pyscript/no_cw_newp.ivy: line 888: Model checking invariant
+pyscript/no_cw_newp.ivy: line 889: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmp8SguLG.aig; pdr; write_aiger_cex  /tmp/tmp8SguLG.out".
+
+Output 0 of miter "/tmp/tmp8SguLG" was asserted in frame 13.  Time =     4.55 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+[
+    0:zoneIdentifiers = x
+]
+err_flag := false
+
+pyscript/no_cw_newp.ivy: line 32: flit.sent6 := new
+
+[
+    flit.sent6 = new
+]
+pyscript/no_cw_newp.ivy: line 33: flit.sent5 := new
+
+[
+    flit.sent5 = new
+]
+pyscript/no_cw_newp.ivy: line 34: flit.sent4 := new
+
+[
+    flit.sent4 = new
+]
+pyscript/no_cw_newp.ivy: line 35: flit.sent3 := new
+
+[
+    flit.sent3 = new
+]
+pyscript/no_cw_newp.ivy: line 36: flit.sent2 := new
+
+[
+    flit.sent2 = new
+]
+pyscript/no_cw_newp.ivy: line 37: flit.sent1 := new
+
+[
+    flit.sent1 = new
+]
+pyscript/no_cw_newp.ivy: line 38: flit.sent0 := new
+
+[
+    flit.sent0 = new
+]
+pyscript/no_cw_newp.ivy: line 40: flit.zn6 := x
+
+pyscript/no_cw_newp.ivy: line 41: flit.zn5 := x
+
+[
+    flit.zn5 = x
+]
+pyscript/no_cw_newp.ivy: line 42: flit.zn4 := x
+
+[
+    flit.zn4 = x
+]
+pyscript/no_cw_newp.ivy: line 43: flit.zn3 := x
+
+[
+    flit.zn3 = x
+]
+pyscript/no_cw_newp.ivy: line 44: flit.zn2 := x
+
+[
+    flit.zn2 = x
+]
+pyscript/no_cw_newp.ivy: line 45: flit.zn1 := x
+
+pyscript/no_cw_newp.ivy: line 47: node.northLink := default
+
+pyscript/no_cw_newp.ivy: line 48: node.eastLink := default
+
+pyscript/no_cw_newp.ivy: line 49: node.southLink := default
+
+pyscript/no_cw_newp.ivy: line 50: node.westLink := default
+
+pyscript/no_cw_newp.ivy: line 51: node.northLink1 := default
+
+[
+    node.northLink1 = default
+]
+pyscript/no_cw_newp.ivy: line 52: node.eastLink1 := default
+
+[
+    node.eastLink1 = default
+]
+pyscript/no_cw_newp.ivy: line 53: node.southLink1 := default
+
+[
+    node.southLink1 = default
+]
+pyscript/no_cw_newp.ivy: line 54: node.westLink1 := default
+
+[
+    node.westLink1 = default
+]
+pyscript/no_cw_newp.ivy: line 55: node.northLink2 := default
+
+[
+    node.northLink2 = default
+]
+pyscript/no_cw_newp.ivy: line 56: node.eastLink2 := default
+
+[
+    node.eastLink2 = default
+]
+pyscript/no_cw_newp.ivy: line 57: node.southLink2 := default
+
+[
+    node.southLink2 = default
+]
+pyscript/no_cw_newp.ivy: line 58: node.westLink2 := default
+
+[
+    node.westLink2 = default
+]
+pyscript/no_cw_newp.ivy: line 59: node.northLink3 := default
+
+[
+    node.northLink3 = default
+]
+pyscript/no_cw_newp.ivy: line 60: node.eastLink3 := default
+
+[
+    node.eastLink3 = default
+]
+pyscript/no_cw_newp.ivy: line 61: node.southLink3 := default
+
+[
+    node.southLink3 = default
+]
+pyscript/no_cw_newp.ivy: line 62: node.westLink3 := default
+
+[
+    node.westLink3 = default
+]
+pyscript/no_cw_newp.ivy: line 63: node.northLink4 := default
+
+[
+    node.northLink4 = default
+]
+pyscript/no_cw_newp.ivy: line 64: node.eastLink4 := default
+
+[
+    node.eastLink4 = default
+]
+pyscript/no_cw_newp.ivy: line 65: node.southLink4 := default
+
+[
+    node.southLink4 = default
+]
+pyscript/no_cw_newp.ivy: line 66: node.westLink4 := default
+
+[
+    node.westLink4 = default
+]
+pyscript/no_cw_newp.ivy: line 67: node.northLink5 := default
+
+[
+    node.northLink5 = default
+]
+pyscript/no_cw_newp.ivy: line 68: node.eastLink5 := default
+
+[
+    node.eastLink5 = default
+]
+pyscript/no_cw_newp.ivy: line 69: node.southLink5 := default
+
+[
+    node.southLink5 = default
+]
+pyscript/no_cw_newp.ivy: line 70: node.westLink5 := default
+
+[
+    node.westLink5 = default
+]
+pyscript/no_cw_newp.ivy: line 71: node.northLink6 := default
+
+pyscript/no_cw_newp.ivy: line 72: node.eastLink6 := default
+
+pyscript/no_cw_newp.ivy: line 73: node.southLink6 := default
+
+pyscript/no_cw_newp.ivy: line 74: node.westLink6 := default
+
+pyscript/no_cw_newp.ivy: line 76: flit.zn0 := *
+
+[
+    flit.zn0 = i
+]
+pyscript/no_cw_newp.ivy: line 77: assume err_flag | flit.zn0 ~= x
+
+pyscript/no_cw_newp.ivy: line 79: destNE := *
+
+[
+    destNE = false
+]
+pyscript/no_cw_newp.ivy: line 81: flit.livelock_free := false
+
+[
+    flit.livelock_free = false
+]
+pyscript/no_cw_newp.ivy: line 281: call node.getLinks
+{
+    pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+    pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+    pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+    {
+        pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+        pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+        [
+            router.negTrav = true
+        ]
+        pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+        [
+            router.westNew = true
+        ]
+        pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+        [
+            router.notWest = true
+        ]
+        pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+        [
+            router.notSouth = true
+        ]
+        pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+        [
+            router.notEast = true
+        ]
+        pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+        [
+            router.notNorth = true
+        ]
+        pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+        [
+            router.abcjklnoq = false
+        ]
+        pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+        [
+            router.afghijklmnpq = true
+        ]
+        pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+        [
+            router.abcfhijknop = true
+        ]
+        pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+        [
+            router.cdefghijmopq = true
+        ]
+        pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+        [
+            router.efghm = false
+        ]
+        pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+        [
+            router.ghijklmq = true
+        ]
+        pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+        [
+            router.abcdefnop = false
+        ]
+        pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+        [
+            router.cjoqdip = true
+        ]
+        pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+        [
+            router.fghijmpq = true
+        ]
+        pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+        [
+            router.abcefghjklnoq = false
+        ]
+        pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+        [
+            router.abcdefhijknop = true
+        ]
+        pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+        {
+            pyscript/no_cw_newp.ivy: line 327: node.northLink := *
+
+            pyscript/no_cw_newp.ivy: line 327: assume err_flag | node.northLink ~= default
+
+            pyscript/no_cw_newp.ivy: line 328: node.eastLink := *
+
+            pyscript/no_cw_newp.ivy: line 328: assume err_flag | node.eastLink ~= default
+
+            pyscript/no_cw_newp.ivy: line 329: node.southLink := *
+
+            pyscript/no_cw_newp.ivy: line 329: assume err_flag | node.southLink ~= default
+
+            pyscript/no_cw_newp.ivy: line 330: node.westLink := *
+
+            pyscript/no_cw_newp.ivy: line 330: assume err_flag | node.westLink ~= default
+
+            pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+            pyscript/no_cw_newp.ivy: line 337: assume err_flag | node.eastLink ~= edge
+
+            pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+            pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+            pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+            pyscript/no_cw_newp.ivy: line 819: easyTrace.needPrinting := false
+
+            pyscript/no_cw_newp.ivy: line 821: easyTrace.traveling6 := new
+
+            pyscript/no_cw_newp.ivy: line 822: easyTrace.traveling5 := new
+
+            pyscript/no_cw_newp.ivy: line 823: easyTrace.traveling4 := new
+
+            pyscript/no_cw_newp.ivy: line 824: easyTrace.traveling3 := new
+
+            pyscript/no_cw_newp.ivy: line 825: easyTrace.traveling2 := new
+
+            pyscript/no_cw_newp.ivy: line 826: easyTrace.traveling1 := new
+
+            pyscript/no_cw_newp.ivy: line 827: easyTrace.traveling0 := new
+
+            pyscript/no_cw_newp.ivy: line 829: easyTrace.toZone6 := x
+
+            pyscript/no_cw_newp.ivy: line 830: easyTrace.toZone5 := x
+
+            pyscript/no_cw_newp.ivy: line 831: easyTrace.toZone4 := x
+
+            pyscript/no_cw_newp.ivy: line 832: easyTrace.toZone3 := x
+
+            pyscript/no_cw_newp.ivy: line 833: easyTrace.toZone2 := x
+
+            pyscript/no_cw_newp.ivy: line 834: easyTrace.toZone1 := x
+
+            pyscript/no_cw_newp.ivy: line 835: easyTrace.toZone0 := x
+
+            __init := true
+
+            [
+                easyTrace.traveling3 = new
+                easyTrace.toZone0 = x
+                easyTrace.traveling0 = new
+                easyTrace.traveling6 = new
+                easyTrace.toZone1 = x
+                node.isLoop4 = false
+                easyTrace.toZone6 = x
+                node.northLink = free
+                easyTrace.needPrinting = false
+                easyTrace.traveling5 = new
+                node.eastLink = free
+                node.southLink = free
+                easyTrace.traveling2 = new
+                easyTrace.toZone4 = x
+                node.isLoop2 = false
+                easyTrace.toZone2 = x
+                easyTrace.toZone5 = x
+                easyTrace.traveling1 = new
+                easyTrace.traveling4 = new
+                easyTrace.toZone3 = x
+                node.faultCounter = 0
+                flit.zn1 = i
+                node.westLink = edge
+            ]
+        }
+
+    }
+
+}
+
+[
+    0:zoneIdentifiers = i
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    [
+        flit.zn2 = i
+    ]
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    [
+        node.northLink1 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    [
+        node.eastLink1 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    [
+        node.southLink1 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    [
+        node.westLink1 = edge
+    ]
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 327: node.northLink := *
+
+                        [
+                            node.northLink = faulty
+                        ]
+                        pyscript/no_cw_newp.ivy: line 327: assume err_flag | node.northLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 328: node.eastLink := *
+
+                        pyscript/no_cw_newp.ivy: line 328: assume err_flag | node.eastLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 329: node.southLink := *
+
+                        pyscript/no_cw_newp.ivy: line 329: assume err_flag | node.southLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 330: node.westLink := *
+
+                        pyscript/no_cw_newp.ivy: line 330: assume err_flag | node.westLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 337: assume err_flag | node.eastLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 369: assume err_flag | node.eastLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 381: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 226: flit.sent0 := east
+
+                        [
+                            flit.sent0 = east
+                        ]
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 629: flit.zn0 := j
+
+                            [
+                                flit.zn0 = j
+                                node.faultCounter = 1
+                            ]
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+[
+    0:zoneIdentifiers = x
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    [
+        flit.sent1 = east
+    ]
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    [
+        flit.zn3 = i
+    ]
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    [
+        node.northLink2 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    [
+        node.eastLink2 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    [
+        node.southLink2 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    [
+        node.westLink2 = edge
+    ]
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    [
+        node.northLink1 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 321: node.eastLink := *
+
+                        pyscript/no_cw_newp.ivy: line 321: assume err_flag | node.eastLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 322: node.westLink := *
+
+                        [
+                            node.westLink = free
+                        ]
+                        pyscript/no_cw_newp.ivy: line 322: assume err_flag | node.westLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 323: node.northLink := *
+
+                        [
+                            node.northLink = free
+                        ]
+                        pyscript/no_cw_newp.ivy: line 323: assume err_flag | node.northLink ~= edge & node.northLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 324: node.southLink := *
+
+                        [
+                            node.southLink = faulty
+                        ]
+                        pyscript/no_cw_newp.ivy: line 324: assume err_flag | node.southLink ~= edge & node.southLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 350: assume err_flag | node.westLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 369: assume err_flag | node.eastLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 382: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 397: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 216: flit.sent0 := north
+
+                        [
+                            flit.sent0 = north
+                        ]
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 645: flit.zn0 := *
+
+                            pyscript/no_cw_newp.ivy: line 646: assume err_flag | (flit.zn0 = j | flit.zn0 = q)
+
+                            [
+                                router.notEast = false
+                                router.westNew = false
+                                router.negTrav = false
+                                router.abcefghjklnoq = true
+                                router.abcjklnoq = true
+                                node.faultCounter = 2
+                                flit.zn1 = j
+                            ]
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    [
+        flit.sent2 = east
+    ]
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    [
+        flit.sent1 = north
+    ]
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    [
+        flit.zn4 = i
+    ]
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    [
+        flit.zn2 = j
+    ]
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    [
+        node.northLink3 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    [
+        node.eastLink3 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    [
+        node.southLink3 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    [
+        node.westLink3 = edge
+    ]
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    [
+        node.northLink2 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    [
+        node.northLink1 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    [
+        node.southLink1 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    [
+        node.westLink1 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 315: node.northLink := *
+
+                        pyscript/no_cw_newp.ivy: line 315: assume err_flag | node.northLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 316: node.southLink := *
+
+                        [
+                            node.southLink = free
+                        ]
+                        pyscript/no_cw_newp.ivy: line 316: assume err_flag | node.southLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 317: node.eastLink := *
+
+                        pyscript/no_cw_newp.ivy: line 317: assume err_flag | node.eastLink ~= edge & node.eastLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 318: node.westLink := *
+
+                        pyscript/no_cw_newp.ivy: line 318: assume err_flag | node.westLink ~= edge & node.westLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 347: assume err_flag | node.southLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 369: assume err_flag | node.eastLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 383: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 398: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 216: flit.sent0 := north
+
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 645: flit.zn0 := *
+
+                            pyscript/no_cw_newp.ivy: line 646: assume err_flag | (flit.zn0 = j | flit.zn0 = q)
+
+                            [
+                                router.notEast = true
+                                router.notNorth = false
+                            ]
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    [
+        flit.sent3 = east
+    ]
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    [
+        flit.sent2 = north
+    ]
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    [
+        flit.zn5 = i
+    ]
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    [
+        flit.zn3 = j
+    ]
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    [
+        node.northLink4 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    [
+        node.eastLink4 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    [
+        node.southLink4 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    [
+        node.westLink4 = edge
+    ]
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    [
+        node.northLink3 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    [
+        node.northLink2 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    [
+        node.southLink2 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    [
+        node.westLink2 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    [
+        node.southLink1 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 315: node.northLink := *
+
+                        pyscript/no_cw_newp.ivy: line 315: assume err_flag | node.northLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 316: node.southLink := *
+
+                        pyscript/no_cw_newp.ivy: line 316: assume err_flag | node.southLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 317: node.eastLink := *
+
+                        pyscript/no_cw_newp.ivy: line 317: assume err_flag | node.eastLink ~= edge & node.eastLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 318: node.westLink := *
+
+                        pyscript/no_cw_newp.ivy: line 318: assume err_flag | node.westLink ~= edge & node.westLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 347: assume err_flag | node.southLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 384: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 399: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 216: flit.sent0 := north
+
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 645: flit.zn0 := *
+
+                            pyscript/no_cw_newp.ivy: line 646: assume err_flag | (flit.zn0 = j | flit.zn0 = q)
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+[
+    0:zoneIdentifiers = a
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    [
+        flit.sent4 = east
+    ]
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    [
+        flit.sent3 = north
+    ]
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    [
+        flit.zn4 = j
+    ]
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    [
+        node.northLink5 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    [
+        node.eastLink5 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    [
+        node.southLink5 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    [
+        node.westLink5 = edge
+    ]
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    [
+        node.northLink4 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    [
+        node.northLink3 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    [
+        node.southLink3 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    [
+        node.westLink3 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    [
+        node.southLink2 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 315: node.northLink := *
+
+                        pyscript/no_cw_newp.ivy: line 315: assume err_flag | node.northLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 316: node.southLink := *
+
+                        pyscript/no_cw_newp.ivy: line 316: assume err_flag | node.southLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 317: node.eastLink := *
+
+                        pyscript/no_cw_newp.ivy: line 317: assume err_flag | node.eastLink ~= edge & node.eastLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 318: node.westLink := *
+
+                        pyscript/no_cw_newp.ivy: line 318: assume err_flag | node.westLink ~= edge & node.westLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 347: assume err_flag | node.southLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 385: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 400: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 216: flit.sent0 := north
+
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 645: flit.zn0 := *
+
+                            pyscript/no_cw_newp.ivy: line 646: assume err_flag | (flit.zn0 = j | flit.zn0 = q)
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+[
+    0:zoneIdentifiers = r
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    [
+        flit.sent5 = east
+    ]
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    [
+        flit.sent4 = north
+    ]
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    [
+        flit.zn5 = j
+    ]
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    [
+        node.northLink5 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    [
+        node.northLink4 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    [
+        node.southLink4 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    [
+        node.westLink4 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    [
+        node.southLink3 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 315: node.northLink := *
+
+                        pyscript/no_cw_newp.ivy: line 315: assume err_flag | node.northLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 316: node.southLink := *
+
+                        pyscript/no_cw_newp.ivy: line 316: assume err_flag | node.southLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 317: node.eastLink := *
+
+                        pyscript/no_cw_newp.ivy: line 317: assume err_flag | node.eastLink ~= edge & node.eastLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 318: node.westLink := *
+
+                        pyscript/no_cw_newp.ivy: line 318: assume err_flag | node.westLink ~= edge & node.westLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 347: assume err_flag | node.southLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 386: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 401: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 216: flit.sent0 := north
+
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 645: flit.zn0 := *
+
+                            pyscript/no_cw_newp.ivy: line 646: assume err_flag | (flit.zn0 = j | flit.zn0 = q)
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    [
+        flit.sent6 = east
+    ]
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    [
+        flit.sent5 = north
+    ]
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    [
+        node.northLink5 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    [
+        node.southLink5 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    [
+        node.westLink5 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    [
+        node.southLink4 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 315: node.northLink := *
+
+                        pyscript/no_cw_newp.ivy: line 315: assume err_flag | node.northLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 316: node.southLink := *
+
+                        pyscript/no_cw_newp.ivy: line 316: assume err_flag | node.southLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 317: node.eastLink := *
+
+                        pyscript/no_cw_newp.ivy: line 317: assume err_flag | node.eastLink ~= edge & node.eastLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 318: node.westLink := *
+
+                        pyscript/no_cw_newp.ivy: line 318: assume err_flag | node.westLink ~= edge & node.westLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 347: assume err_flag | node.southLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 387: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 402: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 216: flit.sent0 := north
+
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 645: flit.zn0 := *
+
+                            pyscript/no_cw_newp.ivy: line 646: assume err_flag | (flit.zn0 = j | flit.zn0 = q)
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+[
+    0:zoneIdentifiers = q
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    [
+        flit.sent6 = north
+    ]
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    [
+        node.southLink5 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 315: node.northLink := *
+
+                        [
+                            node.northLink = faulty
+                        ]
+                        pyscript/no_cw_newp.ivy: line 315: assume err_flag | node.northLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 316: node.southLink := *
+
+                        pyscript/no_cw_newp.ivy: line 316: assume err_flag | node.southLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 317: node.eastLink := *
+
+                        pyscript/no_cw_newp.ivy: line 317: assume err_flag | node.eastLink ~= edge & node.eastLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 318: node.westLink := *
+
+                        pyscript/no_cw_newp.ivy: line 318: assume err_flag | node.westLink ~= edge & node.westLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 347: assume err_flag | node.southLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 381: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 403: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 220: flit.sent0 := west
+
+                        [
+                            flit.sent0 = west
+                        ]
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 656: flit.zn0 := i
+
+                            [
+                                flit.zn0 = i
+                            ]
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    [
+        flit.sent1 = west
+    ]
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    [
+        node.northLink1 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 321: node.eastLink := *
+
+                        pyscript/no_cw_newp.ivy: line 321: assume err_flag | node.eastLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 322: node.westLink := *
+
+                        [
+                            node.westLink = faulty
+                        ]
+                        pyscript/no_cw_newp.ivy: line 322: assume err_flag | node.westLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 323: node.northLink := *
+
+                        [
+                            node.northLink = free
+                        ]
+                        pyscript/no_cw_newp.ivy: line 323: assume err_flag | node.northLink ~= edge & node.northLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 324: node.southLink := *
+
+                        pyscript/no_cw_newp.ivy: line 324: assume err_flag | node.southLink ~= edge & node.southLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 337: assume err_flag | node.eastLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 356: assume err_flag | node.eastLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 382: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 405: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 210: flit.sent0 := south
+
+                        [
+                            flit.sent0 = south
+                        ]
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 632: flit.zn0 := i
+
+                            [
+                                router.westNew = true
+                                router.negTrav = true
+                                router.notNorth = true
+                                router.notWest = false
+                                router.abcefghjklnoq = false
+                                router.abcjklnoq = false
+                                flit.zn1 = i
+                            ]
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+[
+    0:zoneIdentifiers = b
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    [
+        flit.sent2 = west
+    ]
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    [
+        flit.sent1 = south
+    ]
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    [
+        flit.zn2 = i
+    ]
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    [
+        node.northLink2 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    [
+        node.northLink1 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    [
+        node.westLink1 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 315: node.northLink := *
+
+                        pyscript/no_cw_newp.ivy: line 315: assume err_flag | node.northLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 316: node.southLink := *
+
+                        pyscript/no_cw_newp.ivy: line 316: assume err_flag | node.southLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 317: node.eastLink := *
+
+                        pyscript/no_cw_newp.ivy: line 317: assume err_flag | node.eastLink ~= edge & node.eastLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 318: node.westLink := *
+
+                        [
+                            node.westLink = free
+                        ]
+                        pyscript/no_cw_newp.ivy: line 318: assume err_flag | node.westLink ~= edge & node.westLink ~= default
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 337: assume err_flag | node.eastLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 353: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 383: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 406: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 226: flit.sent0 := east
+
+                        [
+                            flit.sent0 = east
+                        ]
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 629: flit.zn0 := j
+
+                            [
+                                router.westNew = false
+                                router.notWest = true
+                                flit.zn0 = j
+                                router.notSouth = false
+                            ]
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+[
+    0:zoneIdentifiers = x
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    [
+        flit.sent3 = west
+    ]
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    [
+        flit.sent2 = south
+    ]
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    [
+        flit.sent1 = east
+    ]
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    [
+        flit.zn3 = i
+    ]
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    [
+        node.northLink3 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    [
+        node.northLink2 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    [
+        node.westLink2 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    [
+        node.westLink1 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 308: node.northLink := node.northLink4
+
+                        pyscript/no_cw_newp.ivy: line 309: node.eastLink := node.eastLink4
+
+                        pyscript/no_cw_newp.ivy: line 310: node.southLink := node.southLink4
+
+                        pyscript/no_cw_newp.ivy: line 311: node.southLink := node.southLink4
+
+                        pyscript/no_cw_newp.ivy: line 312: node.isLoop4 := true
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 350: assume err_flag | node.westLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 384: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 407: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 216: flit.sent0 := north
+
+                        [
+                            flit.sent0 = north
+                        ]
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 645: flit.zn0 := *
+
+                            [
+                                flit.zn0 = q
+                            ]
+                            pyscript/no_cw_newp.ivy: line 646: assume err_flag | (flit.zn0 = j | flit.zn0 = q)
+
+                            [
+                                router.notEast = false
+                                node.isLoop4 = true
+                                router.negTrav = false
+                                router.abcefghjklnoq = true
+                                router.abcjklnoq = true
+                                flit.zn1 = j
+                                router.notSouth = true
+                            ]
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+[
+    0:zoneIdentifiers = h
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    pyscript/no_cw_newp.ivy: line 86: flit.sent6 := flit.sent5
+
+    pyscript/no_cw_newp.ivy: line 87: flit.sent5 := flit.sent4
+
+    pyscript/no_cw_newp.ivy: line 88: flit.sent4 := flit.sent3
+
+    [
+        flit.sent4 = west
+    ]
+    pyscript/no_cw_newp.ivy: line 89: flit.sent3 := flit.sent2
+
+    [
+        flit.sent3 = south
+    ]
+    pyscript/no_cw_newp.ivy: line 90: flit.sent2 := flit.sent1
+
+    [
+        flit.sent2 = east
+    ]
+    pyscript/no_cw_newp.ivy: line 91: flit.sent1 := flit.sent0
+
+    [
+        flit.sent1 = north
+    ]
+    pyscript/no_cw_newp.ivy: line 93: flit.zn6 := flit.zn5
+
+    pyscript/no_cw_newp.ivy: line 94: flit.zn5 := flit.zn4
+
+    pyscript/no_cw_newp.ivy: line 95: flit.zn4 := flit.zn3
+
+    [
+        flit.zn4 = i
+    ]
+    pyscript/no_cw_newp.ivy: line 96: flit.zn3 := flit.zn2
+
+    pyscript/no_cw_newp.ivy: line 97: flit.zn2 := flit.zn1
+
+    [
+        flit.zn2 = j
+    ]
+    pyscript/no_cw_newp.ivy: line 99: node.northLink6 := node.northLink5
+
+    pyscript/no_cw_newp.ivy: line 100: node.eastLink6 := node.eastLink5
+
+    pyscript/no_cw_newp.ivy: line 101: node.southLink6 := node.southLink5
+
+    pyscript/no_cw_newp.ivy: line 102: node.westLink6 := node.westLink5
+
+    pyscript/no_cw_newp.ivy: line 103: node.northLink5 := node.northLink4
+
+    pyscript/no_cw_newp.ivy: line 104: node.eastLink5 := node.eastLink4
+
+    pyscript/no_cw_newp.ivy: line 105: node.southLink5 := node.southLink4
+
+    pyscript/no_cw_newp.ivy: line 106: node.westLink5 := node.westLink4
+
+    pyscript/no_cw_newp.ivy: line 107: node.northLink4 := node.northLink3
+
+    [
+        node.northLink4 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 108: node.eastLink4 := node.eastLink3
+
+    pyscript/no_cw_newp.ivy: line 109: node.southLink4 := node.southLink3
+
+    pyscript/no_cw_newp.ivy: line 110: node.westLink4 := node.westLink3
+
+    pyscript/no_cw_newp.ivy: line 111: node.northLink3 := node.northLink2
+
+    [
+        node.northLink3 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 112: node.eastLink3 := node.eastLink2
+
+    pyscript/no_cw_newp.ivy: line 113: node.southLink3 := node.southLink2
+
+    pyscript/no_cw_newp.ivy: line 114: node.westLink3 := node.westLink2
+
+    [
+        node.westLink3 = faulty
+    ]
+    pyscript/no_cw_newp.ivy: line 115: node.northLink2 := node.northLink1
+
+    pyscript/no_cw_newp.ivy: line 116: node.eastLink2 := node.eastLink1
+
+    pyscript/no_cw_newp.ivy: line 117: node.southLink2 := node.southLink1
+
+    pyscript/no_cw_newp.ivy: line 118: node.westLink2 := node.westLink1
+
+    [
+        node.westLink2 = free
+    ]
+    pyscript/no_cw_newp.ivy: line 119: node.northLink1 := node.northLink
+
+    pyscript/no_cw_newp.ivy: line 120: node.eastLink1 := node.eastLink
+
+    pyscript/no_cw_newp.ivy: line 121: node.southLink1 := node.southLink
+
+    pyscript/no_cw_newp.ivy: line 122: node.westLink1 := node.westLink
+
+    pyscript/no_cw_newp.ivy: line 125: call router.route
+    {
+        pyscript/no_cw_newp.ivy: line 186: call router.setConditions
+        {
+            pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+            pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            pyscript/no_cw_newp.ivy: line 187: call node.getLinks
+            {
+                pyscript/no_cw_newp.ivy: line 286: node.isLoop2 := false
+
+                pyscript/no_cw_newp.ivy: line 287: node.isLoop4 := false
+
+                pyscript/no_cw_newp.ivy: line 289: call router.setConditions
+                {
+                    pyscript/no_cw_newp.ivy: line 161: flit.zn1 := flit.zn0
+
+                    pyscript/no_cw_newp.ivy: line 163: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 164: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 165: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 166: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 167: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 168: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                    pyscript/no_cw_newp.ivy: line 170: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 171: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 172: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 173: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 174: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                    pyscript/no_cw_newp.ivy: line 175: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 176: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 177: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 178: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 179: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                    pyscript/no_cw_newp.ivy: line 180: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                    pyscript/no_cw_newp.ivy: line 290: call easyTrace.go
+                    {
+                        pyscript/no_cw_newp.ivy: line 308: node.northLink := node.northLink4
+
+                        [
+                            node.northLink = faulty
+                        ]
+                        pyscript/no_cw_newp.ivy: line 309: node.eastLink := node.eastLink4
+
+                        pyscript/no_cw_newp.ivy: line 310: node.southLink := node.southLink4
+
+                        pyscript/no_cw_newp.ivy: line 311: node.southLink := node.southLink4
+
+                        pyscript/no_cw_newp.ivy: line 312: node.isLoop4 := true
+
+                        pyscript/no_cw_newp.ivy: line 334: assume err_flag | node.northLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 347: assume err_flag | node.southLink ~= edge
+
+                        pyscript/no_cw_newp.ivy: line 359: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                        pyscript/no_cw_newp.ivy: line 379: node.faultCounter := 0:number
+
+                        pyscript/no_cw_newp.ivy: line 381: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 408: node.faultCounter := node.faultCounter + 1
+
+                        pyscript/no_cw_newp.ivy: line 415: assume err_flag | node.faultCounter <= 2
+
+                        pyscript/no_cw_newp.ivy: line 220: flit.sent0 := west
+
+                        [
+                            flit.sent0 = west
+                        ]
+                        pyscript/no_cw_newp.ivy: line 236: call node.getNextZone
+                        {
+                            pyscript/no_cw_newp.ivy: line 788: flit.zn0 := m
+
+                            [
+                                router.abcdefhijknop = false
+                                router.notEast = true
+                                router.abcfhijknop = false
+                                router.notNorth = false
+                                flit.zn0 = m
+                                flit.zn1 = q
+                            ]
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************
