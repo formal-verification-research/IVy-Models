@@ -1,0 +1,751 @@
+
+Isolate this:
+
+********************************************************************************
+
+minimal_copy_y_tests_1599253490/0.ivy: line 1328: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1329: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1330: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1331: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1332: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1333: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1334: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1335: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1336: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1337: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1338: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1339: Model checking invariant
+minimal_copy_y_tests_1599253490/0.ivy: line 1340: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpWTFdY1.aig; pdr; write_aiger_cex  /tmp/tmpWTFdY1.out".
+
+Output 0 of miter "/tmp/tmpWTFdY1" was asserted in frame 2.  Time =     0.19 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+[
+    0:zoneIdentifiers = c
+]
+err_flag := false
+
+minimal_copy_y_tests_1599253490/0.ivy: line 99: flit.sent9 := new
+
+[
+    flit.sent9 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 100: flit.sent8 := new
+
+[
+    flit.sent8 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 101: flit.sent7 := new
+
+[
+    flit.sent7 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 102: flit.sent6 := new
+
+[
+    flit.sent6 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 103: flit.sent5 := new
+
+[
+    flit.sent5 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 104: flit.sent4 := new
+
+[
+    flit.sent4 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 105: flit.sent3 := new
+
+[
+    flit.sent3 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 106: flit.sent2 := new
+
+[
+    flit.sent2 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 107: flit.sent1 := new
+
+[
+    flit.sent1 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 108: flit.sent0 := new
+
+[
+    flit.sent0 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 113: flit.zn9 := x
+
+[
+    flit.zn9 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 114: flit.zn8 := x
+
+[
+    flit.zn8 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 115: flit.zn7 := x
+
+[
+    flit.zn7 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 116: flit.zn6 := x
+
+[
+    flit.zn6 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 117: flit.zn5 := x
+
+[
+    flit.zn5 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 118: flit.zn4 := x
+
+[
+    flit.zn4 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 119: flit.zn3 := x
+
+[
+    flit.zn3 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 120: flit.zn2 := x
+
+[
+    flit.zn2 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 121: flit.zn1 := x
+
+[
+    flit.zn1 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 123: node.northLink := default
+
+[
+    node.northLink = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 124: node.eastLink := default
+
+[
+    node.eastLink = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 125: node.southLink := default
+
+[
+    node.southLink = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 126: node.westLink := default
+
+[
+    node.westLink = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 127: node.northLink1 := default
+
+[
+    node.northLink1 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 128: node.eastLink1 := default
+
+[
+    node.eastLink1 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 129: node.southLink1 := default
+
+[
+    node.southLink1 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 130: node.westLink1 := default
+
+[
+    node.westLink1 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 131: node.northLink2 := default
+
+[
+    node.northLink2 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 132: node.eastLink2 := default
+
+[
+    node.eastLink2 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 133: node.southLink2 := default
+
+[
+    node.southLink2 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 134: node.westLink2 := default
+
+[
+    node.westLink2 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 135: node.northLink3 := default
+
+[
+    node.northLink3 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 136: node.eastLink3 := default
+
+[
+    node.eastLink3 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 137: node.southLink3 := default
+
+[
+    node.southLink3 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 138: node.westLink3 := default
+
+[
+    node.westLink3 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 139: node.northLink4 := default
+
+[
+    node.northLink4 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 140: node.eastLink4 := default
+
+[
+    node.eastLink4 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 141: node.southLink4 := default
+
+[
+    node.southLink4 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 142: node.westLink4 := default
+
+[
+    node.westLink4 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 143: node.northLink5 := default
+
+[
+    node.northLink5 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 144: node.eastLink5 := default
+
+[
+    node.eastLink5 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 145: node.southLink5 := default
+
+[
+    node.southLink5 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 146: node.westLink5 := default
+
+[
+    node.westLink5 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 147: node.northLink6 := default
+
+[
+    node.northLink6 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 148: node.eastLink6 := default
+
+[
+    node.eastLink6 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 149: node.southLink6 := default
+
+[
+    node.southLink6 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 150: node.westLink6 := default
+
+[
+    node.westLink6 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 151: node.northLink7 := default
+
+[
+    node.northLink7 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 152: node.eastLink7 := default
+
+[
+    node.eastLink7 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 153: node.southLink7 := default
+
+[
+    node.southLink7 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 154: node.westLink7 := default
+
+[
+    node.westLink7 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 155: node.northLink8 := default
+
+[
+    node.northLink8 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 156: node.eastLink8 := default
+
+[
+    node.eastLink8 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 157: node.southLink8 := default
+
+[
+    node.southLink8 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 158: node.westLink8 := default
+
+[
+    node.westLink8 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 159: node.northLink9 := default
+
+[
+    node.northLink9 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 160: node.eastLink9 := default
+
+[
+    node.eastLink9 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 161: node.southLink9 := default
+
+[
+    node.southLink9 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 162: node.westLink9 := default
+
+[
+    node.westLink9 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 176: flit.zn0 := *
+
+[
+    flit.zn0 = r
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 177: assume err_flag | flit.zn0 ~= x
+
+minimal_copy_y_tests_1599253490/0.ivy: line 179: flit.livelock_free := false
+
+[
+    flit.livelock_free = false
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 180: flit.dropped := false
+
+[
+    flit.dropped = false
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1192: easyTrace.needPrinting := false
+
+[
+    easyTrace.needPrinting = false
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1194: easyTrace.traveling6 := new
+
+[
+    easyTrace.traveling6 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1195: easyTrace.traveling5 := new
+
+[
+    easyTrace.traveling5 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1196: easyTrace.traveling4 := new
+
+[
+    easyTrace.traveling4 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1197: easyTrace.traveling3 := new
+
+[
+    easyTrace.traveling3 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1198: easyTrace.traveling2 := new
+
+[
+    easyTrace.traveling2 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1199: easyTrace.traveling1 := new
+
+[
+    easyTrace.traveling1 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1200: easyTrace.traveling0 := new
+
+[
+    easyTrace.traveling0 = new
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1202: easyTrace.toZone6 := x
+
+[
+    easyTrace.toZone6 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1203: easyTrace.toZone5 := x
+
+[
+    easyTrace.toZone5 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1204: easyTrace.toZone4 := x
+
+[
+    easyTrace.toZone4 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1205: easyTrace.toZone3 := x
+
+[
+    easyTrace.toZone3 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1206: easyTrace.toZone2 := x
+
+[
+    easyTrace.toZone2 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1207: easyTrace.toZone1 := x
+
+[
+    easyTrace.toZone1 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1208: easyTrace.toZone0 := x
+
+[
+    easyTrace.toZone0 = x
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1210: easyTrace.northLink := default
+
+[
+    easyTrace.northLink = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1211: easyTrace.eastLink := default
+
+[
+    easyTrace.eastLink = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1212: easyTrace.southLink := default
+
+[
+    easyTrace.southLink = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1213: easyTrace.westLink := default
+
+[
+    easyTrace.westLink = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1214: easyTrace.northLink1 := default
+
+[
+    easyTrace.northLink1 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1215: easyTrace.eastLink1 := default
+
+[
+    easyTrace.eastLink1 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1216: easyTrace.southLink1 := default
+
+[
+    easyTrace.southLink1 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1217: easyTrace.westLink1 := default
+
+[
+    easyTrace.westLink1 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1218: easyTrace.northLink2 := default
+
+[
+    easyTrace.northLink2 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1219: easyTrace.eastLink2 := default
+
+[
+    easyTrace.eastLink2 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1220: easyTrace.southLink2 := default
+
+[
+    easyTrace.southLink2 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1221: easyTrace.westLink2 := default
+
+[
+    easyTrace.westLink2 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1222: easyTrace.northLink3 := default
+
+[
+    easyTrace.northLink3 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1223: easyTrace.eastLink3 := default
+
+[
+    easyTrace.eastLink3 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1224: easyTrace.southLink3 := default
+
+[
+    easyTrace.southLink3 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1225: easyTrace.westLink3 := default
+
+[
+    easyTrace.westLink3 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1226: easyTrace.northLink4 := default
+
+[
+    easyTrace.northLink4 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1227: easyTrace.eastLink4 := default
+
+[
+    easyTrace.eastLink4 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1228: easyTrace.southLink4 := default
+
+[
+    easyTrace.southLink4 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1229: easyTrace.westLink4 := default
+
+[
+    easyTrace.westLink4 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1230: easyTrace.northLink5 := default
+
+[
+    easyTrace.northLink5 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1231: easyTrace.eastLink5 := default
+
+[
+    easyTrace.eastLink5 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1232: easyTrace.southLink5 := default
+
+[
+    easyTrace.southLink5 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1233: easyTrace.westLink5 := default
+
+[
+    easyTrace.westLink5 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1234: easyTrace.northLink6 := default
+
+[
+    easyTrace.northLink6 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1235: easyTrace.eastLink6 := default
+
+[
+    easyTrace.eastLink6 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1236: easyTrace.southLink6 := default
+
+[
+    easyTrace.southLink6 = default
+]
+minimal_copy_y_tests_1599253490/0.ivy: line 1237: easyTrace.westLink6 := default
+
+[
+    easyTrace.westLink6 = default
+]
+__init := true
+
+[
+    router.abcdefhijknop = false
+    router.cdefghijmopq = false
+    node.beenHere9 = false
+    router.efghm = false
+    router.westNew = false
+    router.negTrav = false
+    router.notNorth = false
+    node.beenHere2 = false
+    router.abcdefnop = false
+    router.abcjklnoq = false
+    router.afghijklmnpq = false
+    router.cjoqdip = false
+    router.notEast = false
+    node.beenHere5 = false
+    node.beenHere7 = false
+    router.notSouth = false
+    router.fghijmpq = false
+    node.isLoop4 = false
+    router.abcfhijknop = false
+    node.beenHere8 = false
+    node.beenHere3 = false
+    router.abcefghjklnoq = false
+    node.faultCounter = 32
+    router.ghijklmq = false
+    router.notWest = false
+    node.isLoop2 = false
+    node.beenHere6 = false
+    node.beenHere4 = false
+]
+[
+    0:zoneIdentifiers = q
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    minimal_copy_y_tests_1599253490/0.ivy: line 186: assume err_flag | ~flit.dropped & ~flit.livelock_free
+
+    minimal_copy_y_tests_1599253490/0.ivy: line 193: call router.route
+    {
+        minimal_copy_y_tests_1599253490/0.ivy: line 325: call router.setConditions
+        {
+            minimal_copy_y_tests_1599253490/0.ivy: line 299: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            [
+                router.negTrav = true
+            ]
+            minimal_copy_y_tests_1599253490/0.ivy: line 300: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+            [
+                router.westNew = true
+            ]
+            minimal_copy_y_tests_1599253490/0.ivy: line 301: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+            [
+                router.notWest = true
+            ]
+            minimal_copy_y_tests_1599253490/0.ivy: line 302: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+            [
+                router.notSouth = true
+            ]
+            minimal_copy_y_tests_1599253490/0.ivy: line 303: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            [
+                router.notEast = true
+            ]
+            minimal_copy_y_tests_1599253490/0.ivy: line 304: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+            [
+                router.notNorth = true
+            ]
+            minimal_copy_y_tests_1599253490/0.ivy: line 306: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 307: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 308: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 309: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 310: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 311: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 312: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 313: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 314: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 315: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 316: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+            minimal_copy_y_tests_1599253490/0.ivy: line 326: call node.getLinks
+            {
+                minimal_copy_y_tests_1599253490/0.ivy: line 514: node.isLoop2 := false
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 515: node.isLoop4 := false
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 516: node.beenHere2 := false
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 517: node.beenHere3 := false
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 518: node.beenHere4 := false
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 519: node.beenHere5 := false
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 520: node.beenHere6 := false
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 521: node.beenHere7 := false
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 522: node.beenHere8 := false
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 523: node.beenHere9 := false
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 542: node.northLink := *
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 542: assume err_flag | node.northLink ~= default
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 543: node.eastLink := *
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 543: assume err_flag | node.eastLink ~= default
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 544: node.southLink := *
+
+                [
+                    node.southLink = free
+                ]
+                minimal_copy_y_tests_1599253490/0.ivy: line 544: assume err_flag | node.southLink ~= default
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 545: node.westLink := *
+
+                [
+                    node.westLink = free
+                ]
+                minimal_copy_y_tests_1599253490/0.ivy: line 545: assume err_flag | node.westLink ~= default
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 630: assume err_flag | node.northLink ~= edge
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 633: assume err_flag | node.eastLink ~= edge
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 636: assume err_flag | node.southLink ~= edge
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 639: assume err_flag | node.westLink ~= edge
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 655: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 674: node.faultCounter := 0:number
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 722: assume err_flag | node.faultCounter <= 2
+
+                minimal_copy_y_tests_1599253490/0.ivy: line 377: call router.drop
+                {
+                    minimal_copy_y_tests_1599253490/0.ivy: line 434: flit.sent0 := new
+
+                    minimal_copy_y_tests_1599253490/0.ivy: line 435: flit.dropped := true
+
+                    [
+                        flit.dropped = true
+                        node.northLink = free
+                        node.eastLink = free
+                        node.faultCounter = 0
+                    ]
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************

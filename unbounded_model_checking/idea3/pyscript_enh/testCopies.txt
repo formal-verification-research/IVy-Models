@@ -1,0 +1,36 @@
+
+Isolate this:
+
+********************************************************************************
+
+testCopies.ivy: line 1151: Model checking invariant
+testCopies.ivy: line 1152: Model checking invariant
+testCopies.ivy: line 1153: Model checking invariant
+testCopies.ivy: line 1154: Model checking invariant
+testCopies.ivy: line 1155: Model checking invariant
+testCopies.ivy: line 1156: Model checking invariant
+testCopies.ivy: line 1157: Model checking invariant
+testCopies.ivy: line 1158: Model checking invariant
+testCopies.ivy: line 1159: Model checking invariant
+testCopies.ivy: line 1160: Model checking invariant
+testCopies.ivy: line 1161: Model checking invariant
+testCopies.ivy: line 1162: Model checking invariant
+testCopies.ivy: line 1164: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpX17kRH.aig; pdr; write_aiger_cex  /tmp/tmpX17kRH.out".
+
+Invariant F[5] : 411 clauses with 77 flops (out of 257) (cex = 0, ave = 43.93)
+Verification of invariant with 411 clauses was successful.  Time =     0.05 sec
+Property proved.  Time =     3.22 sec
+There is no current CEX.
+--------------------------------------------------------------------------------
+
+PASS
+
+OK

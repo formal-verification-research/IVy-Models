@@ -4,3 +4,4 @@
 *.smt2
 settings.json
 *.ai
+unbounded_model_checking/model/*

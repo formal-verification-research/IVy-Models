@@ -1,0 +1,35 @@
+
+Isolate this:
+
+********************************************************************************
+
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1064: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1065: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1066: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1067: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1068: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1069: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1070: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1071: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1072: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1073: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1074: Model checking invariant
+minimal_copy_ll_n_tests_1599254158/0.ivy: line 1075: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpBlRW6c.aig; pdr; write_aiger_cex  /tmp/tmpBlRW6c.out".
+
+Invariant F[17] : 1199 clauses with 104 flops (out of 254) (cex = 0, ave = 50.01)
+Verification of invariant with 1199 clauses was successful.  Time =     0.25 sec
+Property proved.  Time =    26.42 sec
+There is no current CEX.
+--------------------------------------------------------------------------------
+
+PASS
+
+OK

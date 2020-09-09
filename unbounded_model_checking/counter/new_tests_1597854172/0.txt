@@ -1,0 +1,1 @@
+new_tests_1597854172/0.ivy: line 1087: error: unknown symbol: moveCounter

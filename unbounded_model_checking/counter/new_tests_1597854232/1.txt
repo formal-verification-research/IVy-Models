@@ -1,0 +1,22 @@
+
+Isolate this:
+
+********************************************************************************
+
+new_tests_1597854232/1.ivy: line 1073: Model checking invariant
+new_tests_1597854232/1.ivy: line 1074: Model checking invariant
+new_tests_1597854232/1.ivy: line 1075: Model checking invariant
+new_tests_1597854232/1.ivy: line 1076: Model checking invariant
+new_tests_1597854232/1.ivy: line 1077: Model checking invariant
+new_tests_1597854232/1.ivy: line 1078: Model checking invariant
+new_tests_1597854232/1.ivy: line 1079: Model checking invariant
+new_tests_1597854232/1.ivy: line 1080: Model checking invariant
+new_tests_1597854232/1.ivy: line 1081: Model checking invariant
+new_tests_1597854232/1.ivy: line 1082: Model checking invariant
+new_tests_1597854232/1.ivy: line 1083: Model checking invariant
+new_tests_1597854232/1.ivy: line 1084: Model checking invariant
+new_tests_1597854232/1.ivy: line 1087: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instan
