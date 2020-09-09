@@ -1,0 +1,797 @@
+
+Isolate this:
+
+********************************************************************************
+
+enh_memory_4_tests_1598911834/0.ivy: line 1097: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpJbssy8.aig; pdr; write_aiger_cex  /tmp/tmpJbssy8.out".
+
+Output 0 of miter "/tmp/tmpJbssy8" was asserted in frame 2.  Time =     0.71 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+[
+    0:zoneIdentifiers = c
+]
+err_flag := false
+
+enh_memory_4_tests_1598911834/0.ivy: line 66: flit.moveCounter := 0:number
+
+[
+    flit.moveCounter = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 68: flit.x_pos := 15:number
+
+[
+    flit.x_pos = 15
+]
+enh_memory_4_tests_1598911834/0.ivy: line 69: flit.x_pos1 := 0:number
+
+[
+    flit.x_pos1 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 70: flit.x_pos2 := 0:number
+
+[
+    flit.x_pos2 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 71: flit.x_pos3 := 0:number
+
+[
+    flit.x_pos3 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 72: flit.x_pos4 := 0:number
+
+[
+    flit.x_pos4 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 73: flit.x_pos5 := 0:number
+
+[
+    flit.x_pos5 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 74: flit.x_pos6 := 0:number
+
+[
+    flit.x_pos6 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 75: flit.x_pos7 := 0:number
+
+[
+    flit.x_pos7 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 76: flit.x_pos8 := 0:number
+
+[
+    flit.x_pos8 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 77: flit.x_pos9 := 0:number
+
+[
+    flit.x_pos9 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 79: flit.y_pos := 15:number
+
+[
+    flit.y_pos = 15
+]
+enh_memory_4_tests_1598911834/0.ivy: line 80: flit.y_pos1 := 0:number
+
+[
+    flit.y_pos1 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 81: flit.y_pos2 := 0:number
+
+[
+    flit.y_pos2 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 82: flit.y_pos3 := 0:number
+
+[
+    flit.y_pos3 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 83: flit.y_pos4 := 0:number
+
+[
+    flit.y_pos4 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 84: flit.y_pos5 := 0:number
+
+[
+    flit.y_pos5 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 85: flit.y_pos6 := 0:number
+
+[
+    flit.y_pos6 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 86: flit.y_pos7 := 0:number
+
+[
+    flit.y_pos7 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 87: flit.y_pos8 := 0:number
+
+[
+    flit.y_pos8 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 88: flit.y_pos9 := 0:number
+
+[
+    flit.y_pos9 = 0
+]
+enh_memory_4_tests_1598911834/0.ivy: line 90: flit.sent6 := new
+
+[
+    flit.sent6 = new
+]
+enh_memory_4_tests_1598911834/0.ivy: line 91: flit.sent5 := new
+
+[
+    flit.sent5 = new
+]
+enh_memory_4_tests_1598911834/0.ivy: line 92: flit.sent4 := new
+
+[
+    flit.sent4 = new
+]
+enh_memory_4_tests_1598911834/0.ivy: line 93: flit.sent3 := new
+
+[
+    flit.sent3 = new
+]
+enh_memory_4_tests_1598911834/0.ivy: line 94: flit.sent2 := new
+
+[
+    flit.sent2 = new
+]
+enh_memory_4_tests_1598911834/0.ivy: line 95: flit.sent1 := new
+
+[
+    flit.sent1 = new
+]
+enh_memory_4_tests_1598911834/0.ivy: line 96: flit.sent0 := new
+
+[
+    flit.sent0 = new
+]
+enh_memory_4_tests_1598911834/0.ivy: line 98: flit.zn6 := x
+
+[
+    flit.zn6 = x
+]
+enh_memory_4_tests_1598911834/0.ivy: line 99: flit.zn5 := x
+
+[
+    flit.zn5 = x
+]
+enh_memory_4_tests_1598911834/0.ivy: line 100: flit.zn4 := x
+
+[
+    flit.zn4 = x
+]
+enh_memory_4_tests_1598911834/0.ivy: line 101: flit.zn3 := x
+
+[
+    flit.zn3 = x
+]
+enh_memory_4_tests_1598911834/0.ivy: line 102: flit.zn2 := x
+
+[
+    flit.zn2 = x
+]
+enh_memory_4_tests_1598911834/0.ivy: line 103: flit.zn1 := x
+
+[
+    flit.zn1 = x
+]
+enh_memory_4_tests_1598911834/0.ivy: line 105: node.northLink := default
+
+[
+    node.northLink = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 106: node.eastLink := default
+
+[
+    node.eastLink = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 107: node.southLink := default
+
+[
+    node.southLink = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 108: node.westLink := default
+
+[
+    node.westLink = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 109: node.northLink1 := default
+
+[
+    node.northLink1 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 110: node.eastLink1 := default
+
+[
+    node.eastLink1 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 111: node.southLink1 := default
+
+[
+    node.southLink1 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 112: node.westLink1 := default
+
+[
+    node.westLink1 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 113: node.northLink2 := default
+
+[
+    node.northLink2 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 114: node.eastLink2 := default
+
+[
+    node.eastLink2 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 115: node.southLink2 := default
+
+[
+    node.southLink2 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 116: node.westLink2 := default
+
+[
+    node.westLink2 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 117: node.northLink3 := default
+
+[
+    node.northLink3 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 118: node.eastLink3 := default
+
+[
+    node.eastLink3 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 119: node.southLink3 := default
+
+[
+    node.southLink3 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 120: node.westLink3 := default
+
+[
+    node.westLink3 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 121: node.northLink4 := default
+
+[
+    node.northLink4 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 122: node.eastLink4 := default
+
+[
+    node.eastLink4 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 123: node.southLink4 := default
+
+[
+    node.southLink4 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 124: node.westLink4 := default
+
+[
+    node.westLink4 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 125: node.northLink5 := default
+
+[
+    node.northLink5 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 126: node.eastLink5 := default
+
+[
+    node.eastLink5 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 127: node.southLink5 := default
+
+[
+    node.southLink5 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 128: node.westLink5 := default
+
+[
+    node.westLink5 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 129: node.northLink6 := default
+
+[
+    node.northLink6 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 130: node.eastLink6 := default
+
+[
+    node.eastLink6 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 131: node.southLink6 := default
+
+[
+    node.southLink6 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 132: node.westLink6 := default
+
+[
+    node.westLink6 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 133: node.northLink7 := default
+
+[
+    node.northLink7 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 134: node.eastLink7 := default
+
+[
+    node.eastLink7 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 135: node.southLink7 := default
+
+[
+    node.southLink7 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 136: node.westLink7 := default
+
+[
+    node.westLink7 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 137: node.northLink8 := default
+
+[
+    node.northLink8 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 138: node.eastLink8 := default
+
+[
+    node.eastLink8 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 139: node.southLink8 := default
+
+[
+    node.southLink8 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 140: node.westLink8 := default
+
+[
+    node.westLink8 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 141: node.northLink9 := default
+
+[
+    node.northLink9 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 142: node.eastLink9 := default
+
+[
+    node.eastLink9 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 143: node.southLink9 := default
+
+[
+    node.southLink9 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 144: node.westLink9 := default
+
+[
+    node.westLink9 = default
+]
+enh_memory_4_tests_1598911834/0.ivy: line 146: flit.zn0 := *
+
+[
+    flit.zn0 = k
+]
+enh_memory_4_tests_1598911834/0.ivy: line 147: assume (err_flag | flit.zn0 ~= x)
+
+enh_memory_4_tests_1598911834/0.ivy: line 149: flit.livelock_free := false
+
+[
+    flit.livelock_free = false
+]
+enh_memory_4_tests_1598911834/0.ivy: line 150: flit.dropped := false
+
+[
+    flit.dropped = false
+]
+__init := true
+
+[
+    router.cdefghijmopq = false
+    router.abcdefhijknop = false
+    router.fghijmpq = false
+    flit.sent9 = north
+    router.notEast = false
+    node.beenHere9 = false
+    node.isLoop4 = false
+    flit.zn8 = a
+    router.abcfhijknop = false
+    node.beenHere8 = false
+    node.beenHere3 = false
+    router.westNew = false
+    router.negTrav = false
+    router.notNorth = false
+    router.ghijklmq = false
+    node.beenHere2 = false
+    router.notWest = false
+    flit.sent7 = north
+    flit.sent8 = north
+    flit.zn9 = a
+    router.abcefghjklnoq = false
+    router.abcdefnop = true
+    node.isLoop2 = false
+    router.abcjklnoq = true
+    router.efghm = false
+    node.beenHere6 = false
+    router.afghijklmnpq = false
+    router.cjoqdip = false
+    node.faultCounter = 0
+    node.beenHere5 = false
+    node.beenHere7 = false
+    flit.zn7 = a
+    router.notSouth = false
+    node.beenHere4 = false
+]
+[
+    0:zoneIdentifiers = e
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    enh_memory_4_tests_1598911834/0.ivy: line 156: assume (err_flag | (~flit.dropped & ~flit.livelock_free))
+
+    enh_memory_4_tests_1598911834/0.ivy: line 159: call flit.copyFirst
+    {
+        enh_memory_4_tests_1598911834/0.ivy: line 170: flit.moveCounter := flit.moveCounter + 1
+
+        [
+            flit.moveCounter = 1
+        ]
+        enh_memory_4_tests_1598911834/0.ivy: line 172: flit.x_pos9 := flit.x_pos8
+
+        enh_memory_4_tests_1598911834/0.ivy: line 173: flit.x_pos8 := flit.x_pos7
+
+        enh_memory_4_tests_1598911834/0.ivy: line 174: flit.x_pos7 := flit.x_pos6
+
+        enh_memory_4_tests_1598911834/0.ivy: line 175: flit.x_pos6 := flit.x_pos5
+
+        enh_memory_4_tests_1598911834/0.ivy: line 176: flit.x_pos5 := flit.x_pos4
+
+        enh_memory_4_tests_1598911834/0.ivy: line 177: flit.x_pos4 := flit.x_pos3
+
+        enh_memory_4_tests_1598911834/0.ivy: line 178: flit.x_pos3 := flit.x_pos2
+
+        enh_memory_4_tests_1598911834/0.ivy: line 179: flit.x_pos2 := flit.x_pos1
+
+        enh_memory_4_tests_1598911834/0.ivy: line 180: flit.x_pos1 := flit.x_pos
+
+        [
+            flit.x_pos1 = 15
+        ]
+        enh_memory_4_tests_1598911834/0.ivy: line 182: flit.y_pos9 := flit.y_pos8
+
+        enh_memory_4_tests_1598911834/0.ivy: line 183: flit.y_pos8 := flit.y_pos7
+
+        enh_memory_4_tests_1598911834/0.ivy: line 184: flit.y_pos7 := flit.y_pos6
+
+        enh_memory_4_tests_1598911834/0.ivy: line 185: flit.y_pos6 := flit.y_pos5
+
+        enh_memory_4_tests_1598911834/0.ivy: line 186: flit.y_pos5 := flit.y_pos4
+
+        enh_memory_4_tests_1598911834/0.ivy: line 187: flit.y_pos4 := flit.y_pos3
+
+        enh_memory_4_tests_1598911834/0.ivy: line 188: flit.y_pos3 := flit.y_pos2
+
+        enh_memory_4_tests_1598911834/0.ivy: line 189: flit.y_pos2 := flit.y_pos1
+
+        enh_memory_4_tests_1598911834/0.ivy: line 190: flit.y_pos1 := flit.y_pos
+
+        [
+            flit.y_pos1 = 15
+        ]
+        enh_memory_4_tests_1598911834/0.ivy: line 205: flit.zn9 := flit.zn8
+
+        enh_memory_4_tests_1598911834/0.ivy: line 206: flit.zn8 := flit.zn7
+
+        enh_memory_4_tests_1598911834/0.ivy: line 207: flit.zn7 := flit.zn6
+
+        [
+            flit.zn7 = x
+        ]
+        enh_memory_4_tests_1598911834/0.ivy: line 208: flit.zn6 := flit.zn5
+
+        enh_memory_4_tests_1598911834/0.ivy: line 209: flit.zn5 := flit.zn4
+
+        enh_memory_4_tests_1598911834/0.ivy: line 210: flit.zn4 := flit.zn3
+
+        enh_memory_4_tests_1598911834/0.ivy: line 211: flit.zn3 := flit.zn2
+
+        enh_memory_4_tests_1598911834/0.ivy: line 212: flit.zn2 := flit.zn1
+
+        enh_memory_4_tests_1598911834/0.ivy: line 213: flit.zn1 := flit.zn0
+
+        [
+            flit.zn1 = k
+        ]
+        enh_memory_4_tests_1598911834/0.ivy: line 215: flit.sent9 := flit.sent8
+
+        enh_memory_4_tests_1598911834/0.ivy: line 216: flit.sent8 := flit.sent7
+
+        enh_memory_4_tests_1598911834/0.ivy: line 217: flit.sent7 := flit.sent6
+
+        [
+            flit.sent7 = new
+        ]
+        enh_memory_4_tests_1598911834/0.ivy: line 218: flit.sent6 := flit.sent5
+
+        enh_memory_4_tests_1598911834/0.ivy: line 219: flit.sent5 := flit.sent4
+
+        enh_memory_4_tests_1598911834/0.ivy: line 220: flit.sent4 := flit.sent3
+
+        enh_memory_4_tests_1598911834/0.ivy: line 221: flit.sent3 := flit.sent2
+
+        enh_memory_4_tests_1598911834/0.ivy: line 222: flit.sent2 := flit.sent1
+
+        enh_memory_4_tests_1598911834/0.ivy: line 223: flit.sent1 := flit.sent0
+
+        enh_memory_4_tests_1598911834/0.ivy: line 225: node.northLink9 := node.northLink8
+
+        enh_memory_4_tests_1598911834/0.ivy: line 226: node.eastLink9 := node.eastLink8
+
+        enh_memory_4_tests_1598911834/0.ivy: line 227: node.southLink9 := node.southLink8
+
+        enh_memory_4_tests_1598911834/0.ivy: line 228: node.westLink9 := node.westLink8
+
+        enh_memory_4_tests_1598911834/0.ivy: line 230: node.northLink8 := node.northLink7
+
+        enh_memory_4_tests_1598911834/0.ivy: line 231: node.eastLink8 := node.eastLink7
+
+        enh_memory_4_tests_1598911834/0.ivy: line 232: node.southLink8 := node.southLink7
+
+        enh_memory_4_tests_1598911834/0.ivy: line 233: node.westLink8 := node.westLink7
+
+        enh_memory_4_tests_1598911834/0.ivy: line 235: node.northLink7 := node.northLink6
+
+        enh_memory_4_tests_1598911834/0.ivy: line 236: node.eastLink7 := node.eastLink6
+
+        enh_memory_4_tests_1598911834/0.ivy: line 237: node.southLink7 := node.southLink6
+
+        enh_memory_4_tests_1598911834/0.ivy: line 238: node.westLink7 := node.westLink6
+
+        enh_memory_4_tests_1598911834/0.ivy: line 240: node.northLink6 := node.northLink5
+
+        enh_memory_4_tests_1598911834/0.ivy: line 241: node.eastLink6 := node.eastLink5
+
+        enh_memory_4_tests_1598911834/0.ivy: line 242: node.southLink6 := node.southLink5
+
+        enh_memory_4_tests_1598911834/0.ivy: line 243: node.westLink6 := node.westLink5
+
+        enh_memory_4_tests_1598911834/0.ivy: line 245: node.northLink5 := node.northLink4
+
+        enh_memory_4_tests_1598911834/0.ivy: line 246: node.eastLink5 := node.eastLink4
+
+        enh_memory_4_tests_1598911834/0.ivy: line 247: node.southLink5 := node.southLink4
+
+        enh_memory_4_tests_1598911834/0.ivy: line 248: node.westLink5 := node.westLink4
+
+        enh_memory_4_tests_1598911834/0.ivy: line 250: node.northLink4 := node.northLink3
+
+        enh_memory_4_tests_1598911834/0.ivy: line 251: node.eastLink4 := node.eastLink3
+
+        enh_memory_4_tests_1598911834/0.ivy: line 252: node.southLink4 := node.southLink3
+
+        enh_memory_4_tests_1598911834/0.ivy: line 253: node.westLink4 := node.westLink3
+
+        enh_memory_4_tests_1598911834/0.ivy: line 255: node.northLink3 := node.northLink2
+
+        enh_memory_4_tests_1598911834/0.ivy: line 256: node.eastLink3 := node.eastLink2
+
+        enh_memory_4_tests_1598911834/0.ivy: line 257: node.southLink3 := node.southLink2
+
+        enh_memory_4_tests_1598911834/0.ivy: line 258: node.westLink3 := node.westLink2
+
+        enh_memory_4_tests_1598911834/0.ivy: line 260: node.northLink2 := node.northLink1
+
+        enh_memory_4_tests_1598911834/0.ivy: line 261: node.eastLink2 := node.eastLink1
+
+        enh_memory_4_tests_1598911834/0.ivy: line 262: node.southLink2 := node.southLink1
+
+        enh_memory_4_tests_1598911834/0.ivy: line 263: node.westLink2 := node.westLink1
+
+        enh_memory_4_tests_1598911834/0.ivy: line 265: node.northLink1 := node.northLink
+
+        enh_memory_4_tests_1598911834/0.ivy: line 266: node.eastLink1 := node.eastLink
+
+        enh_memory_4_tests_1598911834/0.ivy: line 267: node.southLink1 := node.southLink
+
+        enh_memory_4_tests_1598911834/0.ivy: line 268: node.westLink1 := node.westLink
+
+        enh_memory_4_tests_1598911834/0.ivy: line 162: call router.route
+        {
+            enh_memory_4_tests_1598911834/0.ivy: line 327: call router.setConditions
+            {
+                enh_memory_4_tests_1598911834/0.ivy: line 301: router.negTrav := (flit.sent1 = west | flit.sent1 = south | flit.sent1 = new)
+
+                [
+                    router.negTrav = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 302: router.westNew := (flit.sent1 = west | flit.sent1 = new)
+
+                [
+                    router.westNew = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 303: router.notWest := (flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new)
+
+                [
+                    router.notWest = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 304: router.notSouth := (flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new)
+
+                [
+                    router.notSouth = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 305: router.notEast := (flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new)
+
+                [
+                    router.notEast = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 306: router.notNorth := (flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new)
+
+                [
+                    router.notNorth = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 308: router.abcjklnoq := (flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q)
+
+                enh_memory_4_tests_1598911834/0.ivy: line 309: router.afghijklmnpq := (flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q)
+
+                [
+                    router.afghijklmnpq = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 310: router.abcfhijknop := (flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p)
+
+                [
+                    router.abcfhijknop = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 311: router.cdefghijmopq := (flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q)
+
+                enh_memory_4_tests_1598911834/0.ivy: line 312: router.efghm := (flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m)
+
+                enh_memory_4_tests_1598911834/0.ivy: line 313: router.ghijklmq := (flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q)
+
+                [
+                    router.ghijklmq = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 314: router.abcdefnop := (flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p)
+
+                [
+                    router.abcdefnop = false
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 315: router.cjoqdip := (flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p)
+
+                enh_memory_4_tests_1598911834/0.ivy: line 316: router.fghijmpq := (flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q)
+
+                enh_memory_4_tests_1598911834/0.ivy: line 317: router.abcefghjklnoq := (flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q)
+
+                [
+                    router.abcefghjklnoq = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 318: router.abcdefhijknop := (flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p)
+
+                [
+                    router.abcdefhijknop = true
+                ]
+                enh_memory_4_tests_1598911834/0.ivy: line 328: call node.getLinks
+                {
+                    enh_memory_4_tests_1598911834/0.ivy: line 503: node.isLoop2 := false
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 504: node.isLoop4 := false
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 505: node.beenHere2 := false
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 506: node.beenHere3 := false
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 507: node.beenHere4 := false
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 508: node.beenHere5 := false
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 509: node.beenHere6 := false
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 510: node.beenHere7 := false
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 511: node.beenHere8 := false
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 512: node.beenHere9 := false
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 531: node.northLink := *
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 531: assume (err_flag | node.northLink ~= default)
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 532: node.eastLink := *
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 532: assume (err_flag | node.eastLink ~= default)
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 533: node.southLink := *
+
+                    [
+                        node.southLink = free
+                    ]
+                    enh_memory_4_tests_1598911834/0.ivy: line 533: assume (err_flag | node.southLink ~= default)
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 534: node.westLink := *
+
+                    [
+                        node.westLink = faulty
+                    ]
+                    enh_memory_4_tests_1598911834/0.ivy: line 534: assume (err_flag | node.westLink ~= default)
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 619: assume (err_flag | node.northLink ~= edge)
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 628: assume (err_flag | node.westLink ~= edge)
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 644: assume (err_flag | (~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)))
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 663: node.faultCounter := 0:number
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 698: node.faultCounter := node.faultCounter + 1
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 711: assume (err_flag | node.faultCounter <= 2)
+
+                    enh_memory_4_tests_1598911834/0.ivy: line 361: call router.north1
+                    {
+                        enh_memory_4_tests_1598911834/0.ivy: line 414: flit.sent0 := north
+
+                        [
+                            flit.sent0 = north
+                        ]
+                        enh_memory_4_tests_1598911834/0.ivy: line 415: call node.getNextZone
+                        {
+                            enh_memory_4_tests_1598911834/0.ivy: line 962: flit.zn0 := *
+
+                            enh_memory_4_tests_1598911834/0.ivy: line 963: assume (err_flag | (flit.zn0 = k | flit.zn0 = l))
+
+                            [
+                                node.northLink = free
+                                node.eastLink = free
+                                node.faultCounter = 1
+                            ]
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************

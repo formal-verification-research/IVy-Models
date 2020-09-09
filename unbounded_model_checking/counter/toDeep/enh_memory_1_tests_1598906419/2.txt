@@ -1,0 +1,15 @@
+
+Isolate this:
+
+********************************************************************************
+
+enh_memory_1_tests_1598906419/2.ivy: line 1084: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+error: model checker returned non-zero status

@@ -1,0 +1,1098 @@
+#lang ivy1.7
+
+attribute method = mc
+
+type zoneIdentifiers = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,x}
+type dir = {north,east,south,west,new}
+type linkStatuses = {free,faulty,edge,default}
+type number
+type counter
+interpret number -> bv[6]
+# interpret counter -> bv[7]
+
+object flit = {
+  
+  var moveCounter : number
+  
+  var x_pos : number
+  var x_pos1 : number
+  var x_pos2 : number
+  var x_pos3 : number
+  var x_pos4 : number
+  var x_pos5 : number
+  var x_pos6 : number
+  var x_pos7 : number
+  var x_pos8 : number
+  var x_pos9 : number
+  
+  var y_pos : number
+  var y_pos1 : number
+  var y_pos2 : number
+  var y_pos3 : number
+  var y_pos4 : number
+  var y_pos5 : number
+  var y_pos6 : number
+  var y_pos7 : number
+  var y_pos8 : number
+  var y_pos9 : number
+  
+  var sent9 : dir
+  var sent8 : dir
+  var sent7 : dir
+  var sent6 : dir
+  var sent5 : dir
+  var sent4 : dir
+  var sent3 : dir
+  var sent2 : dir
+  var sent1 : dir
+  var sent0 : dir
+  
+  var zn9 : zoneIdentifiers
+  var zn8 : zoneIdentifiers
+  var zn7 : zoneIdentifiers
+  var zn6 : zoneIdentifiers
+  var zn5 : zoneIdentifiers
+  var zn4 : zoneIdentifiers
+  var zn3 : zoneIdentifiers
+  var zn2 : zoneIdentifiers
+  var zn1 : zoneIdentifiers
+  var zn0 : zoneIdentifiers
+  
+  var livelock_free : bool
+  var dropped : bool
+  
+  after init {
+    
+    moveCounter := 0;
+    
+    # flit.x_pos := 15; # chosen because a flit should not go more than 15 in one direction - theory
+    # flit.x_pos1 := 0;
+    # flit.x_pos2 := 0;
+    # flit.x_pos3 := 0;
+    # flit.x_pos4 := 0;
+    # flit.x_pos5 := 0;
+    # flit.x_pos6 := 0;
+    # flit.x_pos7 := 0;
+    # flit.x_pos8 := 0;
+    # flit.x_pos9 := 0;
+    
+    # flit.y_pos := 15; # chosen because a flit should not go more than 15 in one direction - theory
+    # flit.y_pos1 := 0;
+    # flit.y_pos2 := 0;
+    # flit.y_pos3 := 0;
+    # flit.y_pos4 := 0;
+    # flit.y_pos5 := 0;
+    # flit.y_pos6 := 0;
+    # flit.y_pos7 := 0;
+    # flit.y_pos8 := 0;
+    # flit.y_pos9 := 0;
+    
+    sent6 := new;
+    sent5 := new;
+    sent4 := new;
+    sent3 := new;
+    sent2 := new;
+    sent1 := new;    
+    sent0 := new;    
+
+    zn6 := x;
+    zn5 := x;
+    zn4 := x;
+    zn3 := x;
+    zn2 := x;
+    zn1 := x;  
+    
+    node.northLink  := default;
+    node.eastLink   := default;
+    node.southLink  := default;
+    node.westLink   := default;
+    node.northLink1 := default;
+    node.eastLink1  := default;
+    node.southLink1 := default;
+    node.westLink1  := default;
+    node.northLink2 := default;
+    node.eastLink2  := default;
+    node.southLink2 := default;
+    node.westLink2  := default;
+    node.northLink3 := default;
+    node.eastLink3  := default;
+    node.southLink3 := default;
+    node.westLink3  := default;
+    node.northLink4 := default;
+    node.eastLink4  := default;
+    node.southLink4 := default;
+    node.westLink4  := default;
+    node.northLink5 := default;
+    node.eastLink5  := default;
+    node.southLink5 := default;
+    node.westLink5  := default;
+    node.northLink6 := default;
+     node.eastLink6 := default;
+    node.southLink6 := default;
+     node.westLink6 := default;
+    node.northLink7 := default;
+     node.eastLink7 := default;
+    node.southLink7 := default;
+     node.westLink7 := default;
+    node.northLink8 := default;
+     node.eastLink8 := default;
+    node.southLink8 := default;
+     node.westLink8 := default;
+    node.northLink9 := default;
+     node.eastLink9 := default;
+    node.southLink9 := default;
+     node.westLink9 := default;
+    
+    zn0 := *;
+    assume zn0 ~= x;
+    
+    livelock_free := false;
+    dropped := false;
+    
+  }
+  
+  action moveFlit = {
+    
+    require ~flit.dropped & ~livelock_free;
+    
+    if ~(zn1 = zn0 & sent1 = sent0) {
+      call copyFirst;
+    };
+    
+    call router.route;
+
+  } #end moveFlit
+  
+  export moveFlit
+  
+  action copyFirst = {
+    
+    moveCounter := moveCounter + 1;
+    
+    # flit.x_pos9 := flit.x_pos8;
+    # flit.x_pos8 := flit.x_pos7;
+    # flit.x_pos7 := flit.x_pos6;
+    # flit.x_pos6 := flit.x_pos5;
+    # flit.x_pos5 := flit.x_pos4;
+    # flit.x_pos4 := flit.x_pos3;
+    # flit.x_pos3 := flit.x_pos2;
+    # flit.x_pos2 := flit.x_pos1;
+    # flit.x_pos1 := flit.x_pos;
+    
+    # flit.y_pos9 := flit.y_pos8;
+    # flit.y_pos8 := flit.y_pos7;
+    # flit.y_pos7 := flit.y_pos6;
+    # flit.y_pos6 := flit.y_pos5;
+    # flit.y_pos5 := flit.y_pos4;
+    # flit.y_pos4 := flit.y_pos3;
+    # flit.y_pos3 := flit.y_pos2;
+    # flit.y_pos2 := flit.y_pos1;
+    # flit.y_pos1 := flit.y_pos;
+    
+    # if sent0 = north {
+      # flit.y_pos := flit.y_pos + 1;
+    # }
+    # else if sent0 = east {
+      # flit.x_pos := flit.x_pos + 1;
+    # }
+    # else if sent0 = south {
+      # flit.y_pos := flit.y_pos - 1;
+    # } 
+    # else if sent0 = west {
+      # flit.x_pos := flit.x_pos - 1;
+    # };
+    
+    zn9 := zn8;
+    zn8 := zn7;
+    zn7 := zn6;
+    zn6 := zn5;
+    zn5 := zn4;
+    zn4 := zn3;
+    zn3 := zn2;
+    zn2 := zn1;
+    zn1 := zn0;
+    
+    sent9 := sent8;
+    sent8 := sent7;
+    sent7 := sent6;
+    sent6 := sent5;
+    sent5 := sent4;
+    sent4 := sent3;
+    sent3 := sent2;
+    sent2 := sent1;
+    sent1 := sent0;
+    
+    node.northLink9 := node.northLink8;
+     node.eastLink9 :=  node.eastLink8;
+    node.southLink9 := node.southLink8;
+     node.westLink9 :=  node.westLink8;
+     
+    node.northLink8 := node.northLink7;
+     node.eastLink8 :=  node.eastLink7;
+    node.southLink8 := node.southLink7;
+     node.westLink8 :=  node.westLink7;
+    
+    node.northLink7 := node.northLink6;
+     node.eastLink7 :=  node.eastLink6;
+    node.southLink7 := node.southLink6;
+     node.westLink7 :=  node.westLink6;
+    
+    node.northLink6 := node.northLink5;
+     node.eastLink6 :=  node.eastLink5;
+    node.southLink6 := node.southLink5;
+     node.westLink6 :=  node.westLink5;
+    
+    node.northLink5 := node.northLink4;
+     node.eastLink5 :=  node.eastLink4;
+    node.southLink5 := node.southLink4;
+     node.westLink5 :=  node.westLink4;
+    
+    node.northLink4 := node.northLink3;
+     node.eastLink4 :=  node.eastLink3;
+    node.southLink4 := node.southLink3;
+     node.westLink4 :=  node.westLink3;
+    
+    node.northLink3 := node.northLink2;
+     node.eastLink3 :=  node.eastLink2;
+    node.southLink3 := node.southLink2;
+     node.westLink3 :=  node.westLink2;
+    
+    node.northLink2 := node.northLink1;
+     node.eastLink2 :=  node.eastLink1;
+    node.southLink2 := node.southLink1;
+     node.westLink2 :=  node.westLink1;
+    
+    node.northLink1 := node.northLink;
+    node.eastLink1 :=  node.eastLink;
+    node.southLink1 := node.southLink;
+    node.westLink1 :=  node.westLink;
+  
+  } #end copyFirst
+
+} #end flit
+
+
+
+object router = {
+
+  var negTrav : bool
+  
+  var abcjklnoq : bool
+  var afghijklmnpq : bool
+  var abcfhijknop : bool
+  var cdefghijmopq : bool
+  var acefghijklnoq : bool
+  var efghm : bool
+  var ghijklmq : bool
+  var abcdefnop : bool
+  var cjoqdip : bool
+  var fghijmpq : bool
+  var abcefghjklnoq : bool
+  var abcdefhijknop : bool
+  
+  var westNew : bool
+  var notWest : bool
+  var notSouth : bool
+  var notEast : bool
+  var notNorth : bool
+  
+  action setConditions = {
+    
+    negTrav := (flit.sent1 = west | flit.sent1 = south | flit.sent1 = new);
+    westNew := (flit.sent1 = west | flit.sent1 = new);
+    notWest := (flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new);
+    notSouth := (flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new);
+    notEast := (flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new);
+    notNorth := (flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new);
+    
+    abcjklnoq := (flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q);
+    afghijklmnpq := (flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q);
+    abcfhijknop := (flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p);
+    cdefghijmopq := (flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q);
+    efghm := (flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m);
+    ghijklmq := (flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q);
+    abcdefnop := (flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p);
+    cjoqdip := (flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p);
+    fghijmpq := (flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q);
+    abcefghjklnoq := (flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q);
+    abcdefhijknop := (flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p);
+    
+  } #end setZoneConditions
+
+  action route = { 
+  
+    # numbered actions are called, allowing for an easier time reading the trace to see which decision
+    # the protocol took and at what level (ie south0, south1, and south2; see below)
+    
+    call setConditions;
+    call node.getLinks;
+    
+    if flit.dropped {
+      flit.dropped := true;
+    }
+    
+    else if flit.zn1 = r {
+      flit.livelock_free := true;
+    }
+    
+    else if node.westLink = free & flit.zn1 = n {
+      call west0;
+    }
+    else if node.southLink = free & flit.zn1 = o {
+      call south0;
+    }
+    else if node.eastLink = free & flit.zn1 = p {
+      call east0;
+    }
+    else if node.northLink = free & flit.zn1 = q {
+      call north0;
+    }
+    
+    else if node.westLink = free & negTrav & (abcjklnoq | (afghijklmnpq & node.southLink = faulty)) & (abcdefhijknop | notSouth) {
+      call west1;
+    }
+    else if node.southLink = free & negTrav & (abcdefnop | (cdefghijmopq & node.westLink = faulty)) & (abcefghjklnoq | cdefghijmopq) {
+      call south1;
+    }
+    else if node.eastLink = free & notWest & efghm {
+      call east1;
+    }
+    else if node.northLink = free & notSouth & ghijklmq {
+      call north1;
+    }
+    
+                                                                          #new thing below:
+    else if node.westLink = free & abcjklnoq & (notEast | flit.zn1 = q) & ((flit.zn1 ~= j & flit.zn1 ~= q) | flit.sent1 ~= north) {
+      call west2;
+    }
+    else if node.southLink = free & notNorth & abcdefnop { 
+      call south2;
+    }
+    else if node.eastLink = free & cdefghijmopq & (notWest | cjoqdip) {
+      call east2;
+    }
+    else if node.northLink = free & afghijklmnpq & (notSouth | fghijmpq) {
+      call north2;
+    }
+    
+    else {
+      call drop;
+    };
+    
+  } #end route
+  
+  action west0 = {
+    flit.sent0 := west;
+    call node.getNextZone;
+  } #end west0
+  action south0 = {
+    flit.sent0 := south;
+    call node.getNextZone;
+  } #end south0
+  action east0 = {
+    flit.sent0 := east;
+    call node.getNextZone;
+  } #end east0
+  action north0 = {
+    flit.sent0 := north;
+    call node.getNextZone;
+  } #end north0
+  
+  action west1 = {
+    flit.sent0 := west;
+    call node.getNextZone;
+  } #end west1
+  action south1 = {
+    flit.sent0 := south;
+    call node.getNextZone;
+  } #end south1
+  action east1 = {
+    flit.sent0 := east;
+    call node.getNextZone;
+  } #end east1
+  action north1 = {
+    flit.sent0 := north;
+    call node.getNextZone;
+  } #end north1
+  
+  action west2 = {
+    flit.sent0 := west;
+    call node.getNextZone;
+  } #end west2
+  action south2 = {
+    flit.sent0 := south;
+    call node.getNextZone;
+  } #end south2
+  action east2 = {
+    flit.sent0 := east;
+    call node.getNextZone;
+  } #end east2
+  action north2 = {
+    flit.sent0 := north;
+    call node.getNextZone;
+  } #end north2
+  
+  action drop = {
+    flit.sent0 := new;
+    flit.dropped := true;
+  } #end drop
+  
+} #end router                
+
+
+
+object node = {
+  
+  var northLink : linkStatuses
+  var eastLink  : linkStatuses
+  var southLink : linkStatuses
+  var westLink  : linkStatuses
+  
+  var northLink1 : linkStatuses
+  var eastLink1  : linkStatuses
+  var southLink1 : linkStatuses
+  var westLink1  : linkStatuses
+  var northLink2 : linkStatuses
+  var eastLink2  : linkStatuses
+  var southLink2 : linkStatuses
+  var westLink2  : linkStatuses
+  var northLink3 : linkStatuses
+  var eastLink3  : linkStatuses
+  var southLink3 : linkStatuses
+  var westLink3  : linkStatuses
+  var northLink4 : linkStatuses
+  var eastLink4  : linkStatuses
+  var southLink4 : linkStatuses
+  var westLink4  : linkStatuses
+  var northLink5 : linkStatuses
+  var  eastLink5 : linkStatuses
+  var southLink5 : linkStatuses
+  var  westLink5 : linkStatuses
+  var northLink6 : linkStatuses
+  var  eastLink6 : linkStatuses
+  var southLink6 : linkStatuses
+  var  westLink6 : linkStatuses
+  var northLink7 : linkStatuses
+  var  eastLink7 : linkStatuses
+  var southLink7 : linkStatuses
+  var  westLink7 : linkStatuses
+  var northLink8 : linkStatuses
+  var  eastLink8 : linkStatuses
+  var southLink8 : linkStatuses
+  var  westLink8 : linkStatuses
+  var northLink9 : linkStatuses
+  var  eastLink9 : linkStatuses
+  var southLink9 : linkStatuses
+  var  westLink9 : linkStatuses
+  
+  individual faultCounter : number
+  individual isLoop2 : bool
+  individual isLoop4 : bool
+  
+  individual beenHere2 : bool
+  individual beenHere3 : bool
+  individual beenHere4 : bool
+  individual beenHere5 : bool
+  individual beenHere6 : bool
+  individual beenHere7 : bool
+  individual beenHere8 : bool
+  individual beenHere9 : bool
+  
+  action getLinks = { 
+    
+    isLoop2 := false;
+    isLoop4 := false;
+    beenHere2 := false;
+    beenHere3 := false;
+    beenHere4 := false;
+    beenHere5 := false;
+    beenHere6 := false;
+    beenHere7 := false;
+    beenHere8 := false;
+    beenHere9 := false;
+    
+    if flit.sent1 = north | flit.sent1 = south {
+      northLink := *; assume northLink ~= default;
+      southLink := *; assume southLink ~= default;
+      if eastLink ~= edge { eastLink := *; assume eastLink ~= edge & eastLink ~= default; }
+      else { eastLink := edge; };
+      if westLink ~= edge { westLink := *; assume westLink ~= edge & westLink ~= default; }
+      else { westLink := edge; };
+    }
+    else if flit.sent1 = east | flit.sent1 = west {
+      eastLink := *; assume eastLink ~= default;
+      westLink := *; assume westLink ~= default;
+      if northLink ~= edge { northLink := *; assume northLink ~= edge & northLink ~= default; }
+      else { northLink := edge; };
+      if southLink ~= edge { southLink := *; assume southLink ~= edge & southLink ~= default; }
+      else { southLink := edge; };
+    }
+    else {
+      northLink := *; assume northLink ~= default;
+      eastLink  := *; assume eastLink  ~= default;
+      southLink := *; assume southLink ~= default;
+      westLink := *;  assume westLink  ~= default;
+    };
+    
+    if northLink2 ~= default & ( (flit.sent2 = north & flit.sent1 = south) | (flit.sent2 = south & flit.sent1 = north) | (flit.sent2 = east & flit.sent1 = west) | (flit.sent2 = west & flit.sent1 = east) ) {
+      northLink := northLink2;
+      eastLink := eastLink2;
+      southLink := southLink2;
+      southLink := southLink2;
+      isLoop2 := true;
+    };
+    
+    if northLink4 ~= default & 
+       ((flit.sent4 = north & flit.sent3 = east & flit.sent2 = south & flit.sent1 = west) | 
+       (flit.sent4 = east & flit.sent3 = south & flit.sent2 = west & flit.sent1 = north) |
+       (flit.sent4 = south & flit.sent3 = west & flit.sent2 = north & flit.sent1 = east) | 
+       (flit.sent4 = west & flit.sent3 = north & flit.sent2 = east & flit.sent1 = south) | 
+       (flit.sent4 = south & flit.sent3 = east & flit.sent2 = north & flit.sent1 = west) | 
+       (flit.sent4 = east & flit.sent3 = north & flit.sent2 = west & flit.sent1 = south) |
+       (flit.sent4 = north & flit.sent3 = west & flit.sent2 = south & flit.sent1 = east) | 
+       (flit.sent4 = west & flit.sent3 = south & flit.sent2 = east & flit.sent1 = north)) {
+      northLink := northLink4;
+      eastLink := eastLink4;
+      southLink := southLink4;
+      southLink := southLink4;
+      isLoop4 := true;
+    };
+    
+    # if flit.x_pos = flit.x_pos2 & flit.y_pos = flit.y_pos2 {
+      # beenHere2 := true;
+      # northLink := northLink2;
+       # eastLink :=  eastLink2;
+      # southLink := southLink2;
+       # westLink :=  westLink2;
+    # }
+    # else if flit.x_pos = flit.x_pos3 & flit.y_pos = flit.y_pos3 {
+      # beenHere3 := true;
+      # northLink := northLink2;
+       # eastLink :=  eastLink2;
+      # southLink := southLink2;
+       # westLink :=  westLink2;
+    # }
+    # else if flit.x_pos = flit.x_pos4 & flit.y_pos = flit.y_pos4 {
+      # beenHere4 := true;
+      # northLink := northLink2;
+       # eastLink :=  eastLink2;
+      # southLink := southLink2;
+       # westLink :=  westLink2;
+    # }
+    # else if flit.x_pos = flit.x_pos5 & flit.y_pos = flit.y_pos5 {
+      # beenHere5 := true;
+      # northLink := northLink2;
+       # eastLink :=  eastLink2;
+      # southLink := southLink2;
+       # westLink :=  westLink2;
+    # }
+    # else if flit.x_pos = flit.x_pos6 & flit.y_pos = flit.y_pos6 {
+      # beenHere6 := true;
+      # northLink := northLink2;
+       # eastLink :=  eastLink2;
+      # southLink := southLink2;
+       # westLink :=  westLink2;
+    # }
+    # else if flit.x_pos = flit.x_pos7 & flit.y_pos = flit.y_pos7 {
+      # beenHere7 := true;
+      # northLink := northLink2;
+       # eastLink :=  eastLink2;
+      # southLink := southLink2;
+       # westLink :=  westLink2;
+    # }
+    # else if flit.x_pos = flit.x_pos8 & flit.y_pos = flit.y_pos8 {
+      # beenHere8 := true;
+      # northLink := northLink2;
+       # eastLink :=  eastLink2;
+      # southLink := southLink2;
+       # westLink :=  westLink2;
+    # }
+    # else if flit.x_pos = flit.x_pos9 & flit.y_pos = flit.y_pos9 {
+      # beenHere9 := true;
+      # northLink := northLink2;
+       # eastLink :=  eastLink2;
+      # southLink := southLink2;
+       # westLink :=  westLink2;
+    # };
+    
+    if ~router.abcdefnop {
+      assume ~(northLink = edge);
+    };
+    if ~router.abcjklnoq {
+      assume ~(eastLink = edge);
+    };
+    if ~router.afghijklmnpq {
+      assume ~(southLink = edge);
+    };
+    if ~router.cdefghijmopq {
+      assume ~(westLink = edge);
+    };
+    
+    if flit.sent1 = north {
+      assume ~(southLink = edge);
+    };
+    if flit.sent1 = east {
+      assume ~(westLink = edge);
+    };
+    if flit.sent1 = south {
+      assume ~(northLink = edge);
+    };
+    if flit.sent1 = west {
+      assume ~(eastLink = edge);
+    };
+
+    assume ~(northLink = edge & southLink = edge) & ~(eastLink = edge & westLink = edge);
+    
+    # The following relies on the following logic:
+    # In order for the flit to reach the north edge from the south edge, it always reaches the north edge while traveling north
+    # This also checks that the network is large enough to be verified
+    
+    if (southLink1 = edge) {
+      assume northLink ~= edge; 
+    };
+    if (westLink1 = edge) {
+      assume eastLink ~= edge; 
+    };
+    if (northLink1 = edge) {
+      assume southLink ~= edge;
+    };
+    if (eastLink1 = edge) {
+      assume westLink ~= edge; 
+    };
+    
+    faultCounter := 0;
+    
+    if northLink  = faulty { faultCounter := faultCounter + 1 };
+    if northLink1 = faulty { faultCounter := faultCounter + 1 };
+    if northLink2 = faulty & ~isLoop2 & ~beenHere2 { faultCounter := faultCounter + 1 };
+    if northLink3 = faulty & ~isLoop2 & ~beenHere3 { faultCounter := faultCounter + 1 };
+    if northLink4 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere4 { faultCounter := faultCounter + 1 };
+    if northLink5 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere5 { faultCounter := faultCounter + 1 };
+    if northLink6 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere6 { faultCounter := faultCounter + 1 };
+    if northLink7 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere7 { faultCounter := faultCounter + 1 };
+    if northLink8 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere8 { faultCounter := faultCounter + 1 };
+    if northLink9 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere9 { faultCounter := faultCounter + 1 };
+    
+    if eastLink  = faulty { faultCounter := faultCounter + 1 };
+    if eastLink1 = faulty { faultCounter := faultCounter + 1 };
+    if eastLink2 = faulty & ~isLoop2 & ~beenHere2 { faultCounter := faultCounter + 1 };
+    if eastLink3 = faulty & ~isLoop2 & ~beenHere3 { faultCounter := faultCounter + 1 };
+    if eastLink4 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere4 { faultCounter := faultCounter + 1 };
+    if eastLink5 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere5 { faultCounter := faultCounter + 1 };
+    if eastLink6 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere6 { faultCounter := faultCounter + 1 };
+    if eastLink7 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere7 { faultCounter := faultCounter + 1 };
+    if eastLink8 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere8 { faultCounter := faultCounter + 1 };
+    if eastLink9 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere9 { faultCounter := faultCounter + 1 };
+    
+    if southLink  = faulty { faultCounter := faultCounter + 1 };
+    if southLink1 = faulty { faultCounter := faultCounter + 1 };
+    if southLink2 = faulty & ~isLoop2 & ~beenHere2 { faultCounter := faultCounter + 1 };
+    if southLink3 = faulty & ~isLoop2 & ~beenHere3 { faultCounter := faultCounter + 1 };
+    if southLink4 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere4 { faultCounter := faultCounter + 1 };
+    if southLink5 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere5 { faultCounter := faultCounter + 1 };
+    if southLink6 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere6 { faultCounter := faultCounter + 1 };
+    if southLink7 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere7 { faultCounter := faultCounter + 1 };
+    if southLink8 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere8 { faultCounter := faultCounter + 1 };
+    if southLink9 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere9 { faultCounter := faultCounter + 1 };
+
+    if westLink  = faulty { faultCounter := faultCounter + 1 };
+    if westLink1 = faulty { faultCounter := faultCounter + 1 };
+    if westLink2 = faulty & ~isLoop2 & ~beenHere2 { faultCounter := faultCounter + 1 };
+    if westLink3 = faulty & ~isLoop2 & ~beenHere3 { faultCounter := faultCounter + 1 };
+    if westLink4 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere4 { faultCounter := faultCounter + 1 };
+    if westLink5 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere5 { faultCounter := faultCounter + 1 };
+    if westLink6 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere6 { faultCounter := faultCounter + 1 };
+    if westLink7 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere7 { faultCounter := faultCounter + 1 };
+    if westLink8 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere8 { faultCounter := faultCounter + 1 };
+    if westLink9 = faulty & ~isLoop4 & ~isLoop2 & ~beenHere9 { faultCounter := faultCounter + 1 };
+    
+    # This is how we can set fault tolerance specification.
+    # Network with new protocol fault-tolerant up to 2 faults
+    assume faultCounter <= 2;
+    
+  } #end getLinks
+  
+  action getNextZone = { #this if statement will need MUCH more development... this is just good enough to test.
+    if flit.zn1 = a {
+      if flit.sent0 = north {
+        flit.zn0 := b;
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := a;
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := l;
+      }
+      else if flit.sent0 = west {
+        if flit.zn2 = n | flit.zn4 = 0 | flit.zn4 = q | flit.zn5 = c | flit.zn5 = j {
+          flit.zn0 := n;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = a | flit.zn0 = n;
+        }
+      }
+      
+    }
+    else if flit.zn1 = b {
+      if flit.sent0 = north {
+        flit.zn0 := b;
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := b;
+      }
+      else if flit.sent0 = south {
+        if flit.zn2 = n | flit.zn2 = o {
+          flit.zn0 := n;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = b | flit.zn0 = a | flit.zn0 = n;
+        }
+      }
+      else if flit.sent0 = west {
+        if flit.zn2 = n | flit.zn2 = o {
+          flit.zn0 := o;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = b | flit.zn0 = c | flit.zn0 = o;
+        }
+      }
+    
+    }
+    else if flit.zn1 = c {
+      if flit.sent0 = north {
+        flit.zn0 := c;
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := b;
+      }
+      else if flit.sent0 = south {
+        if flit.zn2 = o | flit.zn4 = p | flit.zn4 = n | flit.zn5 = a | flit.zn5 = f {
+          flit.zn0 := o;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = c | flit.zn0 = o;
+        }
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := d;
+      }
+    
+    }
+    else if flit.zn1 = d {
+      if flit.sent0 = north {
+        flit.zn0 := d;
+      }
+      else if flit.sent0 = east {
+        if flit.zn2 = c | flit.zn3 = p {
+          flit.zn0 := c;
+        }
+        else if flit.zn2 = o | flit.zn2 = p | flit.zn3 = f {
+          flit.zn0 := o;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = c | flit.zn0 = o;
+        }
+      }
+      else if flit.sent0 = south {
+        if flit.zn2 = o | flit.zn2 = p | flit.zn3 = c | flit.zn3 = f {
+          flit.zn0 := p;
+        }
+        else if flit.zn2 = c {
+          flit.zn0 := d;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = d | flit.zn0 = p;
+        }
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := e;
+      }
+    
+    }
+    else if flit.zn1 = e {
+      if flit.sent0 = north {
+        flit.zn0 := e;
+      }
+      else if flit.sent0 = east {
+        if flit.zn2 = d | flit.zn3 = p | flit.zn4 = m | flit.zn5 = i {
+          flit.zn0 := d;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = e | flit.zn0 = d;
+        }
+      }
+      else if flit.sent0 = south {
+        if flit.zn2 = f | flit.zn3 = p | flit.zn3 = g | flit.zn4 = m | flit.zn4 = h {
+          flit.zn0 := f;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = e | flit.zn0 = f;
+        }
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := e;
+      }
+    
+    }
+    else if flit.zn1 = f {
+      if flit.sent0 = north {
+        flit.zn0 := e;
+      }
+      else if flit.sent0 = east {
+        if flit.zn2 = p | flit.zn3 = m | flit.zn3 = d | flit.zn4 = i {
+          flit.zn0 := p
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = f | flit.zn0 = p;
+        }
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := g;
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := f;
+      }
+    
+    }
+    else if flit.zn1 = g {
+      if flit.sent0 = north {
+        flit.zn0 := f;
+      }
+      else if flit.sent0 = east {
+        if flit.zn2 = m | flit.zn3 = p | flit.zn3 = i {
+          flit.zn0 := m;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = g | flit.zn0 = m;
+        }
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := h;
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := g;
+      }
+    
+    }
+    else if flit.zn1 = h {
+      if flit.sent0 = north {
+        if flit.zn2 = g | flit.zn3 = m | flit.zn4 = q | flit.zn5 = l {
+          flit.zn0 := g;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = g | flit.zn0 = h;
+        }
+      }
+      else if flit.sent0 = east {
+        if flit.zn2 = i | flit.zn3 = m | flit.zn4 = p | flit.zn5 = d {
+          flit.zn0 := i;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = h | flit.zn0 = i;
+        }
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := h;
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := h;
+      }
+    
+    }
+    else if flit.zn1 = i {
+      if flit.sent0 = north {
+        if flit.zn2 = m | flit.zn3 = g | flit.zn3 = q | flit.zn4 = l {
+          flit.zn0 := m;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = i | flit.zn0 = m;
+        }
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := j;
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := i;
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := h;
+      }
+    
+    }
+    else if flit.zn1 = j {
+      if flit.sent0 = north {
+        if flit.zn2 = q | flit.zn3 = m | flit.zn3 = l | flit.zn4 = g {
+          flit.zn0 := q;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = j | flit.zn0 = q;
+        }
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := k;
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := j;
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := i;
+      }
+    
+    }
+    else if flit.zn1 = k {
+      if flit.sent0 = north {
+        if flit.zn2 = l | flit.zn3 = q | flit.zn4 = m | flit.zn5 = g {
+          flit.zn0 := l;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = k | flit.zn0 = l;
+        }
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := k;
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := k;
+      }
+      else if flit.sent0 = west {
+        if flit.zn2 = j | flit.zn3 = q | flit.zn4 = m | flit.zn4 = n {
+          flit.zn0 := j;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = j | flit.zn0 = k;
+        }
+      }
+    
+    }
+    else if flit.zn1 = l {
+      if flit.sent0 = north {
+        if flit.zn2 = a | flit.zn3 = q | flit.zn3 = n {
+          flit.zn0 := a;
+        }
+        else if flit.zn2 = n | flit.zn2 = q | flit.zn3 = j {
+          flit.zn0 := n;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = a | flit.zn0 = n;
+        }
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := l;
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := k;
+      }
+      else if flit.sent0 = west {
+        if flit.zn2 = q | flit.zn2 = n | flit.zn3 = j {
+          flit.zn0 := q;
+        }
+        else {
+          flit.zn0 := *;
+          assume flit.zn0 = l | flit.zn0 = q;
+        }
+      }
+    
+    }
+    else if flit.zn1 = m {
+      if flit.sent0 = north {
+        flit.zn0 := p;
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := q;
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := i;
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := g;
+      }
+    
+    }
+    else if flit.zn1 = n {
+      if flit.sent0 = north {
+        flit.zn0 := b;
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := a;
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := l;
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := r;
+      }
+    
+    }
+    else if flit.zn1 = o {
+      if flit.sent0 = north {
+        flit.zn0 := c;
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := b;
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := r;
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := d;
+      }
+    
+    }
+    else if flit.zn1 = p {
+      if flit.sent0 = north {
+        flit.zn0 := d;
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := r;
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := m;
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := f;
+      }
+    
+    }
+    else if flit.zn1 = q {
+      if flit.sent0 = north {
+        flit.zn0 := r;
+      }
+      else if flit.sent0 = east {
+        flit.zn0 := l;
+      }
+      else if flit.sent0 = south {
+        flit.zn0 := j;
+      }
+      else if flit.sent0 = west {
+        flit.zn0 := m;
+      }
+    
+    };
+    
+    
+  } #end getNextZone
+
+
+} #end node
+
+
+#counter follows
+invariant flit.moveCounter <= 2
+# success. edited by python script in folder enh_memory_5_tests_1598997984
