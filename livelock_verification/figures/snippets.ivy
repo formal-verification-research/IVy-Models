@@ -1,0 +1,120 @@
+object arbiter = {
+		
+		individual get_from : sources 
+		individual ready : bool
+		
+		after init {
+			get_from := void;
+			ready := false;
+		}
+		
+		before choose {
+			get_from := void;
+			ready := false;
+		}
+		
+		action choose = {
+			if r1.hf {
+				if r2.hf {
+					if r3.hf { # 1 2 3
+						get_from := *; 
+						assume get_from = rc1 | get_from = rc2 | get_from = rc3; 
+					}
+					else { # 1 2 _
+						get_from := *; 
+						assume get_from = rc1 | get_from = rc2; 
+		            };
+				}
+				else if r3.hf { # 1 _ 3
+					get_from := *; 
+					assume get_from = rc1 | get_from = rc3; 
+				}
+				else { # 1 _ _
+					get_from := rc1;
+		        };
+	            ready := true;
+			}	
+			else if r2.hf {
+				if r3.hf { # _ 2 3
+					get_from := *; 
+					assume get_from = rc2 | get_from = rc3; 
+				}
+				else { # _ 2 _
+					get_from := rc2;
+		        };
+                ready := true;
+			}
+			else if r3.hf { # _ _ 3
+				get_from := rc3;
+				ready := true;
+			}
+			else { # _ _ _
+				get_from := void;
+				ready := false;
+			};
+			call spec.remove_duplicates;
+		} #end choose
+		
+		action check = {
+			if ~r_recv.hf & ready & (get_from = rc1 | get_from = rc2 | get_from = rc3) {
+				assert ready;
+				assert ~r_recv.hf; 
+				call send; 
+			}
+			else {
+				ready := false;
+				get_from := void;
+			};
+		} #end check
+		
+		execute choose before check
+		
+		action send = {
+			call spec.clear_upstream;
+			ready := false;
+			if get_from = rc1 {
+				assert r1.hf;
+				call r1.has_sent;
+				call r_recv.get_flit;
+				call spec.copy_data;
+			};
+			if get_from = rc2 {
+				assert r2.hf;
+				call r2.has_sent;
+				call r_recv.get_flit;
+
+				call spec.copy_data;
+
+			};
+			if get_from = rc3 {
+				assert r3.hf;
+				call r3.has_sent;
+				call r_recv.get_flit;
+				call spec.copy_data;
+			};
+			
+			get_from := void;
+			
+		} #end send
+				
+		conjecture (ready & r1.hf) -> get_from ~= void
+		conjecture (ready & r2.hf) -> get_from ~= void
+		conjecture (ready & r3.hf) -> get_from ~= void
+		
+		conjecture ready -> get_from ~= void
+		
+		conjecture ready -> (r1.hf | r2.hf | r3.hf)
+		
+		conjecture (ready & r1.hf & ~r2.hf & ~r3.hf) -> get_from = rc1
+		conjecture (ready & ~r1.hf & r2.hf & ~r3.hf) -> get_from = rc2
+		conjecture (ready & ~r1.hf & ~r2.hf & r3.hf) -> get_from = rc3
+		
+		conjecture (ready & r1.hf & r2.hf & ~r3.hf) -> (get_from = rc1 | get_from = rc2)
+		conjecture (ready & ~r1.hf & r2.hf & r3.hf) -> (get_from = rc2 | get_from = rc3)
+		conjecture (ready & r1.hf & ~r2.hf & r3.hf) -> (get_from = rc1 | get_from = rc3)
+		
+		conjecture (ready & get_from = rc1) -> (r1.hf)
+		conjecture (ready & get_from = rc2) -> (r2.hf)
+		conjecture (ready & get_from = rc3) -> (r3.hf)
+		
+	} #end arbiter
