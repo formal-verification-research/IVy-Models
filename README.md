@@ -1,5 +1,5 @@
 # Scaling Up Network-on-Chip Verification
-As presented by Landon Taylor, Sanghamitra Roy, and Zhen Zhang. 
+As presented by Landon Taylor and Zhen Zhang. 
 
 See <https://formal-verification-research.github.io> for more information
 
