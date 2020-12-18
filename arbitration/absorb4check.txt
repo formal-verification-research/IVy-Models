@@ -1,0 +1,206 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        absorb4.ivy: line 179: a.arbiter.conj5
+        absorb4.ivy: line 180: a.arbiter.conj6
+        absorb4.ivy: line 181: a.arbiter.conj7
+        absorb4.ivy: line 182: a.arbiter.conj8
+        absorb4.ivy: line 184: a.arbiter.conj9
+        absorb4.ivy: line 185: a.arbiter.conj10
+        absorb4.ivy: line 187: a.arbiter.conj11
+        absorb4.ivy: line 188: a.arbiter.conj12
+        absorb4.ivy: line 189: a.arbiter.conj13
+        absorb4.ivy: line 191: a.arbiter.conj14
+        absorb4.ivy: line 192: a.arbiter.conj15
+        absorb4.ivy: line 193: a.arbiter.conj16
+        absorb4.ivy: line 194: a.arbiter.conj17
+        absorb4.ivy: line 195: a.arbiter.conj18
+        absorb4.ivy: line 196: a.arbiter.conj19
+        absorb4.ivy: line 198: a.arbiter.conj20
+        absorb4.ivy: line 199: a.arbiter.conj21
+        absorb4.ivy: line 200: a.arbiter.conj22
+        absorb4.ivy: line 201: a.arbiter.conj23
+        absorb4.ivy: line 203: a.arbiter.conj24
+        absorb4.ivy: line 204: a.arbiter.conj25
+        absorb4.ivy: line 205: a.arbiter.conj26
+        absorb4.ivy: line 216: a.invar27
+
+    The following action implementations are present:
+        absorb4.ivy: line 145: implementation of a.arbiter.check
+        absorb4.ivy: line 157: implementation of a.arbiter.send
+        absorb4.ivy: line 36: implementation of a.r1.has_sent
+        absorb4.ivy: line 32: implementation of a.r1.send
+        absorb4.ivy: line 36: implementation of a.r2.has_sent
+        absorb4.ivy: line 32: implementation of a.r2.send
+        absorb4.ivy: line 36: implementation of a.r3.has_sent
+        absorb4.ivy: line 32: implementation of a.r3.send
+        absorb4.ivy: line 36: implementation of a.r4.has_sent
+        absorb4.ivy: line 32: implementation of a.r4.send
+
+    The following action monitors are present:
+        absorb4.ivy: line 64: monitor of a.arbiter.check
+        absorb4.ivy: line 28: monitor of a.r1.send
+        absorb4.ivy: line 28: monitor of a.r2.send
+        absorb4.ivy: line 28: monitor of a.r3.send
+        absorb4.ivy: line 28: monitor of a.r4.send
+
+    The following initializers are present:
+        absorb4.ivy: line 54: a.arbiter.init[after3]
+        absorb4.ivy: line 9: spec.init[after1]
+
+    Initialization must establish the invariant
+        absorb4.ivy: line 179: a.arbiter.conj5 ... PASS
+        absorb4.ivy: line 180: a.arbiter.conj6 ... PASS
+        absorb4.ivy: line 181: a.arbiter.conj7 ... PASS
+        absorb4.ivy: line 182: a.arbiter.conj8 ... PASS
+        absorb4.ivy: line 184: a.arbiter.conj9 ... PASS
+        absorb4.ivy: line 185: a.arbiter.conj10 ... PASS
+        absorb4.ivy: line 187: a.arbiter.conj11 ... PASS
+        absorb4.ivy: line 188: a.arbiter.conj12 ... PASS
+        absorb4.ivy: line 189: a.arbiter.conj13 ... PASS
+        absorb4.ivy: line 191: a.arbiter.conj14 ... PASS
+        absorb4.ivy: line 192: a.arbiter.conj15 ... PASS
+        absorb4.ivy: line 193: a.arbiter.conj16 ... PASS
+        absorb4.ivy: line 194: a.arbiter.conj17 ... PASS
+        absorb4.ivy: line 195: a.arbiter.conj18 ... PASS
+        absorb4.ivy: line 196: a.arbiter.conj19 ... PASS
+        absorb4.ivy: line 198: a.arbiter.conj20 ... PASS
+        absorb4.ivy: line 199: a.arbiter.conj21 ... PASS
+        absorb4.ivy: line 200: a.arbiter.conj22 ... PASS
+        absorb4.ivy: line 201: a.arbiter.conj23 ... PASS
+        absorb4.ivy: line 203: a.arbiter.conj24 ... PASS
+        absorb4.ivy: line 204: a.arbiter.conj25 ... PASS
+        absorb4.ivy: line 205: a.arbiter.conj26 ... PASS
+        absorb4.ivy: line 216: a.invar27 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:a.r1.send
+            absorb4.ivy: line 179: a.arbiter.conj5 ... PASS
+            absorb4.ivy: line 180: a.arbiter.conj6 ... PASS
+            absorb4.ivy: line 181: a.arbiter.conj7 ... PASS
+            absorb4.ivy: line 182: a.arbiter.conj8 ... PASS
+            absorb4.ivy: line 184: a.arbiter.conj9 ... PASS
+            absorb4.ivy: line 185: a.arbiter.conj10 ... PASS
+            absorb4.ivy: line 187: a.arbiter.conj11 ... PASS
+            absorb4.ivy: line 188: a.arbiter.conj12 ... PASS
+            absorb4.ivy: line 189: a.arbiter.conj13 ... PASS
+            absorb4.ivy: line 191: a.arbiter.conj14 ... PASS
+            absorb4.ivy: line 192: a.arbiter.conj15 ... PASS
+            absorb4.ivy: line 193: a.arbiter.conj16 ... PASS
+            absorb4.ivy: line 194: a.arbiter.conj17 ... PASS
+            absorb4.ivy: line 195: a.arbiter.conj18 ... PASS
+            absorb4.ivy: line 196: a.arbiter.conj19 ... PASS
+            absorb4.ivy: line 198: a.arbiter.conj20 ... PASS
+            absorb4.ivy: line 199: a.arbiter.conj21 ... PASS
+            absorb4.ivy: line 200: a.arbiter.conj22 ... PASS
+            absorb4.ivy: line 201: a.arbiter.conj23 ... PASS
+            absorb4.ivy: line 203: a.arbiter.conj24 ... PASS
+            absorb4.ivy: line 204: a.arbiter.conj25 ... PASS
+            absorb4.ivy: line 205: a.arbiter.conj26 ... PASS
+            absorb4.ivy: line 216: a.invar27 ... PASS
+        (internal) ext:a.r2.send
+            absorb4.ivy: line 179: a.arbiter.conj5 ... PASS
+            absorb4.ivy: line 180: a.arbiter.conj6 ... PASS
+            absorb4.ivy: line 181: a.arbiter.conj7 ... PASS
+            absorb4.ivy: line 182: a.arbiter.conj8 ... PASS
+            absorb4.ivy: line 184: a.arbiter.conj9 ... PASS
+            absorb4.ivy: line 185: a.arbiter.conj10 ... PASS
+            absorb4.ivy: line 187: a.arbiter.conj11 ... PASS
+            absorb4.ivy: line 188: a.arbiter.conj12 ... PASS
+            absorb4.ivy: line 189: a.arbiter.conj13 ... PASS
+            absorb4.ivy: line 191: a.arbiter.conj14 ... PASS
+            absorb4.ivy: line 192: a.arbiter.conj15 ... PASS
+            absorb4.ivy: line 193: a.arbiter.conj16 ... PASS
+            absorb4.ivy: line 194: a.arbiter.conj17 ... PASS
+            absorb4.ivy: line 195: a.arbiter.conj18 ... PASS
+            absorb4.ivy: line 196: a.arbiter.conj19 ... PASS
+            absorb4.ivy: line 198: a.arbiter.conj20 ... PASS
+            absorb4.ivy: line 199: a.arbiter.conj21 ... PASS
+            absorb4.ivy: line 200: a.arbiter.conj22 ... PASS
+            absorb4.ivy: line 201: a.arbiter.conj23 ... PASS
+            absorb4.ivy: line 203: a.arbiter.conj24 ... PASS
+            absorb4.ivy: line 204: a.arbiter.conj25 ... PASS
+            absorb4.ivy: line 205: a.arbiter.conj26 ... PASS
+            absorb4.ivy: line 216: a.invar27 ... PASS
+        (internal) ext:a.r3.send
+            absorb4.ivy: line 179: a.arbiter.conj5 ... PASS
+            absorb4.ivy: line 180: a.arbiter.conj6 ... PASS
+            absorb4.ivy: line 181: a.arbiter.conj7 ... PASS
+            absorb4.ivy: line 182: a.arbiter.conj8 ... PASS
+            absorb4.ivy: line 184: a.arbiter.conj9 ... PASS
+            absorb4.ivy: line 185: a.arbiter.conj10 ... PASS
+            absorb4.ivy: line 187: a.arbiter.conj11 ... PASS
+            absorb4.ivy: line 188: a.arbiter.conj12 ... PASS
+            absorb4.ivy: line 189: a.arbiter.conj13 ... PASS
+            absorb4.ivy: line 191: a.arbiter.conj14 ... PASS
+            absorb4.ivy: line 192: a.arbiter.conj15 ... PASS
+            absorb4.ivy: line 193: a.arbiter.conj16 ... PASS
+            absorb4.ivy: line 194: a.arbiter.conj17 ... PASS
+            absorb4.ivy: line 195: a.arbiter.conj18 ... PASS
+            absorb4.ivy: line 196: a.arbiter.conj19 ... PASS
+            absorb4.ivy: line 198: a.arbiter.conj20 ... PASS
+            absorb4.ivy: line 199: a.arbiter.conj21 ... PASS
+            absorb4.ivy: line 200: a.arbiter.conj22 ... PASS
+            absorb4.ivy: line 201: a.arbiter.conj23 ... PASS
+            absorb4.ivy: line 203: a.arbiter.conj24 ... PASS
+            absorb4.ivy: line 204: a.arbiter.conj25 ... PASS
+            absorb4.ivy: line 205: a.arbiter.conj26 ... PASS
+            absorb4.ivy: line 216: a.invar27 ... PASS
+        (internal) ext:a.r4.send
+            absorb4.ivy: line 179: a.arbiter.conj5 ... PASS
+            absorb4.ivy: line 180: a.arbiter.conj6 ... PASS
+            absorb4.ivy: line 181: a.arbiter.conj7 ... PASS
+            absorb4.ivy: line 182: a.arbiter.conj8 ... PASS
+            absorb4.ivy: line 184: a.arbiter.conj9 ... PASS
+            absorb4.ivy: line 185: a.arbiter.conj10 ... PASS
+            absorb4.ivy: line 187: a.arbiter.conj11 ... PASS
+            absorb4.ivy: line 188: a.arbiter.conj12 ... PASS
+            absorb4.ivy: line 189: a.arbiter.conj13 ... PASS
+            absorb4.ivy: line 191: a.arbiter.conj14 ... PASS
+            absorb4.ivy: line 192: a.arbiter.conj15 ... PASS
+            absorb4.ivy: line 193: a.arbiter.conj16 ... PASS
+            absorb4.ivy: line 194: a.arbiter.conj17 ... PASS
+            absorb4.ivy: line 195: a.arbiter.conj18 ... PASS
+            absorb4.ivy: line 196: a.arbiter.conj19 ... PASS
+            absorb4.ivy: line 198: a.arbiter.conj20 ... PASS
+            absorb4.ivy: line 199: a.arbiter.conj21 ... PASS
+            absorb4.ivy: line 200: a.arbiter.conj22 ... PASS
+            absorb4.ivy: line 201: a.arbiter.conj23 ... PASS
+            absorb4.ivy: line 203: a.arbiter.conj24 ... PASS
+            absorb4.ivy: line 204: a.arbiter.conj25 ... PASS
+            absorb4.ivy: line 205: a.arbiter.conj26 ... PASS
+            absorb4.ivy: line 216: a.invar27 ... PASS
+
+    The following program assertions are treated as assumptions:
+        in action a.r2.send when called from the environment:
+            absorb4.ivy: line 29: assumption
+        in action a.r4.send when called from the environment:
+            absorb4.ivy: line 29: assumption
+        in action a.arbiter.check when called from a.r2.send,a.r4.send,a.r1.send,a.r3.send:
+            absorb4.ivy: line 70: assumption
+            absorb4.ivy: line 74: assumption
+            absorb4.ivy: line 79: assumption
+            absorb4.ivy: line 83: assumption
+            absorb4.ivy: line 89: assumption
+            absorb4.ivy: line 93: assumption
+            absorb4.ivy: line 98: assumption
+            absorb4.ivy: line 109: assumption
+            absorb4.ivy: line 113: assumption
+            absorb4.ivy: line 118: assumption
+            absorb4.ivy: line 128: assumption
+        in action a.r1.send when called from the environment:
+            absorb4.ivy: line 29: assumption
+        in action a.r3.send when called from the environment:
+            absorb4.ivy: line 29: assumption
+
+    The following program assertions are treated as guarantees:
+        in action a.arbiter.send when called from a.arbiter.check:
+            absorb4.ivy: line 160: guarantee ... PASS
+            absorb4.ivy: line 164: guarantee ... PASS
+            absorb4.ivy: line 168: guarantee ... PASS
+            absorb4.ivy: line 172: guarantee ... PASS
+
+OK

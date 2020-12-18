@@ -1,0 +1,780 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        pair_absorb2.ivy: line 50: spec.conj2
+        pair_absorb2.ivy: line 51: spec.conj3
+        pair_absorb2.ivy: line 52: spec.conj4
+        pair_absorb2.ivy: line 224: b.arbiter.conj8
+        pair_absorb2.ivy: line 225: b.arbiter.conj9
+        pair_absorb2.ivy: line 227: b.arbiter.conj10
+        pair_absorb2.ivy: line 229: b.arbiter.conj11
+        pair_absorb2.ivy: line 230: b.arbiter.conj12
+        pair_absorb2.ivy: line 231: b.arbiter.conj13
+        pair_absorb2.ivy: line 232: b.arbiter.conj14
+        pair_absorb2.ivy: line 234: b.arbiter.conj15
+        pair_absorb2.ivy: line 235: b.arbiter.conj16
+        pair_absorb2.ivy: line 236: b.arbiter.conj17
+        pair_absorb2.ivy: line 237: b.arbiter.conj18
+        pair_absorb2.ivy: line 239: b.arbiter.conj19
+        pair_absorb2.ivy: line 240: b.arbiter.conj20
+        pair_absorb2.ivy: line 241: b.arbiter.conj21
+        pair_absorb2.ivy: line 242: b.arbiter.conj22
+        pair_absorb2.ivy: line 245: b.arbiter.conj23
+        pair_absorb2.ivy: line 246: b.arbiter.conj24
+        pair_absorb2.ivy: line 247: b.arbiter.conj25
+        pair_absorb2.ivy: line 248: b.arbiter.conj26
+        pair_absorb2.ivy: line 271: b.invar28
+        pair_absorb2.ivy: line 224: c.arbiter.conj8
+        pair_absorb2.ivy: line 225: c.arbiter.conj9
+        pair_absorb2.ivy: line 227: c.arbiter.conj10
+        pair_absorb2.ivy: line 229: c.arbiter.conj11
+        pair_absorb2.ivy: line 230: c.arbiter.conj12
+        pair_absorb2.ivy: line 231: c.arbiter.conj13
+        pair_absorb2.ivy: line 232: c.arbiter.conj14
+        pair_absorb2.ivy: line 234: c.arbiter.conj15
+        pair_absorb2.ivy: line 235: c.arbiter.conj16
+        pair_absorb2.ivy: line 236: c.arbiter.conj17
+        pair_absorb2.ivy: line 237: c.arbiter.conj18
+        pair_absorb2.ivy: line 239: c.arbiter.conj19
+        pair_absorb2.ivy: line 240: c.arbiter.conj20
+        pair_absorb2.ivy: line 241: c.arbiter.conj21
+        pair_absorb2.ivy: line 242: c.arbiter.conj22
+        pair_absorb2.ivy: line 245: c.arbiter.conj23
+        pair_absorb2.ivy: line 246: c.arbiter.conj24
+        pair_absorb2.ivy: line 247: c.arbiter.conj25
+        pair_absorb2.ivy: line 248: c.arbiter.conj26
+        pair_absorb2.ivy: line 271: c.invar28
+        pair_absorb2.ivy: line 365: a.arbiter.conj32
+        pair_absorb2.ivy: line 366: a.arbiter.conj33
+        pair_absorb2.ivy: line 368: a.arbiter.conj34
+        pair_absorb2.ivy: line 369: a.arbiter.conj35
+        pair_absorb2.ivy: line 371: a.arbiter.conj36
+        pair_absorb2.ivy: line 372: a.arbiter.conj37
+        pair_absorb2.ivy: line 374: a.arbiter.conj38
+        pair_absorb2.ivy: line 376: a.arbiter.conj39
+        pair_absorb2.ivy: line 377: a.arbiter.conj40
+        pair_absorb2.ivy: line 386: a.invar41
+
+    The following action implementations are present:
+        pair_absorb2.ivy: line 338: implementation of a.arbiter.check
+        pair_absorb2.ivy: line 350: implementation of a.arbiter.send
+        pair_absorb2.ivy: line 292: implementation of a.r1.has_sent
+        pair_absorb2.ivy: line 288: implementation of a.r1.send
+        pair_absorb2.ivy: line 292: implementation of a.r2.has_sent
+        pair_absorb2.ivy: line 288: implementation of a.r2.send
+        pair_absorb2.ivy: line 179: implementation of b.arbiter.check
+        pair_absorb2.ivy: line 191: implementation of b.arbiter.send
+        pair_absorb2.ivy: line 71: implementation of b.r1.has_sent
+        pair_absorb2.ivy: line 67: implementation of b.r1.send
+        pair_absorb2.ivy: line 71: implementation of b.r2.has_sent
+        pair_absorb2.ivy: line 67: implementation of b.r2.send
+        pair_absorb2.ivy: line 71: implementation of b.r3.has_sent
+        pair_absorb2.ivy: line 67: implementation of b.r3.send
+        pair_absorb2.ivy: line 71: implementation of b.r4.has_sent
+        pair_absorb2.ivy: line 67: implementation of b.r4.send
+        pair_absorb2.ivy: line 260: implementation of b.r_recv.get_flit
+        pair_absorb2.ivy: line 179: implementation of c.arbiter.check
+        pair_absorb2.ivy: line 191: implementation of c.arbiter.send
+        pair_absorb2.ivy: line 71: implementation of c.r1.has_sent
+        pair_absorb2.ivy: line 67: implementation of c.r1.send
+        pair_absorb2.ivy: line 71: implementation of c.r2.has_sent
+        pair_absorb2.ivy: line 67: implementation of c.r2.send
+        pair_absorb2.ivy: line 71: implementation of c.r3.has_sent
+        pair_absorb2.ivy: line 67: implementation of c.r3.send
+        pair_absorb2.ivy: line 71: implementation of c.r4.has_sent
+        pair_absorb2.ivy: line 67: implementation of c.r4.send
+        pair_absorb2.ivy: line 260: implementation of c.r_recv.get_flit
+        pair_absorb2.ivy: line 39: implementation of spec.clear_upstream
+        pair_absorb2.ivy: line 32: implementation of spec.copy_data
+
+    The following action monitors are present:
+        pair_absorb2.ivy: line 317: monitor of a.arbiter.check
+        pair_absorb2.ivy: line 284: monitor of a.r1.send
+        pair_absorb2.ivy: line 284: monitor of a.r2.send
+        pair_absorb2.ivy: line 97: monitor of b.arbiter.check
+        pair_absorb2.ivy: line 63: monitor of b.r1.send
+        pair_absorb2.ivy: line 63: monitor of b.r2.send
+        pair_absorb2.ivy: line 63: monitor of b.r3.send
+        pair_absorb2.ivy: line 63: monitor of b.r4.send
+        pair_absorb2.ivy: line 256: monitor of b.r_recv.get_flit
+        pair_absorb2.ivy: line 97: monitor of c.arbiter.check
+        pair_absorb2.ivy: line 63: monitor of c.r1.send
+        pair_absorb2.ivy: line 63: monitor of c.r2.send
+        pair_absorb2.ivy: line 63: monitor of c.r3.send
+        pair_absorb2.ivy: line 63: monitor of c.r4.send
+        pair_absorb2.ivy: line 256: monitor of c.r_recv.get_flit
+
+    The following initializers are present:
+        pair_absorb2.ivy: line 307: a.arbiter.init[after30]
+        pair_absorb2.ivy: line 87: b.arbiter.init[after6]
+        pair_absorb2.ivy: line 87: c.arbiter.init[after6]
+        pair_absorb2.ivy: line 9: spec.init[after1]
+
+    Initialization must establish the invariant
+        pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+        pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+        pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+        pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+        pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+        pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+        pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+        pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+        pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+        pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+        pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+        pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+        pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+        pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+        pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+        pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+        pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+        pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+        pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+        pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+        pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+        pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+        pair_absorb2.ivy: line 271: b.invar28 ... PASS
+        pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+        pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+        pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+        pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+        pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+        pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+        pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+        pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+        pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+        pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+        pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+        pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+        pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+        pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+        pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+        pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+        pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+        pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+        pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+        pair_absorb2.ivy: line 271: c.invar28 ... PASS
+        pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+        pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+        pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+        pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+        pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+        pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+        pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+        pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+        pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+        pair_absorb2.ivy: line 386: a.invar41 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:a.r1.send
+            pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+            pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+            pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+            pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: b.invar28 ... PASS
+            pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: c.invar28 ... PASS
+            pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+            pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+            pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+            pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+            pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+            pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+            pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+            pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+            pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+            pair_absorb2.ivy: line 386: a.invar41 ... PASS
+        (internal) ext:a.r2.send
+            pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+            pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+            pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+            pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: b.invar28 ... PASS
+            pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: c.invar28 ... PASS
+            pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+            pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+            pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+            pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+            pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+            pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+            pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+            pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+            pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+            pair_absorb2.ivy: line 386: a.invar41 ... PASS
+        (internal) ext:b.r1.send
+            pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+            pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+            pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+            pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: b.invar28 ... PASS
+            pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: c.invar28 ... PASS
+            pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+            pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+            pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+            pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+            pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+            pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+            pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+            pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+            pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+            pair_absorb2.ivy: line 386: a.invar41 ... PASS
+        (internal) ext:b.r2.send
+            pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+            pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+            pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+            pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: b.invar28 ... PASS
+            pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: c.invar28 ... PASS
+            pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+            pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+            pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+            pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+            pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+            pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+            pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+            pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+            pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+            pair_absorb2.ivy: line 386: a.invar41 ... PASS
+        (internal) ext:b.r3.send
+            pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+            pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+            pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+            pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: b.invar28 ... PASS
+            pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: c.invar28 ... PASS
+            pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+            pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+            pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+            pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+            pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+            pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+            pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+            pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+            pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+            pair_absorb2.ivy: line 386: a.invar41 ... PASS
+        (internal) ext:b.r4.send
+            pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+            pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+            pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+            pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: b.invar28 ... PASS
+            pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: c.invar28 ... PASS
+            pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+            pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+            pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+            pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+            pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+            pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+            pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+            pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+            pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+            pair_absorb2.ivy: line 386: a.invar41 ... PASS
+        (internal) ext:c.r1.send
+            pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+            pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+            pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+            pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: b.invar28 ... PASS
+            pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: c.invar28 ... PASS
+            pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+            pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+            pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+            pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+            pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+            pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+            pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+            pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+            pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+            pair_absorb2.ivy: line 386: a.invar41 ... PASS
+        (internal) ext:c.r2.send
+            pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+            pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+            pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+            pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: b.invar28 ... PASS
+            pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: c.invar28 ... PASS
+            pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+            pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+            pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+            pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+            pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+            pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+            pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+            pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+            pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+            pair_absorb2.ivy: line 386: a.invar41 ... PASS
+        (internal) ext:c.r3.send
+            pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+            pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+            pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+            pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: b.invar28 ... PASS
+            pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: c.invar28 ... PASS
+            pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+            pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+            pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+            pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+            pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+            pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+            pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+            pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+            pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+            pair_absorb2.ivy: line 386: a.invar41 ... PASS
+        (internal) ext:c.r4.send
+            pair_absorb2.ivy: line 50: spec.conj2 ... PASS
+            pair_absorb2.ivy: line 51: spec.conj3 ... PASS
+            pair_absorb2.ivy: line 52: spec.conj4 ... PASS
+            pair_absorb2.ivy: line 224: b.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: b.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: b.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: b.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: b.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: b.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: b.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: b.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: b.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: b.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: b.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: b.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: b.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: b.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: b.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: b.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: b.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: b.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: b.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: b.invar28 ... PASS
+            pair_absorb2.ivy: line 224: c.arbiter.conj8 ... PASS
+            pair_absorb2.ivy: line 225: c.arbiter.conj9 ... PASS
+            pair_absorb2.ivy: line 227: c.arbiter.conj10 ... PASS
+            pair_absorb2.ivy: line 229: c.arbiter.conj11 ... PASS
+            pair_absorb2.ivy: line 230: c.arbiter.conj12 ... PASS
+            pair_absorb2.ivy: line 231: c.arbiter.conj13 ... PASS
+            pair_absorb2.ivy: line 232: c.arbiter.conj14 ... PASS
+            pair_absorb2.ivy: line 234: c.arbiter.conj15 ... PASS
+            pair_absorb2.ivy: line 235: c.arbiter.conj16 ... PASS
+            pair_absorb2.ivy: line 236: c.arbiter.conj17 ... PASS
+            pair_absorb2.ivy: line 237: c.arbiter.conj18 ... PASS
+            pair_absorb2.ivy: line 239: c.arbiter.conj19 ... PASS
+            pair_absorb2.ivy: line 240: c.arbiter.conj20 ... PASS
+            pair_absorb2.ivy: line 241: c.arbiter.conj21 ... PASS
+            pair_absorb2.ivy: line 242: c.arbiter.conj22 ... PASS
+            pair_absorb2.ivy: line 245: c.arbiter.conj23 ... PASS
+            pair_absorb2.ivy: line 246: c.arbiter.conj24 ... PASS
+            pair_absorb2.ivy: line 247: c.arbiter.conj25 ... PASS
+            pair_absorb2.ivy: line 248: c.arbiter.conj26 ... PASS
+            pair_absorb2.ivy: line 271: c.invar28 ... PASS
+            pair_absorb2.ivy: line 365: a.arbiter.conj32 ... PASS
+            pair_absorb2.ivy: line 366: a.arbiter.conj33 ... PASS
+            pair_absorb2.ivy: line 368: a.arbiter.conj34 ... PASS
+            pair_absorb2.ivy: line 369: a.arbiter.conj35 ... PASS
+            pair_absorb2.ivy: line 371: a.arbiter.conj36 ... PASS
+            pair_absorb2.ivy: line 372: a.arbiter.conj37 ... PASS
+            pair_absorb2.ivy: line 374: a.arbiter.conj38 ... PASS
+            pair_absorb2.ivy: line 376: a.arbiter.conj39 ... PASS
+            pair_absorb2.ivy: line 377: a.arbiter.conj40 ... PASS
+            pair_absorb2.ivy: line 386: a.invar41 ... PASS
+
+    The following program assertions are treated as assumptions:
+        in action a.r2.send when called from the environment:
+            pair_absorb2.ivy: line 285: assumption
+        in action b.arbiter.check when called from b.r3.send,b.r4.send,b.r1.send,b.r2.send:
+            pair_absorb2.ivy: line 103: assumption
+            pair_absorb2.ivy: line 107: assumption
+            pair_absorb2.ivy: line 112: assumption
+            pair_absorb2.ivy: line 116: assumption
+            pair_absorb2.ivy: line 122: assumption
+            pair_absorb2.ivy: line 126: assumption
+            pair_absorb2.ivy: line 131: assumption
+            pair_absorb2.ivy: line 142: assumption
+            pair_absorb2.ivy: line 146: assumption
+            pair_absorb2.ivy: line 151: assumption
+            pair_absorb2.ivy: line 161: assumption
+        in action b.r3.send when called from the environment:
+            pair_absorb2.ivy: line 64: assumption
+        in action c.r4.send when called from the environment:
+            pair_absorb2.ivy: line 64: assumption
+        in action c.r1.send when called from the environment:
+            pair_absorb2.ivy: line 64: assumption
+        in action a.arbiter.check when called from a.r2.send,a.r1.send:
+            pair_absorb2.ivy: line 321: assumption
+        in action c.arbiter.check when called from c.r4.send,c.r1.send,c.r3.send,c.r2.send:
+            pair_absorb2.ivy: line 103: assumption
+            pair_absorb2.ivy: line 107: assumption
+            pair_absorb2.ivy: line 112: assumption
+            pair_absorb2.ivy: line 116: assumption
+            pair_absorb2.ivy: line 122: assumption
+            pair_absorb2.ivy: line 126: assumption
+            pair_absorb2.ivy: line 131: assumption
+            pair_absorb2.ivy: line 142: assumption
+            pair_absorb2.ivy: line 146: assumption
+            pair_absorb2.ivy: line 151: assumption
+            pair_absorb2.ivy: line 161: assumption
+        in action b.r4.send when called from the environment:
+            pair_absorb2.ivy: line 64: assumption
+        in action b.r1.send when called from the environment:
+            pair_absorb2.ivy: line 64: assumption
+        in action c.r3.send when called from the environment:
+            pair_absorb2.ivy: line 64: assumption
+        in action b.r2.send when called from the environment:
+            pair_absorb2.ivy: line 64: assumption
+        in action c.r2.send when called from the environment:
+            pair_absorb2.ivy: line 64: assumption
+        in action a.r1.send when called from the environment:
+            pair_absorb2.ivy: line 285: assumption
+
+    The following program assertions are treated as guarantees:
+        in action b.r_recv.get_flit when called from b.arbiter.send,b.arbiter.send,b.arbiter.send,b.arbiter.send:
+            pair_absorb2.ivy: line 257: guarantee ... PASS
+        in action b.arbiter.send when called from b.arbiter.check:
+            pair_absorb2.ivy: line 194: guarantee ... PASS
+            pair_absorb2.ivy: line 200: guarantee ... PASS
+            pair_absorb2.ivy: line 208: guarantee ... PASS
+            pair_absorb2.ivy: line 214: guarantee ... PASS
+        in action c.arbiter.send when called from c.arbiter.check:
+            pair_absorb2.ivy: line 194: guarantee ... PASS
+            pair_absorb2.ivy: line 200: guarantee ... PASS
+            pair_absorb2.ivy: line 208: guarantee ... PASS
+            pair_absorb2.ivy: line 214: guarantee ... PASS
+        in action c.r_recv.get_flit when called from c.arbiter.send,c.arbiter.send,c.arbiter.send,c.arbiter.send:
+            pair_absorb2.ivy: line 257: guarantee ... PASS
+        in action a.arbiter.send when called from a.arbiter.check:
+            pair_absorb2.ivy: line 354: guarantee ... PASS
+            pair_absorb2.ivy: line 358: guarantee ... PASS
+
+OK
