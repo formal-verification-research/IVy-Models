@@ -14,7 +14,6 @@ Within each folder, steps to recreate our results are enumerated.
 | Directory         | Description       |
 | ----------------- | ----------------- |
 | arbitration       | Verifying correctness of the handshake arbitration protocol and the network architecture. See Sections 5 and 6 in our paper. | 
-| old_ideas         | Our non-working model (useful to understand limitations of invariant checking)
 | routing           | Correct verification of the routing protocol using C++ simulation. | 
 | zones             | Using scripts to formally verify the zone-based model |
 | software          | Software used to generate verification results |
