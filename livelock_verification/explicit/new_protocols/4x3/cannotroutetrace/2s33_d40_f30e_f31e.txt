@@ -1,7 +1,0 @@
-MODIFIED ROUTE: 
-south to 32
-south to 31
-south to 30
-north two 31
-
---- no routing decision available

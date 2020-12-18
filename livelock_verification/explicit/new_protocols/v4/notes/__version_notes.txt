@@ -1,1 +1,0 @@
-Moved not west ok to the else south

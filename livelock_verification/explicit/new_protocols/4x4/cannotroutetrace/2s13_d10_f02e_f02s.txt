@@ -1,5 +1,0 @@
-MODIFIED ROUTE: 
-west to 03
-south to 02
-
---- no routing decision available

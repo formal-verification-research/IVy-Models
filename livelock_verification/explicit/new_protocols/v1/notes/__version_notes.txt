@@ -1,1 +1,0 @@
-2nd go west changed to exclude cases where the destination is the northeast corner or the current x is not the east edge. (route.cpp ln 143)

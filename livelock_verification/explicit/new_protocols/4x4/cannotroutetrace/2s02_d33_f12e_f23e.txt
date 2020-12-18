@@ -1,6 +1,0 @@
-MODIFIED ROUTE: 
-east to 12
-north to 13
-east to 23
-
---- no routing decision available

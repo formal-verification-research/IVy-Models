@@ -1,4 +1,0 @@
-MODIFIED ROUTE: 
-south to 42
-
---- no routing decision available
