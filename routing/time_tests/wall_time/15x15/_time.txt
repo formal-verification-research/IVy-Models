@@ -1,0 +1,4 @@
+Runtime: 
+Total Elapsed time: 35157 seconds
+Total Elapsed time: 585 minutes with 57 seconds
+Total Elapsed time: 9 hours with 585 minutes with 57 seconds

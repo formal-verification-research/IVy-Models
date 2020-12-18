@@ -1,0 +1,88 @@
+--- PATTERN FROM: 2s11_d23_f11w_f21n -------------
+Livelock Starts: ve (original start)
+Loop includes 4 nodes.
+Loop is as follows: 
+east two 20
+north to 21
+west two 11
+south to 10
+--- End of report ------
+
+
+--- PATTERN FROM: 2s11_d32_f11s_f12e -------------
+Livelock Starts: ve (original start)
+Loop includes 4 nodes.
+Loop is as follows: 
+north to 02
+east to 12
+south two 11
+west to 01
+--- End of report ------
+
+
+--- PATTERN FROM: 2s12_d32_f11s_f12e -------------
+Livelock Starts: ve (original start)
+Loop includes 4 nodes.
+Loop is as follows: 
+west to 01
+north to 02
+east to 12
+south two 11
+--- End of report ------
+
+
+--- PATTERN FROM: 2s13_d32_f11s_f12e -------------
+Livelock Starts: 01 (traveling west)
+Loop includes 4 nodes.
+Loop is as follows: 
+west to 01
+north to 02
+east to 12
+south two 11
+--- End of report ------
+
+
+--- PATTERN FROM: 2s21_d23_f11w_f21n -------------
+Livelock Starts: ve (original start)
+Loop includes 4 nodes.
+Loop is as follows: 
+south to 10
+east two 20
+north to 21
+west two 11
+--- End of report ------
+
+
+--- PATTERN FROM: 2s21_d33_f21w_f31n -------------
+Livelock Starts: ve (original start)
+Loop includes 4 nodes.
+Loop is as follows: 
+east two 30
+north to 31
+west two 21
+south to 20
+--- End of report ------
+
+
+--- PATTERN FROM: 2s31_d23_f11w_f21n -------------
+Livelock Starts: 10 (traveling south)
+Loop includes 4 nodes.
+Loop is as follows: 
+south to 10
+east two 20
+north to 21
+west two 11
+--- End of report ------
+
+
+--- PATTERN FROM: 2s31_d33_f21w_f31n -------------
+Livelock Starts: ve (original start)
+Loop includes 4 nodes.
+Loop is as follows: 
+south to 20
+east two 30
+north to 31
+west two 21
+--- End of report ------
+
+

@@ -1,0 +1,6 @@
+ORIGINAL ROUTE: 
+west to 10
+west to 00
+north to 01
+DELIVERED!
+

@@ -1,0 +1,208 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        2s21_d33_f21w_f31n.ivy: line 307: flit.invar9
+        2s21_d33_f21w_f31n.ivy: line 308: flit.invar10
+        2s21_d33_f21w_f31n.ivy: line 310: flit.invar11
+        2s21_d33_f21w_f31n.ivy: line 311: flit.invar12
+        2s21_d33_f21w_f31n.ivy: line 313: flit.invar13
+        2s21_d33_f21w_f31n.ivy: line 315: flit.invar14
+        2s21_d33_f21w_f31n.ivy: line 316: flit.invar15
+        2s21_d33_f21w_f31n.ivy: line 317: flit.invar16
+        2s21_d33_f21w_f31n.ivy: line 318: flit.invar17
+        2s21_d33_f21w_f31n.ivy: line 319: flit.invar18
+        2s21_d33_f21w_f31n.ivy: line 321: flit.invar19
+        2s21_d33_f21w_f31n.ivy: line 323: flit.invar20
+        2s21_d33_f21w_f31n.ivy: line 324: flit.invar21
+        2s21_d33_f21w_f31n.ivy: line 325: flit.invar22
+        2s21_d33_f21w_f31n.ivy: line 326: flit.invar23
+        2s21_d33_f21w_f31n.ivy: line 327: flit.invar24
+        2s21_d33_f21w_f31n.ivy: line 419: node.invar25(X:coord, Y:coord)
+        2s21_d33_f21w_f31n.ivy: line 420: node.invar26(X:coord, Y:coord)
+        2s21_d33_f21w_f31n.ivy: line 422: node.invar27(X:coord, Y:coord)
+        2s21_d33_f21w_f31n.ivy: line 423: node.invar28(X:coord, Y:coord)
+        2s21_d33_f21w_f31n.ivy: line 425: node.invar29(X:coord, Y:coord)
+        2s21_d33_f21w_f31n.ivy: line 426: node.invar30(X:coord, Y:coord)
+        2s21_d33_f21w_f31n.ivy: line 432: invar31
+        2s21_d33_f21w_f31n.ivy: line 433: invar32
+        2s21_d33_f21w_f31n.ivy: line 435: invar33
+        2s21_d33_f21w_f31n.ivy: line 437: invar34
+        2s21_d33_f21w_f31n.ivy: line 442: invar35
+        2s21_d33_f21w_f31n.ivy: line 443: invar36
+        2s21_d33_f21w_f31n.ivy: line 444: invar37
+        2s21_d33_f21w_f31n.ivy: line 445: invar38
+        2s21_d33_f21w_f31n.ivy: line 446: invar39
+        2s21_d33_f21w_f31n.ivy: line 447: invar40
+        2s21_d33_f21w_f31n.ivy: line 448: invar41
+        2s21_d33_f21w_f31n.ivy: line 449: invar42
+        2s21_d33_f21w_f31n.ivy: line 450: invar43
+        2s21_d33_f21w_f31n.ivy: line 451: invar44
+        2s21_d33_f21w_f31n.ivy: line 452: invar45
+        2s21_d33_f21w_f31n.ivy: line 453: invar46
+        2s21_d33_f21w_f31n.ivy: line 454: invar47
+        2s21_d33_f21w_f31n.ivy: line 455: invar48
+        2s21_d33_f21w_f31n.ivy: line 456: invar49
+        2s21_d33_f21w_f31n.ivy: line 457: invar50
+        2s21_d33_f21w_f31n.ivy: line 458: invar51
+        2s21_d33_f21w_f31n.ivy: line 459: invar52
+        2s21_d33_f21w_f31n.ivy: line 460: invar53
+        2s21_d33_f21w_f31n.ivy: line 461: invar54
+        2s21_d33_f21w_f31n.ivy: line 462: invar55
+        2s21_d33_f21w_f31n.ivy: line 463: invar56
+
+    The following action implementations are present:
+        2s21_d33_f21w_f31n.ivy: line 285: implementation of flit.get_distances
+        2s21_d33_f21w_f31n.ivy: line 270: implementation of flit.send
+        2s21_d33_f21w_f31n.ivy: line 353: implementation of node.route
+        2s21_d33_f21w_f31n.ivy: line 117: implementation of spec.check
+        2s21_d33_f21w_f31n.ivy: line 32: implementation of spec.confirm_links
+        2s21_d33_f21w_f31n.ivy: line 195: implementation of spec.go_east
+        2s21_d33_f21w_f31n.ivy: line 203: implementation of spec.go_north
+        2s21_d33_f21w_f31n.ivy: line 187: implementation of spec.go_south
+        2s21_d33_f21w_f31n.ivy: line 179: implementation of spec.go_west
+        2s21_d33_f21w_f31n.ivy: line 231: implementation of spec.is_delivered
+        2s21_d33_f21w_f31n.ivy: line 149: implementation of spec.second_check
+
+    The following action monitors are present:
+        2s21_d33_f21w_f31n.ivy: line 275: monitor of flit.send
+        2s21_d33_f21w_f31n.ivy: line 107: monitor of spec.second_check
+        2s21_d33_f21w_f31n.ivy: line 107: monitor of spec.check
+        2s21_d33_f21w_f31n.ivy: line 216: monitor of spec.go_east
+        2s21_d33_f21w_f31n.ivy: line 226: monitor of spec.go_north
+        2s21_d33_f21w_f31n.ivy: line 221: monitor of spec.go_south
+        2s21_d33_f21w_f31n.ivy: line 211: monitor of spec.go_west
+
+    The following initializers are present:
+        2s21_d33_f21w_f31n.ivy: line 253: flit.init[after7]
+        2s21_d33_f21w_f31n.ivy: line 19: spec.init[after2]
+
+    Initialization must establish the invariant
+        2s21_d33_f21w_f31n.ivy: line 307: flit.invar9 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 308: flit.invar10 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 310: flit.invar11 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 311: flit.invar12 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 313: flit.invar13 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 315: flit.invar14 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 316: flit.invar15 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 317: flit.invar16 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 318: flit.invar17 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 319: flit.invar18 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 321: flit.invar19 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 323: flit.invar20 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 324: flit.invar21 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 325: flit.invar22 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 326: flit.invar23 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 327: flit.invar24 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 419: node.invar25(X:coord, Y:coord) ... PASS
+        2s21_d33_f21w_f31n.ivy: line 420: node.invar26(X:coord, Y:coord) ... PASS
+        2s21_d33_f21w_f31n.ivy: line 422: node.invar27(X:coord, Y:coord) ... PASS
+        2s21_d33_f21w_f31n.ivy: line 423: node.invar28(X:coord, Y:coord) ... PASS
+        2s21_d33_f21w_f31n.ivy: line 425: node.invar29(X:coord, Y:coord) ... PASS
+        2s21_d33_f21w_f31n.ivy: line 426: node.invar30(X:coord, Y:coord) ... PASS
+        2s21_d33_f21w_f31n.ivy: line 432: invar31 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 433: invar32 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 435: invar33 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 437: invar34 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 442: invar35 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 443: invar36 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 444: invar37 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 445: invar38 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 446: invar39 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 447: invar40 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 448: invar41 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 449: invar42 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 450: invar43 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 451: invar44 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 452: invar45 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 453: invar46 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 454: invar47 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 455: invar48 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 456: invar49 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 457: invar50 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 458: invar51 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 459: invar52 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 460: invar53 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 461: invar54 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 462: invar55 ... PASS
+        2s21_d33_f21w_f31n.ivy: line 463: invar56 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:flit.send
+            2s21_d33_f21w_f31n.ivy: line 307: flit.invar9 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 308: flit.invar10 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 310: flit.invar11 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 311: flit.invar12 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 313: flit.invar13 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 315: flit.invar14 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 316: flit.invar15 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 317: flit.invar16 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 318: flit.invar17 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 319: flit.invar18 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 321: flit.invar19 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 323: flit.invar20 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 324: flit.invar21 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 325: flit.invar22 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 326: flit.invar23 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 327: flit.invar24 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 419: node.invar25(X:coord, Y:coord) ... PASS
+            2s21_d33_f21w_f31n.ivy: line 420: node.invar26(X:coord, Y:coord) ... PASS
+            2s21_d33_f21w_f31n.ivy: line 422: node.invar27(X:coord, Y:coord) ... PASS
+            2s21_d33_f21w_f31n.ivy: line 423: node.invar28(X:coord, Y:coord) ... PASS
+            2s21_d33_f21w_f31n.ivy: line 425: node.invar29(X:coord, Y:coord) ... PASS
+            2s21_d33_f21w_f31n.ivy: line 426: node.invar30(X:coord, Y:coord) ... PASS
+            2s21_d33_f21w_f31n.ivy: line 432: invar31 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 433: invar32 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 435: invar33 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 437: invar34 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 442: invar35 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 443: invar36 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 444: invar37 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 445: invar38 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 446: invar39 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 447: invar40 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 448: invar41 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 449: invar42 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 450: invar43 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 451: invar44 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 452: invar45 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 453: invar46 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 454: invar47 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 455: invar48 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 456: invar49 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 457: invar50 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 458: invar51 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 459: invar52 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 460: invar53 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 461: invar54 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 462: invar55 ... PASS
+            2s21_d33_f21w_f31n.ivy: line 463: invar56 ... PASS
+
+    The following program assertions are treated as assumptions:
+        in action flit.send when called from the environment:
+            2s21_d33_f21w_f31n.ivy: line 271: assumption
+
+    The following program assertions are treated as guarantees:
+        in action spec.go_east when called from node.route,node.route,node.route:
+            2s21_d33_f21w_f31n.ivy: line 217: guarantee ... PASS
+            2s21_d33_f21w_f31n.ivy: line 218: guarantee ... PASS
+        in action flit.send when called from the environment,the environment:
+            2s21_d33_f21w_f31n.ivy: line 279: guarantee ... PASS
+            2s21_d33_f21w_f31n.ivy: line 281: guarantee ... PASS
+        in action spec.go_north when called from node.route,node.route,node.route:
+            2s21_d33_f21w_f31n.ivy: line 227: guarantee ... PASS
+            2s21_d33_f21w_f31n.ivy: line 228: guarantee ... PASS
+        in action flit.send when called from :
+            2s21_d33_f21w_f31n.ivy: line 271: guarantee 
+            2s21_d33_f21w_f31n.ivy: line 279: guarantee 
+            2s21_d33_f21w_f31n.ivy: line 281: guarantee 
+        in action spec.go_south when called from node.route,node.route,node.route:
+            2s21_d33_f21w_f31n.ivy: line 222: guarantee ... PASS
+            2s21_d33_f21w_f31n.ivy: line 223: guarantee ... PASS
+        in action spec.go_west when called from node.route,node.route,node.route:
+            2s21_d33_f21w_f31n.ivy: line 212: guarantee ... PASS
+            2s21_d33_f21w_f31n.ivy: line 213: guarantee ... PASS
+
+OK

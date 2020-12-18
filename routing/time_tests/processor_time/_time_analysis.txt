@@ -1,0 +1,16 @@
+Time Analysis:
+
+Analysis for the 2x2 network: Total Decimal time: 0.015625 seconds
+Analysis for the 3x3 network: Total Decimal time: 0.046875 seconds
+Analysis for the 4x4 network: Total Decimal time: 0.703125 seconds
+Analysis for the 5x5 network: Total Decimal time: 2.375 seconds
+Analysis for the 6x6 network: Total Decimal time: 10.875 seconds
+Analysis for the 7x7 network: Total Decimal time: 38.21875 seconds
+Analysis for the 8x8 network: Total Decimal time: 124.3125 seconds
+Analysis for the 9x9 network: Total Decimal time: 335.84375 seconds
+Analysis for the 10x10 network: Total Decimal time: 901.40625 seconds
+Analysis for the 11x11 network: Total Decimal time: 2035.15625 seconds
+Analysis for the 12x12 network: Total Decimal time: 4473.453125 seconds
+Analysis for the 13x13 network: Total Decimal time: 9003.65625 seconds
+Analysis for the 14x14 network: Total Decimal time: 18330.64062 seconds
+Analysis for the 15x15 network: Total Decimal time: 31651.5625 seconds

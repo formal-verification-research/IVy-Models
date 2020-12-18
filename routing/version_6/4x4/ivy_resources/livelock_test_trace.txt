@@ -1,0 +1,168 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        livelock_test.ivy: line 283: flit.invar9
+        livelock_test.ivy: line 284: flit.invar10
+        livelock_test.ivy: line 286: flit.invar11
+        livelock_test.ivy: line 287: flit.invar12
+        livelock_test.ivy: line 289: flit.invar13
+        livelock_test.ivy: line 291: flit.invar14
+        livelock_test.ivy: line 292: flit.invar15
+        livelock_test.ivy: line 293: flit.invar16
+        livelock_test.ivy: line 294: flit.invar17
+        livelock_test.ivy: line 295: flit.invar18
+        livelock_test.ivy: line 297: flit.invar19
+        livelock_test.ivy: line 299: flit.invar20
+        livelock_test.ivy: line 300: flit.invar21
+        livelock_test.ivy: line 301: flit.invar22
+        livelock_test.ivy: line 302: flit.invar23
+        livelock_test.ivy: line 303: flit.invar24
+        livelock_test.ivy: line 305: flit.invar25
+        livelock_test.ivy: line 405: node.invar26(X:coord, Y:coord)
+        livelock_test.ivy: line 406: node.invar27(X:coord, Y:coord)
+        livelock_test.ivy: line 408: node.invar28(X:coord, Y:coord)
+        livelock_test.ivy: line 409: node.invar29(X:coord, Y:coord)
+        livelock_test.ivy: line 411: node.invar30(X:coord, Y:coord)
+        livelock_test.ivy: line 412: node.invar31(X:coord, Y:coord)
+        livelock_test.ivy: line 420: invar32
+        livelock_test.ivy: line 421: invar33
+        livelock_test.ivy: line 422: invar34
+        livelock_test.ivy: line 423: invar35
+        livelock_test.ivy: line 425: invar36
+        livelock_test.ivy: line 428: invar37
+        livelock_test.ivy: line 429: invar38
+        livelock_test.ivy: line 431: invar39
+        livelock_test.ivy: line 432: invar40
+        livelock_test.ivy: line 434: invar41
+        livelock_test.ivy: line 435: invar42
+        livelock_test.ivy: line 436: invar43
+        livelock_test.ivy: line 437: invar44
+        livelock_test.ivy: line 439: invar45
+        livelock_test.ivy: line 440: invar46
+        livelock_test.ivy: line 441: invar47
+        livelock_test.ivy: line 442: invar48
+
+    The following action implementations are present:
+        livelock_test.ivy: line 261: implementation of flit.get_distances
+        livelock_test.ivy: line 246: implementation of flit.send
+        livelock_test.ivy: line 326: implementation of node.route
+        livelock_test.ivy: line 83: implementation of spec.check
+        livelock_test.ivy: line 35: implementation of spec.confirm_links
+        livelock_test.ivy: line 153: implementation of spec.go_east
+        livelock_test.ivy: line 163: implementation of spec.go_north
+        livelock_test.ivy: line 143: implementation of spec.go_south
+        livelock_test.ivy: line 133: implementation of spec.go_west
+        livelock_test.ivy: line 201: implementation of spec.is_delivered
+        livelock_test.ivy: line 110: implementation of spec.second_check
+
+    The following action monitors are present:
+        livelock_test.ivy: line 251: monitor of flit.send
+        livelock_test.ivy: line 73: monitor of spec.second_check
+        livelock_test.ivy: line 73: monitor of spec.check
+        livelock_test.ivy: line 182: monitor of spec.go_east
+        livelock_test.ivy: line 195: monitor of spec.go_north
+        livelock_test.ivy: line 189: monitor of spec.go_south
+        livelock_test.ivy: line 176: monitor of spec.go_west
+
+    The following initializers are present:
+        livelock_test.ivy: line 229: flit.init[after7]
+        livelock_test.ivy: line 21: spec.init[after2]
+
+    Initialization must establish the invariant
+        livelock_test.ivy: line 283: flit.invar9 ... PASS
+        livelock_test.ivy: line 284: flit.invar10 ... PASS
+        livelock_test.ivy: line 286: flit.invar11 ... PASS
+        livelock_test.ivy: line 287: flit.invar12 ... PASS
+        livelock_test.ivy: line 289: flit.invar13 ... PASS
+        livelock_test.ivy: line 291: flit.invar14 ... PASS
+        livelock_test.ivy: line 292: flit.invar15 ... PASS
+        livelock_test.ivy: line 293: flit.invar16 ... PASS
+        livelock_test.ivy: line 294: flit.invar17 ... PASS
+        livelock_test.ivy: line 295: flit.invar18 ... PASS
+        livelock_test.ivy: line 297: flit.invar19 ... PASS
+        livelock_test.ivy: line 299: flit.invar20 ... PASS
+        livelock_test.ivy: line 300: flit.invar21 ... PASS
+        livelock_test.ivy: line 301: flit.invar22 ... PASS
+        livelock_test.ivy: line 302: flit.invar23 ... PASS
+        livelock_test.ivy: line 303: flit.invar24 ... PASS
+        livelock_test.ivy: line 305: flit.invar25 ... PASS
+        livelock_test.ivy: line 405: node.invar26(X:coord, Y:coord) ... PASS
+        livelock_test.ivy: line 406: node.invar27(X:coord, Y:coord) ... PASS
+        livelock_test.ivy: line 408: node.invar28(X:coord, Y:coord) ... PASS
+        livelock_test.ivy: line 409: node.invar29(X:coord, Y:coord) ... PASS
+        livelock_test.ivy: line 411: node.invar30(X:coord, Y:coord) ... PASS
+        livelock_test.ivy: line 412: node.invar31(X:coord, Y:coord) ... PASS
+        livelock_test.ivy: line 420: invar32 ... PASS
+        livelock_test.ivy: line 421: invar33 ... PASS
+        livelock_test.ivy: line 422: invar34 ... PASS
+        livelock_test.ivy: line 423: invar35 ... PASS
+        livelock_test.ivy: line 425: invar36 ... PASS
+        livelock_test.ivy: line 428: invar37 ... PASS
+        livelock_test.ivy: line 429: invar38 ... PASS
+        livelock_test.ivy: line 431: invar39 ... PASS
+        livelock_test.ivy: line 432: invar40 ... PASS
+        livelock_test.ivy: line 434: invar41 ... PASS
+        livelock_test.ivy: line 435: invar42 ... PASS
+        livelock_test.ivy: line 436: invar43 ... PASS
+        livelock_test.ivy: line 437: invar44 ... PASS
+        livelock_test.ivy: line 439: invar45 ... PASS
+        livelock_test.ivy: line 440: invar46 ... PASS
+        livelock_test.ivy: line 441: invar47 ... PASS
+        livelock_test.ivy: line 442: invar48 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:flit.send
+            livelock_test.ivy: line 283: flit.invar9 ... PASS
+            livelock_test.ivy: line 284: flit.invar10 ... PASS
+            livelock_test.ivy: line 286: flit.invar11 ... PASS
+            livelock_test.ivy: line 287: flit.invar12 ... PASS
+            livelock_test.ivy: line 289: flit.invar13 ... PASS
+            livelock_test.ivy: line 291: flit.invar14 ... PASS
+            livelock_test.ivy: line 292: flit.invar15 ... PASS
+            livelock_test.ivy: line 293: flit.invar16 ... PASS
+            livelock_test.ivy: line 294: flit.invar17 ... PASS
+            livelock_test.ivy: line 295: flit.invar18 ... PASS
+            livelock_test.ivy: line 297: flit.invar19 ... PASS
+            livelock_test.ivy: line 299: flit.invar20 ... PASS
+            livelock_test.ivy: line 300: flit.invar21 ... PASS
+            livelock_test.ivy: line 301: flit.invar22 ... PASS
+            livelock_test.ivy: line 302: flit.invar23 ... PASS
+            livelock_test.ivy: line 303: flit.invar24 ... PASS
+            livelock_test.ivy: line 305: flit.invar25 ... PASS
+            livelock_test.ivy: line 405: node.invar26(X:coord, Y:coord) ... PASS
+            livelock_test.ivy: line 406: node.invar27(X:coord, Y:coord) ... PASS
+            livelock_test.ivy: line 408: node.invar28(X:coord, Y:coord) ... PASS
+            livelock_test.ivy: line 409: node.invar29(X:coord, Y:coord) ... PASS
+            livelock_test.ivy: line 411: node.invar30(X:coord, Y:coord) ... PASS
+            livelock_test.ivy: line 412: node.invar31(X:coord, Y:coord) ... PASS
+            livelock_test.ivy: line 420: invar32 ... PASS
+            livelock_test.ivy: line 421: invar33 ... PASS
+            livelock_test.ivy: line 422: invar34 ... PASS
+            livelock_test.ivy: line 423: invar35 ... PASS
+            livelock_test.ivy: line 425: invar36 ... PASS
+            livelock_test.ivy: line 428: invar37 ... PASS
+            livelock_test.ivy: line 429: invar38 ... PASS
+            livelock_test.ivy: line 431: invar39 ... PASS
+            livelock_test.ivy: line 432: invar40 ... PASS
+            livelock_test.ivy: line 434: invar41 ... PASS
+            livelock_test.ivy: line 435: invar42 ... PASS
+            livelock_test.ivy: line 436: invar43 ... PASS
+            livelock_test.ivy: line 437: invar44 ... PASS
+            livelock_test.ivy: line 439: invar45 ... PASS
+            livelock_test.ivy: line 440: invar46 ... PASS
+            livelock_test.ivy: line 441: invar47 ... PASS
+            livelock_test.ivy: line 442: invar48 ... PASS
+
+    The following program assertions are treated as assumptions:
+        in action flit.send when called from the environment:
+            livelock_test.ivy: line 247: assumption
+
+    The following program assertions are treated as guarantees:
+        in action spec.go_east when called from node.route,node.route,node.route:
+            livelock_test.ivy: line 183: guarantee ... PASS
+            livelock_test.ivy: line 186: guarantee ... PASS
+        in action flit.send when called from the environment,the environment:
+            livelock_test.ivy: line 255: guarantee ...

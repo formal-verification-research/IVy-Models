@@ -1,0 +1,7 @@
+MODIFIED ROUTE: 
+west to 10
+west to 00
+north to 01
+east to 11
+east two 21
+

@@ -1,0 +1,8 @@
+Runtime: 
+Total Decimal time: 901.40625 seconds
+Total Elapsed time: 901 seconds
+Total Elapsed time: 15 minutes with 1 seconds
+Total Elapsed time: 0 hours with 15 minutes with 1 seconds
+
+----------------------
+

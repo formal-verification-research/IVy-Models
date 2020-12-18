@@ -1,0 +1,7 @@
+Total Scenarios: 27824160 (100%)
+Delivered:       27824160 (100%)
+Undeliverable:   0 (0%)
+Livelocks Found: 0 (0%)
+Maximum Moves:   29
+--- end of report ---
+

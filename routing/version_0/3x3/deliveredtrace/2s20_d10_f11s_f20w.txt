@@ -1,0 +1,8 @@
+ORIGINAL ROUTE: 
+north two 21
+west two 11
+west to 01
+south to 00
+east to 10
+DELIVERED!
+
