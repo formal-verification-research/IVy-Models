@@ -1,0 +1,27 @@
+
+Isolate this:
+
+********************************************************************************
+
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1067: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1068: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1069: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1070: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1071: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1072: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1073: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1074: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1075: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1076: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1077: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1078: Model checking invariant
+minimal_copy_ll_y_tests_1601429772/833.ivy: line 1079: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+error: model checker returned non-zero status

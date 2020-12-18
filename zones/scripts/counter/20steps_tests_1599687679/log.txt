@@ -1,0 +1,4 @@
+Checked: 1 in 20.11640453338623seconds.
+Checked: 2 in 24.737531900405884seconds.
+Checked: 3 in 33.541372537612915seconds.
+Checked: 4 in 3.56561279296875seconds.

@@ -1,0 +1,36 @@
+
+Isolate this:
+
+********************************************************************************
+
+v3_y_tests_1601429755/130.ivy: line 1075: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1076: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1077: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1078: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1079: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1080: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1081: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1082: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1083: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1084: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1085: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1086: Model checking invariant
+v3_y_tests_1601429755/130.ivy: line 1087: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpmWnqQs.aig; pdr; write_aiger_cex  /tmp/tmpmWnqQs.out".
+
+Invariant F[14] : 4536 clauses with 116 flops (out of 256) (cex = 0, ave = 25.19)
+Verification of invariant with 4536 clauses was successful.  Time =     2.83 sec
+Property proved.  Time =   163.11 sec
+There is no current CEX.
+--------------------------------------------------------------------------------
+
+PASS
+
+OK

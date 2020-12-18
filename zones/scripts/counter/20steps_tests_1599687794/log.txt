@@ -1,0 +1,1 @@
+Checked: 0 in 22.19246792793274seconds. (invariant flit.moveCounter <= 1)Checked: 1 in 27.667364358901978seconds. (invariant flit.moveCounter <= 2)Checked: 2 in 33.37326717376709seconds. (invariant flit.moveCounter <= 3)

@@ -1,0 +1,1055 @@
+
+Isolate this:
+
+********************************************************************************
+
+20steps_tests_1599687794/0.ivy: line 1278: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpuYGC10.aig; pdr; write_aiger_cex  /tmp/tmpuYGC10.out".
+
+Output 0 of miter "/tmp/tmpuYGC10" was asserted in frame 2.  Time =     1.59 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+[
+    0:zoneIdentifiers = c
+]
+err_flag := false
+
+20steps_tests_1599687794/0.ivy: line 64: flit.moveCounter := 0:number
+
+[
+    flit.moveCounter = 0
+]
+20steps_tests_1599687794/0.ivy: line 66: flit.sent12 := new
+
+[
+    flit.sent12 = new
+]
+20steps_tests_1599687794/0.ivy: line 67: flit.sent11 := new
+
+[
+    flit.sent11 = new
+]
+20steps_tests_1599687794/0.ivy: line 68: flit.sent10 := new
+
+[
+    flit.sent10 = new
+]
+20steps_tests_1599687794/0.ivy: line 69: flit.sent9 := new
+
+[
+    flit.sent9 = new
+]
+20steps_tests_1599687794/0.ivy: line 70: flit.sent8 := new
+
+[
+    flit.sent8 = new
+]
+20steps_tests_1599687794/0.ivy: line 71: flit.sent7 := new
+
+[
+    flit.sent7 = new
+]
+20steps_tests_1599687794/0.ivy: line 72: flit.sent6 := new
+
+[
+    flit.sent6 = new
+]
+20steps_tests_1599687794/0.ivy: line 73: flit.sent5 := new
+
+[
+    flit.sent5 = new
+]
+20steps_tests_1599687794/0.ivy: line 74: flit.sent4 := new
+
+[
+    flit.sent4 = new
+]
+20steps_tests_1599687794/0.ivy: line 75: flit.sent3 := new
+
+[
+    flit.sent3 = new
+]
+20steps_tests_1599687794/0.ivy: line 76: flit.sent2 := new
+
+[
+    flit.sent2 = new
+]
+20steps_tests_1599687794/0.ivy: line 77: flit.sent1 := new
+
+[
+    flit.sent1 = new
+]
+20steps_tests_1599687794/0.ivy: line 78: flit.sent0 := new
+
+[
+    flit.sent0 = new
+]
+20steps_tests_1599687794/0.ivy: line 80: flit.zn12 := x
+
+[
+    flit.zn12 = x
+]
+20steps_tests_1599687794/0.ivy: line 81: flit.zn11 := x
+
+[
+    flit.zn11 = x
+]
+20steps_tests_1599687794/0.ivy: line 82: flit.zn10 := x
+
+[
+    flit.zn10 = x
+]
+20steps_tests_1599687794/0.ivy: line 83: flit.zn9 := x
+
+[
+    flit.zn9 = x
+]
+20steps_tests_1599687794/0.ivy: line 84: flit.zn8 := x
+
+[
+    flit.zn8 = x
+]
+20steps_tests_1599687794/0.ivy: line 85: flit.zn7 := x
+
+[
+    flit.zn7 = x
+]
+20steps_tests_1599687794/0.ivy: line 86: flit.zn6 := x
+
+[
+    flit.zn6 = x
+]
+20steps_tests_1599687794/0.ivy: line 87: flit.zn5 := x
+
+[
+    flit.zn5 = x
+]
+20steps_tests_1599687794/0.ivy: line 88: flit.zn4 := x
+
+[
+    flit.zn4 = x
+]
+20steps_tests_1599687794/0.ivy: line 89: flit.zn3 := x
+
+[
+    flit.zn3 = x
+]
+20steps_tests_1599687794/0.ivy: line 90: flit.zn2 := x
+
+[
+    flit.zn2 = x
+]
+20steps_tests_1599687794/0.ivy: line 91: flit.zn1 := x
+
+[
+    flit.zn1 = x
+]
+20steps_tests_1599687794/0.ivy: line 93: node.northLink := default
+
+[
+    node.northLink = default
+]
+20steps_tests_1599687794/0.ivy: line 94: node.eastLink := default
+
+[
+    node.eastLink = default
+]
+20steps_tests_1599687794/0.ivy: line 95: node.southLink := default
+
+[
+    node.southLink = default
+]
+20steps_tests_1599687794/0.ivy: line 96: node.westLink := default
+
+[
+    node.westLink = default
+]
+20steps_tests_1599687794/0.ivy: line 97: node.northLink1 := default
+
+[
+    node.northLink1 = default
+]
+20steps_tests_1599687794/0.ivy: line 98: node.eastLink1 := default
+
+[
+    node.eastLink1 = default
+]
+20steps_tests_1599687794/0.ivy: line 99: node.southLink1 := default
+
+[
+    node.southLink1 = default
+]
+20steps_tests_1599687794/0.ivy: line 100: node.westLink1 := default
+
+[
+    node.westLink1 = default
+]
+20steps_tests_1599687794/0.ivy: line 101: node.northLink2 := default
+
+[
+    node.northLink2 = default
+]
+20steps_tests_1599687794/0.ivy: line 102: node.eastLink2 := default
+
+[
+    node.eastLink2 = default
+]
+20steps_tests_1599687794/0.ivy: line 103: node.southLink2 := default
+
+[
+    node.southLink2 = default
+]
+20steps_tests_1599687794/0.ivy: line 104: node.westLink2 := default
+
+[
+    node.westLink2 = default
+]
+20steps_tests_1599687794/0.ivy: line 105: node.northLink3 := default
+
+[
+    node.northLink3 = default
+]
+20steps_tests_1599687794/0.ivy: line 106: node.eastLink3 := default
+
+[
+    node.eastLink3 = default
+]
+20steps_tests_1599687794/0.ivy: line 107: node.southLink3 := default
+
+[
+    node.southLink3 = default
+]
+20steps_tests_1599687794/0.ivy: line 108: node.westLink3 := default
+
+[
+    node.westLink3 = default
+]
+20steps_tests_1599687794/0.ivy: line 109: node.northLink4 := default
+
+[
+    node.northLink4 = default
+]
+20steps_tests_1599687794/0.ivy: line 110: node.eastLink4 := default
+
+[
+    node.eastLink4 = default
+]
+20steps_tests_1599687794/0.ivy: line 111: node.southLink4 := default
+
+[
+    node.southLink4 = default
+]
+20steps_tests_1599687794/0.ivy: line 112: node.westLink4 := default
+
+[
+    node.westLink4 = default
+]
+20steps_tests_1599687794/0.ivy: line 113: node.northLink5 := default
+
+[
+    node.northLink5 = default
+]
+20steps_tests_1599687794/0.ivy: line 114: node.eastLink5 := default
+
+[
+    node.eastLink5 = default
+]
+20steps_tests_1599687794/0.ivy: line 115: node.southLink5 := default
+
+[
+    node.southLink5 = default
+]
+20steps_tests_1599687794/0.ivy: line 116: node.westLink5 := default
+
+[
+    node.westLink5 = default
+]
+20steps_tests_1599687794/0.ivy: line 117: node.northLink6 := default
+
+[
+    node.northLink6 = default
+]
+20steps_tests_1599687794/0.ivy: line 118: node.eastLink6 := default
+
+[
+    node.eastLink6 = default
+]
+20steps_tests_1599687794/0.ivy: line 119: node.southLink6 := default
+
+[
+    node.southLink6 = default
+]
+20steps_tests_1599687794/0.ivy: line 120: node.westLink6 := default
+
+[
+    node.westLink6 = default
+]
+20steps_tests_1599687794/0.ivy: line 121: node.northLink7 := default
+
+[
+    node.northLink7 = default
+]
+20steps_tests_1599687794/0.ivy: line 122: node.eastLink7 := default
+
+[
+    node.eastLink7 = default
+]
+20steps_tests_1599687794/0.ivy: line 123: node.southLink7 := default
+
+[
+    node.southLink7 = default
+]
+20steps_tests_1599687794/0.ivy: line 124: node.westLink7 := default
+
+[
+    node.westLink7 = default
+]
+20steps_tests_1599687794/0.ivy: line 125: node.northLink8 := default
+
+[
+    node.northLink8 = default
+]
+20steps_tests_1599687794/0.ivy: line 126: node.eastLink8 := default
+
+[
+    node.eastLink8 = default
+]
+20steps_tests_1599687794/0.ivy: line 127: node.southLink8 := default
+
+[
+    node.southLink8 = default
+]
+20steps_tests_1599687794/0.ivy: line 128: node.westLink8 := default
+
+[
+    node.westLink8 = default
+]
+20steps_tests_1599687794/0.ivy: line 129: node.northLink9 := default
+
+[
+    node.northLink9 = default
+]
+20steps_tests_1599687794/0.ivy: line 130: node.eastLink9 := default
+
+[
+    node.eastLink9 = default
+]
+20steps_tests_1599687794/0.ivy: line 131: node.southLink9 := default
+
+[
+    node.southLink9 = default
+]
+20steps_tests_1599687794/0.ivy: line 132: node.westLink9 := default
+
+[
+    node.westLink9 = default
+]
+20steps_tests_1599687794/0.ivy: line 133: node.northLink10 := default
+
+[
+    node.northLink10 = default
+]
+20steps_tests_1599687794/0.ivy: line 134: node.eastLink10 := default
+
+[
+    node.eastLink10 = default
+]
+20steps_tests_1599687794/0.ivy: line 135: node.southLink10 := default
+
+[
+    node.southLink10 = default
+]
+20steps_tests_1599687794/0.ivy: line 136: node.westLink10 := default
+
+[
+    node.westLink10 = default
+]
+20steps_tests_1599687794/0.ivy: line 137: node.northLink11 := default
+
+[
+    node.northLink11 = default
+]
+20steps_tests_1599687794/0.ivy: line 138: node.eastLink11 := default
+
+[
+    node.eastLink11 = default
+]
+20steps_tests_1599687794/0.ivy: line 139: node.southLink11 := default
+
+[
+    node.southLink11 = default
+]
+20steps_tests_1599687794/0.ivy: line 140: node.westLink11 := default
+
+[
+    node.westLink11 = default
+]
+20steps_tests_1599687794/0.ivy: line 141: node.northLink12 := default
+
+[
+    node.northLink12 = default
+]
+20steps_tests_1599687794/0.ivy: line 142: node.eastLink12 := default
+
+[
+    node.eastLink12 = default
+]
+20steps_tests_1599687794/0.ivy: line 143: node.southLink12 := default
+
+[
+    node.southLink12 = default
+]
+20steps_tests_1599687794/0.ivy: line 144: node.westLink12 := default
+
+[
+    node.westLink12 = default
+]
+20steps_tests_1599687794/0.ivy: line 145: node.northLink13 := default
+
+[
+    node.northLink13 = default
+]
+20steps_tests_1599687794/0.ivy: line 146: node.eastLink13 := default
+
+[
+    node.eastLink13 = default
+]
+20steps_tests_1599687794/0.ivy: line 147: node.southLink13 := default
+
+[
+    node.southLink13 = default
+]
+20steps_tests_1599687794/0.ivy: line 148: node.westLink13 := default
+
+[
+    node.westLink13 = default
+]
+20steps_tests_1599687794/0.ivy: line 149: node.northLink14 := default
+
+[
+    node.northLink14 = default
+]
+20steps_tests_1599687794/0.ivy: line 150: node.eastLink14 := default
+
+[
+    node.eastLink14 = default
+]
+20steps_tests_1599687794/0.ivy: line 151: node.southLink14 := default
+
+[
+    node.southLink14 = default
+]
+20steps_tests_1599687794/0.ivy: line 152: node.westLink14 := default
+
+[
+    node.westLink14 = default
+]
+20steps_tests_1599687794/0.ivy: line 153: node.northLink15 := default
+
+[
+    node.northLink15 = default
+]
+20steps_tests_1599687794/0.ivy: line 154: node.eastLink15 := default
+
+[
+    node.eastLink15 = default
+]
+20steps_tests_1599687794/0.ivy: line 155: node.southLink15 := default
+
+[
+    node.southLink15 = default
+]
+20steps_tests_1599687794/0.ivy: line 156: node.westLink15 := default
+
+[
+    node.westLink15 = default
+]
+20steps_tests_1599687794/0.ivy: line 157: node.northLink16 := default
+
+[
+    node.northLink16 = default
+]
+20steps_tests_1599687794/0.ivy: line 158: node.eastLink16 := default
+
+[
+    node.eastLink16 = default
+]
+20steps_tests_1599687794/0.ivy: line 159: node.southLink16 := default
+
+[
+    node.southLink16 = default
+]
+20steps_tests_1599687794/0.ivy: line 160: node.westLink16 := default
+
+[
+    node.westLink16 = default
+]
+20steps_tests_1599687794/0.ivy: line 161: node.northLink17 := default
+
+[
+    node.northLink17 = default
+]
+20steps_tests_1599687794/0.ivy: line 162: node.eastLink17 := default
+
+[
+    node.eastLink17 = default
+]
+20steps_tests_1599687794/0.ivy: line 163: node.southLink17 := default
+
+[
+    node.southLink17 = default
+]
+20steps_tests_1599687794/0.ivy: line 164: node.westLink17 := default
+
+[
+    node.westLink17 = default
+]
+20steps_tests_1599687794/0.ivy: line 165: node.northLink18 := default
+
+[
+    node.northLink18 = default
+]
+20steps_tests_1599687794/0.ivy: line 166: node.eastLink18 := default
+
+[
+    node.eastLink18 = default
+]
+20steps_tests_1599687794/0.ivy: line 167: node.southLink18 := default
+
+[
+    node.southLink18 = default
+]
+20steps_tests_1599687794/0.ivy: line 168: node.westLink18 := default
+
+[
+    node.westLink18 = default
+]
+20steps_tests_1599687794/0.ivy: line 169: node.northLink19 := default
+
+[
+    node.northLink19 = default
+]
+20steps_tests_1599687794/0.ivy: line 170: node.eastLink19 := default
+
+[
+    node.eastLink19 = default
+]
+20steps_tests_1599687794/0.ivy: line 171: node.southLink19 := default
+
+[
+    node.southLink19 = default
+]
+20steps_tests_1599687794/0.ivy: line 172: node.westLink19 := default
+
+[
+    node.westLink19 = default
+]
+20steps_tests_1599687794/0.ivy: line 173: node.northLink20 := default
+
+[
+    node.northLink20 = default
+]
+20steps_tests_1599687794/0.ivy: line 174: node.eastLink20 := default
+
+[
+    node.eastLink20 = default
+]
+20steps_tests_1599687794/0.ivy: line 175: node.southLink20 := default
+
+[
+    node.southLink20 = default
+]
+20steps_tests_1599687794/0.ivy: line 176: node.westLink20 := default
+
+[
+    node.westLink20 = default
+]
+20steps_tests_1599687794/0.ivy: line 178: flit.zn0 := *
+
+[
+    flit.zn0 = k
+]
+20steps_tests_1599687794/0.ivy: line 179: assume err_flag | flit.zn0 ~= x
+
+20steps_tests_1599687794/0.ivy: line 181: flit.livelock_free := false
+
+[
+    flit.livelock_free = false
+]
+20steps_tests_1599687794/0.ivy: line 182: flit.dropped := false
+
+[
+    flit.dropped = false
+]
+__init := true
+
+[
+    router.cdefghijmopq = false
+    flit.sent18 = north
+    router.abcdefhijknop = false
+    router.notEast = false
+    router.efghm = false
+    flit.zn15 = a
+    router.westNew = false
+    router.negTrav = false
+    router.notNorth = false
+    flit.sent14 = north
+    flit.zn17 = a
+    router.abcdefnop = true
+    router.abcjklnoq = true
+    flit.zn20 = a
+    router.afghijklmnpq = false
+    router.cjoqdip = false
+    router.notSouth = false
+    flit.sent16 = north
+    router.fghijmpq = false
+    flit.zn14 = a
+    flit.zn13 = a
+    node.isLoop4 = false
+    router.abcfhijknop = false
+    router.abcefghjklnoq = false
+    flit.sent13 = north
+    node.faultCounter = 20
+    router.ghijklmq = false
+    router.notWest = false
+    flit.zn16 = a
+    flit.sent19 = north
+    node.isLoop2 = false
+    flit.sent17 = north
+    flit.zn19 = a
+    flit.sent20 = north
+    flit.zn18 = a
+    flit.sent15 = north
+]
+[
+    0:zoneIdentifiers = g
+]
+err_flag := false
+
+call ext:flit.moveFlit
+
+{
+    20steps_tests_1599687794/0.ivy: line 188: assume err_flag | ~flit.dropped & ~flit.livelock_free
+
+    20steps_tests_1599687794/0.ivy: line 191: call flit.copyFirst
+    {
+        20steps_tests_1599687794/0.ivy: line 202: flit.moveCounter := flit.moveCounter + 1
+
+        [
+            flit.moveCounter = 1
+        ]
+        20steps_tests_1599687794/0.ivy: line 204: flit.zn20 := flit.zn19
+
+        20steps_tests_1599687794/0.ivy: line 205: flit.zn19 := flit.zn18
+
+        20steps_tests_1599687794/0.ivy: line 206: flit.zn18 := flit.zn17
+
+        20steps_tests_1599687794/0.ivy: line 207: flit.zn17 := flit.zn16
+
+        20steps_tests_1599687794/0.ivy: line 208: flit.zn16 := flit.zn15
+
+        20steps_tests_1599687794/0.ivy: line 209: flit.zn15 := flit.zn14
+
+        20steps_tests_1599687794/0.ivy: line 210: flit.zn14 := flit.zn13
+
+        20steps_tests_1599687794/0.ivy: line 211: flit.zn13 := flit.zn12
+
+        [
+            flit.zn13 = x
+        ]
+        20steps_tests_1599687794/0.ivy: line 212: flit.zn12 := flit.zn11
+
+        20steps_tests_1599687794/0.ivy: line 213: flit.zn11 := flit.zn10
+
+        20steps_tests_1599687794/0.ivy: line 214: flit.zn10 := flit.zn9
+
+        20steps_tests_1599687794/0.ivy: line 215: flit.zn9 := flit.zn8
+
+        20steps_tests_1599687794/0.ivy: line 216: flit.zn8 := flit.zn7
+
+        20steps_tests_1599687794/0.ivy: line 217: flit.zn7 := flit.zn6
+
+        20steps_tests_1599687794/0.ivy: line 218: flit.zn6 := flit.zn5
+
+        20steps_tests_1599687794/0.ivy: line 219: flit.zn5 := flit.zn4
+
+        20steps_tests_1599687794/0.ivy: line 220: flit.zn4 := flit.zn3
+
+        20steps_tests_1599687794/0.ivy: line 221: flit.zn3 := flit.zn2
+
+        20steps_tests_1599687794/0.ivy: line 222: flit.zn2 := flit.zn1
+
+        20steps_tests_1599687794/0.ivy: line 223: flit.zn1 := flit.zn0
+
+        [
+            flit.zn1 = k
+        ]
+        20steps_tests_1599687794/0.ivy: line 225: flit.sent20 := flit.sent19
+
+        20steps_tests_1599687794/0.ivy: line 226: flit.sent19 := flit.sent18
+
+        20steps_tests_1599687794/0.ivy: line 227: flit.sent18 := flit.sent17
+
+        20steps_tests_1599687794/0.ivy: line 228: flit.sent17 := flit.sent16
+
+        20steps_tests_1599687794/0.ivy: line 229: flit.sent16 := flit.sent15
+
+        20steps_tests_1599687794/0.ivy: line 230: flit.sent15 := flit.sent14
+
+        20steps_tests_1599687794/0.ivy: line 231: flit.sent14 := flit.sent13
+
+        20steps_tests_1599687794/0.ivy: line 232: flit.sent13 := flit.sent12
+
+        [
+            flit.sent13 = new
+        ]
+        20steps_tests_1599687794/0.ivy: line 233: flit.sent12 := flit.sent11
+
+        20steps_tests_1599687794/0.ivy: line 234: flit.sent11 := flit.sent10
+
+        20steps_tests_1599687794/0.ivy: line 235: flit.sent10 := flit.sent9
+
+        20steps_tests_1599687794/0.ivy: line 236: flit.sent9 := flit.sent8
+
+        20steps_tests_1599687794/0.ivy: line 237: flit.sent8 := flit.sent7
+
+        20steps_tests_1599687794/0.ivy: line 238: flit.sent7 := flit.sent6
+
+        20steps_tests_1599687794/0.ivy: line 239: flit.sent6 := flit.sent5
+
+        20steps_tests_1599687794/0.ivy: line 240: flit.sent5 := flit.sent4
+
+        20steps_tests_1599687794/0.ivy: line 241: flit.sent4 := flit.sent3
+
+        20steps_tests_1599687794/0.ivy: line 242: flit.sent3 := flit.sent2
+
+        20steps_tests_1599687794/0.ivy: line 243: flit.sent2 := flit.sent1
+
+        20steps_tests_1599687794/0.ivy: line 244: flit.sent1 := flit.sent0
+
+        20steps_tests_1599687794/0.ivy: line 246: node.northLink20 := node.northLink19
+
+        20steps_tests_1599687794/0.ivy: line 247: node.eastLink20 := node.eastLink19
+
+        20steps_tests_1599687794/0.ivy: line 248: node.southLink20 := node.southLink19
+
+        20steps_tests_1599687794/0.ivy: line 249: node.westLink20 := node.westLink19
+
+        20steps_tests_1599687794/0.ivy: line 251: node.northLink19 := node.northLink18
+
+        20steps_tests_1599687794/0.ivy: line 252: node.eastLink19 := node.eastLink18
+
+        20steps_tests_1599687794/0.ivy: line 253: node.southLink19 := node.southLink18
+
+        20steps_tests_1599687794/0.ivy: line 254: node.westLink19 := node.westLink18
+
+        20steps_tests_1599687794/0.ivy: line 256: node.northLink18 := node.northLink17
+
+        20steps_tests_1599687794/0.ivy: line 257: node.eastLink18 := node.eastLink17
+
+        20steps_tests_1599687794/0.ivy: line 258: node.southLink18 := node.southLink17
+
+        20steps_tests_1599687794/0.ivy: line 259: node.westLink18 := node.westLink17
+
+        20steps_tests_1599687794/0.ivy: line 261: node.northLink17 := node.northLink16
+
+        20steps_tests_1599687794/0.ivy: line 262: node.eastLink17 := node.eastLink16
+
+        20steps_tests_1599687794/0.ivy: line 263: node.southLink17 := node.southLink16
+
+        20steps_tests_1599687794/0.ivy: line 264: node.westLink17 := node.westLink16
+
+        20steps_tests_1599687794/0.ivy: line 266: node.northLink16 := node.northLink15
+
+        20steps_tests_1599687794/0.ivy: line 267: node.eastLink16 := node.eastLink15
+
+        20steps_tests_1599687794/0.ivy: line 268: node.southLink16 := node.southLink15
+
+        20steps_tests_1599687794/0.ivy: line 269: node.westLink16 := node.westLink15
+
+        20steps_tests_1599687794/0.ivy: line 271: node.northLink15 := node.northLink14
+
+        20steps_tests_1599687794/0.ivy: line 272: node.eastLink15 := node.eastLink14
+
+        20steps_tests_1599687794/0.ivy: line 273: node.southLink15 := node.southLink14
+
+        20steps_tests_1599687794/0.ivy: line 274: node.westLink15 := node.westLink14
+
+        20steps_tests_1599687794/0.ivy: line 276: node.northLink14 := node.northLink13
+
+        20steps_tests_1599687794/0.ivy: line 277: node.eastLink14 := node.eastLink13
+
+        20steps_tests_1599687794/0.ivy: line 278: node.southLink14 := node.southLink13
+
+        20steps_tests_1599687794/0.ivy: line 279: node.westLink14 := node.westLink13
+
+        20steps_tests_1599687794/0.ivy: line 281: node.northLink13 := node.northLink12
+
+        20steps_tests_1599687794/0.ivy: line 282: node.eastLink13 := node.eastLink12
+
+        20steps_tests_1599687794/0.ivy: line 283: node.southLink13 := node.southLink12
+
+        20steps_tests_1599687794/0.ivy: line 284: node.westLink13 := node.westLink12
+
+        20steps_tests_1599687794/0.ivy: line 286: node.northLink12 := node.northLink11
+
+        20steps_tests_1599687794/0.ivy: line 287: node.eastLink12 := node.eastLink11
+
+        20steps_tests_1599687794/0.ivy: line 288: node.southLink12 := node.southLink11
+
+        20steps_tests_1599687794/0.ivy: line 289: node.westLink12 := node.westLink11
+
+        20steps_tests_1599687794/0.ivy: line 291: node.northLink11 := node.northLink10
+
+        20steps_tests_1599687794/0.ivy: line 292: node.eastLink11 := node.eastLink10
+
+        20steps_tests_1599687794/0.ivy: line 293: node.southLink11 := node.southLink10
+
+        20steps_tests_1599687794/0.ivy: line 294: node.westLink11 := node.westLink10
+
+        20steps_tests_1599687794/0.ivy: line 296: node.northLink10 := node.northLink9
+
+        20steps_tests_1599687794/0.ivy: line 297: node.eastLink10 := node.eastLink9
+
+        20steps_tests_1599687794/0.ivy: line 298: node.southLink10 := node.southLink9
+
+        20steps_tests_1599687794/0.ivy: line 299: node.westLink10 := node.westLink9
+
+        20steps_tests_1599687794/0.ivy: line 301: node.northLink9 := node.northLink8
+
+        20steps_tests_1599687794/0.ivy: line 302: node.eastLink9 := node.eastLink8
+
+        20steps_tests_1599687794/0.ivy: line 303: node.southLink9 := node.southLink8
+
+        20steps_tests_1599687794/0.ivy: line 304: node.westLink9 := node.westLink8
+
+        20steps_tests_1599687794/0.ivy: line 306: node.northLink8 := node.northLink7
+
+        20steps_tests_1599687794/0.ivy: line 307: node.eastLink8 := node.eastLink7
+
+        20steps_tests_1599687794/0.ivy: line 308: node.southLink8 := node.southLink7
+
+        20steps_tests_1599687794/0.ivy: line 309: node.westLink8 := node.westLink7
+
+        20steps_tests_1599687794/0.ivy: line 311: node.northLink7 := node.northLink6
+
+        20steps_tests_1599687794/0.ivy: line 312: node.eastLink7 := node.eastLink6
+
+        20steps_tests_1599687794/0.ivy: line 313: node.southLink7 := node.southLink6
+
+        20steps_tests_1599687794/0.ivy: line 314: node.westLink7 := node.westLink6
+
+        20steps_tests_1599687794/0.ivy: line 316: node.northLink6 := node.northLink5
+
+        20steps_tests_1599687794/0.ivy: line 317: node.eastLink6 := node.eastLink5
+
+        20steps_tests_1599687794/0.ivy: line 318: node.southLink6 := node.southLink5
+
+        20steps_tests_1599687794/0.ivy: line 319: node.westLink6 := node.westLink5
+
+        20steps_tests_1599687794/0.ivy: line 321: node.northLink5 := node.northLink4
+
+        20steps_tests_1599687794/0.ivy: line 322: node.eastLink5 := node.eastLink4
+
+        20steps_tests_1599687794/0.ivy: line 323: node.southLink5 := node.southLink4
+
+        20steps_tests_1599687794/0.ivy: line 324: node.westLink5 := node.westLink4
+
+        20steps_tests_1599687794/0.ivy: line 326: node.northLink4 := node.northLink3
+
+        20steps_tests_1599687794/0.ivy: line 327: node.eastLink4 := node.eastLink3
+
+        20steps_tests_1599687794/0.ivy: line 328: node.southLink4 := node.southLink3
+
+        20steps_tests_1599687794/0.ivy: line 329: node.westLink4 := node.westLink3
+
+        20steps_tests_1599687794/0.ivy: line 331: node.northLink3 := node.northLink2
+
+        20steps_tests_1599687794/0.ivy: line 332: node.eastLink3 := node.eastLink2
+
+        20steps_tests_1599687794/0.ivy: line 333: node.southLink3 := node.southLink2
+
+        20steps_tests_1599687794/0.ivy: line 334: node.westLink3 := node.westLink2
+
+        20steps_tests_1599687794/0.ivy: line 336: node.northLink2 := node.northLink1
+
+        20steps_tests_1599687794/0.ivy: line 337: node.eastLink2 := node.eastLink1
+
+        20steps_tests_1599687794/0.ivy: line 338: node.southLink2 := node.southLink1
+
+        20steps_tests_1599687794/0.ivy: line 339: node.westLink2 := node.westLink1
+
+        20steps_tests_1599687794/0.ivy: line 341: node.northLink1 := node.northLink
+
+        20steps_tests_1599687794/0.ivy: line 342: node.eastLink1 := node.eastLink
+
+        20steps_tests_1599687794/0.ivy: line 343: node.southLink1 := node.southLink
+
+        20steps_tests_1599687794/0.ivy: line 344: node.westLink1 := node.westLink
+
+        20steps_tests_1599687794/0.ivy: line 194: call router.route
+        {
+            20steps_tests_1599687794/0.ivy: line 403: call router.setConditions
+            {
+                20steps_tests_1599687794/0.ivy: line 377: router.negTrav := flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                [
+                    router.negTrav = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 378: router.westNew := flit.sent1 = west | flit.sent1 = new
+
+                [
+                    router.westNew = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 379: router.notWest := flit.sent1 = north | flit.sent1 = south | flit.sent1 = east | flit.sent1 = new
+
+                [
+                    router.notWest = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 380: router.notSouth := flit.sent1 = north | flit.sent1 = west | flit.sent1 = east | flit.sent1 = new
+
+                [
+                    router.notSouth = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 381: router.notEast := flit.sent1 = north | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                [
+                    router.notEast = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 382: router.notNorth := flit.sent1 = east | flit.sent1 = west | flit.sent1 = south | flit.sent1 = new
+
+                [
+                    router.notNorth = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 384: router.abcjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                20steps_tests_1599687794/0.ivy: line 385: router.afghijklmnpq := flit.zn1 = a | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = n | flit.zn1 = p | flit.zn1 = q
+
+                [
+                    router.afghijklmnpq = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 386: router.abcfhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                [
+                    router.abcfhijknop = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 387: router.cdefghijmopq := flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = o | flit.zn1 = p | flit.zn1 = q
+
+                20steps_tests_1599687794/0.ivy: line 388: router.efghm := flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = m
+
+                20steps_tests_1599687794/0.ivy: line 389: router.ghijklmq := flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = m | flit.zn1 = q
+
+                [
+                    router.ghijklmq = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 390: router.abcdefnop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                [
+                    router.abcdefnop = false
+                ]
+                20steps_tests_1599687794/0.ivy: line 391: router.cjoqdip := flit.zn1 = c | flit.zn1 = j | flit.zn1 = o | flit.zn1 = q | flit.zn1 = d | flit.zn1 = i | flit.zn1 = p
+
+                20steps_tests_1599687794/0.ivy: line 392: router.fghijmpq := flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = m | flit.zn1 = p | flit.zn1 = q
+
+                20steps_tests_1599687794/0.ivy: line 393: router.abcefghjklnoq := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = e | flit.zn1 = f | flit.zn1 = g | flit.zn1 = h | flit.zn1 = j | flit.zn1 = k | flit.zn1 = l | flit.zn1 = n | flit.zn1 = o | flit.zn1 = q
+
+                [
+                    router.abcefghjklnoq = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 394: router.abcdefhijknop := flit.zn1 = a | flit.zn1 = b | flit.zn1 = c | flit.zn1 = d | flit.zn1 = e | flit.zn1 = f | flit.zn1 = h | flit.zn1 = i | flit.zn1 = j | flit.zn1 = k | flit.zn1 = n | flit.zn1 = o | flit.zn1 = p
+
+                [
+                    router.abcdefhijknop = true
+                ]
+                20steps_tests_1599687794/0.ivy: line 404: call node.getLinks
+                {
+                    20steps_tests_1599687794/0.ivy: line 614: node.isLoop2 := false
+
+                    20steps_tests_1599687794/0.ivy: line 615: node.isLoop4 := false
+
+                    20steps_tests_1599687794/0.ivy: line 635: node.northLink := *
+
+                    [
+                        node.northLink = free
+                    ]
+                    20steps_tests_1599687794/0.ivy: line 635: assume err_flag | node.northLink ~= default
+
+                    20steps_tests_1599687794/0.ivy: line 636: node.eastLink := *
+
+                    20steps_tests_1599687794/0.ivy: line 636: assume err_flag | node.eastLink ~= default
+
+                    20steps_tests_1599687794/0.ivy: line 637: node.southLink := *
+
+                    [
+                        node.southLink = edge
+                    ]
+                    20steps_tests_1599687794/0.ivy: line 637: assume err_flag | node.southLink ~= default
+
+                    20steps_tests_1599687794/0.ivy: line 638: node.westLink := *
+
+                    [
+                        node.westLink = faulty
+                    ]
+                    20steps_tests_1599687794/0.ivy: line 638: assume err_flag | node.westLink ~= default
+
+                    20steps_tests_1599687794/0.ivy: line 723: assume err_flag | node.northLink ~= edge
+
+                    20steps_tests_1599687794/0.ivy: line 732: assume err_flag | node.westLink ~= edge
+
+                    20steps_tests_1599687794/0.ivy: line 748: assume err_flag | ~(node.northLink = edge & node.southLink = edge) & ~(node.eastLink = edge & node.westLink = edge)
+
+                    20steps_tests_1599687794/0.ivy: line 767: node.faultCounter := 0:number
+
+                    20steps_tests_1599687794/0.ivy: line 836: node.faultCounter := node.faultCounter + 1
+
+                    20steps_tests_1599687794/0.ivy: line 860: assume err_flag | node.faultCounter <= 2
+
+                    20steps_tests_1599687794/0.ivy: line 437: call router.north1
+                    {
+                        20steps_tests_1599687794/0.ivy: line 490: flit.sent0 := north
+
+                        [
+                            flit.sent0 = north
+                        ]
+                        20steps_tests_1599687794/0.ivy: line 491: call node.getNextZone
+                        {
+                            20steps_tests_1599687794/0.ivy: line 1140: flit.zn0 := *
+
+                            20steps_tests_1599687794/0.ivy: line 1141: assume err_flag | (flit.zn0 = k | flit.zn0 = l)
+
+                            [
+                                node.faultCounter = 1
+                                node.eastLink = edge
+                            ]
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************

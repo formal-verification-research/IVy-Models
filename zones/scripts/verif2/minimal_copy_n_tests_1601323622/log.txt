@@ -1,0 +1,42 @@
+Added conditions:  | (flit.zn6 = d & flit.zn5 = m & flit.zn4 = l & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.eastLink6 = edge & node.eastLink3 = edge & node.eastLink2 = edge & node.westLink1 = faulty & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = i & flit.zn5 = k & flit.zn4 = k & flit.zn3 = i & flit.zn2 = i & flit.zn1 = j & node.northLink3 = faulty & node.westLink2 = faulty) to inv8
+Added conditions:  | (flit.zn6 = h & flit.zn5 = k & flit.zn4 = k & flit.zn3 = i & flit.zn2 = i & flit.zn1 = j & node.northLink3 = faulty & node.westLink2 = faulty) to inv8
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = k & flit.zn2 = i & flit.zn1 = i & node.northLink6 = faulty & node.westLink6 = free & node.southLink4 = edge & node.southLink3 = edge & node.northLink2 = faulty & node.westLink1 = faulty & node.southLink = edge) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.northLink5 = faulty & node.northLink1 = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = m & flit.zn4 = l & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.eastLink3 = edge & node.westLink1 = faulty & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = k & flit.zn2 = i & flit.zn1 = i & node.northLink6 = faulty & node.westLink6 = free & node.northLink2 = faulty & node.westLink1 = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink1 = faulty & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.eastLink6 = edge & node.eastLink5 = faulty & node.eastLink3 = edge & node.eastLink2 = edge & node.eastLink1 = faulty & node.westLink1 = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = m & flit.zn4 = l & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = edge & node.westLink4 = edge & node.westLink3 = faulty & node.westLink1 = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink1 = edge & node.westLink = edge) to inv7
+Added conditions:  | (flit.zn6 = h & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = faulty & node.southLink4 = edge & node.southLink3 = edge & node.southLink = edge) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink3 = faulty & node.westLink1 = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = m & flit.zn4 = l & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = edge & node.westLink4 = edge) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.northLink4 = faulty & node.westLink1 = faulty & node.northLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.eastLink3 = faulty & node.westLink1 = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = m & flit.zn4 = l & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.eastLink3 = edge & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.eastLink3 = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink1 = faulty) to inv7
+Added conditions:  | (flit.zn6 = f & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.southLink6 = faulty & node.eastLink3 = edge & node.southLink2 = faulty & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.eastLink6 = faulty & node.eastLink2 = faulty & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.eastLink6 = edge & node.southLink6 = faulty & node.eastLink2 = edge & node.southLink2 = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = m & flit.zn4 = l & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.eastLink3 = faulty & node.westLink1 = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink3 = faulty & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = i & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = faulty & node.westLink1 = edge & node.westLink = edge) to inv7
+Added conditions:  | (flit.zn6 = h & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = faulty & node.eastLink3 = edge & node.westLink1 = faulty & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = f & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.southLink6 = faulty & node.southLink2 = faulty & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p) to inv7
+Added conditions:  | (flit.zn6 = h & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = faulty & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = h & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = faulty) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = m & flit.zn4 = l & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.southLink4 = edge & node.southLink3 = edge & node.southLink = edge) to inv7
+Added conditions:  | (flit.zn6 = d & flit.zn5 = m & flit.zn4 = l & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p) to inv7
+Added conditions:  | (flit.zn6 = f & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.southLink6 = faulty & node.southLink2 = faulty & node.westLink1 = faulty) to inv7
+Added conditions:  | (flit.zn6 = i & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.eastLink6 = edge & node.westLink5 = faulty & node.southLink4 = edge & node.eastLink3 = edge & node.southLink3 = edge & node.eastLink2 = edge & node.westLink1 = faulty & node.southLink = edge & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = f & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.southLink6 = faulty & node.eastLink3 = edge & node.southLink2 = faulty) to inv7
+Added conditions:  | (flit.zn6 = i & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = faulty & node.westLink1 = faulty) to inv7
+Added conditions:  | (flit.zn6 = i & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = faulty) to inv7
+Added conditions:  | (flit.zn6 = m & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = faulty & node.westLink1 = faulty & node.westLink = faulty) to inv7
+Added conditions:  | (flit.zn6 = g & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = faulty) to inv7
+Added conditions:  | (flit.zn6 = m & flit.zn5 = i & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.westLink5 = faulty) to inv7
+Added conditions:  | (flit.zn6 = f & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.southLink6 = faulty & node.southLink4 = edge & node.southLink3 = edge & node.southLink2 = faulty & node.southLink = edge) to inv7
+Added conditions:  | (flit.zn6 = f & flit.zn5 = h & flit.zn4 = k & flit.zn3 = b & flit.zn2 = d & flit.zn1 = p & node.southLink6 = faulty & node.southLink2 = faulty) to inv7
