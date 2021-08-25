@@ -1,0 +1,186 @@
+#lang ivy1.7
+
+attribute method = mc
+
+type zone_names = {a,b,c,d,e,f,g,h,i}
+type rel = {lt,eq,gt,p1,m1,lt1,gt1,null}
+# <d, =d, >d, =d+1, =d-1, <d-1, >d+1
+
+# x_rel indicates x (rel) x_dest. 
+# i.e. x_rel = gt => x > x_dest
+# x_rel = m1 => x = xd - 1
+
+object spec = {
+
+  action assign = {
+    zone(a).x_rel := p1;
+    zone(a).y_rel := eq; # do we need to care about the 1-zone buffer to dest?
+
+    zone(b).x_rel := p1;
+    zone(b).y_rel := p1;
+
+    zone(c).x_rel := eq;
+    zone(c).y_rel := p1;
+
+    zone(d).x_rel := m1;
+    zone(d).y_rel := p1;
+
+    zone(e).x_rel := m1;
+    zone(e).y_rel := eq;
+
+    zone(f).x_rel := m1;
+    zone(f).y_rel := m1;
+
+    zone(g).x_rel := eq;
+    zone(g).y_rel := m1;
+
+    zone(h).x_rel := p1;
+    zone(h).y_rel := m1;
+
+    zone(i).x_rel := m1;
+    zone(i).y_rel := lt;
+
+  } #end assign
+  
+  execute assign before assign_conditions
+  
+  var z : zone_names
+  
+  action assign_conditions = {
+    z := *;
+    
+    zone(z).c01 := (zone(z).x_rel = eq & zone(z).y_rel = eq);
+    
+    zone(z).c02 := (zone(z).x_rel = eq & zone(z).y_rel = p1);
+    zone(z).c03 := (zone(z).x_rel = p1 & zone(z).y_rel = eq);
+    zone(z).c04 := (zone(z).x_rel = eq & zone(z).y_rel = m1);
+    zone(z).c05 := (zone(z).x_rel = m1 & zone(z).y_rel = eq);
+    
+    zone(z).c06 := (zone(z).x_rel = gt | zone(z).x_rel = eq | zone(z).x_rel = p1 | zone(z).x_rel = gt1);
+    zone(z).c07 := (zone(z).y_rel = lt | zone(z).y_rel = eq | zone(z).y_rel = m1 | zone(z).y_rel = lt1);
+    
+    zone(z).c08 := (zone(z).y_rel = gt | zone(z).y_rel = eq | zone(z).y_rel = p1 | zone(z).y_rel = gt1);
+    zone(z).c09 := (zone(z).x_rel = lt | zone(z).x_rel = eq | zone(z).x_rel = m1 | zone(z).x_rel = lt1);
+    
+    zone(z).c10 := (zone(z).x_rel = lt1);
+    zone(z).c11 := ((zone(z).x_rel = lt | zone(z).x_rel = m1 | zone(z).x_rel = lt1) & zone(z).y_rel = m1);
+    
+    zone(z).c12 := (zone(z).y_rel = lt | zone(z).y_rel = m1 | zone(z).y_rel = lt1);
+    
+    zone(z).c13 := ((zone(z).x_rel = eq | zone(z).x_rel = gt | zone(z).x_rel = p1 | zone(z).x_rel = gt1)& zone(z).y_rel = m1);
+    zone(z).c14 := (zone(z).y_rel = m1 & zone(z).x_rel = eq);
+    
+    zone(z).c15 := (zone(z).x_rel = eq);
+    zone(z).c16 := ((zone(z).x_rel = m1 | zone(z).x_rel = lt | zone(z).x_rel = eq | zone(z).x_rel = lt1) & zone(z).y_rel ~= m1);
+    zone(z).c17 := (zone(z).x_rel = m1 & zone(z).y_rel ~= m1);
+    
+    zone(z).c18 := ((zone(z).y_rel = lt | zone(z).y_rel = eq | zone(z).y_rel = m1 | zone(z).y_rel = lt1) & (zone(z).x_rel = lt | zone(z).x_rel = eq | zone(z).x_rel = m1 | zone(z).x_rel = lt1));
+    
+    zone(z).ok := true;
+    
+  } #end assign_conditions
+  
+  export assign_conditions
+  
+} #end spec
+
+module zone_template = {
+  individual ok : bool
+  
+  individual c01 : bool
+  individual c02 : bool
+  individual c03 : bool
+  individual c04 : bool
+  individual c05 : bool
+  individual c06 : bool
+  individual c07 : bool
+  individual c08 : bool
+  individual c09 : bool
+  individual c10 : bool
+  individual c11 : bool
+  individual c12 : bool
+  individual c13 : bool
+  individual c14 : bool
+  individual c15 : bool
+  individual c16 : bool
+  individual c17 : bool
+  individual c18 : bool
+  
+  individual x_rel : rel
+  individual y_rel : rel
+  
+  after init {
+    ok := false;
+    c01 := false;
+    c02 := false;
+    c03 := false;
+    c04 := false;
+    c05 := false;
+    c06 := false;
+    c07 := false;
+    c08 := false;
+    c09 := false;
+    c10 := false;
+    c11 := false;
+    c12 := false;
+    c13 := false;
+    c14 := false;
+    c15 := false;
+    c16 := false;
+    c17 := false;
+    c18 := false;
+    x_rel := null;
+    y_rel := null;
+  } #init
+
+} #end zone
+
+instance zone(Z:zone_names) : zone_template
+
+invariant (zone(a).ok & zone(b).ok) -> (zone(a).c01 ~= zone(b).c01 | zone(a).c02 ~= zone(b).c02 | zone(a).c03 ~= zone(b).c03 | zone(a).c04 ~= zone(b).c04 | zone(a).c05 ~= zone(b).c05 | zone(a).c06 ~= zone(b).c06 | zone(a).c07 ~= zone(b).c07 | zone(a).c08 ~= zone(b).c08 | zone(a).c09 ~= zone(b).c09 | zone(a).c10 ~= zone(b).c10 | zone(a).c11 ~= zone(b).c11 | zone(a).c12 ~= zone(b).c12 | zone(a).c13 ~= zone(b).c13 | zone(a).c14 ~= zone(b).c14 | zone(a).c15 ~= zone(b).c15 | zone(a).c16 ~= zone(b).c16 | zone(a).c17 ~= zone(b).c17 | zone(a).c18 ~= zone(b).c18) 
+invariant (zone(a).ok & zone(c).ok) -> (zone(a).c01 ~= zone(c).c01 | zone(a).c02 ~= zone(c).c02 | zone(a).c03 ~= zone(c).c03 | zone(a).c04 ~= zone(c).c04 | zone(a).c05 ~= zone(c).c05 | zone(a).c06 ~= zone(c).c06 | zone(a).c07 ~= zone(c).c07 | zone(a).c08 ~= zone(c).c08 | zone(a).c09 ~= zone(c).c09 | zone(a).c10 ~= zone(c).c10 | zone(a).c11 ~= zone(c).c11 | zone(a).c12 ~= zone(c).c12 | zone(a).c13 ~= zone(c).c13 | zone(a).c14 ~= zone(c).c14 | zone(a).c15 ~= zone(c).c15 | zone(a).c16 ~= zone(c).c16 | zone(a).c17 ~= zone(c).c17 | zone(a).c18 ~= zone(c).c18) 
+invariant (zone(a).ok & zone(d).ok) -> (zone(a).c01 ~= zone(d).c01 | zone(a).c02 ~= zone(d).c02 | zone(a).c03 ~= zone(d).c03 | zone(a).c04 ~= zone(d).c04 | zone(a).c05 ~= zone(d).c05 | zone(a).c06 ~= zone(d).c06 | zone(a).c07 ~= zone(d).c07 | zone(a).c08 ~= zone(d).c08 | zone(a).c09 ~= zone(d).c09 | zone(a).c10 ~= zone(d).c10 | zone(a).c11 ~= zone(d).c11 | zone(a).c12 ~= zone(d).c12 | zone(a).c13 ~= zone(d).c13 | zone(a).c14 ~= zone(d).c14 | zone(a).c15 ~= zone(d).c15 | zone(a).c16 ~= zone(d).c16 | zone(a).c17 ~= zone(d).c17 | zone(a).c18 ~= zone(d).c18) 
+invariant (zone(a).ok & zone(e).ok) -> (zone(a).c01 ~= zone(e).c01 | zone(a).c02 ~= zone(e).c02 | zone(a).c03 ~= zone(e).c03 | zone(a).c04 ~= zone(e).c04 | zone(a).c05 ~= zone(e).c05 | zone(a).c06 ~= zone(e).c06 | zone(a).c07 ~= zone(e).c07 | zone(a).c08 ~= zone(e).c08 | zone(a).c09 ~= zone(e).c09 | zone(a).c10 ~= zone(e).c10 | zone(a).c11 ~= zone(e).c11 | zone(a).c12 ~= zone(e).c12 | zone(a).c13 ~= zone(e).c13 | zone(a).c14 ~= zone(e).c14 | zone(a).c15 ~= zone(e).c15 | zone(a).c16 ~= zone(e).c16 | zone(a).c17 ~= zone(e).c17 | zone(a).c18 ~= zone(e).c18) 
+invariant (zone(a).ok & zone(f).ok) -> (zone(a).c01 ~= zone(f).c01 | zone(a).c02 ~= zone(f).c02 | zone(a).c03 ~= zone(f).c03 | zone(a).c04 ~= zone(f).c04 | zone(a).c05 ~= zone(f).c05 | zone(a).c06 ~= zone(f).c06 | zone(a).c07 ~= zone(f).c07 | zone(a).c08 ~= zone(f).c08 | zone(a).c09 ~= zone(f).c09 | zone(a).c10 ~= zone(f).c10 | zone(a).c11 ~= zone(f).c11 | zone(a).c12 ~= zone(f).c12 | zone(a).c13 ~= zone(f).c13 | zone(a).c14 ~= zone(f).c14 | zone(a).c15 ~= zone(f).c15 | zone(a).c16 ~= zone(f).c16 | zone(a).c17 ~= zone(f).c17 | zone(a).c18 ~= zone(f).c18) 
+invariant (zone(a).ok & zone(g).ok) -> (zone(a).c01 ~= zone(g).c01 | zone(a).c02 ~= zone(g).c02 | zone(a).c03 ~= zone(g).c03 | zone(a).c04 ~= zone(g).c04 | zone(a).c05 ~= zone(g).c05 | zone(a).c06 ~= zone(g).c06 | zone(a).c07 ~= zone(g).c07 | zone(a).c08 ~= zone(g).c08 | zone(a).c09 ~= zone(g).c09 | zone(a).c10 ~= zone(g).c10 | zone(a).c11 ~= zone(g).c11 | zone(a).c12 ~= zone(g).c12 | zone(a).c13 ~= zone(g).c13 | zone(a).c14 ~= zone(g).c14 | zone(a).c15 ~= zone(g).c15 | zone(a).c16 ~= zone(g).c16 | zone(a).c17 ~= zone(g).c17 | zone(a).c18 ~= zone(g).c18) 
+invariant (zone(a).ok & zone(h).ok) -> (zone(a).c01 ~= zone(h).c01 | zone(a).c02 ~= zone(h).c02 | zone(a).c03 ~= zone(h).c03 | zone(a).c04 ~= zone(h).c04 | zone(a).c05 ~= zone(h).c05 | zone(a).c06 ~= zone(h).c06 | zone(a).c07 ~= zone(h).c07 | zone(a).c08 ~= zone(h).c08 | zone(a).c09 ~= zone(h).c09 | zone(a).c10 ~= zone(h).c10 | zone(a).c11 ~= zone(h).c11 | zone(a).c12 ~= zone(h).c12 | zone(a).c13 ~= zone(h).c13 | zone(a).c14 ~= zone(h).c14 | zone(a).c15 ~= zone(h).c15 | zone(a).c16 ~= zone(h).c16 | zone(a).c17 ~= zone(h).c17 | zone(a).c18 ~= zone(h).c18) 
+invariant (zone(a).ok & zone(i).ok) -> (zone(a).c01 ~= zone(i).c01 | zone(a).c02 ~= zone(i).c02 | zone(a).c03 ~= zone(i).c03 | zone(a).c04 ~= zone(i).c04 | zone(a).c05 ~= zone(i).c05 | zone(a).c06 ~= zone(i).c06 | zone(a).c07 ~= zone(i).c07 | zone(a).c08 ~= zone(i).c08 | zone(a).c09 ~= zone(i).c09 | zone(a).c10 ~= zone(i).c10 | zone(a).c11 ~= zone(i).c11 | zone(a).c12 ~= zone(i).c12 | zone(a).c13 ~= zone(i).c13 | zone(a).c14 ~= zone(i).c14 | zone(a).c15 ~= zone(i).c15 | zone(a).c16 ~= zone(i).c16 | zone(a).c17 ~= zone(i).c17 | zone(a).c18 ~= zone(i).c18) 
+invariant (zone(b).ok & zone(c).ok) -> (zone(b).c01 ~= zone(c).c01 | zone(b).c02 ~= zone(c).c02 | zone(b).c03 ~= zone(c).c03 | zone(b).c04 ~= zone(c).c04 | zone(b).c05 ~= zone(c).c05 | zone(b).c06 ~= zone(c).c06 | zone(b).c07 ~= zone(c).c07 | zone(b).c08 ~= zone(c).c08 | zone(b).c09 ~= zone(c).c09 | zone(b).c10 ~= zone(c).c10 | zone(b).c11 ~= zone(c).c11 | zone(b).c12 ~= zone(c).c12 | zone(b).c13 ~= zone(c).c13 | zone(b).c14 ~= zone(c).c14 | zone(b).c15 ~= zone(c).c15 | zone(b).c16 ~= zone(c).c16 | zone(b).c17 ~= zone(c).c17 | zone(b).c18 ~= zone(c).c18) 
+invariant (zone(b).ok & zone(d).ok) -> (zone(b).c01 ~= zone(d).c01 | zone(b).c02 ~= zone(d).c02 | zone(b).c03 ~= zone(d).c03 | zone(b).c04 ~= zone(d).c04 | zone(b).c05 ~= zone(d).c05 | zone(b).c06 ~= zone(d).c06 | zone(b).c07 ~= zone(d).c07 | zone(b).c08 ~= zone(d).c08 | zone(b).c09 ~= zone(d).c09 | zone(b).c10 ~= zone(d).c10 | zone(b).c11 ~= zone(d).c11 | zone(b).c12 ~= zone(d).c12 | zone(b).c13 ~= zone(d).c13 | zone(b).c14 ~= zone(d).c14 | zone(b).c15 ~= zone(d).c15 | zone(b).c16 ~= zone(d).c16 | zone(b).c17 ~= zone(d).c17 | zone(b).c18 ~= zone(d).c18) 
+invariant (zone(b).ok & zone(e).ok) -> (zone(b).c01 ~= zone(e).c01 | zone(b).c02 ~= zone(e).c02 | zone(b).c03 ~= zone(e).c03 | zone(b).c04 ~= zone(e).c04 | zone(b).c05 ~= zone(e).c05 | zone(b).c06 ~= zone(e).c06 | zone(b).c07 ~= zone(e).c07 | zone(b).c08 ~= zone(e).c08 | zone(b).c09 ~= zone(e).c09 | zone(b).c10 ~= zone(e).c10 | zone(b).c11 ~= zone(e).c11 | zone(b).c12 ~= zone(e).c12 | zone(b).c13 ~= zone(e).c13 | zone(b).c14 ~= zone(e).c14 | zone(b).c15 ~= zone(e).c15 | zone(b).c16 ~= zone(e).c16 | zone(b).c17 ~= zone(e).c17 | zone(b).c18 ~= zone(e).c18) 
+invariant (zone(b).ok & zone(f).ok) -> (zone(b).c01 ~= zone(f).c01 | zone(b).c02 ~= zone(f).c02 | zone(b).c03 ~= zone(f).c03 | zone(b).c04 ~= zone(f).c04 | zone(b).c05 ~= zone(f).c05 | zone(b).c06 ~= zone(f).c06 | zone(b).c07 ~= zone(f).c07 | zone(b).c08 ~= zone(f).c08 | zone(b).c09 ~= zone(f).c09 | zone(b).c10 ~= zone(f).c10 | zone(b).c11 ~= zone(f).c11 | zone(b).c12 ~= zone(f).c12 | zone(b).c13 ~= zone(f).c13 | zone(b).c14 ~= zone(f).c14 | zone(b).c15 ~= zone(f).c15 | zone(b).c16 ~= zone(f).c16 | zone(b).c17 ~= zone(f).c17 | zone(b).c18 ~= zone(f).c18) 
+invariant (zone(b).ok & zone(g).ok) -> (zone(b).c01 ~= zone(g).c01 | zone(b).c02 ~= zone(g).c02 | zone(b).c03 ~= zone(g).c03 | zone(b).c04 ~= zone(g).c04 | zone(b).c05 ~= zone(g).c05 | zone(b).c06 ~= zone(g).c06 | zone(b).c07 ~= zone(g).c07 | zone(b).c08 ~= zone(g).c08 | zone(b).c09 ~= zone(g).c09 | zone(b).c10 ~= zone(g).c10 | zone(b).c11 ~= zone(g).c11 | zone(b).c12 ~= zone(g).c12 | zone(b).c13 ~= zone(g).c13 | zone(b).c14 ~= zone(g).c14 | zone(b).c15 ~= zone(g).c15 | zone(b).c16 ~= zone(g).c16 | zone(b).c17 ~= zone(g).c17 | zone(b).c18 ~= zone(g).c18) 
+invariant (zone(b).ok & zone(h).ok) -> (zone(b).c01 ~= zone(h).c01 | zone(b).c02 ~= zone(h).c02 | zone(b).c03 ~= zone(h).c03 | zone(b).c04 ~= zone(h).c04 | zone(b).c05 ~= zone(h).c05 | zone(b).c06 ~= zone(h).c06 | zone(b).c07 ~= zone(h).c07 | zone(b).c08 ~= zone(h).c08 | zone(b).c09 ~= zone(h).c09 | zone(b).c10 ~= zone(h).c10 | zone(b).c11 ~= zone(h).c11 | zone(b).c12 ~= zone(h).c12 | zone(b).c13 ~= zone(h).c13 | zone(b).c14 ~= zone(h).c14 | zone(b).c15 ~= zone(h).c15 | zone(b).c16 ~= zone(h).c16 | zone(b).c17 ~= zone(h).c17 | zone(b).c18 ~= zone(h).c18) 
+invariant (zone(b).ok & zone(i).ok) -> (zone(b).c01 ~= zone(i).c01 | zone(b).c02 ~= zone(i).c02 | zone(b).c03 ~= zone(i).c03 | zone(b).c04 ~= zone(i).c04 | zone(b).c05 ~= zone(i).c05 | zone(b).c06 ~= zone(i).c06 | zone(b).c07 ~= zone(i).c07 | zone(b).c08 ~= zone(i).c08 | zone(b).c09 ~= zone(i).c09 | zone(b).c10 ~= zone(i).c10 | zone(b).c11 ~= zone(i).c11 | zone(b).c12 ~= zone(i).c12 | zone(b).c13 ~= zone(i).c13 | zone(b).c14 ~= zone(i).c14 | zone(b).c15 ~= zone(i).c15 | zone(b).c16 ~= zone(i).c16 | zone(b).c17 ~= zone(i).c17 | zone(b).c18 ~= zone(i).c18) 
+invariant (zone(c).ok & zone(d).ok) -> (zone(c).c01 ~= zone(d).c01 | zone(c).c02 ~= zone(d).c02 | zone(c).c03 ~= zone(d).c03 | zone(c).c04 ~= zone(d).c04 | zone(c).c05 ~= zone(d).c05 | zone(c).c06 ~= zone(d).c06 | zone(c).c07 ~= zone(d).c07 | zone(c).c08 ~= zone(d).c08 | zone(c).c09 ~= zone(d).c09 | zone(c).c10 ~= zone(d).c10 | zone(c).c11 ~= zone(d).c11 | zone(c).c12 ~= zone(d).c12 | zone(c).c13 ~= zone(d).c13 | zone(c).c14 ~= zone(d).c14 | zone(c).c15 ~= zone(d).c15 | zone(c).c16 ~= zone(d).c16 | zone(c).c17 ~= zone(d).c17 | zone(c).c18 ~= zone(d).c18) 
+invariant (zone(c).ok & zone(e).ok) -> (zone(c).c01 ~= zone(e).c01 | zone(c).c02 ~= zone(e).c02 | zone(c).c03 ~= zone(e).c03 | zone(c).c04 ~= zone(e).c04 | zone(c).c05 ~= zone(e).c05 | zone(c).c06 ~= zone(e).c06 | zone(c).c07 ~= zone(e).c07 | zone(c).c08 ~= zone(e).c08 | zone(c).c09 ~= zone(e).c09 | zone(c).c10 ~= zone(e).c10 | zone(c).c11 ~= zone(e).c11 | zone(c).c12 ~= zone(e).c12 | zone(c).c13 ~= zone(e).c13 | zone(c).c14 ~= zone(e).c14 | zone(c).c15 ~= zone(e).c15 | zone(c).c16 ~= zone(e).c16 | zone(c).c17 ~= zone(e).c17 | zone(c).c18 ~= zone(e).c18) 
+invariant (zone(c).ok & zone(f).ok) -> (zone(c).c01 ~= zone(f).c01 | zone(c).c02 ~= zone(f).c02 | zone(c).c03 ~= zone(f).c03 | zone(c).c04 ~= zone(f).c04 | zone(c).c05 ~= zone(f).c05 | zone(c).c06 ~= zone(f).c06 | zone(c).c07 ~= zone(f).c07 | zone(c).c08 ~= zone(f).c08 | zone(c).c09 ~= zone(f).c09 | zone(c).c10 ~= zone(f).c10 | zone(c).c11 ~= zone(f).c11 | zone(c).c12 ~= zone(f).c12 | zone(c).c13 ~= zone(f).c13 | zone(c).c14 ~= zone(f).c14 | zone(c).c15 ~= zone(f).c15 | zone(c).c16 ~= zone(f).c16 | zone(c).c17 ~= zone(f).c17 | zone(c).c18 ~= zone(f).c18) 
+invariant (zone(c).ok & zone(g).ok) -> (zone(c).c01 ~= zone(g).c01 | zone(c).c02 ~= zone(g).c02 | zone(c).c03 ~= zone(g).c03 | zone(c).c04 ~= zone(g).c04 | zone(c).c05 ~= zone(g).c05 | zone(c).c06 ~= zone(g).c06 | zone(c).c07 ~= zone(g).c07 | zone(c).c08 ~= zone(g).c08 | zone(c).c09 ~= zone(g).c09 | zone(c).c10 ~= zone(g).c10 | zone(c).c11 ~= zone(g).c11 | zone(c).c12 ~= zone(g).c12 | zone(c).c13 ~= zone(g).c13 | zone(c).c14 ~= zone(g).c14 | zone(c).c15 ~= zone(g).c15 | zone(c).c16 ~= zone(g).c16 | zone(c).c17 ~= zone(g).c17 | zone(c).c18 ~= zone(g).c18) 
+invariant (zone(c).ok & zone(h).ok) -> (zone(c).c01 ~= zone(h).c01 | zone(c).c02 ~= zone(h).c02 | zone(c).c03 ~= zone(h).c03 | zone(c).c04 ~= zone(h).c04 | zone(c).c05 ~= zone(h).c05 | zone(c).c06 ~= zone(h).c06 | zone(c).c07 ~= zone(h).c07 | zone(c).c08 ~= zone(h).c08 | zone(c).c09 ~= zone(h).c09 | zone(c).c10 ~= zone(h).c10 | zone(c).c11 ~= zone(h).c11 | zone(c).c12 ~= zone(h).c12 | zone(c).c13 ~= zone(h).c13 | zone(c).c14 ~= zone(h).c14 | zone(c).c15 ~= zone(h).c15 | zone(c).c16 ~= zone(h).c16 | zone(c).c17 ~= zone(h).c17 | zone(c).c18 ~= zone(h).c18) 
+invariant (zone(c).ok & zone(i).ok) -> (zone(c).c01 ~= zone(i).c01 | zone(c).c02 ~= zone(i).c02 | zone(c).c03 ~= zone(i).c03 | zone(c).c04 ~= zone(i).c04 | zone(c).c05 ~= zone(i).c05 | zone(c).c06 ~= zone(i).c06 | zone(c).c07 ~= zone(i).c07 | zone(c).c08 ~= zone(i).c08 | zone(c).c09 ~= zone(i).c09 | zone(c).c10 ~= zone(i).c10 | zone(c).c11 ~= zone(i).c11 | zone(c).c12 ~= zone(i).c12 | zone(c).c13 ~= zone(i).c13 | zone(c).c14 ~= zone(i).c14 | zone(c).c15 ~= zone(i).c15 | zone(c).c16 ~= zone(i).c16 | zone(c).c17 ~= zone(i).c17 | zone(c).c18 ~= zone(i).c18) 
+invariant (zone(d).ok & zone(e).ok) -> (zone(d).c01 ~= zone(e).c01 | zone(d).c02 ~= zone(e).c02 | zone(d).c03 ~= zone(e).c03 | zone(d).c04 ~= zone(e).c04 | zone(d).c05 ~= zone(e).c05 | zone(d).c06 ~= zone(e).c06 | zone(d).c07 ~= zone(e).c07 | zone(d).c08 ~= zone(e).c08 | zone(d).c09 ~= zone(e).c09 | zone(d).c10 ~= zone(e).c10 | zone(d).c11 ~= zone(e).c11 | zone(d).c12 ~= zone(e).c12 | zone(d).c13 ~= zone(e).c13 | zone(d).c14 ~= zone(e).c14 | zone(d).c15 ~= zone(e).c15 | zone(d).c16 ~= zone(e).c16 | zone(d).c17 ~= zone(e).c17 | zone(d).c18 ~= zone(e).c18) 
+invariant (zone(d).ok & zone(f).ok) -> (zone(d).c01 ~= zone(f).c01 | zone(d).c02 ~= zone(f).c02 | zone(d).c03 ~= zone(f).c03 | zone(d).c04 ~= zone(f).c04 | zone(d).c05 ~= zone(f).c05 | zone(d).c06 ~= zone(f).c06 | zone(d).c07 ~= zone(f).c07 | zone(d).c08 ~= zone(f).c08 | zone(d).c09 ~= zone(f).c09 | zone(d).c10 ~= zone(f).c10 | zone(d).c11 ~= zone(f).c11 | zone(d).c12 ~= zone(f).c12 | zone(d).c13 ~= zone(f).c13 | zone(d).c14 ~= zone(f).c14 | zone(d).c15 ~= zone(f).c15 | zone(d).c16 ~= zone(f).c16 | zone(d).c17 ~= zone(f).c17 | zone(d).c18 ~= zone(f).c18) 
+invariant (zone(d).ok & zone(g).ok) -> (zone(d).c01 ~= zone(g).c01 | zone(d).c02 ~= zone(g).c02 | zone(d).c03 ~= zone(g).c03 | zone(d).c04 ~= zone(g).c04 | zone(d).c05 ~= zone(g).c05 | zone(d).c06 ~= zone(g).c06 | zone(d).c07 ~= zone(g).c07 | zone(d).c08 ~= zone(g).c08 | zone(d).c09 ~= zone(g).c09 | zone(d).c10 ~= zone(g).c10 | zone(d).c11 ~= zone(g).c11 | zone(d).c12 ~= zone(g).c12 | zone(d).c13 ~= zone(g).c13 | zone(d).c14 ~= zone(g).c14 | zone(d).c15 ~= zone(g).c15 | zone(d).c16 ~= zone(g).c16 | zone(d).c17 ~= zone(g).c17 | zone(d).c18 ~= zone(g).c18) 
+invariant (zone(d).ok & zone(h).ok) -> (zone(d).c01 ~= zone(h).c01 | zone(d).c02 ~= zone(h).c02 | zone(d).c03 ~= zone(h).c03 | zone(d).c04 ~= zone(h).c04 | zone(d).c05 ~= zone(h).c05 | zone(d).c06 ~= zone(h).c06 | zone(d).c07 ~= zone(h).c07 | zone(d).c08 ~= zone(h).c08 | zone(d).c09 ~= zone(h).c09 | zone(d).c10 ~= zone(h).c10 | zone(d).c11 ~= zone(h).c11 | zone(d).c12 ~= zone(h).c12 | zone(d).c13 ~= zone(h).c13 | zone(d).c14 ~= zone(h).c14 | zone(d).c15 ~= zone(h).c15 | zone(d).c16 ~= zone(h).c16 | zone(d).c17 ~= zone(h).c17 | zone(d).c18 ~= zone(h).c18) 
+invariant (zone(d).ok & zone(i).ok) -> (zone(d).c01 ~= zone(i).c01 | zone(d).c02 ~= zone(i).c02 | zone(d).c03 ~= zone(i).c03 | zone(d).c04 ~= zone(i).c04 | zone(d).c05 ~= zone(i).c05 | zone(d).c06 ~= zone(i).c06 | zone(d).c07 ~= zone(i).c07 | zone(d).c08 ~= zone(i).c08 | zone(d).c09 ~= zone(i).c09 | zone(d).c10 ~= zone(i).c10 | zone(d).c11 ~= zone(i).c11 | zone(d).c12 ~= zone(i).c12 | zone(d).c13 ~= zone(i).c13 | zone(d).c14 ~= zone(i).c14 | zone(d).c15 ~= zone(i).c15 | zone(d).c16 ~= zone(i).c16 | zone(d).c17 ~= zone(i).c17 | zone(d).c18 ~= zone(i).c18) 
+invariant (zone(e).ok & zone(f).ok) -> (zone(e).c01 ~= zone(f).c01 | zone(e).c02 ~= zone(f).c02 | zone(e).c03 ~= zone(f).c03 | zone(e).c04 ~= zone(f).c04 | zone(e).c05 ~= zone(f).c05 | zone(e).c06 ~= zone(f).c06 | zone(e).c07 ~= zone(f).c07 | zone(e).c08 ~= zone(f).c08 | zone(e).c09 ~= zone(f).c09 | zone(e).c10 ~= zone(f).c10 | zone(e).c11 ~= zone(f).c11 | zone(e).c12 ~= zone(f).c12 | zone(e).c13 ~= zone(f).c13 | zone(e).c14 ~= zone(f).c14 | zone(e).c15 ~= zone(f).c15 | zone(e).c16 ~= zone(f).c16 | zone(e).c17 ~= zone(f).c17 | zone(e).c18 ~= zone(f).c18) 
+invariant (zone(e).ok & zone(g).ok) -> (zone(e).c01 ~= zone(g).c01 | zone(e).c02 ~= zone(g).c02 | zone(e).c03 ~= zone(g).c03 | zone(e).c04 ~= zone(g).c04 | zone(e).c05 ~= zone(g).c05 | zone(e).c06 ~= zone(g).c06 | zone(e).c07 ~= zone(g).c07 | zone(e).c08 ~= zone(g).c08 | zone(e).c09 ~= zone(g).c09 | zone(e).c10 ~= zone(g).c10 | zone(e).c11 ~= zone(g).c11 | zone(e).c12 ~= zone(g).c12 | zone(e).c13 ~= zone(g).c13 | zone(e).c14 ~= zone(g).c14 | zone(e).c15 ~= zone(g).c15 | zone(e).c16 ~= zone(g).c16 | zone(e).c17 ~= zone(g).c17 | zone(e).c18 ~= zone(g).c18) 
+invariant (zone(e).ok & zone(h).ok) -> (zone(e).c01 ~= zone(h).c01 | zone(e).c02 ~= zone(h).c02 | zone(e).c03 ~= zone(h).c03 | zone(e).c04 ~= zone(h).c04 | zone(e).c05 ~= zone(h).c05 | zone(e).c06 ~= zone(h).c06 | zone(e).c07 ~= zone(h).c07 | zone(e).c08 ~= zone(h).c08 | zone(e).c09 ~= zone(h).c09 | zone(e).c10 ~= zone(h).c10 | zone(e).c11 ~= zone(h).c11 | zone(e).c12 ~= zone(h).c12 | zone(e).c13 ~= zone(h).c13 | zone(e).c14 ~= zone(h).c14 | zone(e).c15 ~= zone(h).c15 | zone(e).c16 ~= zone(h).c16 | zone(e).c17 ~= zone(h).c17 | zone(e).c18 ~= zone(h).c18) 
+invariant (zone(e).ok & zone(i).ok) -> (zone(e).c01 ~= zone(i).c01 | zone(e).c02 ~= zone(i).c02 | zone(e).c03 ~= zone(i).c03 | zone(e).c04 ~= zone(i).c04 | zone(e).c05 ~= zone(i).c05 | zone(e).c06 ~= zone(i).c06 | zone(e).c07 ~= zone(i).c07 | zone(e).c08 ~= zone(i).c08 | zone(e).c09 ~= zone(i).c09 | zone(e).c10 ~= zone(i).c10 | zone(e).c11 ~= zone(i).c11 | zone(e).c12 ~= zone(i).c12 | zone(e).c13 ~= zone(i).c13 | zone(e).c14 ~= zone(i).c14 | zone(e).c15 ~= zone(i).c15 | zone(e).c16 ~= zone(i).c16 | zone(e).c17 ~= zone(i).c17 | zone(e).c18 ~= zone(i).c18) 
+invariant (zone(f).ok & zone(g).ok) -> (zone(f).c01 ~= zone(g).c01 | zone(f).c02 ~= zone(g).c02 | zone(f).c03 ~= zone(g).c03 | zone(f).c04 ~= zone(g).c04 | zone(f).c05 ~= zone(g).c05 | zone(f).c06 ~= zone(g).c06 | zone(f).c07 ~= zone(g).c07 | zone(f).c08 ~= zone(g).c08 | zone(f).c09 ~= zone(g).c09 | zone(f).c10 ~= zone(g).c10 | zone(f).c11 ~= zone(g).c11 | zone(f).c12 ~= zone(g).c12 | zone(f).c13 ~= zone(g).c13 | zone(f).c14 ~= zone(g).c14 | zone(f).c15 ~= zone(g).c15 | zone(f).c16 ~= zone(g).c16 | zone(f).c17 ~= zone(g).c17 | zone(f).c18 ~= zone(g).c18) 
+invariant (zone(f).ok & zone(h).ok) -> (zone(f).c01 ~= zone(h).c01 | zone(f).c02 ~= zone(h).c02 | zone(f).c03 ~= zone(h).c03 | zone(f).c04 ~= zone(h).c04 | zone(f).c05 ~= zone(h).c05 | zone(f).c06 ~= zone(h).c06 | zone(f).c07 ~= zone(h).c07 | zone(f).c08 ~= zone(h).c08 | zone(f).c09 ~= zone(h).c09 | zone(f).c10 ~= zone(h).c10 | zone(f).c11 ~= zone(h).c11 | zone(f).c12 ~= zone(h).c12 | zone(f).c13 ~= zone(h).c13 | zone(f).c14 ~= zone(h).c14 | zone(f).c15 ~= zone(h).c15 | zone(f).c16 ~= zone(h).c16 | zone(f).c17 ~= zone(h).c17 | zone(f).c18 ~= zone(h).c18) 
+invariant (zone(f).ok & zone(i).ok) -> (zone(f).c01 ~= zone(i).c01 | zone(f).c02 ~= zone(i).c02 | zone(f).c03 ~= zone(i).c03 | zone(f).c04 ~= zone(i).c04 | zone(f).c05 ~= zone(i).c05 | zone(f).c06 ~= zone(i).c06 | zone(f).c07 ~= zone(i).c07 | zone(f).c08 ~= zone(i).c08 | zone(f).c09 ~= zone(i).c09 | zone(f).c10 ~= zone(i).c10 | zone(f).c11 ~= zone(i).c11 | zone(f).c12 ~= zone(i).c12 | zone(f).c13 ~= zone(i).c13 | zone(f).c14 ~= zone(i).c14 | zone(f).c15 ~= zone(i).c15 | zone(f).c16 ~= zone(i).c16 | zone(f).c17 ~= zone(i).c17 | zone(f).c18 ~= zone(i).c18) 
+invariant (zone(g).ok & zone(h).ok) -> (zone(g).c01 ~= zone(h).c01 | zone(g).c02 ~= zone(h).c02 | zone(g).c03 ~= zone(h).c03 | zone(g).c04 ~= zone(h).c04 | zone(g).c05 ~= zone(h).c05 | zone(g).c06 ~= zone(h).c06 | zone(g).c07 ~= zone(h).c07 | zone(g).c08 ~= zone(h).c08 | zone(g).c09 ~= zone(h).c09 | zone(g).c10 ~= zone(h).c10 | zone(g).c11 ~= zone(h).c11 | zone(g).c12 ~= zone(h).c12 | zone(g).c13 ~= zone(h).c13 | zone(g).c14 ~= zone(h).c14 | zone(g).c15 ~= zone(h).c15 | zone(g).c16 ~= zone(h).c16 | zone(g).c17 ~= zone(h).c17 | zone(g).c18 ~= zone(h).c18) 
+invariant (zone(g).ok & zone(i).ok) -> (zone(g).c01 ~= zone(i).c01 | zone(g).c02 ~= zone(i).c02 | zone(g).c03 ~= zone(i).c03 | zone(g).c04 ~= zone(i).c04 | zone(g).c05 ~= zone(i).c05 | zone(g).c06 ~= zone(i).c06 | zone(g).c07 ~= zone(i).c07 | zone(g).c08 ~= zone(i).c08 | zone(g).c09 ~= zone(i).c09 | zone(g).c10 ~= zone(i).c10 | zone(g).c11 ~= zone(i).c11 | zone(g).c12 ~= zone(i).c12 | zone(g).c13 ~= zone(i).c13 | zone(g).c14 ~= zone(i).c14 | zone(g).c15 ~= zone(i).c15 | zone(g).c16 ~= zone(i).c16 | zone(g).c17 ~= zone(i).c17 | zone(g).c18 ~= zone(i).c18) 
+invariant (zone(h).ok & zone(i).ok) -> (zone(h).c01 ~= zone(i).c01 | zone(h).c02 ~= zone(i).c02 | zone(h).c03 ~= zone(i).c03 | zone(h).c04 ~= zone(i).c04 | zone(h).c05 ~= zone(i).c05 | zone(h).c06 ~= zone(i).c06 | zone(h).c07 ~= zone(i).c07 | zone(h).c08 ~= zone(i).c08 | zone(h).c09 ~= zone(i).c09 | zone(h).c10 ~= zone(i).c10 | zone(h).c11 ~= zone(i).c11 | zone(h).c12 ~= zone(i).c12 | zone(h).c13 ~= zone(i).c13 | zone(h).c14 ~= zone(i).c14 | zone(h).c15 ~= zone(i).c15 | zone(h).c16 ~= zone(i).c16 | zone(h).c17 ~= zone(i).c17 | zone(h).c18 ~= zone(i).c18) 
+
+
+invariant zone(a).ok -> (zone(a).c01 | zone(a).c02 | zone(a).c03 | zone(a).c04 | zone(a).c05 | zone(a).c06 | zone(a).c07 | zone(a).c08 | zone(a).c09 | zone(a).c10 | zone(a).c11 | zone(a).c12 | zone(a).c13 | zone(a).c14 | zone(a).c15 | zone(a).c16 | zone(a).c17 | zone(a).c18) 
+invariant zone(b).ok -> (zone(b).c01 | zone(b).c02 | zone(b).c03 | zone(b).c04 | zone(b).c05 | zone(b).c06 | zone(b).c07 | zone(b).c08 | zone(b).c09 | zone(b).c10 | zone(b).c11 | zone(b).c12 | zone(b).c13 | zone(b).c14 | zone(b).c15 | zone(b).c16 | zone(b).c17 | zone(b).c18) 
+invariant zone(c).ok -> (zone(c).c01 | zone(c).c02 | zone(c).c03 | zone(c).c04 | zone(c).c05 | zone(c).c06 | zone(c).c07 | zone(c).c08 | zone(c).c09 | zone(c).c10 | zone(c).c11 | zone(c).c12 | zone(c).c13 | zone(c).c14 | zone(c).c15 | zone(c).c16 | zone(c).c17 | zone(c).c18) 
+invariant zone(d).ok -> (zone(d).c01 | zone(d).c02 | zone(d).c03 | zone(d).c04 | zone(d).c05 | zone(d).c06 | zone(d).c07 | zone(d).c08 | zone(d).c09 | zone(d).c10 | zone(d).c11 | zone(d).c12 | zone(d).c13 | zone(d).c14 | zone(d).c15 | zone(d).c16 | zone(d).c17 | zone(d).c18) 
+invariant zone(e).ok -> (zone(e).c01 | zone(e).c02 | zone(e).c03 | zone(e).c04 | zone(e).c05 | zone(e).c06 | zone(e).c07 | zone(e).c08 | zone(e).c09 | zone(e).c10 | zone(e).c11 | zone(e).c12 | zone(e).c13 | zone(e).c14 | zone(e).c15 | zone(e).c16 | zone(e).c17 | zone(e).c18) 
+invariant zone(f).ok -> (zone(f).c01 | zone(f).c02 | zone(f).c03 | zone(f).c04 | zone(f).c05 | zone(f).c06 | zone(f).c07 | zone(f).c08 | zone(f).c09 | zone(f).c10 | zone(f).c11 | zone(f).c12 | zone(f).c13 | zone(f).c14 | zone(f).c15 | zone(f).c16 | zone(f).c17 | zone(f).c18) 
+invariant zone(g).ok -> (zone(g).c01 | zone(g).c02 | zone(g).c03 | zone(g).c04 | zone(g).c05 | zone(g).c06 | zone(g).c07 | zone(g).c08 | zone(g).c09 | zone(g).c10 | zone(g).c11 | zone(g).c12 | zone(g).c13 | zone(g).c14 | zone(g).c15 | zone(g).c16 | zone(g).c17 | zone(g).c18) 
+invariant zone(h).ok -> (zone(h).c01 | zone(h).c02 | zone(h).c03 | zone(h).c04 | zone(h).c05 | zone(h).c06 | zone(h).c07 | zone(h).c08 | zone(h).c09 | zone(h).c10 | zone(h).c11 | zone(h).c12 | zone(h).c13 | zone(h).c14 | zone(h).c15 | zone(h).c16 | zone(h).c17 | zone(h).c18) 
+invariant zone(i).ok -> (zone(i).c01 | zone(i).c02 | zone(i).c03 | zone(i).c04 | zone(i).c05 | zone(i).c06 | zone(i).c07 | zone(i).c08 | zone(i).c09 | zone(i).c10 | zone(i).c11 | zone(i).c12 | zone(i).c13 | zone(i).c14 | zone(i).c15 | zone(i).c16 | zone(i).c17 | zone(i).c18) 

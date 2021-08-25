@@ -1,0 +1,222 @@
+
+Isolate this:
+
+********************************************************************************
+
+This version has been modified by Landon Taylor. landon.jeffrey.taylor@usu.edu
+The ABCModelChecker function is using 'pdr -qt -L pdr_log.txt'. For more info,
+install abc, and on the command line use 'abc' > 'pdr --help'
+
+********************************************************************************
+
+zones.ivy: line 173: Model checking invariant
+zones.ivy: line 174: Model checking invariant
+zones.ivy: line 175: Model checking invariant
+zones.ivy: line 176: Model checking invariant
+zones.ivy: line 177: Model checking invariant
+zones.ivy: line 178: Model checking invariant
+zones.ivy: line 179: Model checking invariant
+zones.ivy: line 180: Model checking invariant
+zones.ivy: line 181: Model checking invariant
+zones.ivy: line 182: Model checking invariant
+zones.ivy: line 183: Model checking invariant
+zones.ivy: line 184: Model checking invariant
+zones.ivy: line 185: Model checking invariant
+zones.ivy: line 186: Model checking invariant
+zones.ivy: line 187: Model checking invariant
+zones.ivy: line 188: Model checking invariant
+zones.ivy: line 189: Model checking invariant
+zones.ivy: line 190: Model checking invariant
+zones.ivy: line 191: Model checking invariant
+zones.ivy: line 192: Model checking invariant
+zones.ivy: line 193: Model checking invariant
+zones.ivy: line 194: Model checking invariant
+zones.ivy: line 195: Model checking invariant
+zones.ivy: line 196: Model checking invariant
+zones.ivy: line 197: Model checking invariant
+zones.ivy: line 198: Model checking invariant
+zones.ivy: line 199: Model checking invariant
+zones.ivy: line 200: Model checking invariant
+zones.ivy: line 201: Model checking invariant
+zones.ivy: line 202: Model checking invariant
+zones.ivy: line 203: Model checking invariant
+zones.ivy: line 204: Model checking invariant
+zones.ivy: line 205: Model checking invariant
+zones.ivy: line 206: Model checking invariant
+zones.ivy: line 207: Model checking invariant
+zones.ivy: line 208: Model checking invariant
+zones.ivy: line 209: Model checking invariant
+zones.ivy: line 210: Model checking invariant
+zones.ivy: line 211: Model checking invariant
+zones.ivy: line 212: Model checking invariant
+zones.ivy: line 213: Model checking invariant
+zones.ivy: line 214: Model checking invariant
+zones.ivy: line 215: Model checking invariant
+zones.ivy: line 216: Model checking invariant
+zones.ivy: line 217: Model checking invariant
+zones.ivy: line 218: Model checking invariant
+zones.ivy: line 219: Model checking invariant
+zones.ivy: line 220: Model checking invariant
+zones.ivy: line 221: Model checking invariant
+zones.ivy: line 222: Model checking invariant
+zones.ivy: line 223: Model checking invariant
+zones.ivy: line 224: Model checking invariant
+zones.ivy: line 225: Model checking invariant
+zones.ivy: line 226: Model checking invariant
+zones.ivy: line 227: Model checking invariant
+zones.ivy: line 228: Model checking invariant
+zones.ivy: line 229: Model checking invariant
+zones.ivy: line 230: Model checking invariant
+zones.ivy: line 231: Model checking invariant
+zones.ivy: line 232: Model checking invariant
+zones.ivy: line 233: Model checking invariant
+zones.ivy: line 234: Model checking invariant
+zones.ivy: line 235: Model checking invariant
+zones.ivy: line 236: Model checking invariant
+zones.ivy: line 237: Model checking invariant
+zones.ivy: line 238: Model checking invariant
+zones.ivy: line 239: Model checking invariant
+zones.ivy: line 240: Model checking invariant
+zones.ivy: line 241: Model checking invariant
+zones.ivy: line 242: Model checking invariant
+zones.ivy: line 243: Model checking invariant
+zones.ivy: line 244: Model checking invariant
+zones.ivy: line 245: Model checking invariant
+zones.ivy: line 246: Model checking invariant
+zones.ivy: line 247: Model checking invariant
+zones.ivy: line 248: Model checking invariant
+zones.ivy: line 249: Model checking invariant
+zones.ivy: line 250: Model checking invariant
+zones.ivy: line 251: Model checking invariant
+zones.ivy: line 252: Model checking invariant
+zones.ivy: line 253: Model checking invariant
+zones.ivy: line 254: Model checking invariant
+zones.ivy: line 255: Model checking invariant
+zones.ivy: line 256: Model checking invariant
+zones.ivy: line 257: Model checking invariant
+zones.ivy: line 258: Model checking invariant
+zones.ivy: line 259: Model checking invariant
+zones.ivy: line 260: Model checking invariant
+zones.ivy: line 261: Model checking invariant
+zones.ivy: line 262: Model checking invariant
+zones.ivy: line 263: Model checking invariant
+zones.ivy: line 264: Model checking invariant
+zones.ivy: line 265: Model checking invariant
+zones.ivy: line 266: Model checking invariant
+zones.ivy: line 267: Model checking invariant
+zones.ivy: line 268: Model checking invariant
+zones.ivy: line 269: Model checking invariant
+zones.ivy: line 270: Model checking invariant
+zones.ivy: line 271: Model checking invariant
+zones.ivy: line 272: Model checking invariant
+zones.ivy: line 273: Model checking invariant
+zones.ivy: line 274: Model checking invariant
+zones.ivy: line 275: Model checking invariant
+zones.ivy: line 276: Model checking invariant
+zones.ivy: line 277: Model checking invariant
+zones.ivy: line 278: Model checking invariant
+zones.ivy: line 279: Model checking invariant
+zones.ivy: line 280: Model checking invariant
+zones.ivy: line 281: Model checking invariant
+zones.ivy: line 282: Model checking invariant
+zones.ivy: line 283: Model checking invariant
+zones.ivy: line 284: Model checking invariant
+zones.ivy: line 285: Model checking invariant
+zones.ivy: line 286: Model checking invariant
+zones.ivy: line 287: Model checking invariant
+zones.ivy: line 288: Model checking invariant
+zones.ivy: line 289: Model checking invariant
+zones.ivy: line 290: Model checking invariant
+zones.ivy: line 291: Model checking invariant
+zones.ivy: line 292: Model checking invariant
+zones.ivy: line 293: Model checking invariant
+zones.ivy: line 294: Model checking invariant
+zones.ivy: line 295: Model checking invariant
+zones.ivy: line 296: Model checking invariant
+zones.ivy: line 297: Model checking invariant
+zones.ivy: line 298: Model checking invariant
+zones.ivy: line 299: Model checking invariant
+zones.ivy: line 300: Model checking invariant
+zones.ivy: line 301: Model checking invariant
+zones.ivy: line 302: Model checking invariant
+zones.ivy: line 303: Model checking invariant
+zones.ivy: line 304: Model checking invariant
+zones.ivy: line 305: Model checking invariant
+zones.ivy: line 306: Model checking invariant
+zones.ivy: line 307: Model checking invariant
+zones.ivy: line 308: Model checking invariant
+zones.ivy: line 309: Model checking invariant
+zones.ivy: line 310: Model checking invariant
+zones.ivy: line 311: Model checking invariant
+zones.ivy: line 312: Model checking invariant
+zones.ivy: line 313: Model checking invariant
+zones.ivy: line 314: Model checking invariant
+zones.ivy: line 315: Model checking invariant
+zones.ivy: line 316: Model checking invariant
+zones.ivy: line 317: Model checking invariant
+zones.ivy: line 318: Model checking invariant
+zones.ivy: line 319: Model checking invariant
+zones.ivy: line 320: Model checking invariant
+zones.ivy: line 321: Model checking invariant
+zones.ivy: line 322: Model checking invariant
+zones.ivy: line 323: Model checking invariant
+zones.ivy: line 324: Model checking invariant
+zones.ivy: line 325: Model checking invariant
+zones.ivy: line 328: Model checking invariant
+zones.ivy: line 329: Model checking invariant
+zones.ivy: line 330: Model checking invariant
+zones.ivy: line 331: Model checking invariant
+zones.ivy: line 332: Model checking invariant
+zones.ivy: line 333: Model checking invariant
+zones.ivy: line 334: Model checking invariant
+zones.ivy: line 335: Model checking invariant
+zones.ivy: line 336: Model checking invariant
+zones.ivy: line 337: Model checking invariant
+zones.ivy: line 338: Model checking invariant
+zones.ivy: line 339: Model checking invariant
+zones.ivy: line 340: Model checking invariant
+zones.ivy: line 341: Model checking invariant
+zones.ivy: line 342: Model checking invariant
+zones.ivy: line 343: Model checking invariant
+zones.ivy: line 344: Model checking invariant
+zones.ivy: line 345: Model checking invariant
+zones.ivy: line 348: Model checking invariant
+zones.ivy: line 349: Model checking invariant
+zones.ivy: line 350: Model checking invariant
+zones.ivy: line 351: Model checking invariant
+zones.ivy: line 352: Model checking invariant
+zones.ivy: line 353: Model checking invariant
+zones.ivy: line 354: Model checking invariant
+zones.ivy: line 355: Model checking invariant
+zones.ivy: line 356: Model checking invariant
+zones.ivy: line 357: Model checking invariant
+zones.ivy: line 358: Model checking invariant
+zones.ivy: line 359: Model checking invariant
+zones.ivy: line 360: Model checking invariant
+zones.ivy: line 361: Model checking invariant
+zones.ivy: line 362: Model checking invariant
+zones.ivy: line 363: Model checking invariant
+zones.ivy: line 364: Model checking invariant
+zones.ivy: line 365: Model checking invariant
+
+Instantiating quantifiers (see logfiles/ivy_mc_1629230873.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+file name: aigerfiles/1629230873.aag
+aigtoaig_path:/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/aigtoaig
+abc_path: /usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc
+using cmd ['/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc', '-c', 'read_aiger aigerfiles/1629230873.aig; pdr -qt -L aigerfiles/1629230873_pdr.log; write_aiger_cex  aigerfiles/1629230873.out']
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger aigerfiles/1629230873.aig; pdr -qt -L aigerfiles/1629230873_pdr.log; write_aiger_cex  aigerfiles/1629230873.out".
+
+Invariant F[3] : 333 clauses with 309 flops (out of 458) (cex = 13, ave = 152.73)
+Verification of invariant with 333 clauses was successful.  Time =     0.06 sec
+Property proved.  Time =     5.96 sec
+There is no current CEX.
+--------------------------------------------------------------------------------
+
+PASS
+
+OK
