@@ -1,0 +1,78 @@
+
+Isolate this:
+
+********************************************************************************
+
+This version has been modified by Landon Taylor. landon.jeffrey.taylor@usu.edu
+The ABCModelChecker function is using 'pdr -qt -L pdr_log.txt'. For more info,
+install abc, and on the command line use 'abc' > 'pdr --help'
+
+********************************************************************************
+
+3x3.ivy: line 140: Model checking invariant
+3x3.ivy: line 141: Model checking invariant
+3x3.ivy: line 142: Model checking invariant
+3x3.ivy: line 143: Model checking invariant
+3x3.ivy: line 144: Model checking invariant
+3x3.ivy: line 145: Model checking invariant
+3x3.ivy: line 146: Model checking invariant
+3x3.ivy: line 147: Model checking invariant
+3x3.ivy: line 148: Model checking invariant
+3x3.ivy: line 149: Model checking invariant
+3x3.ivy: line 150: Model checking invariant
+3x3.ivy: line 151: Model checking invariant
+3x3.ivy: line 152: Model checking invariant
+3x3.ivy: line 153: Model checking invariant
+3x3.ivy: line 154: Model checking invariant
+3x3.ivy: line 155: Model checking invariant
+3x3.ivy: line 156: Model checking invariant
+3x3.ivy: line 157: Model checking invariant
+3x3.ivy: line 158: Model checking invariant
+3x3.ivy: line 159: Model checking invariant
+3x3.ivy: line 160: Model checking invariant
+3x3.ivy: line 161: Model checking invariant
+3x3.ivy: line 162: Model checking invariant
+3x3.ivy: line 163: Model checking invariant
+3x3.ivy: line 164: Model checking invariant
+3x3.ivy: line 165: Model checking invariant
+3x3.ivy: line 166: Model checking invariant
+3x3.ivy: line 167: Model checking invariant
+3x3.ivy: line 168: Model checking invariant
+3x3.ivy: line 169: Model checking invariant
+3x3.ivy: line 170: Model checking invariant
+3x3.ivy: line 171: Model checking invariant
+3x3.ivy: line 172: Model checking invariant
+3x3.ivy: line 173: Model checking invariant
+3x3.ivy: line 174: Model checking invariant
+3x3.ivy: line 175: Model checking invariant
+3x3.ivy: line 178: Model checking invariant
+3x3.ivy: line 179: Model checking invariant
+3x3.ivy: line 180: Model checking invariant
+3x3.ivy: line 181: Model checking invariant
+3x3.ivy: line 182: Model checking invariant
+3x3.ivy: line 183: Model checking invariant
+3x3.ivy: line 184: Model checking invariant
+3x3.ivy: line 185: Model checking invariant
+3x3.ivy: line 186: Model checking invariant
+
+Instantiating quantifiers (see logfiles/ivy_mc_1629485254.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+file name: aigerfiles/1629485254.aag
+aigtoaig_path:/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/aigtoaig
+abc_path: /usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc
+using cmd ['/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc', '-c', 'read_aiger aigerfiles/1629485254.aig; pdr -qt -L aigerfiles/1629485254_pdr.log; write_aiger_cex  aigerfiles/1629485254.out']
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger aigerfiles/1629485254.aig; pdr -qt -L aigerfiles/1629485254_pdr.log; write_aiger_cex  aigerfiles/1629485254.out".
+
+Invariant F[3] : 228 clauses with 162 flops (out of 232) (cex = 8, ave = 57.89)
+Verification of invariant with 228 clauses was successful.  Time =     0.01 sec
+Property proved.  Time =     0.66 sec
+There is no current CEX.
+--------------------------------------------------------------------------------
+
+PASS
+
+OK

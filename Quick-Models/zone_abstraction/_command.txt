@@ -1,0 +1,5 @@
+For any file in this folder or its subfolders,
+navigate to the folder on the command line and
+use the following command.
+
+ivy_check trace=true filename.ivy

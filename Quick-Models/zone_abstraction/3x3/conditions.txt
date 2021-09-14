@@ -1,0 +1,32 @@
+Conditions in the routing algorithm:
+
+Note to self: make all logic with x on left and xd on right for confusion
+
+Conjunctions and disjunctions are separate properties.
+
+01: x = xd /\ y = yd
+
+02: y = yd + 1 /\ x = xd
+03: y = yd /\ x = xd + 1
+04: y = yd - 1 /\ x = xd
+05: y = yd /\ x = xd - 1
+
+06: x >= xd
+07: y <= yd
+
+08: y >= yd
+09: x <= xd
+
+10: x < xd - 1
+11: x < xd /\ y = yd - 1
+
+12: y < yd
+
+13: x >= xd /\ y = yd - 1 
+14: y = yd - 1 /\ x = xd
+
+15: x = xd
+16: x <= xd /\ x = xd - 1
+17: x = xd - 1 /\ y != yd - 1
+
+18: y <= yd /\ x <= xd

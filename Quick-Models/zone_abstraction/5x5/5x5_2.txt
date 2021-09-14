@@ -1,0 +1,1330 @@
+
+Isolate this:
+
+********************************************************************************
+
+This version has been modified by Landon Taylor. landon.jeffrey.taylor@usu.edu
+The ABCModelChecker function is using 'pdr -qt -L pdr_log.txt'. For more info,
+install abc, and on the command line use 'abc' > 'pdr --help'
+
+********************************************************************************
+
+5x5_2.ivy: line 185: Model checking invariant
+5x5_2.ivy: line 186: Model checking invariant
+5x5_2.ivy: line 187: Model checking invariant
+5x5_2.ivy: line 188: Model checking invariant
+5x5_2.ivy: line 189: Model checking invariant
+5x5_2.ivy: line 190: Model checking invariant
+5x5_2.ivy: line 191: Model checking invariant
+5x5_2.ivy: line 192: Model checking invariant
+5x5_2.ivy: line 193: Model checking invariant
+5x5_2.ivy: line 194: Model checking invariant
+5x5_2.ivy: line 195: Model checking invariant
+5x5_2.ivy: line 196: Model checking invariant
+5x5_2.ivy: line 197: Model checking invariant
+5x5_2.ivy: line 198: Model checking invariant
+5x5_2.ivy: line 199: Model checking invariant
+5x5_2.ivy: line 200: Model checking invariant
+5x5_2.ivy: line 201: Model checking invariant
+5x5_2.ivy: line 202: Model checking invariant
+5x5_2.ivy: line 203: Model checking invariant
+5x5_2.ivy: line 204: Model checking invariant
+5x5_2.ivy: line 205: Model checking invariant
+5x5_2.ivy: line 206: Model checking invariant
+5x5_2.ivy: line 207: Model checking invariant
+5x5_2.ivy: line 208: Model checking invariant
+5x5_2.ivy: line 209: Model checking invariant
+5x5_2.ivy: line 210: Model checking invariant
+5x5_2.ivy: line 211: Model checking invariant
+5x5_2.ivy: line 212: Model checking invariant
+5x5_2.ivy: line 213: Model checking invariant
+5x5_2.ivy: line 214: Model checking invariant
+5x5_2.ivy: line 215: Model checking invariant
+5x5_2.ivy: line 216: Model checking invariant
+5x5_2.ivy: line 217: Model checking invariant
+5x5_2.ivy: line 218: Model checking invariant
+5x5_2.ivy: line 219: Model checking invariant
+5x5_2.ivy: line 220: Model checking invariant
+5x5_2.ivy: line 221: Model checking invariant
+5x5_2.ivy: line 222: Model checking invariant
+5x5_2.ivy: line 223: Model checking invariant
+5x5_2.ivy: line 224: Model checking invariant
+5x5_2.ivy: line 225: Model checking invariant
+5x5_2.ivy: line 226: Model checking invariant
+5x5_2.ivy: line 227: Model checking invariant
+5x5_2.ivy: line 228: Model checking invariant
+5x5_2.ivy: line 229: Model checking invariant
+5x5_2.ivy: line 230: Model checking invariant
+5x5_2.ivy: line 231: Model checking invariant
+5x5_2.ivy: line 232: Model checking invariant
+5x5_2.ivy: line 233: Model checking invariant
+5x5_2.ivy: line 234: Model checking invariant
+5x5_2.ivy: line 235: Model checking invariant
+5x5_2.ivy: line 236: Model checking invariant
+5x5_2.ivy: line 237: Model checking invariant
+5x5_2.ivy: line 238: Model checking invariant
+5x5_2.ivy: line 239: Model checking invariant
+5x5_2.ivy: line 240: Model checking invariant
+5x5_2.ivy: line 241: Model checking invariant
+5x5_2.ivy: line 242: Model checking invariant
+5x5_2.ivy: line 243: Model checking invariant
+5x5_2.ivy: line 244: Model checking invariant
+5x5_2.ivy: line 245: Model checking invariant
+5x5_2.ivy: line 246: Model checking invariant
+5x5_2.ivy: line 247: Model checking invariant
+5x5_2.ivy: line 248: Model checking invariant
+5x5_2.ivy: line 249: Model checking invariant
+5x5_2.ivy: line 250: Model checking invariant
+5x5_2.ivy: line 251: Model checking invariant
+5x5_2.ivy: line 252: Model checking invariant
+5x5_2.ivy: line 253: Model checking invariant
+5x5_2.ivy: line 254: Model checking invariant
+5x5_2.ivy: line 255: Model checking invariant
+5x5_2.ivy: line 256: Model checking invariant
+5x5_2.ivy: line 257: Model checking invariant
+5x5_2.ivy: line 258: Model checking invariant
+5x5_2.ivy: line 259: Model checking invariant
+5x5_2.ivy: line 260: Model checking invariant
+5x5_2.ivy: line 261: Model checking invariant
+5x5_2.ivy: line 262: Model checking invariant
+5x5_2.ivy: line 263: Model checking invariant
+5x5_2.ivy: line 264: Model checking invariant
+5x5_2.ivy: line 265: Model checking invariant
+5x5_2.ivy: line 266: Model checking invariant
+5x5_2.ivy: line 267: Model checking invariant
+5x5_2.ivy: line 268: Model checking invariant
+5x5_2.ivy: line 269: Model checking invariant
+5x5_2.ivy: line 270: Model checking invariant
+5x5_2.ivy: line 271: Model checking invariant
+5x5_2.ivy: line 272: Model checking invariant
+5x5_2.ivy: line 273: Model checking invariant
+5x5_2.ivy: line 274: Model checking invariant
+5x5_2.ivy: line 275: Model checking invariant
+5x5_2.ivy: line 276: Model checking invariant
+5x5_2.ivy: line 277: Model checking invariant
+5x5_2.ivy: line 278: Model checking invariant
+5x5_2.ivy: line 279: Model checking invariant
+5x5_2.ivy: line 280: Model checking invariant
+5x5_2.ivy: line 281: Model checking invariant
+5x5_2.ivy: line 282: Model checking invariant
+5x5_2.ivy: line 283: Model checking invariant
+5x5_2.ivy: line 284: Model checking invariant
+5x5_2.ivy: line 285: Model checking invariant
+5x5_2.ivy: line 286: Model checking invariant
+5x5_2.ivy: line 287: Model checking invariant
+5x5_2.ivy: line 288: Model checking invariant
+5x5_2.ivy: line 289: Model checking invariant
+5x5_2.ivy: line 290: Model checking invariant
+5x5_2.ivy: line 291: Model checking invariant
+5x5_2.ivy: line 292: Model checking invariant
+5x5_2.ivy: line 293: Model checking invariant
+5x5_2.ivy: line 294: Model checking invariant
+5x5_2.ivy: line 295: Model checking invariant
+5x5_2.ivy: line 296: Model checking invariant
+5x5_2.ivy: line 297: Model checking invariant
+5x5_2.ivy: line 298: Model checking invariant
+5x5_2.ivy: line 299: Model checking invariant
+5x5_2.ivy: line 300: Model checking invariant
+5x5_2.ivy: line 301: Model checking invariant
+5x5_2.ivy: line 302: Model checking invariant
+5x5_2.ivy: line 303: Model checking invariant
+5x5_2.ivy: line 304: Model checking invariant
+5x5_2.ivy: line 305: Model checking invariant
+5x5_2.ivy: line 306: Model checking invariant
+5x5_2.ivy: line 307: Model checking invariant
+5x5_2.ivy: line 308: Model checking invariant
+5x5_2.ivy: line 309: Model checking invariant
+5x5_2.ivy: line 310: Model checking invariant
+5x5_2.ivy: line 311: Model checking invariant
+5x5_2.ivy: line 312: Model checking invariant
+5x5_2.ivy: line 313: Model checking invariant
+5x5_2.ivy: line 314: Model checking invariant
+5x5_2.ivy: line 315: Model checking invariant
+5x5_2.ivy: line 316: Model checking invariant
+5x5_2.ivy: line 317: Model checking invariant
+5x5_2.ivy: line 318: Model checking invariant
+5x5_2.ivy: line 319: Model checking invariant
+5x5_2.ivy: line 320: Model checking invariant
+5x5_2.ivy: line 321: Model checking invariant
+5x5_2.ivy: line 322: Model checking invariant
+5x5_2.ivy: line 323: Model checking invariant
+5x5_2.ivy: line 324: Model checking invariant
+5x5_2.ivy: line 325: Model checking invariant
+5x5_2.ivy: line 326: Model checking invariant
+5x5_2.ivy: line 327: Model checking invariant
+5x5_2.ivy: line 328: Model checking invariant
+5x5_2.ivy: line 329: Model checking invariant
+5x5_2.ivy: line 330: Model checking invariant
+5x5_2.ivy: line 331: Model checking invariant
+5x5_2.ivy: line 332: Model checking invariant
+5x5_2.ivy: line 333: Model checking invariant
+5x5_2.ivy: line 334: Model checking invariant
+5x5_2.ivy: line 335: Model checking invariant
+5x5_2.ivy: line 336: Model checking invariant
+5x5_2.ivy: line 337: Model checking invariant
+5x5_2.ivy: line 338: Model checking invariant
+5x5_2.ivy: line 339: Model checking invariant
+5x5_2.ivy: line 340: Model checking invariant
+5x5_2.ivy: line 341: Model checking invariant
+5x5_2.ivy: line 342: Model checking invariant
+5x5_2.ivy: line 343: Model checking invariant
+5x5_2.ivy: line 344: Model checking invariant
+5x5_2.ivy: line 345: Model checking invariant
+5x5_2.ivy: line 346: Model checking invariant
+5x5_2.ivy: line 347: Model checking invariant
+5x5_2.ivy: line 348: Model checking invariant
+5x5_2.ivy: line 349: Model checking invariant
+5x5_2.ivy: line 350: Model checking invariant
+5x5_2.ivy: line 351: Model checking invariant
+5x5_2.ivy: line 352: Model checking invariant
+5x5_2.ivy: line 353: Model checking invariant
+5x5_2.ivy: line 354: Model checking invariant
+5x5_2.ivy: line 355: Model checking invariant
+5x5_2.ivy: line 356: Model checking invariant
+5x5_2.ivy: line 357: Model checking invariant
+5x5_2.ivy: line 358: Model checking invariant
+5x5_2.ivy: line 359: Model checking invariant
+5x5_2.ivy: line 360: Model checking invariant
+5x5_2.ivy: line 361: Model checking invariant
+5x5_2.ivy: line 362: Model checking invariant
+5x5_2.ivy: line 363: Model checking invariant
+5x5_2.ivy: line 364: Model checking invariant
+5x5_2.ivy: line 365: Model checking invariant
+5x5_2.ivy: line 366: Model checking invariant
+5x5_2.ivy: line 367: Model checking invariant
+5x5_2.ivy: line 368: Model checking invariant
+5x5_2.ivy: line 369: Model checking invariant
+5x5_2.ivy: line 370: Model checking invariant
+5x5_2.ivy: line 371: Model checking invariant
+5x5_2.ivy: line 372: Model checking invariant
+5x5_2.ivy: line 373: Model checking invariant
+5x5_2.ivy: line 374: Model checking invariant
+5x5_2.ivy: line 375: Model checking invariant
+5x5_2.ivy: line 376: Model checking invariant
+5x5_2.ivy: line 377: Model checking invariant
+5x5_2.ivy: line 378: Model checking invariant
+5x5_2.ivy: line 379: Model checking invariant
+5x5_2.ivy: line 380: Model checking invariant
+5x5_2.ivy: line 381: Model checking invariant
+5x5_2.ivy: line 382: Model checking invariant
+5x5_2.ivy: line 383: Model checking invariant
+5x5_2.ivy: line 384: Model checking invariant
+5x5_2.ivy: line 385: Model checking invariant
+5x5_2.ivy: line 386: Model checking invariant
+5x5_2.ivy: line 387: Model checking invariant
+5x5_2.ivy: line 388: Model checking invariant
+5x5_2.ivy: line 389: Model checking invariant
+5x5_2.ivy: line 390: Model checking invariant
+5x5_2.ivy: line 391: Model checking invariant
+5x5_2.ivy: line 392: Model checking invariant
+5x5_2.ivy: line 393: Model checking invariant
+5x5_2.ivy: line 394: Model checking invariant
+5x5_2.ivy: line 395: Model checking invariant
+5x5_2.ivy: line 396: Model checking invariant
+5x5_2.ivy: line 397: Model checking invariant
+5x5_2.ivy: line 398: Model checking invariant
+5x5_2.ivy: line 399: Model checking invariant
+5x5_2.ivy: line 400: Model checking invariant
+5x5_2.ivy: line 401: Model checking invariant
+5x5_2.ivy: line 402: Model checking invariant
+5x5_2.ivy: line 403: Model checking invariant
+5x5_2.ivy: line 404: Model checking invariant
+5x5_2.ivy: line 405: Model checking invariant
+5x5_2.ivy: line 406: Model checking invariant
+5x5_2.ivy: line 407: Model checking invariant
+5x5_2.ivy: line 408: Model checking invariant
+5x5_2.ivy: line 409: Model checking invariant
+5x5_2.ivy: line 410: Model checking invariant
+5x5_2.ivy: line 411: Model checking invariant
+5x5_2.ivy: line 412: Model checking invariant
+5x5_2.ivy: line 413: Model checking invariant
+5x5_2.ivy: line 414: Model checking invariant
+5x5_2.ivy: line 415: Model checking invariant
+5x5_2.ivy: line 416: Model checking invariant
+5x5_2.ivy: line 417: Model checking invariant
+5x5_2.ivy: line 418: Model checking invariant
+5x5_2.ivy: line 419: Model checking invariant
+5x5_2.ivy: line 420: Model checking invariant
+5x5_2.ivy: line 421: Model checking invariant
+5x5_2.ivy: line 422: Model checking invariant
+5x5_2.ivy: line 423: Model checking invariant
+5x5_2.ivy: line 424: Model checking invariant
+5x5_2.ivy: line 425: Model checking invariant
+5x5_2.ivy: line 426: Model checking invariant
+5x5_2.ivy: line 427: Model checking invariant
+5x5_2.ivy: line 428: Model checking invariant
+5x5_2.ivy: line 429: Model checking invariant
+5x5_2.ivy: line 430: Model checking invariant
+5x5_2.ivy: line 431: Model checking invariant
+5x5_2.ivy: line 432: Model checking invariant
+5x5_2.ivy: line 433: Model checking invariant
+5x5_2.ivy: line 434: Model checking invariant
+5x5_2.ivy: line 435: Model checking invariant
+5x5_2.ivy: line 436: Model checking invariant
+5x5_2.ivy: line 437: Model checking invariant
+5x5_2.ivy: line 440: Model checking invariant
+5x5_2.ivy: line 441: Model checking invariant
+5x5_2.ivy: line 442: Model checking invariant
+5x5_2.ivy: line 443: Model checking invariant
+5x5_2.ivy: line 444: Model checking invariant
+5x5_2.ivy: line 445: Model checking invariant
+5x5_2.ivy: line 446: Model checking invariant
+5x5_2.ivy: line 447: Model checking invariant
+5x5_2.ivy: line 448: Model checking invariant
+5x5_2.ivy: line 449: Model checking invariant
+5x5_2.ivy: line 450: Model checking invariant
+5x5_2.ivy: line 451: Model checking invariant
+5x5_2.ivy: line 452: Model checking invariant
+5x5_2.ivy: line 453: Model checking invariant
+5x5_2.ivy: line 454: Model checking invariant
+5x5_2.ivy: line 455: Model checking invariant
+5x5_2.ivy: line 456: Model checking invariant
+5x5_2.ivy: line 457: Model checking invariant
+5x5_2.ivy: line 458: Model checking invariant
+5x5_2.ivy: line 459: Model checking invariant
+5x5_2.ivy: line 460: Model checking invariant
+5x5_2.ivy: line 461: Model checking invariant
+5x5_2.ivy: line 462: Model checking invariant
+
+Instantiating quantifiers (see logfiles/ivy_mc_1629486566.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+file name: aigerfiles/1629486566.aag
+aigtoaig_path:/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/aigtoaig
+abc_path: /usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc
+using cmd ['/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc', '-c', 'read_aiger aigerfiles/1629486566.aig; pdr -qt -L aigerfiles/1629486566_pdr.log; write_aiger_cex  aigerfiles/1629486566.out']
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger aigerfiles/1629486566.aig; pdr -qt -L aigerfiles/1629486566_pdr.log; write_aiger_cex  aigerfiles/1629486566.out".
+
+Output 0 of miter "aigerfiles/1629486566" was asserted in frame 3.  Time =    30.47 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+5x5_2.ivy: line 157: zone.ok(Yprm:Z) := false
+
+[
+    zone.ok(a) = false
+    zone.ok(b) = false
+    zone.ok(c) = false
+    zone.ok(d) = false
+    zone.ok(e) = false
+    zone.ok(f) = false
+    zone.ok(g) = false
+    zone.ok(h) = false
+    zone.ok(i) = false
+    zone.ok(j) = false
+    zone.ok(m) = false
+    zone.ok(n) = false
+    zone.ok(o) = false
+    zone.ok(p) = false
+    zone.ok(q) = false
+    zone.ok(r) = false
+    zone.ok(s) = false
+    zone.ok(t) = false
+    zone.ok(u) = false
+    zone.ok(v) = false
+    zone.ok(w) = false
+    zone.ok(x) = false
+    zone.ok(y) = false
+]
+5x5_2.ivy: line 158: zone.c01(Yprm:Z) := false
+
+[
+    zone.c01(a) = false
+    zone.c01(b) = false
+    zone.c01(c) = false
+    zone.c01(d) = false
+    zone.c01(e) = false
+    zone.c01(f) = false
+    zone.c01(g) = false
+    zone.c01(h) = false
+    zone.c01(i) = false
+    zone.c01(j) = false
+    zone.c01(m) = false
+    zone.c01(n) = false
+    zone.c01(o) = false
+    zone.c01(p) = false
+    zone.c01(q) = false
+    zone.c01(r) = false
+    zone.c01(s) = false
+    zone.c01(t) = false
+    zone.c01(u) = false
+    zone.c01(v) = false
+    zone.c01(w) = false
+    zone.c01(x) = false
+    zone.c01(y) = false
+]
+5x5_2.ivy: line 159: zone.c02(Yprm:Z) := false
+
+[
+    zone.c02(a) = false
+    zone.c02(b) = false
+    zone.c02(c) = false
+    zone.c02(d) = false
+    zone.c02(e) = false
+    zone.c02(f) = false
+    zone.c02(g) = false
+    zone.c02(h) = false
+    zone.c02(i) = false
+    zone.c02(j) = false
+    zone.c02(m) = false
+    zone.c02(n) = false
+    zone.c02(o) = false
+    zone.c02(p) = false
+    zone.c02(q) = false
+    zone.c02(r) = false
+    zone.c02(s) = false
+    zone.c02(t) = false
+    zone.c02(u) = false
+    zone.c02(v) = false
+    zone.c02(w) = false
+    zone.c02(x) = false
+    zone.c02(y) = false
+]
+5x5_2.ivy: line 160: zone.c03(Yprm:Z) := false
+
+[
+    zone.c03(a) = false
+    zone.c03(b) = false
+    zone.c03(c) = false
+    zone.c03(d) = false
+    zone.c03(e) = false
+    zone.c03(f) = false
+    zone.c03(g) = false
+    zone.c03(h) = false
+    zone.c03(i) = false
+    zone.c03(j) = false
+    zone.c03(m) = false
+    zone.c03(n) = false
+    zone.c03(o) = false
+    zone.c03(p) = false
+    zone.c03(q) = false
+    zone.c03(r) = false
+    zone.c03(s) = false
+    zone.c03(t) = false
+    zone.c03(u) = false
+    zone.c03(v) = false
+    zone.c03(w) = false
+    zone.c03(x) = false
+    zone.c03(y) = false
+]
+5x5_2.ivy: line 161: zone.c04(Yprm:Z) := false
+
+[
+    zone.c04(a) = false
+    zone.c04(b) = false
+    zone.c04(c) = false
+    zone.c04(d) = false
+    zone.c04(e) = false
+    zone.c04(f) = false
+    zone.c04(g) = false
+    zone.c04(h) = false
+    zone.c04(i) = false
+    zone.c04(j) = false
+    zone.c04(m) = false
+    zone.c04(n) = false
+    zone.c04(o) = false
+    zone.c04(p) = false
+    zone.c04(q) = false
+    zone.c04(r) = false
+    zone.c04(s) = false
+    zone.c04(t) = false
+    zone.c04(u) = false
+    zone.c04(v) = false
+    zone.c04(w) = false
+    zone.c04(x) = false
+    zone.c04(y) = false
+]
+5x5_2.ivy: line 162: zone.c05(Yprm:Z) := false
+
+[
+    zone.c05(a) = false
+    zone.c05(b) = false
+    zone.c05(c) = false
+    zone.c05(d) = false
+    zone.c05(e) = false
+    zone.c05(f) = false
+    zone.c05(g) = false
+    zone.c05(h) = false
+    zone.c05(i) = false
+    zone.c05(j) = false
+    zone.c05(m) = false
+    zone.c05(n) = false
+    zone.c05(o) = false
+    zone.c05(p) = false
+    zone.c05(q) = false
+    zone.c05(r) = false
+    zone.c05(s) = false
+    zone.c05(t) = false
+    zone.c05(u) = false
+    zone.c05(v) = false
+    zone.c05(w) = false
+    zone.c05(x) = false
+    zone.c05(y) = false
+]
+5x5_2.ivy: line 163: zone.c06(Yprm:Z) := false
+
+[
+    zone.c06(a) = false
+    zone.c06(b) = false
+    zone.c06(c) = false
+    zone.c06(d) = false
+    zone.c06(e) = false
+    zone.c06(f) = false
+    zone.c06(g) = false
+    zone.c06(h) = false
+    zone.c06(i) = false
+    zone.c06(j) = false
+    zone.c06(m) = false
+    zone.c06(n) = false
+    zone.c06(o) = false
+    zone.c06(p) = false
+    zone.c06(q) = false
+    zone.c06(r) = false
+    zone.c06(s) = false
+    zone.c06(t) = false
+    zone.c06(u) = false
+    zone.c06(v) = false
+    zone.c06(w) = false
+    zone.c06(x) = false
+    zone.c06(y) = false
+]
+5x5_2.ivy: line 164: zone.c07(Yprm:Z) := false
+
+[
+    zone.c07(a) = false
+    zone.c07(b) = false
+    zone.c07(c) = false
+    zone.c07(d) = false
+    zone.c07(e) = false
+    zone.c07(f) = false
+    zone.c07(g) = false
+    zone.c07(h) = false
+    zone.c07(i) = false
+    zone.c07(j) = false
+    zone.c07(m) = false
+    zone.c07(n) = false
+    zone.c07(o) = false
+    zone.c07(p) = false
+    zone.c07(q) = false
+    zone.c07(r) = false
+    zone.c07(s) = false
+    zone.c07(t) = false
+    zone.c07(u) = false
+    zone.c07(v) = false
+    zone.c07(w) = false
+    zone.c07(x) = false
+    zone.c07(y) = false
+]
+5x5_2.ivy: line 165: zone.c08(Yprm:Z) := false
+
+[
+    zone.c08(a) = false
+    zone.c08(b) = false
+    zone.c08(c) = false
+    zone.c08(d) = false
+    zone.c08(e) = false
+    zone.c08(f) = false
+    zone.c08(g) = false
+    zone.c08(h) = false
+    zone.c08(i) = false
+    zone.c08(j) = false
+    zone.c08(m) = false
+    zone.c08(n) = false
+    zone.c08(o) = false
+    zone.c08(p) = false
+    zone.c08(q) = false
+    zone.c08(r) = false
+    zone.c08(s) = false
+    zone.c08(t) = false
+    zone.c08(u) = false
+    zone.c08(v) = false
+    zone.c08(w) = false
+    zone.c08(x) = false
+    zone.c08(y) = false
+]
+5x5_2.ivy: line 166: zone.c09(Yprm:Z) := false
+
+[
+    zone.c09(a) = false
+    zone.c09(b) = false
+    zone.c09(c) = false
+    zone.c09(d) = false
+    zone.c09(e) = false
+    zone.c09(f) = false
+    zone.c09(g) = false
+    zone.c09(h) = false
+    zone.c09(i) = false
+    zone.c09(j) = false
+    zone.c09(m) = false
+    zone.c09(n) = false
+    zone.c09(o) = false
+    zone.c09(p) = false
+    zone.c09(q) = false
+    zone.c09(r) = false
+    zone.c09(s) = false
+    zone.c09(t) = false
+    zone.c09(u) = false
+    zone.c09(v) = false
+    zone.c09(w) = false
+    zone.c09(x) = false
+    zone.c09(y) = false
+]
+5x5_2.ivy: line 167: zone.c10(Yprm:Z) := false
+
+[
+    zone.c10(a) = false
+    zone.c10(b) = false
+    zone.c10(c) = false
+    zone.c10(d) = false
+    zone.c10(e) = false
+    zone.c10(f) = false
+    zone.c10(g) = false
+    zone.c10(h) = false
+    zone.c10(i) = false
+    zone.c10(j) = false
+    zone.c10(m) = false
+    zone.c10(n) = false
+    zone.c10(o) = false
+    zone.c10(p) = false
+    zone.c10(q) = false
+    zone.c10(r) = false
+    zone.c10(s) = false
+    zone.c10(t) = false
+    zone.c10(u) = false
+    zone.c10(v) = false
+    zone.c10(w) = false
+    zone.c10(x) = false
+    zone.c10(y) = false
+]
+5x5_2.ivy: line 168: zone.c11(Yprm:Z) := false
+
+[
+    zone.c11(a) = false
+    zone.c11(b) = false
+    zone.c11(c) = false
+    zone.c11(d) = false
+    zone.c11(e) = false
+    zone.c11(f) = false
+    zone.c11(g) = false
+    zone.c11(h) = false
+    zone.c11(i) = false
+    zone.c11(j) = false
+    zone.c11(m) = false
+    zone.c11(n) = false
+    zone.c11(o) = false
+    zone.c11(p) = false
+    zone.c11(q) = false
+    zone.c11(r) = false
+    zone.c11(s) = false
+    zone.c11(t) = false
+    zone.c11(u) = false
+    zone.c11(v) = false
+    zone.c11(w) = false
+    zone.c11(x) = false
+    zone.c11(y) = false
+]
+5x5_2.ivy: line 169: zone.c12(Yprm:Z) := false
+
+[
+    zone.c12(a) = false
+    zone.c12(b) = false
+    zone.c12(c) = false
+    zone.c12(d) = false
+    zone.c12(e) = false
+    zone.c12(f) = false
+    zone.c12(g) = false
+    zone.c12(h) = false
+    zone.c12(i) = false
+    zone.c12(j) = false
+    zone.c12(m) = false
+    zone.c12(n) = false
+    zone.c12(o) = false
+    zone.c12(p) = false
+    zone.c12(q) = false
+    zone.c12(r) = false
+    zone.c12(s) = false
+    zone.c12(t) = false
+    zone.c12(u) = false
+    zone.c12(v) = false
+    zone.c12(w) = false
+    zone.c12(x) = false
+    zone.c12(y) = false
+]
+5x5_2.ivy: line 170: zone.c13(Yprm:Z) := false
+
+[
+    zone.c13(a) = false
+    zone.c13(b) = false
+    zone.c13(c) = false
+    zone.c13(d) = false
+    zone.c13(e) = false
+    zone.c13(f) = false
+    zone.c13(g) = false
+    zone.c13(h) = false
+    zone.c13(i) = false
+    zone.c13(j) = false
+    zone.c13(m) = false
+    zone.c13(n) = false
+    zone.c13(o) = false
+    zone.c13(p) = false
+    zone.c13(q) = false
+    zone.c13(r) = false
+    zone.c13(s) = false
+    zone.c13(t) = false
+    zone.c13(u) = false
+    zone.c13(v) = false
+    zone.c13(w) = false
+    zone.c13(x) = false
+    zone.c13(y) = false
+]
+5x5_2.ivy: line 171: zone.c14(Yprm:Z) := false
+
+[
+    zone.c14(a) = false
+    zone.c14(b) = false
+    zone.c14(c) = false
+    zone.c14(d) = false
+    zone.c14(e) = false
+    zone.c14(f) = false
+    zone.c14(g) = false
+    zone.c14(h) = false
+    zone.c14(i) = false
+    zone.c14(j) = false
+    zone.c14(m) = false
+    zone.c14(n) = false
+    zone.c14(o) = false
+    zone.c14(p) = false
+    zone.c14(q) = false
+    zone.c14(r) = false
+    zone.c14(s) = false
+    zone.c14(t) = false
+    zone.c14(u) = false
+    zone.c14(v) = false
+    zone.c14(w) = false
+    zone.c14(x) = false
+    zone.c14(y) = false
+]
+5x5_2.ivy: line 172: zone.c15(Yprm:Z) := false
+
+[
+    zone.c15(a) = false
+    zone.c15(b) = false
+    zone.c15(c) = false
+    zone.c15(d) = false
+    zone.c15(e) = false
+    zone.c15(f) = false
+    zone.c15(g) = false
+    zone.c15(h) = false
+    zone.c15(i) = false
+    zone.c15(j) = false
+    zone.c15(m) = false
+    zone.c15(n) = false
+    zone.c15(o) = false
+    zone.c15(p) = false
+    zone.c15(q) = false
+    zone.c15(r) = false
+    zone.c15(s) = false
+    zone.c15(t) = false
+    zone.c15(u) = false
+    zone.c15(v) = false
+    zone.c15(w) = false
+    zone.c15(x) = false
+    zone.c15(y) = false
+]
+5x5_2.ivy: line 173: zone.c16(Yprm:Z) := false
+
+[
+    zone.c16(a) = false
+    zone.c16(b) = false
+    zone.c16(c) = false
+    zone.c16(d) = false
+    zone.c16(e) = false
+    zone.c16(f) = false
+    zone.c16(g) = false
+    zone.c16(h) = false
+    zone.c16(i) = false
+    zone.c16(j) = false
+    zone.c16(m) = false
+    zone.c16(n) = false
+    zone.c16(o) = false
+    zone.c16(p) = false
+    zone.c16(q) = false
+    zone.c16(r) = false
+    zone.c16(s) = false
+    zone.c16(t) = false
+    zone.c16(u) = false
+    zone.c16(v) = false
+    zone.c16(w) = false
+    zone.c16(x) = false
+    zone.c16(y) = false
+]
+5x5_2.ivy: line 174: zone.c17(Yprm:Z) := false
+
+[
+    zone.c17(a) = false
+    zone.c17(b) = false
+    zone.c17(c) = false
+    zone.c17(d) = false
+    zone.c17(e) = false
+    zone.c17(f) = false
+    zone.c17(g) = false
+    zone.c17(h) = false
+    zone.c17(i) = false
+    zone.c17(j) = false
+    zone.c17(m) = false
+    zone.c17(n) = false
+    zone.c17(o) = false
+    zone.c17(p) = false
+    zone.c17(q) = false
+    zone.c17(r) = false
+    zone.c17(s) = false
+    zone.c17(t) = false
+    zone.c17(u) = false
+    zone.c17(v) = false
+    zone.c17(w) = false
+    zone.c17(x) = false
+    zone.c17(y) = false
+]
+5x5_2.ivy: line 175: zone.c18(Yprm:Z) := false
+
+[
+    zone.c18(a) = false
+    zone.c18(b) = false
+    zone.c18(c) = false
+    zone.c18(d) = false
+    zone.c18(e) = false
+    zone.c18(f) = false
+    zone.c18(g) = false
+    zone.c18(h) = false
+    zone.c18(i) = false
+    zone.c18(j) = false
+    zone.c18(m) = false
+    zone.c18(n) = false
+    zone.c18(o) = false
+    zone.c18(p) = false
+    zone.c18(q) = false
+    zone.c18(r) = false
+    zone.c18(s) = false
+    zone.c18(t) = false
+    zone.c18(u) = false
+    zone.c18(v) = false
+    zone.c18(w) = false
+    zone.c18(x) = false
+    zone.c18(y) = false
+]
+5x5_2.ivy: line 176: zone.x_rel(Yprm:Z) := null
+
+[
+    zone.x_rel(y) = null
+    zone.x_rel(x) = null
+    zone.x_rel(w) = null
+    zone.x_rel(v) = null
+    zone.x_rel(u) = null
+    zone.x_rel(t) = null
+    zone.x_rel(s) = null
+    zone.x_rel(r) = null
+    zone.x_rel(q) = null
+    zone.x_rel(p) = null
+    zone.x_rel(o) = null
+    zone.x_rel(n) = null
+    zone.x_rel(m) = null
+    zone.x_rel(j) = null
+    zone.x_rel(i) = null
+    zone.x_rel(h) = null
+    zone.x_rel(g) = null
+    zone.x_rel(f) = null
+    zone.x_rel(e) = null
+    zone.x_rel(d) = null
+    zone.x_rel(c) = null
+    zone.x_rel(b) = null
+    zone.x_rel(a) = null
+]
+5x5_2.ivy: line 177: zone.y_rel(Yprm:Z) := null
+
+[
+    zone.y_rel(y) = null
+    zone.y_rel(x) = null
+    zone.y_rel(w) = null
+    zone.y_rel(v) = null
+    zone.y_rel(u) = null
+    zone.y_rel(t) = null
+    zone.y_rel(s) = null
+    zone.y_rel(r) = null
+    zone.y_rel(q) = null
+    zone.y_rel(p) = null
+    zone.y_rel(o) = null
+    zone.y_rel(n) = null
+    zone.y_rel(m) = null
+    zone.y_rel(j) = null
+    zone.y_rel(i) = null
+    zone.y_rel(h) = null
+    zone.y_rel(g) = null
+    zone.y_rel(f) = null
+    zone.y_rel(e) = null
+    zone.y_rel(d) = null
+    zone.y_rel(c) = null
+    zone.y_rel(b) = null
+    zone.y_rel(a) = null
+]
+__init := true
+
+[
+    spec.z = a
+]
+err_flag := false
+
+call ext:spec.assign_conditions
+
+{
+    5x5_2.ivy: line 17: zone.x_rel(a) := p1
+
+    [
+        zone.x_rel(a) = p1
+    ]
+    5x5_2.ivy: line 18: zone.y_rel(a) := eq
+
+    [
+        zone.y_rel(a) = eq
+    ]
+    5x5_2.ivy: line 20: zone.x_rel(b) := p1
+
+    [
+        zone.x_rel(b) = p1
+    ]
+    5x5_2.ivy: line 21: zone.y_rel(b) := gt
+
+    [
+        zone.y_rel(b) = gt
+    ]
+    5x5_2.ivy: line 23: zone.x_rel(c) := eq
+
+    [
+        zone.x_rel(c) = eq
+    ]
+    5x5_2.ivy: line 24: zone.y_rel(c) := p1
+
+    [
+        zone.y_rel(c) = p1
+    ]
+    5x5_2.ivy: line 26: zone.x_rel(d) := m1
+
+    [
+        zone.x_rel(d) = m1
+    ]
+    5x5_2.ivy: line 27: zone.y_rel(d) := p1
+
+    [
+        zone.y_rel(d) = p1
+    ]
+    5x5_2.ivy: line 29: zone.x_rel(e) := m1
+
+    [
+        zone.x_rel(e) = m1
+    ]
+    5x5_2.ivy: line 30: zone.y_rel(e) := eq
+
+    [
+        zone.y_rel(e) = eq
+    ]
+    5x5_2.ivy: line 32: zone.x_rel(f) := m1
+
+    [
+        zone.x_rel(f) = m1
+    ]
+    5x5_2.ivy: line 33: zone.y_rel(f) := m1
+
+    [
+        zone.y_rel(f) = m1
+    ]
+    5x5_2.ivy: line 35: zone.x_rel(g) := eq
+
+    [
+        zone.x_rel(g) = eq
+    ]
+    5x5_2.ivy: line 36: zone.y_rel(g) := m1
+
+    [
+        zone.y_rel(g) = m1
+    ]
+    5x5_2.ivy: line 38: zone.x_rel(h) := p1
+
+    [
+        zone.x_rel(h) = p1
+    ]
+    5x5_2.ivy: line 39: zone.y_rel(h) := m1
+
+    [
+        zone.y_rel(h) = m1
+    ]
+    5x5_2.ivy: line 41: zone.x_rel(i) := gt1
+
+    [
+        zone.x_rel(i) = gt1
+    ]
+    5x5_2.ivy: line 42: zone.y_rel(i) := eq
+
+    [
+        zone.y_rel(i) = eq
+    ]
+    5x5_2.ivy: line 44: zone.x_rel(j) := gt1
+
+    [
+        zone.x_rel(j) = gt1
+    ]
+    5x5_2.ivy: line 45: zone.y_rel(j) := gt
+
+    [
+        zone.y_rel(j) = gt
+    ]
+    5x5_2.ivy: line 48: zone.x_rel(m) := eq
+
+    [
+        zone.x_rel(m) = eq
+    ]
+    5x5_2.ivy: line 49: zone.y_rel(m) := gt1
+
+    [
+        zone.y_rel(m) = gt1
+    ]
+    5x5_2.ivy: line 51: zone.x_rel(n) := m1
+
+    [
+        zone.x_rel(n) = m1
+    ]
+    5x5_2.ivy: line 52: zone.y_rel(n) := gt1
+
+    [
+        zone.y_rel(n) = gt1
+    ]
+    5x5_2.ivy: line 54: zone.x_rel(o) := lt1
+
+    [
+        zone.x_rel(o) = lt1
+    ]
+    5x5_2.ivy: line 55: zone.y_rel(o) := gt1
+
+    [
+        zone.y_rel(o) = gt1
+    ]
+    5x5_2.ivy: line 57: zone.x_rel(p) := lt1
+
+    [
+        zone.x_rel(p) = lt1
+    ]
+    5x5_2.ivy: line 58: zone.y_rel(p) := p1
+
+    [
+        zone.y_rel(p) = p1
+    ]
+    5x5_2.ivy: line 60: zone.x_rel(q) := lt1
+
+    [
+        zone.x_rel(q) = lt1
+    ]
+    5x5_2.ivy: line 61: zone.y_rel(q) := eq
+
+    [
+        zone.y_rel(q) = eq
+    ]
+    5x5_2.ivy: line 63: zone.x_rel(r) := lt1
+
+    [
+        zone.x_rel(r) = lt1
+    ]
+    5x5_2.ivy: line 64: zone.y_rel(r) := m1
+
+    [
+        zone.y_rel(r) = m1
+    ]
+    5x5_2.ivy: line 66: zone.x_rel(s) := lt1
+
+    [
+        zone.x_rel(s) = lt1
+    ]
+    5x5_2.ivy: line 67: zone.y_rel(s) := lt1
+
+    [
+        zone.y_rel(s) = lt1
+    ]
+    5x5_2.ivy: line 69: zone.x_rel(t) := m1
+
+    [
+        zone.x_rel(t) = m1
+    ]
+    5x5_2.ivy: line 70: zone.y_rel(t) := lt1
+
+    [
+        zone.y_rel(t) = lt1
+    ]
+    5x5_2.ivy: line 72: zone.x_rel(u) := eq
+
+    [
+        zone.x_rel(u) = eq
+    ]
+    5x5_2.ivy: line 73: zone.y_rel(u) := lt1
+
+    [
+        zone.y_rel(u) = lt1
+    ]
+    5x5_2.ivy: line 75: zone.x_rel(v) := p1
+
+    [
+        zone.x_rel(v) = p1
+    ]
+    5x5_2.ivy: line 76: zone.y_rel(v) := lt1
+
+    [
+        zone.y_rel(v) = lt1
+    ]
+    5x5_2.ivy: line 78: zone.x_rel(w) := gt1
+
+    [
+        zone.x_rel(w) = gt1
+    ]
+    5x5_2.ivy: line 79: zone.y_rel(w) := lt1
+
+    [
+        zone.y_rel(w) = lt1
+    ]
+    5x5_2.ivy: line 81: zone.x_rel(x) := gt1
+
+    [
+        zone.x_rel(x) = gt1
+    ]
+    5x5_2.ivy: line 82: zone.y_rel(x) := m1
+
+    [
+        zone.y_rel(x) = m1
+    ]
+    5x5_2.ivy: line 84: zone.x_rel(y) := eq
+
+    5x5_2.ivy: line 85: zone.y_rel(y) := eq
+
+    5x5_2.ivy: line 94: spec.z := *
+
+    [
+        spec.z = w
+    ]
+    5x5_2.ivy: line 96: zone.c01(spec.z) := zone.x_rel(spec.z) = eq & zone.y_rel(spec.z) = eq
+
+    5x5_2.ivy: line 98: zone.c02(spec.z) := zone.x_rel(spec.z) = eq & zone.y_rel(spec.z) = p1
+
+    5x5_2.ivy: line 99: zone.c03(spec.z) := zone.x_rel(spec.z) = p1 & zone.y_rel(spec.z) = eq
+
+    5x5_2.ivy: line 100: zone.c04(spec.z) := zone.x_rel(spec.z) = eq & zone.y_rel(spec.z) = m1
+
+    5x5_2.ivy: line 101: zone.c05(spec.z) := zone.x_rel(spec.z) = m1 & zone.y_rel(spec.z) = eq
+
+    5x5_2.ivy: line 103: zone.c06(spec.z) := zone.x_rel(spec.z) = gt | zone.x_rel(spec.z) = eq | zone.x_rel(spec.z) = p1 | zone.x_rel(spec.z) = gt1
+
+    [
+        zone.c06(w) = true
+    ]
+    5x5_2.ivy: line 104: zone.c07(spec.z) := zone.y_rel(spec.z) = lt | zone.y_rel(spec.z) = eq | zone.y_rel(spec.z) = m1 | zone.y_rel(spec.z) = lt1
+
+    [
+        zone.c07(w) = true
+    ]
+    5x5_2.ivy: line 106: zone.c08(spec.z) := zone.y_rel(spec.z) = gt | zone.y_rel(spec.z) = eq | zone.y_rel(spec.z) = p1 | zone.y_rel(spec.z) = gt1
+
+    5x5_2.ivy: line 107: zone.c09(spec.z) := zone.x_rel(spec.z) = lt | zone.x_rel(spec.z) = eq | zone.x_rel(spec.z) = m1 | zone.x_rel(spec.z) = lt1
+
+    5x5_2.ivy: line 109: zone.c10(spec.z) := zone.x_rel(spec.z) = lt1
+
+    5x5_2.ivy: line 110: zone.c11(spec.z) := (zone.x_rel(spec.z) = lt | zone.x_rel(spec.z) = m1 | zone.x_rel(spec.z) = lt1) & zone.y_rel(spec.z) = m1
+
+    5x5_2.ivy: line 112: zone.c12(spec.z) := zone.y_rel(spec.z) = lt | zone.y_rel(spec.z) = m1 | zone.y_rel(spec.z) = lt1
+
+    [
+        zone.c12(w) = true
+    ]
+    5x5_2.ivy: line 114: zone.c13(spec.z) := (zone.x_rel(spec.z) = eq | zone.x_rel(spec.z) = gt | zone.x_rel(spec.z) = p1 | zone.x_rel(spec.z) = gt1) & zone.y_rel(spec.z) = m1
+
+    5x5_2.ivy: line 115: zone.c14(spec.z) := zone.y_rel(spec.z) = m1 & zone.x_rel(spec.z) = eq
+
+    5x5_2.ivy: line 117: zone.c15(spec.z) := zone.x_rel(spec.z) = eq
+
+    5x5_2.ivy: line 118: zone.c16(spec.z) := (zone.x_rel(spec.z) = m1 | zone.x_rel(spec.z) = lt | zone.x_rel(spec.z) = eq | zone.x_rel(spec.z) = lt1) & zone.y_rel(spec.z) ~= m1
+
+    5x5_2.ivy: line 119: zone.c17(spec.z) := zone.x_rel(spec.z) = m1 & zone.y_rel(spec.z) ~= m1
+
+    5x5_2.ivy: line 121: zone.c18(spec.z) := (zone.y_rel(spec.z) = lt | zone.y_rel(spec.z) = eq | zone.y_rel(spec.z) = m1 | zone.y_rel(spec.z) = lt1) & (zone.x_rel(spec.z) = lt | zone.x_rel(spec.z) = eq | zone.x_rel(spec.z) = m1 | zone.x_rel(spec.z) = lt1)
+
+    5x5_2.ivy: line 123: zone.ok(spec.z) := true
+
+    [
+        zone.x_rel(y) = eq
+        zone.y_rel(y) = eq
+        zone.ok(w) = true
+    ]
+}
+
+err_flag := false
+
+call ext:spec.assign_conditions
+
+{
+    5x5_2.ivy: line 17: zone.x_rel(a) := p1
+
+    5x5_2.ivy: line 18: zone.y_rel(a) := eq
+
+    5x5_2.ivy: line 20: zone.x_rel(b) := p1
+
+    5x5_2.ivy: line 21: zone.y_rel(b) := gt
+
+    5x5_2.ivy: line 23: zone.x_rel(c) := eq
+
+    5x5_2.ivy: line 24: zone.y_rel(c) := p1
+
+    5x5_2.ivy: line 26: zone.x_rel(d) := m1
+
+    5x5_2.ivy: line 27: zone.y_rel(d) := p1
+
+    5x5_2.ivy: line 29: zone.x_rel(e) := m1
+
+    5x5_2.ivy: line 30: zone.y_rel(e) := eq
+
+    5x5_2.ivy: line 32: zone.x_rel(f) := m1
+
+    5x5_2.ivy: line 33: zone.y_rel(f) := m1
+
+    5x5_2.ivy: line 35: zone.x_rel(g) := eq
+
+    5x5_2.ivy: line 36: zone.y_rel(g) := m1
+
+    5x5_2.ivy: line 38: zone.x_rel(h) := p1
+
+    5x5_2.ivy: line 39: zone.y_rel(h) := m1
+
+    5x5_2.ivy: line 41: zone.x_rel(i) := gt1
+
+    5x5_2.ivy: line 42: zone.y_rel(i) := eq
+
+    5x5_2.ivy: line 44: zone.x_rel(j) := gt1
+
+    5x5_2.ivy: line 45: zone.y_rel(j) := gt
+
+    5x5_2.ivy: line 48: zone.x_rel(m) := eq
+
+    5x5_2.ivy: line 49: zone.y_rel(m) := gt1
+
+    5x5_2.ivy: line 51: zone.x_rel(n) := m1
+
+    5x5_2.ivy: line 52: zone.y_rel(n) := gt1
+
+    5x5_2.ivy: line 54: zone.x_rel(o) := lt1
+
+    5x5_2.ivy: line 55: zone.y_rel(o) := gt1
+
+    5x5_2.ivy: line 57: zone.x_rel(p) := lt1
+
+    5x5_2.ivy: line 58: zone.y_rel(p) := p1
+
+    5x5_2.ivy: line 60: zone.x_rel(q) := lt1
+
+    5x5_2.ivy: line 61: zone.y_rel(q) := eq
+
+    5x5_2.ivy: line 63: zone.x_rel(r) := lt1
+
+    5x5_2.ivy: line 64: zone.y_rel(r) := m1
+
+    5x5_2.ivy: line 66: zone.x_rel(s) := lt1
+
+    5x5_2.ivy: line 67: zone.y_rel(s) := lt1
+
+    5x5_2.ivy: line 69: zone.x_rel(t) := m1
+
+    5x5_2.ivy: line 70: zone.y_rel(t) := lt1
+
+    5x5_2.ivy: line 72: zone.x_rel(u) := eq
+
+    5x5_2.ivy: line 73: zone.y_rel(u) := lt1
+
+    5x5_2.ivy: line 75: zone.x_rel(v) := p1
+
+    5x5_2.ivy: line 76: zone.y_rel(v) := lt1
+
+    5x5_2.ivy: line 78: zone.x_rel(w) := gt1
+
+    5x5_2.ivy: line 79: zone.y_rel(w) := lt1
+
+    5x5_2.ivy: line 81: zone.x_rel(x) := gt1
+
+    5x5_2.ivy: line 82: zone.y_rel(x) := m1
+
+    5x5_2.ivy: line 84: zone.x_rel(y) := eq
+
+    5x5_2.ivy: line 85: zone.y_rel(y) := eq
+
+    5x5_2.ivy: line 94: spec.z := *
+
+    [
+        spec.z = v
+    ]
+    5x5_2.ivy: line 96: zone.c01(spec.z) := zone.x_rel(spec.z) = eq & zone.y_rel(spec.z) = eq
+
+    5x5_2.ivy: line 98: zone.c02(spec.z) := zone.x_rel(spec.z) = eq & zone.y_rel(spec.z) = p1
+
+    5x5_2.ivy: line 99: zone.c03(spec.z) := zone.x_rel(spec.z) = p1 & zone.y_rel(spec.z) = eq
+
+    5x5_2.ivy: line 100: zone.c04(spec.z) := zone.x_rel(spec.z) = eq & zone.y_rel(spec.z) = m1
+
+    5x5_2.ivy: line 101: zone.c05(spec.z) := zone.x_rel(spec.z) = m1 & zone.y_rel(spec.z) = eq
+
+    5x5_2.ivy: line 103: zone.c06(spec.z) := zone.x_rel(spec.z) = gt | zone.x_rel(spec.z) = eq | zone.x_rel(spec.z) = p1 | zone.x_rel(spec.z) = gt1
+
+    [
+        zone.c06(v) = true
+    ]
+    5x5_2.ivy: line 104: zone.c07(spec.z) := zone.y_rel(spec.z) = lt | zone.y_rel(spec.z) = eq | zone.y_rel(spec.z) = m1 | zone.y_rel(spec.z) = lt1
+
+    [
+        zone.c07(v) = true
+    ]
+    5x5_2.ivy: line 106: zone.c08(spec.z) := zone.y_rel(spec.z) = gt | zone.y_rel(spec.z) = eq | zone.y_rel(spec.z) = p1 | zone.y_rel(spec.z) = gt1
+
+    5x5_2.ivy: line 107: zone.c09(spec.z) := zone.x_rel(spec.z) = lt | zone.x_rel(spec.z) = eq | zone.x_rel(spec.z) = m1 | zone.x_rel(spec.z) = lt1
+
+    5x5_2.ivy: line 109: zone.c10(spec.z) := zone.x_rel(spec.z) = lt1
+
+    5x5_2.ivy: line 110: zone.c11(spec.z) := (zone.x_rel(spec.z) = lt | zone.x_rel(spec.z) = m1 | zone.x_rel(spec.z) = lt1) & zone.y_rel(spec.z) = m1
+
+    5x5_2.ivy: line 112: zone.c12(spec.z) := zone.y_rel(spec.z) = lt | zone.y_rel(spec.z) = m1 | zone.y_rel(spec.z) = lt1
+
+    [
+        zone.c12(v) = true
+    ]
+    5x5_2.ivy: line 114: zone.c13(spec.z) := (zone.x_rel(spec.z) = eq | zone.x_rel(spec.z) = gt | zone.x_rel(spec.z) = p1 | zone.x_rel(spec.z) = gt1) & zone.y_rel(spec.z) = m1
+
+    5x5_2.ivy: line 115: zone.c14(spec.z) := zone.y_rel(spec.z) = m1 & zone.x_rel(spec.z) = eq
+
+    5x5_2.ivy: line 117: zone.c15(spec.z) := zone.x_rel(spec.z) = eq
+
+    5x5_2.ivy: line 118: zone.c16(spec.z) := (zone.x_rel(spec.z) = m1 | zone.x_rel(spec.z) = lt | zone.x_rel(spec.z) = eq | zone.x_rel(spec.z) = lt1) & zone.y_rel(spec.z) ~= m1
+
+    5x5_2.ivy: line 119: zone.c17(spec.z) := zone.x_rel(spec.z) = m1 & zone.y_rel(spec.z) ~= m1
+
+    5x5_2.ivy: line 121: zone.c18(spec.z) := (zone.y_rel(spec.z) = lt | zone.y_rel(spec.z) = eq | zone.y_rel(spec.z) = m1 | zone.y_rel(spec.z) = lt1) & (zone.x_rel(spec.z) = lt | zone.x_rel(spec.z) = eq | zone.x_rel(spec.z) = m1 | zone.x_rel(spec.z) = lt1)
+
+    5x5_2.ivy: line 123: zone.ok(spec.z) := true
+
+    [
+        zone.ok(v) = true
+    ]
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************
