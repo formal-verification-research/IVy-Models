@@ -10,7 +10,7 @@ This artifact contains the models described in the paper “Scaling Up Livelock 
 
 The virtual machine that contains the artifact can be found at
 
-> Provide Google Drive Link
+> Link is unavailable because this file is present on the virtual machine.
 
 ### Checksum
 

@@ -1,12 +1,15 @@
-# Routing Algorithm Verification
+## Refutation-Based Simulation 
 
-This directory includes a model of the routing algorithm after some modifications. It is *not* livelock-free for the purpose of illustrating the livelock proof.
+Every reference to a directory will be from the perspective of the `Quick-Models/simulation` subfolder (i.e. directory `a` refers to the directory `~/Desktop/Quick-Models/simulation/a`).
 
-Estimated required time: 30-60 minutes
+This folder contains a sample of the C++ simulation model and IVy livelock verification model used for simulation and livelock verification, respectively. The work from this subfolder is described in Section 5 of the paper.
 
-## Execution Instructions
+*This process will generally take under 30 minutes but may take more depending on available CPU*
 
-1. To execute the C++ simulation, navigate to the `NxN` directory and use the `make` command.
-3. To prove livelock scenarios, navigate to the `livelocks` directory and execute `make`.
-3. Then navigate to the `livelocks/ivyfiles` directory and use the `make` command to use IVy to verify the livelock scenarios. The `livelocks/ivyfiles/tests` folder contains the traces from IVy to verify correctness (`OK` at the bottom of the trace indicates correctness).
-4. To analyze the livelock scenarios, navigate to the `../pattern_finder` directory. Execute `a.out` in that directory. It will prompt you for a path to the folder it will look in for the livelock trace. Once it has analyzed the traces, it will give detailed summaries of the livelock patterns in the `pattern_finder/test` folder.
+###  To Reproduce Simulation Results
+
+1. To initiate the C++ simulation on Algorithm 1 on a $3\times 3$ NoC, navigate to the `3x3` directory and use the `make` command. The C++ simulation should run in a matter of seconds. Simulation detects potential livelock scenarios, and their traces are found in the `3x3/livelocktrace` folder. Several `.txt` files are generated to report the simulation’s findings. To see the number of potential livelocks when 2 faults are present in the network, open the file `3x3/_2_report.txt`. It reports that 9 potential livelocks were found during simulation.
+2. To prove that a potential livelock scenarios are indeed livelock, navigate to the `3x3/livelocks` directory and execute `make`. This will examine the traces returned in the `3x3/livelocktrace` folder and populate the `3x3/livelocks/ivyfiles` directory with IVy models. These models implement the livelock verification description from Section 5.2 in the paper. As indicated in `3x3/_2_report.txt`, 9 potential livelocks are detected, so 9 IVy files are generated. Each of these IVy models (for  instance, `2s00_d22_f11w_f21n.ivy`) represents a single potential livelock. The file name above indicates a 2-fault NoC with the packet starting at coordinates (0,0),  destination (2,2), with faulty links at (1,1,west) and (2,1,north). The invariants described at  the end of these files are the implementations of equations 1-4 with  values from a specific potential livelock. Finally, it will use a script to use IVy to check each model.
+3. The `3x3/livelocks/ivyfiles/tests` directory contains the results of IVy’s verification. Open any file in this directory and find the text `OK` at the end. This indicates that IVy was able to successfully verify that the potential livelock is indeed a true livelock trace, and that a packet is unable to escape its cyclical pattern (as described in Section 5 of the paper).
+4. To analyze and group the livelock patterns we verified in Step 3, navigate to the `pattern_finder` folder (in the `simulation` directory) and execute `make`. A script will prompt for a folder to crawl. Input `3x3` and click enter. It will quickly examine each livelock trace and group them into patterns. Once it is finished, type `quit` to terminate the script and navigate to the `pattern_finder/test` folder. Open the file `3x3_patterns.txt` to view the grouping of livelock patterns from Algorithm 1. The user is able to identify the decision that initiates the greatest number of livelock scenarios, as shown in Figures 2-3 and the preceding paragraph in Section 6 of the paper.
+5. Note also that unroutable traces, as described in Section 7 of the paper, are found in the `3x3/cannotroutetrace` folder. These traces aid the user to understand the impact of adding livelock resistance to a network.
