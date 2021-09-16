@@ -1,9 +1,0 @@
-p_west*11_south10_east*20_north21_ 2s00_d22_f11w_f21n
-p_west*11_south10_east*20_north21_ 2s01_d22_f11w_f21n
-p_west*11_south10_east*20_north21_ 2s02_d22_f11w_f21n
-p_west*11_south10_east*20_north21_ 2s10_d22_f11w_f21n
-p_north02_east12_south*11_west01_ 2s11_d22_f11s_f12e
-p_east*20_north21_west*11_south10_ 2s11_d22_f11w_f21n
-p_west01_north02_east12_south*11_ 2s12_d22_f11s_f12e
-p_west*11_south10_east*20_north21_ 2s20_d22_f11w_f21n
-p_south10_east*20_north21_west*11_ 2s21_d22_f11w_f21n
