@@ -6,7 +6,7 @@ This folder contains a sample of the C++ simulation model and IVy livelock verif
 
 *This process will generally take under 30 minutes but may take more depending on available CPU*
 
-###  To Reproduce Simulation Results
+###  To Reproduce Results
 
 1. To initiate the C++ simulation on Algorithm 1 on a $3\times 3$ NoC, navigate to the `3x3` directory and use the `make` command. The C++ simulation should run in a matter of seconds. Simulation detects potential livelock scenarios, and their traces are found in the `3x3/livelocktrace` folder. Several `.txt` files are generated to report the simulation’s findings. To see the number of potential livelocks when 2 faults are present in the network, open the file `3x3/_2_report.txt`. It reports that 9 potential livelocks were found during simulation.
 2. To prove that a potential livelock scenarios are indeed livelock, navigate to the `3x3/livelocks` directory and execute `make`. This will examine the traces returned in the `3x3/livelocktrace` folder and populate the `3x3/livelocks/ivyfiles` directory with IVy models. These models implement the livelock verification description from Section 5.2 in the paper. As indicated in `3x3/_2_report.txt`, 9 potential livelocks are detected, so 9 IVy files are generated. Each of these IVy models (for  instance, `2s00_d22_f11w_f21n.ivy`) represents a single potential livelock. The file name above indicates a 2-fault NoC with the packet starting at coordinates (0,0),  destination (2,2), with faulty links at (1,1,west) and (2,1,north). The invariants described at  the end of these files are the implementations of equations 1-4 with  values from a specific potential livelock. Finally, it will use a script to use IVy to check each model.
