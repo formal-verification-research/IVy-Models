@@ -3,7 +3,7 @@
 attribute method = mc
 
 # type zone_names = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,test}
-type zone_names = {a,b,c,d,e,f,g,h,i,j,k,m,n,o,p,q,r,s,t,u,v,w,x,y}
+type zone_names = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y}
 type rel = {lt,eq,gt,p1,m1,lt1,gt1,null}
 # <d, =d, >d, =d+1, =d-1, <d-1, >d+1
 
