@@ -1,6 +1,11 @@
 # Scaling Up Network-on-Chip Verification
 As presented by Landon Taylor and Zhen Zhang. 
 
+Paper Link: TBA
+Artifact Link: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5512664.svg)](https://doi.org/10.5281/zenodo.5512664)
+
+The artifact is an Ubuntu virtual machine. Detailed instructions are provided at the artifact link.
+
 See <https://formal-verification-research.github.io> for more information
 
 ---
