@@ -1,0 +1,581 @@
+#lang ivy1.7
+
+# For an N by N network, the range of n is 1 to N
+# and the range of nsq is 1 to N^2.
+# This uses N = 3, both values should be updated for a larger grid size.
+type n = {1..3}
+type nsq = {1..9}
+
+var x : n   # Used for width
+var y : n	# Used for height
+var n_max : n	# Used as reference maximum value
+var ind : nsq		# Used as one-dimensional index value
+type directions = {north, south, east, west, inside}
+
+after init {
+	n_max := 3 # Update to maximum N value when N is changed
+	
+	call setup_node(I:nsq);
+}
+
+
+module node = {
+	
+	individual x_pos : n
+	individual y_pos : n
+	individual index : nsq
+	
+	action setup_node(index_in:nsq) {
+		index := index_in;
+		y_pos := 1;
+		
+		while index > n_max 
+		{
+			y_pos := y_pos + 1;
+			index := index - n_max;
+		}
+		
+		x_pos := index;
+		index := index_in;
+	
+		call rtr(W:directions).setup_router(W);  
+		call arb(Z:directions).setup_arbiter(Z);
+		# I can't recall if the "call" is needed for this use case
+		}
+	
+	action locate(xc:n, yc:n, in_val:nsq) = {
+		x_pos  := xc;
+		y_pos  := yc;
+		index  := in_val;
+		}
+	
+	module router = {
+		# Here the direction indicates the direction that the router receives from
+		individual dir : directions
+		
+		individual has_flit : bool
+		individual dest : directions
+	
+		action setup_router(dir_r: directions) = {
+			dir := dir_r;
+			
+			if dir = inside {
+				has_flit := 1;
+				call route_from_self;
+			} else {
+				has_flit := 0;
+				call route; # This will be overridden when the node receives a flit, but for now 
+							# it is called to avoid illegal destination assignments
+			}
+		}
+					
+
+		action route = { 
+			# This action non-deterministically chooses a destination
+			# direction from the options available to that node
+
+		if (x_pos = 1) & (y_pos = 1) { 
+			# South West corner
+			if * {
+				dest := east; # Minor preference given to East
+			} else if * {
+				dest := north;
+			} else {
+				dest := inside;
+			}
+		} else if (x_pos = n_max) & (y_pos = 1) {
+			# South East Corner
+			if * {
+				dest := west; # Minor preference given to West
+			} else if * {
+				dest := north;
+			} else {
+				dest := inside;
+			}
+		} else if (x_pos = 1) & (y_pos = n_max) {
+			# North West Corner
+			if * {
+				dest := south; # Minor preference given to South
+			} else if * {
+				dest := east;
+			} else {
+				dest := inside;
+			}
+		} else if (x_pos = n_max) & (y_pos = n_max) {
+			# North East Corner
+			if * {
+				dest := south; # Minor preference given to South
+			} else if * {
+				dest := west;
+			} else {
+				dest := inside;
+			}
+		# As all corner cases are accounted for, edge cases should not include
+		# when x and y are both 1 or N
+		} else if y_pos = 1 {
+			# South Edge
+			if * { 
+				if * {
+					dest := west; 
+				} else {
+					dest := east;
+				}
+			} else {
+				if * { 
+					dest := north;
+				} else {
+					dest := inside;
+				}
+			}
+		} else if x_pos = 1 {
+			# West Edge
+			if * { 
+				if * {
+					dest := south; 
+				} else {
+					dest := east;
+				}
+			} else {
+				if * { 
+					dest := north;
+				} else {
+					dest := inside;
+				}
+			}
+		} else if x_pos = n_max {
+			# East Edge
+			if * { 
+				if * {
+					dest := south; 
+				} else {
+					dest := west;
+				}
+			} else {
+				if * { 
+					dest := north;
+				} else {
+					dest := inside;
+				}
+			}
+		} else if y_pos = n_max {
+			# North Edge
+			if * { 
+				if * {
+					dest := south; 
+				} else {
+					dest := west;
+				}
+			} else {
+				if * { 
+					dest := east;
+				} else {
+					dest := inside;
+				}
+			}
+		} else {
+			# General Case for Middle Nodes
+			if * { 
+				if * {
+					dest := south;
+				} else {
+					dest := west;
+				}
+			} else {
+				if * {
+					dest := east;
+				} else {
+					if * {
+						dest := north;
+					} else {
+						dest := inside;
+					}
+				}
+			}	
+		  }
+		}  # End of action route
+		
+		action route_from_self ={ 
+			# This action non-deterministically chooses a destination
+			# direction from the options available to that node
+			# with the added restriction that a node's generating
+			# router cannot select its own absorbing arbiter as a destination
+
+		if (x_pos = 1) & (y_pos = 1) { 
+			# South West corner
+			if * {
+				dest := east; 
+			} else {
+				dest := north;
+				 
+			}
+		} else if (x_pos = n_max) & (y_pos = 1) {
+			# South East Corner
+			if * {
+				dest := west; 
+			} else {
+				dest := north;
+			}
+		} else if (x_pos = 1) & (y_pos = n_max) {
+			# North West Corner
+			if * {
+				dest := south; 
+			} else {
+				dest := east;
+			}
+		} else if (x_pos = n_max) & (y_pos = n_max) {
+			# North East Corner
+			if * {
+				dest := south; 
+			} else {
+				dest := west;
+			}
+		# As all corner cases are accounted for, edge cases should not include
+		# when x and y are both 1 or N
+		} else if y_pos = 1 {
+			# South Edge
+			if * { 
+				dest := west; 
+				
+			} else {
+				if * { 
+					dest := east;
+				} else {
+					dest := north;
+				}
+			}
+		} else if x_pos = 1 {
+			# West Edge
+			if * { 
+				dest := south; 
+				
+			} else {
+				if * { 
+					dest := east;
+				} else {
+					dest := north;
+				}
+			}
+		} else if x_pos = n_max {
+			# East Edge
+			if * { 
+					dest := south; 
+				
+			} else {
+				if * { 
+					dest := west;
+				} else {
+					dest := north;
+				}
+			}
+		} else if y_pos = n_max {
+			# North Edge
+			if * { 
+					dest := south; 
+				
+			} else {
+				if * { 
+					dest := west;
+				} else {
+					dest := east;
+				}
+			}
+		} else {
+			# General Case for Middle Nodes
+			if * { 
+				if * {
+					dest := south;
+				} else {
+					dest := west;
+				}
+			} else {
+				 if * {
+					dest := east;
+				} else {
+						dest := north;
+					}
+				}
+			}	
+		
+		}  # End of action route_from_self
+		
+		action send = {
+			require has_flit = true;
+			call arb(dest).request(dir); 
+		}	
+		
+		action receive = { 
+			has_flit := true;
+			call route;
+			} 
+
+		action clear_flit = {
+			require dir ~= inside;
+			
+			has_flit := 0;
+		}
+	
+		action route_next = {
+			require dir = inside;
+			
+			call route_from_self;
+		}
+		
+	}
+	
+	instance rtr(W:directions) : router
+
+	module arbiter = {
+		#Here, the direction indicates the direction that the arbiter sends to
+		var dir: directions
+		var i:n
+		var j:n
+		var b:nsq 
+		
+		action setup_arbiter (dir_a:directions) {
+			dir := dir_a;
+
+			if (dir = south) {
+				i := x_pos;
+				j := y_pos - 1;
+			} else if (dir = west) {	
+				i := x_pos - 1;
+				j := y_pos;
+			} else if (dir = east) {
+				i := x_pos + 1;
+				j := y_pos;
+			} else if (dir = north) {
+				i := x_pos;
+				j:= y_pos + 1;
+			} else {
+				# This is for the absorbing Arbiter, 
+				# these values are initialized but not needed for the Self-facing Arbiter
+				i := x_pos;
+				j := y_pos;
+			}	
+			
+			var temp1 : n
+			
+			temp1 := j;
+			b := i;
+			
+			while temp1 > 1 
+			{
+				b := b + n_max;
+				temp1 := temp1 - 1;
+			}
+
+			
+		}			
+
+		action request (src:directions) = {
+		
+			if dir = inside {		
+			# Absorbing arbiter can always receive a flit, but should not receive
+			# flits from its own node's generating router
+				require src ~= inside;
+			
+				#Absorb the flit, it gets cleared from the sender but is not received anywhere else
+				call rtr(src).clear_flit;	
+			} else {
+
+			
+		
+	# First check to see if downstream router is empty
+	# and if it is, call the handshake action
+				if grid(b).rtr(dir).has_flit = false {
+					call handshake(src);
+				}
+		}
+	}
+
+		action handshake(src:directions) = {
+			
+			call grid(b).rtr(dir).receive;
+				
+			if src = inside {
+				call rtr(src).route_next;
+			} else {
+				call rtr(src).clear_flit;
+			}
+		}
+	}
+	
+	instance arb(Z:directions) : arbiter
+
+}
+
+instance grid(D:nsq) : node
+
+
+object noc = {
+		var k : directions
+		var a : nsq
+		var temp2 : n
+		
+		action tick (i:n, j:n) = {
+		
+			temp2 := j;
+			a := i;
+			
+			while temp2 > 1 
+			{
+				a := a + n_max;
+				temp2 := temp2 - 1;
+			}
+			
+			call select_router(i, j);
+			
+			if grid(a).rtr(k).has_flit = true {
+				call grid(a).rtr(k).send;
+				}
+			
+			}
+			
+		action select_router (i:width, j:height) = {
+			# Non-deterministically pick a node index
+			
+			# Pick a router that is valid for that node direction
+			if (i = 1) & (j = 1) {
+				# South West Corner
+				if * {
+						k := inside;
+				} else {
+						if * { 
+								k := east;
+						} else {
+								k := north;
+						}
+				}
+			} else if (i = n_max) & (j = 1) {
+				# South East Corner
+				if * {
+						k := inside;
+				} else {
+						if * { 
+								k := west;
+						} else {
+								k := north;
+						}
+				}
+			} else if (i = 1) & (j = n_max) {
+				# North West Corner
+				if * {
+						k := inside;
+				} else {
+						if * { 
+								k := south;
+						} else {
+								k := east;
+						}
+				}
+			} else if (i = n_max) & (j = n_max) {
+				# North East Corner
+				if * {
+						k := inside;
+				} else {
+						if * { 
+								k := south;
+						} else {
+								k := west;
+						}
+				}
+			} else if j = 1 {
+				# South Edge 
+				if * {
+						if * {
+								k := inside;
+						} else {
+								k := west;
+						}
+				} else {
+						if * {
+								k := east;
+						} else {
+								k := north;
+						}
+				}
+			} else if i = 1 {
+				# West Edge 
+				if * {
+						if * {
+								k := inside;
+						} else {
+								k := south;
+						}
+				} else {
+						if * {
+								k := east;
+						} else {
+								k := north;
+						}
+				}
+			} else if i = n_max {
+				# East Edge 
+				if * {
+						if * {
+								k := inside;
+						} else {
+								k := south;
+						}
+				} else {
+						if * {
+								k := west;
+						} else {
+								k := north;
+						}
+				}
+			} else if j = n_max {
+				# North Edge 
+				if * {
+						if * {
+								k := inside;
+						} else {
+								k := south;
+						}
+				} else {
+						if * {
+								k := west;
+						} else {
+								k := east;
+						}
+				}
+			} else {
+			# General Case for Middle Nodes
+				if * { 
+						k := inside;
+				} else {
+						if * {
+								if * {
+										k := south;
+								} else { 
+										k := west;
+								}
+						} else {
+								if * {
+										k := east;
+								} else {
+										k := north;
+								}
+						}
+				}
+			}
+		}
+		
+		export tick
+}
+
+# These invariants state that a router on an edge or corner node
+# should never attempt to route in the direction of "off the chip"
+
+invariant (exists X:nsq. grid(X).y_pos = 1) -> (forall Y:directions. grid(X).rtr(Y).dest ~= south)
+invariant (exists X:nsq. grid(X).x_pos = 1) -> (forall Y:directions. grid(X).rtr(Y).dest ~= west)
+invariant (exists X:nsq. grid(X).x_pos = n) -> (forall Y:directions. grid(X).rtr(Y).dest ~= east)
+invariant (exists X:nsq. grid(X).y_pos = n) -> (forall Y:directions. grid(X).rtr(Y).dest ~= north)
+
+# These invariants state that routers that would receive 
+# from "off the chip" should never have a flit
+
+invariant (exists X:nsq. grid(X).y_pos = 1) -> (grid(X).rtr(south).has_flit ~= true)
+invariant (exists X:nsq. grid(X).x_pos = 1) -> (grid(X).rtr(west).has_flit ~= true)
+invariant (exists X:nsq. grid(X).x_pos = n) -> (grid(X).rtr(east).has_flit ~= true)
+invariant (exists X:nsq. grid(X).y_pos = n) -> (grid(X).rtr(north).has_flit ~= true)
