@@ -8,15 +8,11 @@ This artifact contains the models described in the paper “Scaling Up Livelock 
 
 ### Downloadable Virtual Machine
 
-The virtual machine that contains the artifact can be found at
-
-> Link is unavailable because this file is present on the virtual machine.
+The virtual machine that contains the artifact can be found at `https://doi.org/10.5281/zenodo.5512664`. The artifact’s DOI is `10.5281/zenodo.5512664`. An alternative download link is provided at `https://drive.google.com/file/d/1xlrBJPzDYrKEkeGIHEVY3nH1aMa5rLco/view?usp=sharing`
 
 ### Checksum
 
-The SHA256 Checksum of the archive file is
-
-> Provide the checksum
+The SHA256 Checksum of the archive file is `ff96202a8c0c310f1487c1aa9eb9a887bd634b15fe7b0dc2022655aa8c10d013`
 
 ### Virtual Machine Instructions
 
@@ -27,7 +23,7 @@ RAM: 4GB
 Username: `user`
 Password: `user`
 
-Tested in Virtualbox on Windows 10 and Mac OSX.
+Tested in Virtualbox on Windows 10 and Mac OSX. The lowest system specifications used to test this virtual machine are a *Windows 10 machine (version 1903) with an Intel Core i7 4-Core 2 GHz Processor and 8 GB memory.*
 
 #### Step-By-Step Loading Instructions
 
@@ -96,9 +92,15 @@ This folder contains the model used to produce abstract zones with the help of I
 
 ----
 
+## Potential Error Correction
 
+### Minimum RAM Requirement
 
+The virtual machine is allocated 4GB of RAM. It has been tested on a Windows 10 computer with 8GB of RAM.
 
+### IVy Test Errors
+
+If in the *Refutation-Based Simulation* section, the `ivyfiles` folder is populated with files containing errors, a likely cause is duplication within the IVy files. That  is, generation of new IVy files appends to existing files (instead of  overwriting them). If the script ran twice, the IVy checks will return  errors the second time. A solution to this issue is deleting each file in the `ivyfiles` and `ivyfiles/tests` folders and  running `make` from the `livelocks` directory again. This `make` command should be executed only once.
 
 
 
